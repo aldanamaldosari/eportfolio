@@ -7,13 +7,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
 <div id="progress"></div>
 <div class="topbar">
   <div class="bar">
-    <a class="sig" href="index.html#home">AlDana Al-Dosari<span>MSc Artificial Intelligence</span></a>
+    <a class="sig" href="index.html#home"><svg class="logo" viewBox="0 0 460 381" aria-hidden="true"><g transform="translate(0,381) scale(0.1,-0.1)"><path d="M2305 3800 c-159 -5 -468 -14 -685 -19 -837 -22 -1142 -137 -1176 -441 -24 -218 246 -663 336 -555 10 13 6 22 -28 59 -166 180 -73 490 187 625 192 99 503 165 961 206 231 20 583 20 528 0 -120 -44 -259 -136 -318 -210 -16 -20 -136 -248 -268 -508 -358 -705 -1354 -2525 -1454 -2657 -77 -102 -193 -189 -287 -216 -86 -25 -101 -32 -101 -49 0 -65 204 -21 338 74 270 190 394 208 637 96 683 -317 1699 -215 2380 240 611 408 1090 1124 1216 1821 27 146 33 507 11 609 -123 557 -463 812 -1214 911 -150 20 -639 26 -1063 14z m980 -145 c690 -113 1018 -639 875 -1405 -235 -1264 -1201 -2132 -2375 -2133 -351 -1 -533 55 -690 212 -166 164 -161 185 245 966 213 410 394 765 562 1106 412 835 618 1152 796 1222 118 47 403 62 587 32z"/></g></svg><span class="sig-text">AlDana Al-Dosari<span>MSc Artificial Intelligence</span></span></a>
     <nav><a href="index.html#home">Home</a><a href="index.html#about">About me</a><a href="index.html#modules" aria-current="true">Modules</a></nav>
   </div>
 </div>
@@ -24,7 +25,7 @@
     <a class="back" href="index.html#modules">← All modules</a>
     <span class="status now">In progress</span>
     <h1>Intelligent Agents</h1>
-    <p class="sub">Description to follow.</p>
+    <p class="sub">Agent architectures, multi-agent interaction, and building agent systems in Java and Python.</p>
   </div>
 
   <div class="tabwrap">
@@ -40,17 +41,37 @@
   <div class="tabpanel" id="overview" role="tabpanel">
     <div class="reading">
       <aside class="note" id="n11"><span class="n">note 1</span>
-        [What you expected before starting, in one line. The gap between that and
-        the outcome is the whole point of the module page.]
+        [What you expected of agent architectures before Unit 1, and where that
+        turned out to be wrong. One or two lines.]
       </aside>
-      <p class="lede">
-        [What the module covered, in two or three sentences — the syllabus in your
-        own words, not the handbook's.]
-        <span class="anchor" id="a11">I went in expecting [X]</span><button class="mark" data-note="n11" data-anchor="a11" aria-expanded="false" aria-controls="n11">1</button>.
+      <p class="lede reveal">
+        Intelligent agents are software programs that perceive their environment and
+        act within it to pursue a goal. The module covers both the individual agent
+        and the interactions between agents, moving from the motivations for
+        agent-based computing through
+        <span class="anchor" id="a11">the main agent models in use today</span><button class="mark" data-note="n11" data-anchor="a11" aria-expanded="false" aria-controls="n11">1</button>
+        and their grounding in artificial intelligence research.
       </p>
-      <p>
-        [What you actually spent the most time on, and why it was harder or easier
-        than the brief suggested.]
+      <p class="reveal">
+        The work is practical as well as theoretical: designing, deploying and
+        evaluating agent systems in languages such as Java and Python, drawing on
+        skills built in earlier modules, and reading into current research issues
+        including state-of-the-art models and recent developments in deployment.
+      </p>
+
+      <h3 class="sub-head">Module aims</h3>
+      <ul class="contrib">
+        <li>Understand the motivations for, and appropriate use of, agent-based computing.</li>
+        <li>Understand the main agent models in use today and their grounding in AI research.</li>
+        <li>Develop, deploy and evaluate intelligent systems to solve real-world problems.</li>
+        <li>Understand contemporary research issues in intelligent agent systems.</li>
+      </ul>
+
+      <h3 class="sub-head">Assessment</h3>
+      <p class="reveal">
+        This e-portfolio forms part of the assessment for the module. Coding
+        exercises are kept in GitHub repositories, and those repository links appear
+        alongside the artefacts below.
       </p>
     </div>
   </div>
@@ -58,72 +79,80 @@
 
   <div class="tabpanel" id="group" role="tabpanel" hidden>
     <div class="reading">
-      <div class="sec-head"><h2>[Project title]</h2><span class="count">[group of N]</span></div>
+      <div class="sec-head"><h2>Team design proposal</h2><span class="count">Unit 6 · Group E</span></div>
+
+      <p class="meta-line"><span class="status now">In progress</span>
+        Due 7 September 2026, 23:55 UK time</p>
 
       <aside class="note" id="n14"><span class="n">note</span>
-        [The moment the group disagreed, and how it resolved. This is what a marker
-        is looking for in a group artefact.]
+        [The moment the group disagreed on the architecture, and how it resolved.
+        This is what a marker looks for in a group artefact.]
       </aside>
-      <p class="lede">
-        [What the group set out to build, in one or two sentences.]
-        My role was [role], which meant
-        <span class="anchor" id="a14">[what you were accountable for]</span><button class="mark" data-note="n14" data-anchor="a14" aria-expanded="false" aria-controls="n14">1</button>.
+      <p class="lede reveal">
+        Group E is building an LLM-powered planning agent for academic research: it
+        takes a topic, plans its own search, retrieves and validates sources, and
+        exports a structured result. My role is Methodology Lead, contributing
+        <span class="anchor" id="a14">the approach and methodology behind the six-agent architecture</span><button class="mark" data-note="n14" data-anchor="a14" aria-expanded="false" aria-controls="n14">1</button>.
       </p>
+
+      <h3 class="sub-head">Submission</h3>
+      <ul class="contrib">
+        <li>Team report — the group design proposal.</li>
+        <li>Individual peer review evaluation.</li>
+      </ul>
 
       <h3 class="sub-head">What I contributed</h3>
       <ul class="contrib">
-        <li>[A specific piece of the system or document you owned end to end.]</li>
+        <li>[The methodology itself — how the six agents divide the work and why that split.]</li>
         <li>[A decision you argued for, and whether the group took it.]</li>
-        <li>[Something you did that was not in your assigned role.]</li>
+        <li>[Something you did outside the Methodology Lead role.]</li>
       </ul>
 
       <h3 class="sub-head">How we worked</h3>
-      <p>
-        [How the group split the work, met, and made decisions. Name the tools if
-        they mattered.]
+      <p class="reveal">
+        [How Group E split the work, met, and made decisions. Name the tools if they
+        mattered.]
       </p>
 
       <h3 class="sub-head">Outcome</h3>
-      <p>
-        [What was submitted, the result, and what you would change about how the
-        group ran rather than what it produced.]
+      <p class="reveal">
+        [To complete after submission: the result, and what you would change about how
+        the group ran rather than what it produced.]
       </p>
 
-      <a class="evidence" href="#">Open the group artefact →</a>
+      <a class="evidence" href="#">Open the team report →</a>
     </div>
   </div>
 
   <div class="tabpanel" id="artefacts" role="tabpanel" hidden>
     <div class="reading">
-      <article class="entry" id="artefact-1">
-        <div class="entry-head"><span class="call">Artefact 1</span><h3>[First piece of work]</h3></div>
-        <p class="meta">[Individual / group of 5] · [Month Year] · [Grade or status]</p>
-        <aside class="note" id="n12"><span class="n">note 2</span>
-          [One line on the trade-off you accepted here, and what it cost.]
-        </aside>
+      <article class="entry reveal" id="unit-6">
+        <div class="entry-head"><span class="call">Unit 6</span><h3>Development Team Project: Project Report</h3></div>
+        <p class="meta"><span class="status now">In progress</span> Group E · due 23:55, Monday 7 September 2026</p>
         <p>
-          [What the brief asked for, in one sentence.] I approached it by [method],
-          which meant
-          <span class="anchor" id="a12">[the trade-off you accepted]</span><button class="mark" data-note="n12" data-anchor="a12" aria-expanded="false" aria-controls="n12">2</button>.
-          The result was [outcome, with a number if you have one].
+          The team design proposal for Group E's LLM-powered research planning agent,
+          submitted alongside an individual peer review evaluation.
         </p>
-        <ul class="tags"><li>[skill]</li><li>[tool]</li><li>[method]</li></ul>
-        <a class="evidence" href="#">Open the artefact →</a>
+        <a class="evidence" href="#group">See the Group project tab →</a>
       </article>
 
-      <article class="entry" id="artefact-2">
-        <div class="entry-head"><span class="call">Artefact 2</span><h3>[Second piece of work]</h3></div>
-        <p class="meta">[Individual] · [Month Year]</p>
-        <aside class="note" id="n13"><span class="n">note 3</span>
-          [What you would keep from this, and what you would throw away.]
-        </aside>
+      <article class="entry reveal" data-i="1" id="unit-11">
+        <div class="entry-head"><span class="call">Unit 11</span><h3>Individual Project: Presentation</h3></div>
+        <p class="meta"><span class="status next">Upcoming</span> Individual · due 23:55, Monday 12 October 2026</p>
         <p>
-          [What you built or wrote.] The part I got wrong first was
-          <span class="anchor" id="a13">[the mistake]</span><button class="mark" data-note="n13" data-anchor="a13" aria-expanded="false" aria-controls="n13">3</button>,
-          and correcting it changed [what it changed].
+          An individual presentation setting out the agent-based system, the design
+          decisions behind it and how it was evaluated.
         </p>
-        <ul class="tags"><li>[skill]</li><li>[tool]</li></ul>
-        <a class="evidence" href="#">Open the artefact →</a>
+        <a class="evidence" href="#">Open the presentation →</a>
+      </article>
+
+      <article class="entry reveal" data-i="2" id="unit-12">
+        <div class="entry-head"><span class="call">Unit 12</span><h3>Individual Module e-Portfolio</h3></div>
+        <p class="meta"><span class="status next">Upcoming</span> Individual · due 23:55, Monday 19 October 2026</p>
+        <p>
+          This e-portfolio itself, collecting the module's artefacts, reflections and
+          evidence against the learning outcomes.
+        </p>
       </article>
     </div>
   </div>
@@ -137,12 +166,20 @@
       <table class="map">
         <thead><tr><th>Learning outcome</th><th>Evidence</th></tr></thead>
         <tbody>
-          <tr><td>[Outcome 1 — copy the wording from the module handbook]</td>
-              <td><a class="chip" href="#artefact-1">Artefact 1</a></td></tr>
-          <tr><td>[Outcome 2]</td>
-              <td><a class="chip" href="#artefact-1">Artefact 1</a><a class="chip" href="#artefact-2">Artefact 2</a></td></tr>
-          <tr><td>[Outcome 3]</td>
-              <td><a class="chip" href="#artefact-2">Artefact 2</a></td></tr>
+          <tr><td>Identify and critically analyse agent-based systems, differentiating
+              between architectures and approaches.</td>
+              <td><a class="chip" href="#unit-6">Unit 6</a><a class="chip" href="#unit-11">Unit 11</a></td></tr>
+          <tr><td>Apply and critically evaluate intelligent agent techniques to real-world
+              problems, particularly where technical risk and uncertainty is involved.</td>
+              <td><a class="chip" href="#unit-11">Unit 11</a></td></tr>
+          <tr><td>Deploy critically appropriate software tools and skills for the design and
+              implementation of an agent-based system, bearing in mind applicable legal,
+              social, ethical and professional issues.</td>
+              <td><a class="chip" href="#unit-6">Unit 6</a></td></tr>
+          <tr><td>Systematically develop and implement the skills required to be an effective
+              member of a development team in a virtual professional environment, adopting
+              real-life perspectives on team roles and organisation.</td>
+              <td><a class="chip" href="#group">Group project</a></td></tr>
         </tbody>
       </table>
     </div>
