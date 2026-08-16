@@ -277,25 +277,6 @@ p{margin:0 0 18px}
 .hero .thesis{animation-delay:.46s}
 .hero .folio{animation-delay:.58s}
 
-/* network graphic */
-.hero-art{position:absolute;right:34px;top:50%;transform:translateY(-50%);
-  width:330px;height:330px;pointer-events:none}
-.hero-art line{stroke:var(--blue);stroke-width:1;opacity:.35;
-  stroke-dasharray:120;stroke-dashoffset:120;
-  animation:draw 1.4s cubic-bezier(.3,.7,.3,1) forwards}
-.hero-art circle{opacity:0;animation:pop .6s cubic-bezier(.2,.9,.3,1.3) forwards}
-.hero-art .ring{fill:none;stroke:var(--mauve);stroke-width:1;opacity:.22;
-  transform-origin:165px 165px;animation:spin 44s linear infinite}
-.hero-art .ring.slow{animation-duration:70s;animation-direction:reverse;stroke:var(--blush);opacity:.14}
-@keyframes draw{to{stroke-dashoffset:0}}
-@keyframes pop{to{opacity:1}}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes float{0%,100%{transform:translateY(-50%)}50%{transform:translateY(-54%)}}
-.hero-art{animation:float 9s ease-in-out 2s infinite}
-.hero-art .pulse{animation:pop .6s cubic-bezier(.2,.9,.3,1.3) forwards,
-  breathe 3.4s ease-in-out infinite}
-@keyframes breathe{0%,100%{r:5}50%{r:8}}
-
 /* drifting pills in the corner, echoing the palette swatch */
 .hero-pills{position:absolute;left:-70px;bottom:-90px;opacity:.16;pointer-events:none}
 .hero-pills rect{animation:drift 14s ease-in-out infinite}
@@ -324,12 +305,9 @@ p{margin:0 0 18px}
 .mod{transition:transform .3s cubic-bezier(.2,.7,.3,1),box-shadow .3s,border-color .3s,
   opacity .7s cubic-bezier(.2,.7,.3,1)}
 
-@media (max-width:1040px){.hero-art{display:none}}
 @media (prefers-reduced-motion:reduce){
   .hero .kicker,.hero h1,.hero .programme,.hero .thesis,.hero .folio{opacity:1;animation:none}
-  .hero-art,.hero-art *,.hero-pills rect,.status.now::after{animation:none!important}
-  .hero-art line{stroke-dashoffset:0}
-  .hero-art circle{opacity:1}
+  .hero-pills rect,.status.now::after{animation:none!important}
   .reveal{opacity:1;transform:none}
   .sec-head h2::before{transform:scale(1)}
 }
