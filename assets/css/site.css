@@ -284,6 +284,16 @@ p{margin:0 0 18px}
   padding:3px 10px;border-radius:20px;margin:0 4px 4px 0;display:inline-block;color:var(--soft);background:var(--card)}
 .chip:hover{border-color:var(--mauve);color:var(--slate)}
 
+/* ---------- artefact schedule ---------- */
+.artefact-schedule{margin-bottom:38px}
+.artefact-schedule td{font-size:14.5px;padding:12px 14px 12px 0}
+.artefact-schedule td.u{font-weight:700;color:var(--navy);white-space:nowrap;width:80px}
+.artefact-schedule td a{color:var(--slate);text-decoration:none;
+  border-bottom:1px solid var(--rule);padding-bottom:1px}
+.artefact-schedule td a:hover{color:var(--mauve);border-bottom-color:var(--mauve)}
+.artefact-schedule td:last-child{white-space:nowrap;width:130px}
+.artefact-schedule .status{margin:0;font-size:10.5px}
+
 /* ---------- schedule table ---------- */
 .schedule td{font-size:14.5px;padding:13px 14px 13px 0}
 .schedule td.u{font-weight:700;color:var(--navy);white-space:nowrap;width:64px}

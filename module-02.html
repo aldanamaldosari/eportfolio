@@ -32,8 +32,8 @@
     <div class="tabs" role="tablist" aria-label="Module sections">
       <button role="tab" data-panel="overview" aria-controls="overview" aria-selected="true">Overview</button>
       <button role="tab" data-panel="group" aria-controls="group" aria-selected="false">Group project</button>
-      <button role="tab" data-panel="schedule" aria-controls="schedule" aria-selected="false">Schedule</button>
       <button role="tab" data-panel="artefacts" aria-controls="artefacts" aria-selected="false">Artefacts</button>
+      <button role="tab" data-panel="assessments" aria-controls="assessments" aria-selected="false">Assessments</button>
       <button role="tab" data-panel="outcomes" aria-controls="outcomes" aria-selected="false">Outcome map</button>
       <button role="tab" data-panel="reflection" aria-controls="reflection" aria-selected="false">Reflection</button>
     </div>
@@ -164,46 +164,20 @@
     </div>
   </div>
 
-
-  <div class="tabpanel" id="schedule" role="tabpanel" hidden>
-    <div class="reading">
-      <p class="reveal">Every component in the module, in unit order, with where I am on it.</p>
-      <table class="map schedule">
-        <thead><tr><th>Unit</th><th>Component</th><th>Deadline</th><th>Type</th><th>Progress</th></tr></thead>
-        <tbody>
-          <tr><td class="u">1–3</td><td>Collaborative Discussion 1: Agent Based Systems</td><td class="d">End of Unit 3</td><td><span class="kind k-e-portfolio">e-Portfolio</span></td><td><span class="status now">In progress</span></td></tr>
-          <tr><td class="u">1</td><td>Unit 1 Seminar Preparation</td><td class="d">End of Unit 1</td><td><span class="kind k-formative">Formative</span></td><td><span class="status next">Upcoming</span></td></tr>
-          <tr><td class="u">2</td><td>Unit 2 Seminar Preparation</td><td class="d">End of Unit 2</td><td><span class="kind k-formative">Formative</span></td><td><span class="status next">Upcoming</span></td></tr>
-          <tr><td class="u">4</td><td>Unit 4 Seminar Preparation</td><td class="d">End of Unit 4</td><td><span class="kind k-formative">Formative</span></td><td><span class="status next">Upcoming</span></td></tr>
-          <tr><td class="u">5–7</td><td>Collaborative Discussion 2: Agent Communication Languages</td><td class="d">End of Unit 7</td><td><span class="kind k-e-portfolio">e-Portfolio</span></td><td><span class="status next">Upcoming</span></td></tr>
-          <tr><td class="u">6</td><td>Creating Agent Dialogues</td><td class="d">End of Unit 6</td><td><span class="kind k-e-portfolio">e-Portfolio</span></td><td><span class="status now">In progress</span></td></tr>
-          <tr><td class="u">6</td><td>Unit 6 Seminar Preparation</td><td class="d">End of Unit 6</td><td><span class="kind k-formative">Formative</span></td><td><span class="status next">Upcoming</span></td></tr>
-          <tr><td class="u">6</td><td>Development Team Project: Project Report</td><td class="d">7 September 2026</td><td><span class="kind k-assessed">Assessed</span></td><td><span class="status now">In progress</span></td></tr>
-          <tr><td class="u">8</td><td>Creating Parse Trees</td><td class="d">End of Unit 8</td><td><span class="kind k-e-portfolio">e-Portfolio</span></td><td><span class="status next">Upcoming</span></td></tr>
-          <tr><td class="u">8</td><td>Unit 8 Seminar Preparation</td><td class="d">End of Unit 8</td><td><span class="kind k-formative">Formative</span></td><td><span class="status next">Upcoming</span></td></tr>
-          <tr><td class="u">9–11</td><td>Collaborative Discussion 3: Deep Learning</td><td class="d">End of Unit 11</td><td><span class="kind k-e-portfolio">e-Portfolio</span></td><td><span class="status next">Upcoming</span></td></tr>
-          <tr><td class="u">10</td><td>Deep Learning in Action</td><td class="d">End of Unit 10</td><td><span class="kind k-e-portfolio">e-Portfolio</span></td><td><span class="status next">Upcoming</span></td></tr>
-          <tr><td class="u">10</td><td>Unit 10 Seminar Preparation</td><td class="d">End of Unit 10</td><td><span class="kind k-formative">Formative</span></td><td><span class="status next">Upcoming</span></td></tr>
-          <tr><td class="u">11</td><td>Individual Project: Presentation</td><td class="d">12 October 2026</td><td><span class="kind k-assessed">Assessed</span></td><td><span class="status next">Upcoming</span></td></tr>
-          <tr><td class="u">12</td><td>Individual Module e-Portfolio</td><td class="d">19 October 2026</td><td><span class="kind k-assessed">Assessed</span></td><td><span class="status next">Upcoming</span></td></tr>
-          <tr><td class="u">12</td><td>Unit 12 Seminar Preparation</td><td class="d">End of Unit 12</td><td><span class="kind k-formative">Formative</span></td><td><span class="status next">Upcoming</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
   <div class="tabpanel" id="artefacts" role="tabpanel" hidden>
     <div class="reading">
-    <nav class="subnav" aria-label="Artefact groups">
-      <ol>
-        <li><a href="#eportfolio-activities">e-Portfolio activities</a></li>
-        <li><a href="#assessed-submissions">Assessed submissions</a></li>
-      </ol>
-    </nav>
+      <table class="map artefact-schedule">
+        <thead><tr><th>Unit</th><th>Artefact</th><th>Progress</th></tr></thead>
+        <tbody>
+          <tr><td class="u">Units 1–3</td><td><a href="#act-cd1">Collaborative Discussion 1: Agent Based Systems</a></td><td><span class="status now">In progress</span></td></tr>
+          <tr><td class="u">Unit 6</td><td><a href="#act-dialogues">Creating Agent Dialogues</a></td><td><span class="status now">In progress</span></td></tr>
+          <tr><td class="u">Units 5–7</td><td><a href="#act-cd2">Collaborative Discussion 2: Agent Communication Languages</a></td><td><span class="status next">Upcoming</span></td></tr>
+          <tr><td class="u">Unit 8</td><td><a href="#act-parse">Creating Parse Trees</a></td><td><span class="status next">Upcoming</span></td></tr>
+          <tr><td class="u">Unit 10</td><td><a href="#act-dl">Deep Learning in Action</a></td><td><span class="status next">Upcoming</span></td></tr>
+          <tr><td class="u">Units 9–11</td><td><a href="#act-cd3">Collaborative Discussion 3: Deep Learning</a></td><td><span class="status next">Upcoming</span></td></tr>
+        </tbody>
+      </table>
 
-      <section class="sub-section" id="eportfolio-activities">
-        <h3>e-Portfolio activities</h3>
-        <p class="when">Six components collected across the module</p>
       <article class="entry reveal" data-i="0" id="act-cd1">
         <div class="entry-head"><span class="call">Units 1–3</span><h3>Collaborative Discussion 1: Agent Based Systems</h3></div>
         <p class="meta"><span class="status now">In progress</span> e-Portfolio · due End of Unit 3</p>
@@ -248,12 +222,12 @@
         <p>Forum thread on deep learning.</p>
         <p class="small">Content to be added.</p>
       </article>
+    </div>
+  </div>
 
-      </section>
 
-      <section class="sub-section" id="assessed-submissions">
-        <h3>Assessed submissions</h3>
-        <p class="when">Three components carrying the module mark</p>
+  <div class="tabpanel" id="assessments" role="tabpanel" hidden>
+    <div class="reading">
       <article class="entry reveal" id="unit-6">
         <div class="entry-head"><span class="call">Unit 6</span><h3>Development Team Project: Project Report</h3></div>
         <p class="meta"><span class="status now">In progress</span> Group E · due 23:55, Monday 7 September 2026</p>
@@ -313,7 +287,6 @@
         <p class="small">Reflections follow Rolfe et al. (2001) — what, so what, now what.</p>
         <a class="evidence" href="#reflection">Read the reflections →</a>
       </article>
-      </section>
     </div>
   </div>
 
