@@ -54,6 +54,24 @@
 })();
 
 
+  /* in-panel scroll menu */
+  var sublinks={};
+  document.querySelectorAll('.subnav a').forEach(function(a){
+    sublinks[a.getAttribute('href').slice(1)]=a;
+  });
+  if(Object.keys(sublinks).length){
+    var subspy=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        var a=sublinks[e.target.id]; if(!a) return;
+        if(e.isIntersecting){
+          Object.keys(sublinks).forEach(function(k){sublinks[k].removeAttribute('aria-current');});
+          a.setAttribute('aria-current','true');
+        }
+      });
+    },{rootMargin:'-35% 0px -55% 0px'});
+    document.querySelectorAll('.sub-section').forEach(function(x){subspy.observe(x);});
+  }
+
   /* module pages: meeting timeline */
   document.querySelectorAll('.tl button').forEach(function(btn){
     btn.addEventListener('click',function(){

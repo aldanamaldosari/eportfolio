@@ -32,6 +32,7 @@
     <div class="tabs" role="tablist" aria-label="Module sections">
       <button role="tab" data-panel="overview" aria-controls="overview" aria-selected="true">Overview</button>
       <button role="tab" data-panel="group" aria-controls="group" aria-selected="false">Group project</button>
+      <button role="tab" data-panel="schedule" aria-controls="schedule" aria-selected="false">Schedule</button>
       <button role="tab" data-panel="artefacts" aria-controls="artefacts" aria-selected="false">Artefacts</button>
       <button role="tab" data-panel="outcomes" aria-controls="outcomes" aria-selected="false">Outcome map</button>
       <button role="tab" data-panel="reflection" aria-controls="reflection" aria-selected="false">Reflection</button>
@@ -40,16 +41,11 @@
 
   <div class="tabpanel" id="overview" role="tabpanel">
     <div class="reading">
-      <aside class="note" id="n11"><span class="n">note 1</span>
-        [What you expected of agent architectures before Unit 1, and where that
-        turned out to be wrong. One or two lines.]
-      </aside>
       <p class="lede reveal">
         Intelligent agents are software programs that perceive their environment and
         act within it to pursue a goal. The module covers both the individual agent
         and the interactions between agents, moving from the motivations for
-        agent-based computing through
-        <span class="anchor" id="a11">the main agent models in use today</span><button class="mark" data-note="n11" data-anchor="a11" aria-expanded="false" aria-controls="n11">1</button>
+        agent-based computing through the main agent models in use today
         and their grounding in artificial intelligence research.
       </p>
       <p class="reveal">
@@ -168,8 +164,96 @@
     </div>
   </div>
 
+
+  <div class="tabpanel" id="schedule" role="tabpanel" hidden>
+    <div class="reading">
+      <p class="reveal">Every component in the module, in unit order, with where I am on it.</p>
+      <table class="map schedule">
+        <thead><tr><th>Unit</th><th>Component</th><th>Deadline</th><th>Type</th><th>Progress</th></tr></thead>
+        <tbody>
+          <tr><td class="u">1–3</td><td>Collaborative Discussion 1: Agent Based Systems</td><td class="d">End of Unit 3</td><td><span class="kind k-e-portfolio">e-Portfolio</span></td><td><span class="status now">In progress</span></td></tr>
+          <tr><td class="u">1</td><td>Unit 1 Seminar Preparation</td><td class="d">End of Unit 1</td><td><span class="kind k-formative">Formative</span></td><td><span class="status next">Upcoming</span></td></tr>
+          <tr><td class="u">2</td><td>Unit 2 Seminar Preparation</td><td class="d">End of Unit 2</td><td><span class="kind k-formative">Formative</span></td><td><span class="status next">Upcoming</span></td></tr>
+          <tr><td class="u">4</td><td>Unit 4 Seminar Preparation</td><td class="d">End of Unit 4</td><td><span class="kind k-formative">Formative</span></td><td><span class="status next">Upcoming</span></td></tr>
+          <tr><td class="u">5–7</td><td>Collaborative Discussion 2: Agent Communication Languages</td><td class="d">End of Unit 7</td><td><span class="kind k-e-portfolio">e-Portfolio</span></td><td><span class="status next">Upcoming</span></td></tr>
+          <tr><td class="u">6</td><td>Creating Agent Dialogues</td><td class="d">End of Unit 6</td><td><span class="kind k-e-portfolio">e-Portfolio</span></td><td><span class="status now">In progress</span></td></tr>
+          <tr><td class="u">6</td><td>Unit 6 Seminar Preparation</td><td class="d">End of Unit 6</td><td><span class="kind k-formative">Formative</span></td><td><span class="status next">Upcoming</span></td></tr>
+          <tr><td class="u">6</td><td>Development Team Project: Project Report</td><td class="d">7 September 2026</td><td><span class="kind k-assessed">Assessed</span></td><td><span class="status now">In progress</span></td></tr>
+          <tr><td class="u">8</td><td>Creating Parse Trees</td><td class="d">End of Unit 8</td><td><span class="kind k-e-portfolio">e-Portfolio</span></td><td><span class="status next">Upcoming</span></td></tr>
+          <tr><td class="u">8</td><td>Unit 8 Seminar Preparation</td><td class="d">End of Unit 8</td><td><span class="kind k-formative">Formative</span></td><td><span class="status next">Upcoming</span></td></tr>
+          <tr><td class="u">9–11</td><td>Collaborative Discussion 3: Deep Learning</td><td class="d">End of Unit 11</td><td><span class="kind k-e-portfolio">e-Portfolio</span></td><td><span class="status next">Upcoming</span></td></tr>
+          <tr><td class="u">10</td><td>Deep Learning in Action</td><td class="d">End of Unit 10</td><td><span class="kind k-e-portfolio">e-Portfolio</span></td><td><span class="status next">Upcoming</span></td></tr>
+          <tr><td class="u">10</td><td>Unit 10 Seminar Preparation</td><td class="d">End of Unit 10</td><td><span class="kind k-formative">Formative</span></td><td><span class="status next">Upcoming</span></td></tr>
+          <tr><td class="u">11</td><td>Individual Project: Presentation</td><td class="d">12 October 2026</td><td><span class="kind k-assessed">Assessed</span></td><td><span class="status next">Upcoming</span></td></tr>
+          <tr><td class="u">12</td><td>Individual Module e-Portfolio</td><td class="d">19 October 2026</td><td><span class="kind k-assessed">Assessed</span></td><td><span class="status next">Upcoming</span></td></tr>
+          <tr><td class="u">12</td><td>Unit 12 Seminar Preparation</td><td class="d">End of Unit 12</td><td><span class="kind k-formative">Formative</span></td><td><span class="status next">Upcoming</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
   <div class="tabpanel" id="artefacts" role="tabpanel" hidden>
     <div class="reading">
+    <nav class="subnav" aria-label="Artefact groups">
+      <ol>
+        <li><a href="#eportfolio-activities">e-Portfolio activities</a></li>
+        <li><a href="#assessed-submissions">Assessed submissions</a></li>
+      </ol>
+    </nav>
+
+      <section class="sub-section" id="eportfolio-activities">
+        <h3>e-Portfolio activities</h3>
+        <p class="when">Six components collected across the module</p>
+      <article class="entry reveal" data-i="0" id="act-cd1">
+        <div class="entry-head"><span class="call">Units 1–3</span><h3>Collaborative Discussion 1: Agent Based Systems</h3></div>
+        <p class="meta"><span class="status now">In progress</span> e-Portfolio · due End of Unit 3</p>
+        <p>Initial post, peer replies and a summary post on agent-based systems.</p>
+        <a class="evidence" href="collaborative-discussion.html">Open the artefact →</a>
+      </article>
+
+      <article class="entry reveal" data-i="1" id="act-dialogues">
+        <div class="entry-head"><span class="call">Unit 6</span><h3>Creating Agent Dialogues</h3></div>
+        <p class="meta"><span class="status now">In progress</span> e-Portfolio · due End of Unit 6</p>
+        <p>A KQML and KIF dialogue between Alice, procuring stock, and Bob, controlling warehouse stock levels: the available stock of 50-inch televisions, then the number of HDMI slots.</p>
+        <h3 class="sub-head">The dialogue</h3>
+        <pre class="code"><code>; to be added</code></pre>
+        <h3 class="sub-head">Commentary</h3>
+        <p class="small">[Why these performatives, and what the KIF content commits each agent to. To be added.]</p>
+      </article>
+
+      <article class="entry reveal" data-i="2" id="act-cd2">
+        <div class="entry-head"><span class="call">Units 5–7</span><h3>Collaborative Discussion 2: Agent Communication Languages</h3></div>
+        <p class="meta"><span class="status next">Upcoming</span> e-Portfolio · due End of Unit 7</p>
+        <p>Forum thread on agent communication languages.</p>
+        <p class="small">Content to be added.</p>
+      </article>
+
+      <article class="entry reveal" data-i="3" id="act-parse">
+        <div class="entry-head"><span class="call">Unit 8</span><h3>Creating Parse Trees</h3></div>
+        <p class="meta"><span class="status next">Upcoming</span> e-Portfolio · due End of Unit 8</p>
+        <p>Parse trees produced for the Unit 8 activity.</p>
+        <p class="small">Content to be added.</p>
+      </article>
+
+      <article class="entry reveal" data-i="3" id="act-dl">
+        <div class="entry-head"><span class="call">Unit 10</span><h3>Deep Learning in Action</h3></div>
+        <p class="meta"><span class="status next">Upcoming</span> e-Portfolio · due End of Unit 10</p>
+        <p>Applied deep learning exercise.</p>
+        <p class="small">Content to be added.</p>
+      </article>
+
+      <article class="entry reveal" data-i="3" id="act-cd3">
+        <div class="entry-head"><span class="call">Units 9–11</span><h3>Collaborative Discussion 3: Deep Learning</h3></div>
+        <p class="meta"><span class="status next">Upcoming</span> e-Portfolio · due End of Unit 11</p>
+        <p>Forum thread on deep learning.</p>
+        <p class="small">Content to be added.</p>
+      </article>
+
+      </section>
+
+      <section class="sub-section" id="assessed-submissions">
+        <h3>Assessed submissions</h3>
+        <p class="when">Three components carrying the module mark</p>
       <article class="entry reveal" id="unit-6">
         <div class="entry-head"><span class="call">Unit 6</span><h3>Development Team Project: Project Report</h3></div>
         <p class="meta"><span class="status now">In progress</span> Group E · due 23:55, Monday 7 September 2026</p>
@@ -182,22 +266,54 @@
 
       <article class="entry reveal" data-i="1" id="unit-11">
         <div class="entry-head"><span class="call">Unit 11</span><h3>Individual Project: Presentation</h3></div>
-        <p class="meta"><span class="status next">Upcoming</span> Individual · due 23:55, Monday 12 October 2026</p>
+        <p class="meta"><span class="status next">Upcoming</span> Individual · 40% of the module mark · due 23:55, Monday 12 October 2026</p>
         <p>
-          An individual presentation setting out the agent-based system, the design
-          decisions behind it and how it was evaluated.
+          Implementation and demonstration of the LLM-powered planning agent designed in
+          Unit 6: the agent receives a goal, plans a sequence of actions, retrieves and
+          processes data, and produces a meaningful output for the chosen domain.
         </p>
-        <a class="evidence" href="#">Open the presentation →</a>
+
+        <h3 class="sub-head">Deliverables</h3>
+        <ul class="docs">
+          <li><span class="doc-slot" title="To upload after submission"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.8h7.5L19 8.3v12.9H6z"/><path d="M13.3 3v5.5H19M9 12.5h6M9 16h4.5"/></svg></span>Presentation deck, up to 10 slides, with the audio transcript</li>
+          <li><span class="doc-slot" title="To upload after submission"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.8h7.5L19 8.3v12.9H6z"/><path d="M13.3 3v5.5H19M9 12.5h6M9 16h4.5"/></svg></span>Source code and dependencies, commented with the reasoning behind design decisions</li>
+          <li><span class="doc-slot" title="To upload after submission"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.8h7.5L19 8.3v12.9H6z"/><path d="M13.3 3v5.5H19M9 12.5h6M9 16h4.5"/></svg></span>Evidence of execution — demonstrations, screenshots, logs or output captures</li>
+          <li><span class="doc-slot" title="To upload after submission"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.8h7.5L19 8.3v12.9H6z"/><path d="M13.3 3v5.5H19M9 12.5h6M9 16h4.5"/></svg></span>Testing evidence — unit and functional tests, with any remediation</li>
+          <li><span class="doc-slot" title="To upload after submission"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.8h7.5L19 8.3v12.9H6z"/><path d="M13.3 3v5.5H19M9 12.5h6M9 16h4.5"/></svg></span>README covering the solution and how to install and run it</li>
+        </ul>
       </article>
 
       <article class="entry reveal" data-i="2" id="unit-12">
         <div class="entry-head"><span class="call">Unit 12</span><h3>Individual Module e-Portfolio</h3></div>
-        <p class="meta"><span class="status next">Upcoming</span> Individual · due 23:55, Monday 19 October 2026</p>
+        <p class="meta"><span class="status next">Upcoming</span> Individual · 40% of the module mark · 2,500 words · due 23:55, Monday 19 October 2026</p>
         <p>
-          This e-portfolio itself, collecting the module's artefacts, reflections and
-          evidence against the learning outcomes.
+          This site itself: the collated evidence of the module, and a reflective
+          account of how the work developed. The reflective section runs to 1,000
+          words, the remaining evidence to 1,500.
         </p>
+
+        <h3 class="sub-head">Contents</h3>
+        <ul class="contrib">
+          <li>Exercise outputs — coding scripts, agent implementations and system designs.</li>
+          <li>Forum contributions, with the analysis behind them.</li>
+          <li>Reflective commentary on the skills and understanding developed.</li>
+          <li>Critical evaluation of the project across both the Unit 6 design and the
+            Unit 11 implementation.</li>
+          <li>Three reflective case studies grounded in the systems I designed and built.</li>
+        </ul>
+
+        <h3 class="sub-head">Case study themes</h3>
+        <p class="small">Three to be selected from: bias in autonomous decision-making ·
+          AI safety constraints such as kill switches, bounded autonomy and safe
+          exploration · explainable decisions in agents (XAI) · legal and ethical
+          frameworks for autonomous systems · responsible deployment and unintended
+          emergent behaviour.</p>
+
+        <h3 class="sub-head">Reflective framework</h3>
+        <p class="small">Reflections follow Rolfe et al. (2001) — what, so what, now what.</p>
+        <a class="evidence" href="#reflection">Read the reflections →</a>
       </article>
+      </section>
     </div>
   </div>
 
@@ -212,7 +328,7 @@
         <tbody>
           <tr><td>Identify and critically analyse agent-based systems, differentiating
               between architectures and approaches.</td>
-              <td><a class="chip" href="#unit-6">Unit 6</a><a class="chip" href="#unit-11">Unit 11</a></td></tr>
+              <td><a class="chip" href="#act-dialogues">Dialogues</a><a class="chip" href="#unit-6">Unit 6</a><a class="chip" href="#unit-11">Unit 11</a></td></tr>
           <tr><td>Apply and critically evaluate intelligent agent techniques to real-world
               problems, particularly where technical risk and uncertainty is involved.</td>
               <td><a class="chip" href="#unit-11">Unit 11</a></td></tr>
@@ -256,7 +372,7 @@
     </div>
   </div>
 
-  <div class="pager"><a href="module-01.html">← Numerical Analysis</a><a href="module-03.html">Machine Learning →</a></div>
+  <div class="pager"><a href="module-01.html">← Numerical Analysis</a><span>Machine Learning →</span></div>
 
 </div>
 

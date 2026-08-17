@@ -42,6 +42,16 @@ a{color:inherit}
 /* ---------- shell ---------- */
 .shell{max-width:1180px;margin:0 auto;padding:0 32px}
 .reading{max-width:var(--col)}
+.reading.wide{max-width:940px}
+.about-box{background:var(--card);border:1px solid var(--rule);border-radius:var(--radius);
+  padding:44px 48px 36px;position:relative}
+.about-box::before{content:"";position:absolute;left:0;top:34px;bottom:34px;width:3px;
+  background:var(--mauve);border-radius:0 3px 3px 0}
+.about-box .lede{color:var(--navy)}
+.about-box p:last-child{margin-bottom:0;color:var(--soft);font-size:15px;
+  padding-top:20px;border-top:1px solid var(--rule)}
+.reading.wide p{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+@media (max-width:700px){.reading.wide p{text-align:left;hyphens:manual}}
 section{padding:0 0 88px;scroll-margin-top:96px}
 
 /* ---------- gradient panel (hero) ---------- */
@@ -140,6 +150,11 @@ p{margin:0 0 18px}
 .mod:hover::after,.mod:focus-visible::after{transform:scaleX(1)}
 .mod:hover .call{color:var(--mauve);border-color:var(--mauve)}
 .mod:focus-visible{outline:2px solid var(--slate);outline-offset:4px}
+.mod.is-locked{background:transparent;border-style:dashed;box-shadow:none;cursor:default}
+.mod.is-locked h3{color:var(--soft)}
+.mod.is-locked:hover{transform:none;border-color:var(--rule);box-shadow:none}
+.mod.is-locked:hover::after{transform:scaleX(0)}
+.locked-note{margin-top:auto;padding-top:20px;font-size:12.5px;color:var(--soft);opacity:.75}
 
 /* ---------- module tab bar ---------- */
 .tabwrap{position:sticky;top:64px;z-index:50;background:var(--paper);
@@ -162,10 +177,16 @@ p{margin:0 0 18px}
 .meta-line .status{margin:0}
 .sub-head{font-weight:700;font-size:15px;letter-spacing:-.02em;color:var(--navy);
   margin:34px 0 10px}
+.entry .sub-head{margin:26px 0 8px;font-size:14px}
+.entry .docs li{font-size:14.5px;padding:8px 0}
+.entry .small{font-size:14.5px;color:var(--soft);line-height:1.6}
 .contrib{margin:0 0 18px;padding:0;list-style:none;max-width:var(--col)}
 .contrib li{position:relative;padding:0 0 10px 22px;font-size:15.5px;line-height:1.6}
 .contrib li::before{content:"";position:absolute;left:0;top:11px;width:8px;height:1px;
   background:var(--mauve)}
+.refs{list-style:none;margin:18px 0 0;padding:0;max-width:var(--col)}
+.refs li{padding:0 0 16px 30px;text-indent:-30px;font-size:15px;line-height:1.6;
+  color:var(--ink)}
 
 /* ---------- roles, documents, timeline ---------- */
 .docs{list-style:none;margin:0 0 6px;padding:0;max-width:var(--col)}
@@ -205,6 +226,34 @@ p{margin:0 0 18px}
 .tl:hover .tl-body,.tl.open .tl-body{max-height:220px;opacity:1;padding:12px 0 14px}
 .tl button:focus-visible{outline:2px solid var(--mauve);outline-offset:2px}
 
+/* ---------- code ---------- */
+.code{background:var(--navy);color:var(--blush);border-radius:14px;
+  padding:20px 22px;margin:0 0 6px;max-width:var(--col);overflow-x:auto;
+  font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  font-size:13px;line-height:1.65;white-space:pre}
+.code code{font:inherit;color:inherit}
+
+/* ---------- in-panel scroll menu ---------- */
+.subnav{position:sticky;top:142px;z-index:40;background:var(--paper);
+  padding:14px 0 12px;margin:-8px 0 8px;border-bottom:1px solid var(--rule)}
+.subnav ol{list-style:none;display:flex;gap:22px;margin:0;padding:0;
+  overflow-x:auto;scrollbar-width:none}
+.subnav ol::-webkit-scrollbar{display:none}
+.subnav a{font-size:13.5px;font-weight:500;color:var(--soft);text-decoration:none;
+  white-space:nowrap;padding-bottom:4px;border-bottom:2px solid transparent;
+  transition:color .2s,border-color .2s}
+.subnav a:hover{color:var(--navy)}
+.subnav a[aria-current="true"]{color:var(--navy);border-bottom-color:var(--mauve)}
+.sub-section{scroll-margin-top:208px;padding-top:26px}
+.sub-section > h3{font-weight:700;font-size:19px;letter-spacing:-.028em;color:var(--navy);
+  margin:0 0 6px}
+.sub-section .when{font-size:13px;color:var(--soft);margin:0 0 16px}
+.post{border-left:2px solid var(--rule);padding:2px 0 2px 20px;margin:0 0 22px}
+.post.mine{border-left-color:var(--mauve)}
+.post h4{font-size:14.5px;font-weight:700;color:var(--navy);margin:0 0 2px}
+.post .who{font-size:12.5px;color:var(--soft);margin:0 0 10px}
+.post p{margin:0 0 12px}
+
 /* ---------- artefact entries ---------- */
 .entry{padding:28px 0;border-top:1px solid var(--rule)}
 .entry p,.entry .tags{max-width:var(--col)}
@@ -234,6 +283,27 @@ p{margin:0 0 18px}
 .chip{font-family:var(--mono);font-size:10.5px;text-decoration:none;border:1px solid var(--rule);
   padding:3px 10px;border-radius:20px;margin:0 4px 4px 0;display:inline-block;color:var(--soft);background:var(--card)}
 .chip:hover{border-color:var(--mauve);color:var(--slate)}
+
+/* ---------- schedule table ---------- */
+.schedule td{font-size:14.5px;padding:13px 14px 13px 0}
+.schedule td.u{font-weight:700;color:var(--navy);white-space:nowrap;width:64px}
+.schedule td.d{color:var(--soft);white-space:nowrap}
+.schedule td:last-child{white-space:nowrap}
+.schedule .status{margin:0;font-size:10.5px}
+.kind{display:inline-block;font-size:10.5px;font-weight:500;letter-spacing:.06em;
+  text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap}
+.k-e-portfolio{background:var(--blush);color:var(--navy)}
+.k-formative{background:var(--panel);color:var(--soft)}
+.k-assessed{background:var(--navy);color:var(--blush)}
+@media (max-width:760px){
+  .schedule thead{display:none}
+  .schedule tr{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;padding:14px 0;
+    border-bottom:1px solid var(--rule)}
+  .schedule td{border:0;padding:0}
+  .schedule td:nth-child(2){grid-column:2;font-weight:500}
+  .schedule td.u{grid-row:1;grid-column:1}
+  .schedule td.d,.schedule td:nth-child(4),.schedule td:last-child{grid-column:2}
+}
 
 /* ---------- reflection ---------- */
 .reflect{border-top:1px solid var(--rule)}
@@ -295,7 +365,11 @@ p{margin:0 0 18px}
   .hero{margin-top:84px;padding:44px 26px 40px}
   .mhead{margin-top:80px;padding:34px 24px 34px}
   .tabwrap{top:60px;padding:16px 0 14px;margin-top:32px}
+  .subnav{top:124px}
+  .sub-section{scroll-margin-top:186px}
   .colophon{padding:26px 0 64px}
+  .about-box{padding:28px 24px 24px;border-radius:18px}
+  .about-box::before{top:22px;bottom:22px}
   section{padding-bottom:66px}
 }
 @media (prefers-reduced-motion:reduce){
