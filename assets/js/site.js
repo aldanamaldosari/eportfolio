@@ -54,6 +54,26 @@
 })();
 
 
+  /* side menu: follow the entry in view */
+  var mlinks={};
+  document.querySelectorAll('.sidemenu a').forEach(function(a){
+    mlinks[a.getAttribute('href').slice(1)]=a;
+  });
+  if(Object.keys(mlinks).length){
+    var mspy=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        var a=mlinks[e.target.id]; if(!a) return;
+        if(e.isIntersecting){
+          Object.keys(mlinks).forEach(function(k){mlinks[k].removeAttribute('aria-current');});
+          a.setAttribute('aria-current','true');
+        }
+      });
+    },{rootMargin:'-30% 0px -60% 0px'});
+    Object.keys(mlinks).forEach(function(k){
+      var t=document.getElementById(k); if(t) mspy.observe(t);
+    });
+  }
+
   /* in-panel scroll menu */
   var sublinks={};
   document.querySelectorAll('.subnav a').forEach(function(a){

@@ -227,7 +227,7 @@ p{margin:0 0 18px}
 .tl button:focus-visible{outline:2px solid var(--mauve);outline-offset:2px}
 
 /* ---------- code ---------- */
-.code{background:var(--navy);color:var(--blush);border-radius:14px;
+.code{background:var(--panel);color:var(--ink);border:1px solid var(--rule);border-radius:14px;
   padding:20px 22px;margin:0 0 6px;max-width:var(--col);overflow-x:auto;
   font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
   font-size:13px;line-height:1.65;white-space:pre}
@@ -255,7 +255,7 @@ p{margin:0 0 18px}
 .post p{margin:0 0 12px}
 
 /* ---------- artefact entries ---------- */
-.entry{padding:28px 0;border-top:1px solid var(--rule)}
+.entry{padding:28px 0;border-top:1px solid var(--rule);scroll-margin-top:170px}
 .entry p,.entry .tags{max-width:var(--col)}
 .entry:first-of-type{border-top:none;padding-top:0}
 .entry-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
@@ -283,6 +283,29 @@ p{margin:0 0 18px}
 .chip{font-family:var(--mono);font-size:10.5px;text-decoration:none;border:1px solid var(--rule);
   padding:3px 10px;border-radius:20px;margin:0 4px 4px 0;display:inline-block;color:var(--soft);background:var(--card)}
 .chip:hover{border-color:var(--mauve);color:var(--slate)}
+
+/* ---------- side menu beside a panel ---------- */
+.with-menu{display:grid;grid-template-columns:262px minmax(0,1fr);gap:52px;align-items:start}
+.menu-body{max-width:var(--col)}
+.sidemenu{position:sticky;top:146px}
+.sidemenu .m-head{display:block;font-size:10.5px;font-weight:500;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--soft);padding-bottom:10px;
+  border-bottom:1px solid var(--rule)}
+.sidemenu ol{list-style:none;margin:0;padding:0;counter-reset:m}
+.sidemenu li{border-bottom:1px solid var(--rule)}
+.sidemenu a{display:grid;grid-template-columns:1fr auto;gap:2px 10px;
+  padding:13px 0;text-decoration:none;transition:padding .25s}
+.sidemenu .m-unit{grid-column:1;font-size:11px;font-weight:500;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--soft);transition:color .2s}
+.sidemenu .status{grid-column:2;grid-row:1;margin:0;font-size:0}
+.sidemenu .status::before{width:8px;height:8px}
+.sidemenu .m-title{grid-column:1/-1;font-size:14px;line-height:1.4;font-weight:500;
+  color:var(--slate);transition:color .2s}
+.sidemenu a:hover{padding-left:8px}
+.sidemenu a:hover .m-title,.sidemenu a:hover .m-unit{color:var(--mauve)}
+.sidemenu a[aria-current="true"] .m-title{color:var(--navy);font-weight:700}
+.sidemenu a[aria-current="true"] .m-unit{color:var(--mauve)}
+.sidemenu a:focus-visible{outline:2px solid var(--mauve);outline-offset:2px}
 
 /* ---------- artefact schedule ---------- */
 .artefact-schedule{margin-bottom:38px}
@@ -365,6 +388,11 @@ p{margin:0 0 18px}
 @media (max-width:900px){
   .modules{grid-template-columns:1fr;gap:12px;max-width:var(--col)}
   .mod{min-height:0}
+  .with-menu{grid-template-columns:1fr;gap:26px}
+  .sidemenu{position:static;background:var(--card);border:1px solid var(--rule);
+    border-radius:18px;padding:16px 18px 4px}
+  .sidemenu li:last-child{border-bottom:0}
+  .sidemenu a:hover{padding-left:0}
 }
 @media (max-width:760px){
   :root{--radius:20px}
