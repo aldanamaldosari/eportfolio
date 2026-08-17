@@ -54,6 +54,14 @@
 })();
 
 
+  /* module pages: meeting timeline */
+  document.querySelectorAll('.tl button').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var li=btn.parentNode, open=li.classList.toggle('open');
+      btn.setAttribute('aria-expanded',String(open));
+    });
+  });
+
   /* module pages: section switcher */
   var tabs=Array.prototype.slice.call(document.querySelectorAll('.tabs button'));
   if(tabs.length){

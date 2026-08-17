@@ -167,6 +167,44 @@ p{margin:0 0 18px}
 .contrib li::before{content:"";position:absolute;left:0;top:11px;width:8px;height:1px;
   background:var(--mauve)}
 
+/* ---------- roles, documents, timeline ---------- */
+.docs{list-style:none;margin:0 0 6px;padding:0;max-width:var(--col)}
+.docs li{display:flex;align-items:center;gap:12px;padding:9px 0;font-size:15px;
+  border-bottom:1px solid var(--rule)}
+.doc-slot{display:inline-flex;color:var(--soft);opacity:.45}
+.doc-slot svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;
+  stroke-linecap:round;stroke-linejoin:round}
+
+.roles{list-style:none;margin:0 0 26px;padding:0;max-width:var(--col)}
+.roles li{display:flex;flex-wrap:wrap;gap:4px 14px;padding:9px 0;
+  border-bottom:1px solid var(--rule)}
+.roles b{font-weight:700;font-size:15px;color:var(--navy);min-width:150px}
+.roles span{font-size:14.5px;color:var(--soft)}
+
+.timeline{list-style:none;margin:6px 0 8px;padding:0 0 0 26px;position:relative;
+  max-width:var(--col)}
+.timeline::before{content:"";position:absolute;left:5px;top:10px;bottom:10px;width:1px;
+  background:var(--rule)}
+.tl{position:relative;padding:2px 0}
+.tl::before{content:"";position:absolute;left:-26px;top:15px;width:11px;height:11px;
+  border-radius:50%;background:var(--paper);border:1.5px solid var(--soft);
+  transition:background .25s,border-color .25s,transform .25s}
+.tl.done::before{background:var(--slate);border-color:var(--slate)}
+.tl.now::before{background:var(--mauve);border-color:var(--mauve)}
+.tl button{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;
+  background:none;border:0;padding:10px 0;cursor:pointer;font-family:var(--sans);
+  border-bottom:1px solid var(--rule);transition:color .2s}
+.tl-date{font-size:13px;font-weight:500;color:var(--soft);min-width:104px;
+  letter-spacing:.02em;transition:color .2s}
+.tl-title{font-size:15.5px;font-weight:700;letter-spacing:-.02em;color:var(--navy)}
+.tl:hover::before,.tl.open::before{transform:scale(1.25)}
+.tl:hover .tl-date,.tl.open .tl-date{color:var(--mauve)}
+.tl-body{max-height:0;overflow:hidden;opacity:0;font-size:14.5px;line-height:1.6;
+  color:var(--soft);
+  transition:max-height .4s cubic-bezier(.2,.7,.3,1),opacity .3s,padding .3s}
+.tl:hover .tl-body,.tl.open .tl-body{max-height:220px;opacity:1;padding:12px 0 14px}
+.tl button:focus-visible{outline:2px solid var(--mauve);outline-offset:2px}
+
 /* ---------- artefact entries ---------- */
 .entry{padding:28px 0;border-top:1px solid var(--rule)}
 .entry p,.entry .tags{max-width:var(--col)}

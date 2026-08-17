@@ -3,7 +3,7 @@
 Professional ePortfolio documenting my learning journey through the MSc Artificial
 Intelligence programme at the University of Essex.
 
-Live at https://aldanamaldosari.github.io/eportfolio2
+Live at https://[username].github.io/
 
 ## Structure
 
@@ -65,14 +65,31 @@ easy to find with a search across the folder.
 * **Adding the CV** — replace the `<span>` holding the document icon in the footer
   with an `<a href="...">` and the fade disappears
 
+## Deployment
+
+GitHub Pages, from `main`.
+
+```
+git add .
+git commit -m "Description"
+git push origin main
+```
+
+Pages rebuilds within a minute or two. If the site looks unchanged, hard-refresh
+with Ctrl+F5 — that is CDN caching, not a failed push.
+
 ## Programme Information
 
 * Programme: MSc Artificial Intelligence
 * Institution: University of Essex
 * Modules published: 3
 
-## Disclaimer 
-The design and front-end code of this site were developed with the assistance of Claude, an AI assistant made by Anthropic. All academic content — the reflections, artefacts, analysis and evidence presented against the learning outcomes — is my own work.
+## Disclaimer
+
+The design and front-end code of this site were developed with the assistance of
+Claude, an AI assistant made by Anthropic. All academic content — the reflections,
+artefacts, analysis and evidence presented against the learning outcomes — is my
+own work.
 
 ---
 
