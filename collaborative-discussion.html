@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Collaborative Discussion — Intelligent Agents</title>
+<title>Collaborative Discussion 1 — Intelligent Agents</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
@@ -24,36 +24,49 @@
   <div class="block slate mhead">
     <a class="back" href="module-02.html#artefacts">← Intelligent Agents</a>
     <span class="status now">In progress</span>
-    <h1>Collaborative Discussion</h1>
-    <p class="sub">Module discussion forum — my posts, the replies they drew, and the
-      reviews I wrote for my peers.</p>
+    <h1>Collaborative Discussion 1: Agent Based Systems</h1>
+    <p class="sub">Units 1–3 — what led to the rise of agent-based systems, and the
+      benefits the approach offers organisations.</p>
   </div>
 
   <div class="tabwrap">
     <div class="tabs" role="tablist" aria-label="Discussion sections">
       <button role="tab" data-panel="brief" aria-controls="brief" aria-selected="true">Task</button>
       <button role="tab" data-panel="thread" aria-controls="thread" aria-selected="false">My posts</button>
-      <button role="tab" data-panel="reviews" aria-controls="reviews" aria-selected="false">Peer reviews</button>
+      <button role="tab" data-panel="reviews" aria-controls="reviews" aria-selected="false">Peer responses</button>
       <button role="tab" data-panel="refs" aria-controls="refs" aria-selected="false">References</button>
     </div>
   </div>
 
   <div class="tabpanel" id="brief" role="tabpanel">
+
     <div class="reading">
       <p class="lede reveal">
-        [The discussion question or brief, in one or two sentences.]
-      </p>
-      <p class="reveal">
-        [What the task asked for — an initial post by a given date, replies to a set
-        number of peers, and a summary post closing the thread.]
+        Discuss what has led to the rise of agent-based systems and the benefits that
+        this approach can offer to organisations. The discussion should include at
+        least three references.
       </p>
 
-      <h3 class="sub-head">Requirements</h3>
+      <h3 class="sub-head">Guidance</h3>
       <ul class="contrib">
-        <li>[Initial post — word count and deadline.]</li>
-        <li>[Peer responses — how many, and by when.]</li>
-        <li>[Summary post — what it has to cover.]</li>
+        <li>Initial post responding to the question, at least 200 words — Unit 1.</li>
+        <li>Responses to at least two peers' posts, 200–300 words each — Unit 2.</li>
+        <li>Summary post of 300 words drawing on the initial post, peer feedback and
+          the content of the three units — Unit 3.</li>
+        <li>All sources referenced in UoEO Harvard style.</li>
       </ul>
+
+      <h3 class="sub-head">Learning outcomes</h3>
+      <ul class="contrib">
+        <li>The motivations for, and appropriate use of, agent-based computing.</li>
+        <li>The main agent models in use today and their grounding in artificial
+          intelligence research.</li>
+      </ul>
+
+      <h3 class="sub-head">Assessment</h3>
+      <p class="small">Not assessed directly; the tutor posts group feedback by module
+        announcement. This activity forms a component of the e-portfolio submitted in
+        Unit 12.</p>
     </div>
   </div>
 
@@ -69,33 +82,150 @@
 
       <section class="sub-section" id="initial-post">
         <h3>Initial post</h3>
-        <p class="when">[Posted — date]</p>
+        <p class="when">Unit 1</p>
+
         <div class="post mine">
-          <p>[Your initial post, in full.]</p>
+          <p>The rise of agent-based systems is the result of a vast array of changes in
+            computing, not a single breakthrough. Wooldridge (2009) identifies five
+            trends — ubiquity, interconnection, intelligence, delegation, and human
+            orientation — and he argues that it was these that made agency an intuitive
+            design abstraction: as processing became cheap, embedded and networked,
+            software had to work in an open environment that no designer could fully
+            specify in advance. Jennings, Sycara and Wooldridge (1998) say that
+            agent-based computing arose in response to the problem of conventional,
+            centrally controlled software engineering, which struggles to cope with
+            systems that are distributed, dynamic, and composed of components owned by
+            different stakeholders. Delegation is the key: organisations need software
+            that acts autonomously on their behalf when uncertainty arises, not software
+            that waits to be told what to do.</p>
+
+          <p>These motivations are backed up by the mainstream AI field. Brooks (1991)
+            challenged the assumption that intelligent behaviour requires a symbolic
+            world model and developed reactive architecture suitable for real-time,
+            embedded environments. Rao and Georgeff (1995) formalised the
+            Belief–Desire–Intention model, translating Bratman's (1987) philosophy of
+            practical reasoning into a deliberative architecture that is still
+            influential in commercial agent platforms. Hybrid, layered architectures
+            have since developed to build on this, and Russell and Norvig (2021) have
+            defined the rational agent as the central abstraction for AI.</p>
+
+          <p>The benefits are largely architectural for organisations: decomposing a
+            problem into autonomous, loosely coupled agents facilitates modularity and
+            incremental development; decentralisation removes single points of failure
+            and allows the system to degrade gracefully rather than fail outright; and
+            open design allows agents to join or leave at runtime, helping the system
+            scale. Coordination and negotiation mechanisms allow for supply chain
+            management, smart grid balancing, and automated procurement. Bonabeau (2002)
+            discusses agent-based modelling, in which emergent behaviour at the system
+            level can be simulated to inform decision-making and resource allocation;
+            however, the resulting behaviour may be opaque and difficult to verify.</p>
         </div>
       </section>
 
       <section class="sub-section" id="replies">
         <h3>Replies to my post</h3>
-        <p class="when">[2 replies received]</p>
+        <p class="when">Unit 2 · 2 replies received</p>
+
         <div class="post">
-          <h4>[Peer name or initials]</h4>
-          <p class="who">[Date]</p>
-          <p>[Their reply, in full.]</p>
+          <h4>I.E.</h4>
+          <p class="who">Reply to my initial post</p>
+          <p>Your post provides a strong explanation of how the limitations of centrally
+            controlled software contributed to the rise of agent-based systems. I
+            particularly agree with your view that delegation is central to this
+            development. When an environment is distributed and cannot be fully specified
+            in advance, an agent must be able to respond autonomously while continuing to
+            pursue organisational goals. Your comparison of reactive and deliberative
+            approaches also usefully demonstrates that there is no single agent
+            architecture suitable for every context.</p>
+          <p>The concern you raise about opacity and verification is especially
+            important. Although decentralisation may improve resilience by reducing
+            reliance on a single controller, it can also make responsibility difficult to
+            trace when several agents interact and produce unexpected emergent behaviour.
+            Bonabeau (2002) notes that simple agent-level rules can generate complex
+            system-level outcomes; consequently, an organisation should not assume that
+            modularity automatically makes the overall system predictable.</p>
+          <p>Several measures could reduce this risk. Agents should operate within
+            explicit authority limits, maintain auditable decision logs, and provide
+            explanations for consequential actions. Organisations could also test agent
+            interactions through simulation and scenario-based validation before
+            deployment, while monitoring outcomes continuously after deployment. Human
+            approval or override should remain available for high-impact decisions, such
+            as financial transactions or changes to critical infrastructure. In addition,
+            Jennings (2000) argues that effective agent-oriented systems require careful
+            treatment of organisational relationships and interactions, not only the
+            behaviour of individual agents.</p>
+          <p>Your discussion therefore raises an interesting question: as a multi-agent
+            system becomes more autonomous and open, how should an organisation balance
+            adaptability with the need for accountability and predictable control?</p>
         </div>
+
         <div class="post">
-          <h4>[Peer name or initials]</h4>
-          <p class="who">[Date]</p>
-          <p>[Their reply, in full.]</p>
+          <h4>K.D.</h4>
+          <p class="who">Reply to my initial post</p>
+          <p>I really enjoyed reading your discussion of the factors that contributed to
+            the rise of agent-based systems. Your explanation of Wooldridge's (2009) five
+            trends and the connection to distributed, dynamic environments clearly
+            highlights why traditional centralised software architectures often struggle
+            in complex real-world settings.</p>
+          <p>One additional point worth considering is the impact of modern generative AI
+            on agent-based computing. While classical agent architectures such as the BDI
+            model focus on autonomous decision-making through beliefs, desires and
+            intentions (Rao and Georgeff, 1995), recent advances in large language models
+            have significantly expanded what agents can do. Today's AI agents can
+            interpret natural language, reason about tasks, interact with external tools,
+            and collaborate with other agents to achieve goals. This strengthens the
+            concept of delegation that you discuss, as organisations increasingly rely on
+            autonomous agents to support decision-making and automate business
+            processes.</p>
+          <p>However, these capabilities also introduce challenges related to
+            transparency, trust and governance. As agents become more autonomous,
+            ensuring their decisions are explainable and aligned with organisational
+            objectives becomes increasingly important (Russell and Norvig, 2021).
+            Therefore, the future success of agent-based systems may depend not only on
+            their autonomy and scalability but also on effective mechanisms for oversight
+            and accountability.</p>
         </div>
       </section>
 
       <section class="sub-section" id="summary-post">
         <h3>Summary post</h3>
-        <p class="when">[Posted — date]</p>
+        <p class="when">Unit 3</p>
+
         <div class="post mine">
-          <p>[Your summary post, in full — what the thread converged on, what you
-            changed your mind about, and what remains open.]</p>
+          <p>In my first post, I argued that agent-based systems emerged from convergent
+            trends instead of a single breakthrough (Wooldridge, 2009), and delegation was
+            the key driver: distributed, open environments cannot be fully defined in
+            advance, so software has to act on behalf of an organisation under uncertainty
+            (Jennings, Sycara and Wooldridge, 1998). The benefits I found from decomposing
+            a problem into loosely coupled autonomous agents — modularity, graceful
+            degradation, runtime openness — all follow from that decomposition.</p>
+
+          <p>Both peer comments related to the same fault line that I had only touched
+            upon briefly in Bonabeau (2002): the factors that make these systems resilient
+            also make them opaque. I.E. argued that decentralisation makes it harder to
+            trace responsibility, as simple agent-level rules lead to complex system-level
+            outcomes, and modularity does not mean predictability. K.D. took the case to a
+            further dimension and pointed out that LLM agents, in the sense of reading
+            natural language, using external tools, and working effectively with one
+            another, enlarge delegation even while making alignment and explanation more
+            difficult.</p>
+
+          <p>I would amend my original framing from this perspective. I had been thinking
+            of opacity as a caveat for agent-based modelling, but now understand it as a
+            structural cost of the same design choice I had presented as a benefit.
+            Autonomy and accountability are not separate issues to be balanced afterwards,
+            but a pair of properties to be designed together. This answers I.E.'s closing
+            question: the balance is set at design time through bounded authority, not
+            negotiated at runtime.</p>
+
+          <p>In a more concrete sense, all of the measures raised through the thread —
+            clear authority limits, auditable decision logs, simulation and
+            scenario-based validation before deployment, continuous monitoring after it,
+            and human override for high-impact actions — should be considered as
+            first-class architectural requirements, not governance added later. Jennings
+            (2000) also supports this view: agent-oriented engineering is concerned with
+            organisational relationships and interaction structures, not with individual
+            agent behaviour alone. Verifiability is what makes delegation sensible.</p>
         </div>
       </section>
 
@@ -104,21 +234,101 @@
 
   <div class="tabpanel" id="reviews" role="tabpanel" hidden>
     <div class="reading">
-      <p class="reveal">Reviews I wrote on other students' posts.</p>
+      <p class="reveal">Responses I wrote to two peers in Unit 2.</p>
 
-      <article class="entry reveal">
-        <div class="entry-head"><span class="call">Review 1</span><h3>[Peer name or initials]</h3></div>
-        <p class="meta">[Date] · on [their post title or topic]</p>
+      <article class="entry reveal" id="review-fb">
+        <div class="entry-head"><span class="call">Peer response 1</span><h3>F.B.</h3></div>
+        <p class="meta">Unit 2 · on commitment in BDI agents and coordination gains in logistics</p>
+
+        <p class="small">Their post argued that agents became necessary because ordinary
+          programs assume a static environment, grounded the claim in the BDI model, and
+          cited a logistics study reporting large delay reductions from coordination.</p>
+
         <div class="post mine">
-          <p>[Your review, in full.]</p>
+          <p>Your framing of commitment as the thing that stops an agent from thrashing is
+            certainly solid, but I would go for a higher degree of scrutiny, since that is
+            also where BDI agents fall behind. Rao and Georgeff (1995) consider intention
+            reconsideration as an open design parameter instead of a settled one, and
+            Kinny and Georgeff's (1991) Tileworld experiments show the same: bold agents
+            that rarely reconsider outperform cautious ones when the environment changes
+            slowly, but that ordering changes as the rate of change increases. So "don't
+            rethink everything constantly" is not necessarily correct: it is a bet on how
+            dynamic the environment is, which is exactly what Wooldridge (2002) sets up as
+            the case for agents in the first place. Worth naming the bet explicitly.</p>
+
+          <p>That also affects how far the logistics evidence travels. Feizabadi, Hosseini
+            and Yahouni (2025) report their gains from simulations with a learned
+            communication channel, so the roughly three-quarters median delay reduction
+            bundles coordination with a trained policy and a particular shop-floor layout.
+            I would take it as strong evidence that coordination is worth paying for,
+            rather than as a transferable figure.</p>
+
+          <p>The same shape of risk applies to the research agent you describe. A Planner
+            that commits to a decomposition from an ambiguous topic will keep retrieving
+            confidently against a poor plan, and the Curation Agent only sees what
+            retrieval hands it. That is the argument for interleaving reasoning with
+            observation instead of planning once, as Yao et al. (2023) demonstrate with
+            ReAct-style feedback, and for a validation step downstream of curation.</p>
+
+          <p>So my question back: what would actually trigger re-planning in your setup —
+            low retrieval yield, weak relevance scores, or an explicit human
+            checkpoint?</p>
         </div>
       </article>
 
-      <article class="entry reveal" data-i="1">
-        <div class="entry-head"><span class="call">Review 2</span><h3>[Peer name or initials]</h3></div>
-        <p class="meta">[Date] · on [their post title or topic]</p>
+      <article class="entry reveal" data-i="1" id="review-ie">
+        <div class="entry-head"><span class="call">Peer response 2</span><h3>I.E.</h3></div>
+        <p class="meta">Unit 2 · on the five trends, delegation and organisational benefit</p>
+
+        <p class="small">Their post linked the rise of agent-based systems to ubiquity,
+          interconnection, intelligence, delegation and human orientation, and argued that
+          agents suit workflows that traditional fixed-instruction software cannot
+          serve.</p>
+
         <div class="post mine">
-          <p>[Your review, in full.]</p>
+          <p>I think delegation and increasing system autonomy are at the heart of the
+            growth of agent-based computing. Your point that modern software must operate
+            continuously and respond to changing conditions aligns with the autonomy and
+            reactivity described by Wooldridge and Jennings (1995). Still, at the same
+            time, the increasing delegation of decision-making poses a major challenge:
+            the more autonomy we give an agent, the more carefully we need to define the
+            boundaries of that autonomy.</p>
+
+          <p>Jennings (2000) acknowledges that agent-based systems comprise autonomous
+            components whose interactions can lead to complex system-level behaviour. Such
+            flexibility allows for greater resilience, but failures are hard to predict or
+            track. Therefore, organisations should not consider delegation to replace the
+            human decision-making process. Explicit operational limits, human approval for
+            high-impact actions, continuous monitoring, and mechanisms for overriding or
+            ending the agent's behaviour could help prevent unintended consequences.</p>
+
+          <p>There is also a potential tension between proactivity and control. An agent
+            that is proactively seeking to achieve organisational objectives may choose to
+            do what it can technically achieve, even if it is counter to organisational
+            priorities. This is particularly important in financial trading or
+            telecommunications, where autonomous behaviour could be immediately
+            operational. Russell (2019) also argues that increasingly capable AI systems
+            should have objectives and behaviours aligned with human preferences.</p>
+
+          <p>Therefore, alongside the five trends you describe, I would say that governance
+            and accountability should develop at the same pace as autonomy. How do you
+            think organisations should determine which decisions can be fully delegated to
+            agents and what should always require human approval?</p>
+        </div>
+
+        <div class="post">
+          <h4>I.E. replied</h4>
+          <p class="who">Answering my question on where the boundary sits</p>
+          <p>The boundary should be determined through a risk-based approach rather than
+            by the technical capability of the agent alone. Decisions that are low-impact,
+            reversible, routine and governed by clearly defined rules could reasonably be
+            delegated fully. Human approval should remain mandatory where decisions carry
+            significant financial, legal, ethical, safety or security consequences,
+            particularly when the outcome is difficult to reverse. Autonomy is therefore a
+            graduated spectrum rather than an all-or-nothing choice, with monitoring,
+            auditability and override providing the safeguards. The question is not
+            whether the agent can make a decision, but what follows if it makes the wrong
+            one, and who remains accountable.</p>
         </div>
       </article>
     </div>
@@ -126,11 +336,46 @@
 
   <div class="tabpanel" id="refs" role="tabpanel" hidden>
     <div class="reading">
-      <p class="reveal">Sources cited across the posts above, in UoEO Harvard format.</p>
+      <p class="reveal">Sources cited across my posts, in UoEO Harvard format.</p>
+
       <ul class="refs">
-        <li>[Author, A. (Year) 'Title', <i>Journal</i>, volume(issue), pp. x–y.]</li>
-        <li>[Author, B. (Year) <i>Title</i>. Place: Publisher.]</li>
-        <li>[Author, C. (Year) 'Title'. Available at: URL (Accessed: date).]</li>
+        <li>Bonabeau, E. (2002) 'Agent-based modeling: methods and techniques for
+          simulating human systems', <i>Proceedings of the National Academy of
+          Sciences</i>, 99(suppl. 3), pp. 7280–7287.</li>
+        <li>Bratman, M.E. (1987) <i>Intention, Plans, and Practical Reason</i>. Cambridge,
+          MA: Harvard University Press.</li>
+        <li>Brooks, R.A. (1991) 'Intelligence without representation', <i>Artificial
+          Intelligence</i>, 47(1–3), pp. 139–159.</li>
+        <li>Feizabadi, M., Hosseini, A. and Yahouni, Z. (2025) 'Multi-agent deep Q-network
+          with layer-based communication channel for autonomous internal logistics vehicle
+          scheduling in smart manufacturing', in Dassisti, M., Madani, K. and Panetto, H.
+          (eds.) <i>Innovative Intelligent Industrial Production and Logistics: 5th
+          International Conference, IN4PL 2024</i>. Cham: Springer.</li>
+        <li>Jennings, N.R. (2000) 'On agent-based software engineering', <i>Artificial
+          Intelligence</i>, 117(2), pp. 277–296.</li>
+        <li>Jennings, N.R., Sycara, K. and Wooldridge, M. (1998) 'A roadmap of agent
+          research and development', <i>Autonomous Agents and Multi-Agent Systems</i>,
+          1(1), pp. 7–38.</li>
+        <li>Kinny, D. and Georgeff, M. (1991) 'Commitment and effectiveness of situated
+          agents', <i>Proceedings of the Twelfth International Joint Conference on
+          Artificial Intelligence (IJCAI-91)</i>. Sydney, 24–30 August, pp. 82–88.</li>
+        <li>Rao, A.S. and Georgeff, M.P. (1995) 'BDI agents: from theory to practice',
+          <i>Proceedings of the First International Conference on Multi-Agent Systems
+          (ICMAS-95)</i>. San Francisco, CA, 12–14 June. Menlo Park, CA: AAAI Press,
+          pp. 312–319.</li>
+        <li>Russell, S. (2019) <i>Human Compatible: Artificial Intelligence and the
+          Problem of Control</i>. New York: Viking.</li>
+        <li>Russell, S. and Norvig, P. (2021) <i>Artificial Intelligence: A Modern
+          Approach</i>. 4th edn. Harlow: Pearson.</li>
+        <li>Wooldridge, M. (2002) <i>An Introduction to MultiAgent Systems</i>.
+          Chichester: John Wiley &amp; Sons.</li>
+        <li>Wooldridge, M. (2009) <i>An Introduction to MultiAgent Systems</i>. 2nd edn.
+          Chichester: John Wiley &amp; Sons.</li>
+        <li>Wooldridge, M.J. and Jennings, N.R. (1995) 'Intelligent agents: theory and
+          practice', <i>The Knowledge Engineering Review</i>, 10(2), pp. 115–152.</li>
+        <li>Yao, S. et al. (2023) 'ReAct: synergizing reasoning and acting in language
+          models', <i>Proceedings of the Eleventh International Conference on Learning
+          Representations (ICLR 2023)</i>. Kigali, 1–5 May.</li>
       </ul>
     </div>
   </div>
