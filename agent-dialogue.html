@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Dialogue with KQML and KIF — AlDana Al-Dosari</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2220%22%20fill%3D%22%23101A45%22%2F%3E%3Cg%20transform%3D%22translate%2810.00%2C16.87%29%20scale%280.17391%29%22%20fill%3D%22%23E1CBD7%22%3E%3Cg%20transform%3D%22translate%280%2C381%29%20scale%280.1%2C-0.1%29%22%3E%3Cpath%20d%3D%22M2305%203800%20c-159%20-5%20-468%20-14%20-685%20-19%20-837%20-22%20-1142%20-137%20-1176%20-441%20-24%20-218%20246%20-663%20336%20-555%2010%2013%206%2022%20-28%2059%20-166%20180%20-73%20490%20187%20625%20192%2099%20503%20165%20961%20206%20231%2020%20583%2020%20528%200%20-120%20-44%20-259%20-136%20-318%20-210%20-16%20-20%20-136%20-248%20-268%20-508%20-358%20-705%20-1354%20-2525%20-1454%20-2657%20-77%20-102%20-193%20-189%20-287%20-216%20-86%20-25%20-101%20-32%20-101%20-49%200%20-65%20204%20-21%20338%2074%20270%20190%20394%20208%20637%2096%20683%20-317%201699%20-215%202380%20240%20611%20408%201090%201124%201216%201821%2027%20146%2033%20507%2011%20609%20-123%20557%20-463%20812%20-1214%20911%20-150%2020%20-639%2026%20-1063%2014z%20m980%20-145%20c690%20-113%201018%20-639%20875%20-1405%20-235%20-1264%20-1201%20-2132%20-2375%20-2133%20-351%20-1%20-533%2055%20-690%20212%20-166%20164%20-161%20185%20245%20966%20213%20410%20394%20765%20562%201106%20412%20835%20618%201152%20796%201222%20118%2047%20403%2062%20587%2032z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#101A45; --slate:#26425A; --soft:#86A8CF;
+    --mauve:#C38EB4; --blush:#E1CBD7; --ink:#16242E; --bg:#FBF8FA;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);
+       line-height:1.65;font-size:1.02rem}
+  a{color:var(--slate)}
+
+  /* header block — flat solid colour */
+  header{background:var(--navy);color:var(--blush);padding:56px 24px 48px}
+  .head-inner{max-width:960px;margin:0 auto}
+  .crumb{color:var(--soft);font-size:.9rem;margin-bottom:18px}
+  .crumb a{color:var(--soft);text-decoration:none}
+  h1{font-size:2.1rem;font-weight:700;line-height:1.25;max-width:640px}
+  .head-sub{color:var(--soft);margin-top:14px;max-width:560px}
+
+  /* main layout with marginalia column */
+  main{max-width:960px;margin:0 auto;padding:48px 24px 80px}
+  section{display:grid;grid-template-columns:minmax(0,600px) 280px;
+          column-gap:48px;margin-bottom:56px}
+  section > *{grid-column:1}
+  .margin-note{grid-column:2;align-self:start;font-size:.86rem;color:var(--slate);
+               border-left:3px solid var(--mauve);padding-left:14px;margin-top:4px}
+  .margin-note b{color:var(--navy)}
+  h2{color:var(--navy);font-size:1.35rem;margin-bottom:14px}
+  p{margin-bottom:14px;max-width:600px}
+
+  pre{font-family:'JetBrains Mono',monospace;font-size:.82rem;line-height:1.55;
+      background:#F4EDF2;color:var(--ink);padding:14px 16px;border-radius:10px;
+      overflow-x:auto;margin-bottom:14px}
+
+  /* dialogue message cards — light cards, flat, side-accented */
+  .msg{background:#fff;border-radius:12px;padding:16px 18px;margin:0 0 6px;
+       border:1px solid var(--blush)}
+  .msg.alice{border-left:6px solid var(--navy)}
+  .msg.bob{border-left:6px solid var(--mauve)}
+  .msg .who{font-weight:700;color:var(--navy);margin-bottom:8px}
+  .msg .who span{font-weight:400;color:var(--slate);font-style:italic;font-size:.88rem}
+  .msg pre{margin-bottom:0}
+  .pair{margin-bottom:34px;display:grid;grid-template-columns:minmax(0,600px) 280px;
+        column-gap:48px}
+  .pair .msg{grid-column:1}
+  .pair .margin-note{grid-column:2}
+
+  /* speech act table */
+  table{border-collapse:collapse;width:100%;max-width:600px;font-size:.94rem}
+  th{background:var(--navy);color:var(--blush);text-align:left;padding:10px 14px}
+  td{padding:10px 14px;border-bottom:1px solid var(--blush);vertical-align:top}
+  tr:nth-child(even) td{background:#fff}
+  td code{font-family:'JetBrains Mono',monospace;font-size:.85rem;color:var(--navy);
+          background:var(--blush);padding:1px 6px;border-radius:5px}
+
+  figure{margin:0}
+  figure svg{width:100%;height:auto;border-radius:12px}
+  figcaption{font-size:.86rem;color:var(--slate);font-style:italic;margin-top:10px}
+
+  .kicker{background:var(--slate);color:var(--blush);border-radius:12px;
+          padding:18px 22px;max-width:600px}
+  .kicker b{color:#fff}
+
+  @media (max-width:880px){
+    section,.pair{grid-template-columns:1fr}
+    .margin-note{grid-column:1;border-left-color:var(--soft);margin:6px 0 0}
+  }
+
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:70;background:rgba(251,248,250,.86);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid #DFD2DA}
+  .topbar .bar{max-width:1180px;margin:0 auto;padding:0 32px;height:64px;
+    display:flex;align-items:center;gap:26px}
+  .topbar .sig{display:flex;align-items:center;gap:11px;font-weight:700;font-size:15px;
+    letter-spacing:-.02em;color:var(--navy);text-decoration:none;margin-right:auto}
+  .topbar .sig-text{display:block}
+  .topbar .sig-text span{font-size:10.5px;font-weight:400;letter-spacing:.08em;
+    color:#64788A;display:block;margin-top:1px}
+  .topbar .logo{height:26px;width:auto;flex:none;display:block;overflow:visible;margin:-2px 2px 0 0}
+  .topbar .logo path{fill:var(--navy);transition:fill .25s}
+  .topbar .sig:hover .logo path{fill:var(--mauve)}
+  .topbar nav{display:flex;gap:2px}
+  .topbar nav a{font-size:13.5px;font-weight:500;color:#64788A;text-decoration:none;
+    padding:7px 13px;border-radius:20px;transition:color .2s,background .2s}
+  .topbar nav a:hover{color:var(--navy);background:#EFE6EC}
+  header{padding-top:118px}
+  @media (max-width:760px){
+    .topbar .bar{padding:0 18px;height:60px;gap:8px}
+    .topbar nav a{padding:6px 9px;font-size:12.5px}
+    header{padding-top:100px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="bar">
+    <a class="sig" href="index.html#home"><svg class="logo" viewBox="0 0 460 381" aria-hidden="true"><g transform="translate(0,381) scale(0.1,-0.1)"><path d="M2305 3800 c-159 -5 -468 -14 -685 -19 -837 -22 -1142 -137 -1176 -441 -24 -218 246 -663 336 -555 10 13 6 22 -28 59 -166 180 -73 490 187 625 192 99 503 165 961 206 231 20 583 20 528 0 -120 -44 -259 -136 -318 -210 -16 -20 -136 -248 -268 -508 -358 -705 -1354 -2525 -1454 -2657 -77 -102 -193 -189 -287 -216 -86 -25 -101 -32 -101 -49 0 -65 204 -21 338 74 270 190 394 208 637 96 683 -317 1699 -215 2380 240 611 408 1090 1124 1216 1821 27 146 33 507 11 609 -123 557 -463 812 -1214 911 -150 20 -639 26 -1063 14z m980 -145 c690 -113 1018 -639 875 -1405 -235 -1264 -1201 -2132 -2375 -2133 -351 -1 -533 55 -690 212 -166 164 -161 185 245 966 213 410 394 765 562 1106 412 835 618 1152 796 1222 118 47 403 62 587 32z"/></g></svg><span class="sig-text">AlDana Al-Dosari<span>MSc Artificial Intelligence</span></span></a>
+    <nav><a href="index.html#home">Home</a><a href="index.html#about">About me</a><a href="module-02.html#artefacts">Modules</a></nav>
+  </div>
+</div>
+
+
+<header>
+  <div class="head-inner">
+    <div class="crumb"><a href="index.html#home">e-Portfolio</a> / <a href="module-02.html#artefacts">Intelligent Agents</a> / Artefact</div>
+    <h1>An Agent Dialogue with KQML and KIF</h1>
+    <p class="head-sub">Two software agents negotiate warehouse stock through
+    speech acts, a shared ontology, and first-order-logic content.</p>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ INTRODUCTION ============ -->
+<section>
+  <h2>Introduction — the task</h2>
+  <p>This activity asked for a dialogue between two agents built on
+  <strong>KQML</strong> (Knowledge Query and Manipulation Language) and
+  <strong>KIF</strong> (Knowledge Interchange Format). <strong>Alice</strong> is a
+  procurement agent that buys stock; <strong>Bob</strong> controls stock levels for
+  a warehouse. Alice must discover two facts before purchasing: how many
+  50-inch televisions are available, and how many HDMI slots each set has.</p>
+  <p>The two languages divide the work cleanly. KQML is the outer envelope: its
+  performatives express the sender's <em>intent</em> as a speech act. KIF is the
+  content inside the envelope: logical expressions stating queries and facts.
+  A shared ontology, <code style="font-family:'JetBrains Mono',monospace">warehouse-stock</code>,
+  guarantees that both agents mean the same thing by every term. Because of this
+  separation, Alice never needs to know how Bob stores his data, and Bob never
+  needs to know why Alice is asking — the loose coupling that motivates
+  agent-based computing in heterogeneous systems.</p>
+  <aside class="margin-note"><b>Why agents at all?</b> In supply chains, systems
+  from different vendors and eras must cooperate without sharing internals.
+  Knowledge-level messaging is the alternative to brittle point-to-point
+  integration.</aside>
+</section>
+
+<!-- ============ ONTOLOGY ============ -->
+<section>
+  <h2>The ontology</h2>
+  <p>Before any message is exchanged, both agents commit to the
+  <em>warehouse-stock</em> ontology. It defines the classes, the instance being
+  discussed, and the functions that map a product to a value:</p>
+  <pre>;; Ontology: warehouse-stock
+;; Classes
+(defclass Product)
+(defclass Television :subclass-of Product)
+
+;; Instances
+(instance-of television-50inch Television)
+
+;; Functions (each Product maps to a value)
+(deffunction available-stock (?p Product) :-&gt; Integer)   ; units on hand
+(deffunction hdmi-slots      (?p Product) :-&gt; Integer)   ; HDMI ports per unit
+(deffunction screen-size     (?p Product) :-&gt; Integer)   ; inches</pre>
+  <p>The ontology is what turns syntax into meaning. Without it, a message could
+  be perfectly well-formed KQML and still be uninterpretable — or worse,
+  interpreted differently by each side, producing confidently wrong answers
+  rather than errors.</p>
+  <aside class="margin-note"><b>The hard problem.</b> Ontology alignment remains
+  one of the major unsolved challenges in multi-agent systems. If Bob counted
+  pallets while Alice expected units, both agents would proceed happily — and
+  incorrectly.</aside>
+</section>
+
+<!-- ============ DIAGRAM ============ -->
+<section>
+  <h2>The dialogue at a glance</h2>
+  <figure>
+    <svg viewBox="0 0 860 640" xmlns="http://www.w3.org/2000/svg" font-family="'DM Sans','Segoe UI',Arial,sans-serif" role="img" aria-label="Sequence diagram of the KQML dialogue between Alice and Bob">
+      <defs>
+        <marker id="arrowNavy" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+          <path d="M0,0 L10,4 L0,8 Z" fill="#101A45"/>
+        </marker>
+        <marker id="arrowMauve" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+          <path d="M0,0 L10,4 L0,8 Z" fill="#C38EB4"/>
+        </marker>
+      </defs>
+      <rect x="0" y="0" width="860" height="640" fill="#FFFFFF" rx="14"/>
+      <text x="430" y="42" text-anchor="middle" font-size="21" font-weight="700" fill="#16242E">KQML / KIF Agent Dialogue</text>
+      <text x="430" y="64" text-anchor="middle" font-size="13" fill="#26425A">Shared ontology: warehouse-stock</text>
+      <rect x="90" y="88" width="220" height="46" rx="10" fill="#101A45"/>
+      <text x="200" y="116" text-anchor="middle" font-size="15" font-weight="600" fill="#E1CBD7">Alice · Procurement Agent</text>
+      <rect x="550" y="88" width="220" height="46" rx="10" fill="#26425A"/>
+      <text x="660" y="116" text-anchor="middle" font-size="15" font-weight="600" fill="#E1CBD7">Bob · Warehouse Agent</text>
+      <line x1="200" y1="134" x2="200" y2="586" stroke="#86A8CF" stroke-width="2" stroke-dasharray="5 5"/>
+      <line x1="660" y1="134" x2="660" y2="586" stroke="#86A8CF" stroke-width="2" stroke-dasharray="5 5"/>
+      <line x1="652" y1="176" x2="208" y2="176" stroke="#C38EB4" stroke-width="2.5" marker-end="url(#arrowMauve)"/>
+      <rect x="285" y="146" width="290" height="24" rx="6" fill="#E1CBD7"/>
+      <text x="430" y="162" text-anchor="middle" font-size="12.5" font-weight="600" fill="#16242E">0 · advertise — "I answer stock queries"</text>
+      <line x1="208" y1="262" x2="652" y2="262" stroke="#101A45" stroke-width="2.5" marker-end="url(#arrowNavy)"/>
+      <rect x="240" y="206" width="380" height="50" rx="8" fill="#FBF8FA" stroke="#86A8CF" stroke-width="1.5"/>
+      <text x="430" y="226" text-anchor="middle" font-size="12.5" font-weight="700" fill="#101A45">1 · ask-one  :reply-with query-tv-stock-01</text>
+      <text x="430" y="245" text-anchor="middle" font-size="12" fill="#26425A" font-family="'JetBrains Mono','Consolas',monospace">(available-stock television-50inch ?quantity)</text>
+      <line x1="652" y1="348" x2="208" y2="348" stroke="#26425A" stroke-width="2.5" marker-end="url(#arrowNavy)"/>
+      <rect x="240" y="292" width="380" height="50" rx="8" fill="#FBF8FA" stroke="#C38EB4" stroke-width="1.5"/>
+      <text x="430" y="312" text-anchor="middle" font-size="12.5" font-weight="700" fill="#101A45">2 · tell  :in-reply-to query-tv-stock-01</text>
+      <text x="430" y="331" text-anchor="middle" font-size="12" fill="#26425A" font-family="'JetBrains Mono','Consolas',monospace">(= (available-stock television-50inch) 137)</text>
+      <line x1="208" y1="434" x2="652" y2="434" stroke="#101A45" stroke-width="2.5" marker-end="url(#arrowNavy)"/>
+      <rect x="240" y="378" width="380" height="50" rx="8" fill="#FBF8FA" stroke="#86A8CF" stroke-width="1.5"/>
+      <text x="430" y="398" text-anchor="middle" font-size="12.5" font-weight="700" fill="#101A45">3 · ask-one  :reply-with query-tv-hdmi-02</text>
+      <text x="430" y="417" text-anchor="middle" font-size="12" fill="#26425A" font-family="'JetBrains Mono','Consolas',monospace">(hdmi-slots television-50inch ?number)</text>
+      <line x1="652" y1="520" x2="208" y2="520" stroke="#26425A" stroke-width="2.5" marker-end="url(#arrowNavy)"/>
+      <rect x="240" y="464" width="380" height="50" rx="8" fill="#FBF8FA" stroke="#C38EB4" stroke-width="1.5"/>
+      <text x="430" y="484" text-anchor="middle" font-size="12.5" font-weight="700" fill="#101A45">4 · tell  :in-reply-to query-tv-hdmi-02</text>
+      <text x="430" y="503" text-anchor="middle" font-size="12" fill="#26425A" font-family="'JetBrains Mono','Consolas',monospace">(= (hdmi-slots television-50inch) 3)</text>
+      <rect x="90" y="552" width="220" height="34" rx="8" fill="#101A45"/>
+      <text x="200" y="574" text-anchor="middle" font-size="12.5" font-weight="600" fill="#E1CBD7">Goal achieved ✓</text>
+      <rect x="550" y="552" width="220" height="34" rx="8" fill="#FBF8FA" stroke="#86A8CF" stroke-width="1.2"/>
+      <circle cx="572" cy="569" r="5" fill="#101A45"/>
+      <text x="584" y="573" font-size="11.5" fill="#26425A">query</text>
+      <circle cx="640" cy="569" r="5" fill="#C38EB4"/>
+      <text x="652" y="573" font-size="11.5" fill="#26425A">advertise / reply</text>
+    </svg>
+    <figcaption>Sequence of the five messages. Dashed lines are agent lifelines;
+    each reply is threaded to its question by the conversation labels.</figcaption>
+  </figure>
+  <aside class="margin-note"><b>Reading the diagram.</b> Time flows downward.
+  Navy arrows are Alice's queries; mauve and slate arrows are Bob's
+  capability advert and answers.</aside>
+</section>
+
+<!-- ============ DIALOGUE WITH EXPLAINABILITY ============ -->
+<h2 style="color:var(--navy);font-size:1.35rem;margin-bottom:22px">The dialogue, message by message</h2>
+
+<div class="pair">
+  <div class="msg bob">
+    <div class="who">0 · advertise <span>— Bob → Alice</span></div>
+    <pre>(advertise
+  :sender    Bob
+  :receiver  Alice
+  :language  KQML
+  :ontology  warehouse-stock
+  :content   (ask-one :content (available-stock ?product ?quantity)))</pre>
+  </div>
+  <aside class="margin-note"><b>What this box does.</b> Bob commits publicly to a
+  capability: he can answer <code style="font-family:'JetBrains Mono',monospace">ask-one</code>
+  queries about stock. Capability discovery is what lets agents find each other
+  dynamically instead of being hard-wired together. Note the
+  <em>content is itself a KQML expression</em> — the advert describes the shape
+  of messages Bob accepts.</aside>
+</div>
+
+<div class="pair">
+  <div class="msg alice">
+    <div class="who">1 · ask-one <span>— Alice → Bob</span></div>
+    <pre>(ask-one
+  :sender      Alice
+  :receiver    Bob
+  :language    KIF
+  :ontology    warehouse-stock
+  :reply-with  query-tv-stock-01
+  :content     (available-stock television-50inch ?quantity))</pre>
+  </div>
+  <aside class="margin-note"><b>What this box does.</b> A directive speech act.
+  The KIF variable <code style="font-family:'JetBrains Mono',monospace">?quantity</code>
+  is unbound — Alice is asking Bob to bind it. <code style="font-family:'JetBrains Mono',monospace">ask-one</code>
+  (not <code style="font-family:'JetBrains Mono',monospace">ask-all</code>) because
+  a single answer suffices. The label <code style="font-family:'JetBrains Mono',monospace">:reply-with</code>
+  opens a conversation thread.</aside>
+</div>
+
+<div class="pair">
+  <div class="msg bob">
+    <div class="who">2 · tell <span>— Bob → Alice</span></div>
+    <pre>(tell
+  :sender       Bob
+  :receiver     Alice
+  :language     KIF
+  :ontology     warehouse-stock
+  :in-reply-to  query-tv-stock-01
+  :content      (= (available-stock television-50inch) 137))</pre>
+  </div>
+  <aside class="margin-note"><b>What this box does.</b> An assertive speech act:
+  Bob binds the variable and asserts the fact — 137 units on hand.
+  <code style="font-family:'JetBrains Mono',monospace">:in-reply-to</code> matches
+  the thread label, so even in an asynchronous exchange Alice knows exactly which
+  question this answers. On receipt, Alice updates her belief base.</aside>
+</div>
+
+<div class="pair">
+  <div class="msg alice">
+    <div class="who">3 · ask-one <span>— Alice → Bob</span></div>
+    <pre>(ask-one
+  :sender      Alice
+  :receiver    Bob
+  :language    KIF
+  :ontology    warehouse-stock
+  :reply-with  query-tv-hdmi-02
+  :content     (hdmi-slots television-50inch ?number))</pre>
+  </div>
+  <aside class="margin-note"><b>What this box does.</b> The same query pattern
+  reused for a different function from the ontology,
+  <code style="font-family:'JetBrains Mono',monospace">hdmi-slots</code>, with a
+  fresh thread label. The uniformity is deliberate: one protocol, any fact —
+  Alice's code doesn't change per question.</aside>
+</div>
+
+<div class="pair">
+  <div class="msg bob">
+    <div class="who">4 · tell <span>— Bob → Alice</span></div>
+    <pre>(tell
+  :sender       Bob
+  :receiver     Alice
+  :language     KIF
+  :ontology     warehouse-stock
+  :in-reply-to  query-tv-hdmi-02
+  :content      (= (hdmi-slots television-50inch) 3))</pre>
+  </div>
+  <aside class="margin-note"><b>What this box does.</b> The final assertion:
+  each television has 3 HDMI slots. Alice's goal is achieved — both facts are
+  now in her belief base and she can proceed to a purchasing decision. Had Bob
+  lacked the fact, he would reply with
+  <code style="font-family:'JetBrains Mono',monospace">sorry</code> instead.</aside>
+</div>
+
+<!-- ============ SPEECH ACT TERMS ============ -->
+<section style="margin-top:24px">
+  <h2>Speech act terms and their function</h2>
+  <p>KQML operationalises speech act theory (Austin 1962; Searle 1969): a
+  message is an <em>action</em>, and the performative names which action.
+  The terms used or implied in this dialogue:</p>
+  <table>
+    <tr><th>Term</th><th>Speech act type</th><th>Function in the dialogue</th></tr>
+    <tr><td><code>advertise</code></td><td>Commissive</td>
+        <td>Bob commits to a capability — answering stock queries — enabling
+        discovery.</td></tr>
+    <tr><td><code>ask-one</code></td><td>Directive</td>
+        <td>Requests a single binding for the query's variable; the counterpart
+        <code>ask-all</code> would request every matching fact.</td></tr>
+    <tr><td><code>tell</code></td><td>Assertive</td>
+        <td>Asserts a fact into the conversation; the receiver may adopt it as a
+        belief.</td></tr>
+    <tr><td><code>sorry</code></td><td>Assertive (negative)</td>
+        <td>Graceful failure — the agent understood the request but cannot
+        answer it.</td></tr>
+    <tr><td><code>:reply-with</code> / <code>:in-reply-to</code></td><td>—</td>
+        <td>Not performatives but conversation labels: they thread each answer
+        to its question, permitting asynchronous exchange.</td></tr>
+    <tr><td><code>:ontology</code></td><td>—</td>
+        <td>Declares the shared vocabulary; the semantic ground both agents
+        stand on.</td></tr>
+  </table>
+  <aside class="margin-note"><b>Intent vs. content.</b> The performative carries
+  <em>why</em> the message was sent; the KIF content carries <em>what</em> it
+  says. That separation is what makes the agents loosely coupled.</aside>
+</section>
+
+<!-- ============ EXTENDED SCENARIO BREAKDOWN ============ -->
+<section>
+  <h2>Extending the dialogue: brokered discovery</h2>
+  <p>The core dialogue assumes Alice already knows Bob exists and that Bob can
+  answer everything. The extended scenario below drops both assumptions. Four
+  agents take part — Alice, Bob, a <strong>Facilitator</strong> (broker), and a
+  <strong>Catalogue</strong> agent holding product specifications — and two
+  ontologies are in play: <em>retail-stock</em> for inventory and
+  <em>product-spec</em> for technical attributes.</p>
+  <figure>
+    <svg viewBox="0 0 940 1240" xmlns="http://www.w3.org/2000/svg" font-family="'DM Sans','Segoe UI',Arial,sans-serif" role="img" aria-label="Sequence diagram of the extended fifteen-message dialogue between Alice, the Facilitator, Bob, and the Catalogue agent">
+      <defs>
+        <marker id="aSoft" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#86A8CF"/></marker>
+        <marker id="aSlate" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#26425A"/></marker>
+        <marker id="aMauve" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#C38EB4"/></marker>
+      </defs>
+      <rect x="0" y="0" width="940" height="1240" fill="#FFFFFF" rx="14"/>
+      <rect x="65" y="40" width="170" height="52" rx="10" fill="#101A45"/>
+      <text x="150" y="62" text-anchor="middle" font-size="15" font-weight="700" fill="#E1CBD7">Alice</text>
+      <text x="150" y="80" text-anchor="middle" font-size="10.5" fill="#86A8CF">PROCUREMENT</text>
+      <rect x="325" y="40" width="170" height="52" rx="10" fill="#26425A"/>
+      <text x="410" y="62" text-anchor="middle" font-size="15" font-weight="700" fill="#E1CBD7">Facilitator</text>
+      <text x="410" y="80" text-anchor="middle" font-size="10.5" fill="#86A8CF">BROKER</text>
+      <rect x="575" y="40" width="170" height="52" rx="10" fill="#26425A"/>
+      <text x="660" y="62" text-anchor="middle" font-size="15" font-weight="700" fill="#E1CBD7">Bob</text>
+      <text x="660" y="80" text-anchor="middle" font-size="10.5" fill="#86A8CF">WAREHOUSE STOCK</text>
+      <rect x="780" y="40" width="170" height="52" rx="10" fill="#101A45"/>
+      <text x="865" y="62" text-anchor="middle" font-size="15" font-weight="700" fill="#E1CBD7">Catalogue</text>
+      <text x="865" y="80" text-anchor="middle" font-size="10.5" fill="#86A8CF">PRODUCT SPEC</text>
+      <line x1="150" y1="92" x2="150" y2="1140" stroke="#86A8CF" stroke-width="1.6" stroke-dasharray="5 5"/>
+      <line x1="410" y1="92" x2="410" y2="1140" stroke="#86A8CF" stroke-width="1.6" stroke-dasharray="5 5"/>
+      <line x1="660" y1="92" x2="660" y2="1140" stroke="#86A8CF" stroke-width="1.6" stroke-dasharray="5 5"/>
+      <line x1="865" y1="92" x2="865" y2="1140" stroke="#86A8CF" stroke-width="1.6" stroke-dasharray="5 5"/>
+      <text x="535" y="140" text-anchor="middle" font-size="13.5" font-weight="600" fill="#101A45">1 · register</text>
+      <line x1="652" y1="150" x2="418" y2="150" stroke="#86A8CF" stroke-width="2.4" marker-end="url(#aSoft)"/>
+      <text x="535" y="170" text-anchor="middle" font-size="11.5" fill="#26425A" font-family="'JetBrains Mono','Consolas',monospace">(bob :agent-type stock-controller)</text>
+      <text x="535" y="207" text-anchor="middle" font-size="13.5" font-weight="600" fill="#101A45">2 · advertise</text>
+      <line x1="652" y1="217" x2="418" y2="217" stroke="#86A8CF" stroke-width="2.4" marker-end="url(#aSoft)"/>
+      <text x="535" y="237" text-anchor="middle" font-size="11.5" fill="#26425A" font-family="'JetBrains Mono','Consolas',monospace">ask-one (stock ?item ?qty)</text>
+      <text x="280" y="274" text-anchor="middle" font-size="13.5" font-weight="600" fill="#101A45">3 · register</text>
+      <line x1="158" y1="284" x2="402" y2="284" stroke="#86A8CF" stroke-width="2.4" marker-end="url(#aSoft)"/>
+      <text x="280" y="304" text-anchor="middle" font-size="11.5" fill="#26425A" font-family="'JetBrains Mono','Consolas',monospace">(alice :agent-type procurement)</text>
+      <text x="280" y="341" text-anchor="middle" font-size="13.5" font-weight="600" fill="#101A45">4 · recommend-one</text>
+      <line x1="158" y1="351" x2="402" y2="351" stroke="#86A8CF" stroke-width="2.4" marker-end="url(#aSoft)"/>
+      <text x="280" y="371" text-anchor="middle" font-size="11.5" fill="#26425A" font-family="'JetBrains Mono','Consolas',monospace">who answers (stock ?item ?qty)?</text>
+      <text x="280" y="408" text-anchor="middle" font-size="13.5" font-weight="600" fill="#101A45">5 · tell</text>
+      <line x1="402" y1="418" x2="158" y2="418" stroke="#86A8CF" stroke-width="2.4" marker-end="url(#aSoft)"/>
+      <text x="280" y="438" text-anchor="middle" font-size="11.5" fill="#26425A" font-family="'JetBrains Mono','Consolas',monospace">bob, per his advertisement</text>
+      <rect x="60" y="461" width="820" height="58" rx="10" fill="#E1CBD7" opacity="0.45"/>
+      <text x="405" y="475" text-anchor="middle" font-size="13.5" font-weight="700" fill="#101A45">6 · ask-one</text>
+      <line x1="158" y1="485" x2="652" y2="485" stroke="#C38EB4" stroke-width="2.4" marker-end="url(#aMauve)"/>
+      <text x="405" y="505" text-anchor="middle" font-size="11.5" fill="#26425A" font-family="'JetBrains Mono','Consolas',monospace">(stock (television 50-inch) ?qty)</text>
+      <text x="405" y="542" text-anchor="middle" font-size="13.5" font-weight="600" fill="#101A45">7 · tell</text>
+      <line x1="652" y1="552" x2="158" y2="552" stroke="#86A8CF" stroke-width="2.4" marker-end="url(#aSoft)"/>
+      <text x="405" y="572" text-anchor="middle" font-size="11.5" fill="#26425A" font-family="'JetBrains Mono','Consolas',monospace">(= (stock (television 50-inch)) 37)</text>
+      <text x="405" y="609" text-anchor="middle" font-size="13.5" font-weight="600" fill="#101A45">8 · ask-one</text>
+      <line x1="158" y1="619" x2="652" y2="619" stroke="#26425A" stroke-width="2.4" marker-end="url(#aSlate)"/>
+      <text x="405" y="639" text-anchor="middle" font-size="11.5" fill="#26425A" font-family="'JetBrains Mono','Consolas',monospace">(hdmi-slots (television 50-inch) ?n)</text>
+      <text x="405" y="676" text-anchor="middle" font-size="13.5" font-weight="600" fill="#101A45">9 · sorry</text>
+      <line x1="652" y1="686" x2="158" y2="686" stroke="#26425A" stroke-width="2.4" marker-end="url(#aSlate)"/>
+      <text x="405" y="706" text-anchor="middle" font-size="11.5" fill="#26425A" font-family="'JetBrains Mono','Consolas',monospace">understood, but out of competence</text>
+      <text x="280" y="743" text-anchor="middle" font-size="13.5" font-weight="600" fill="#101A45">10 · broker-one</text>
+      <line x1="158" y1="753" x2="402" y2="753" stroke="#26425A" stroke-width="2.4" marker-end="url(#aSlate)"/>
+      <text x="280" y="773" text-anchor="middle" font-size="11.5" fill="#26425A" font-family="'JetBrains Mono','Consolas',monospace">(hdmi-slots (television 50-inch) ?n)</text>
+      <text x="637" y="810" text-anchor="middle" font-size="13.5" font-weight="600" fill="#101A45">11 · ask-one</text>
+      <line x1="418" y1="820" x2="857" y2="820" stroke="#26425A" stroke-width="2.4" marker-end="url(#aSlate)"/>
+      <text x="637" y="840" text-anchor="middle" font-size="11.5" fill="#26425A" font-family="'JetBrains Mono','Consolas',monospace">(hdmi-slots (television 50-inch) ?n)</text>
+      <text x="637" y="877" text-anchor="middle" font-size="13.5" font-weight="600" fill="#101A45">12 · tell</text>
+      <line x1="857" y1="887" x2="418" y2="887" stroke="#26425A" stroke-width="2.4" marker-end="url(#aSlate)"/>
+      <text x="637" y="907" text-anchor="middle" font-size="11.5" fill="#26425A" font-family="'JetBrains Mono','Consolas',monospace">(= (hdmi-slots (television 50-inch)) 4)</text>
+      <text x="280" y="944" text-anchor="middle" font-size="13.5" font-weight="600" fill="#101A45">13 · tell</text>
+      <line x1="402" y1="954" x2="158" y2="954" stroke="#26425A" stroke-width="2.4" marker-end="url(#aSlate)"/>
+      <text x="280" y="974" text-anchor="middle" font-size="11.5" fill="#26425A" font-family="'JetBrains Mono','Consolas',monospace">(= (hdmi-slots (television 50-inch)) 4)</text>
+      <text x="405" y="1011" text-anchor="middle" font-size="13.5" font-weight="600" fill="#101A45">14 · achieve</text>
+      <line x1="158" y1="1021" x2="652" y2="1021" stroke="#86A8CF" stroke-width="2.4" marker-end="url(#aSoft)"/>
+      <text x="405" y="1041" text-anchor="middle" font-size="11.5" fill="#26425A" font-family="'JetBrains Mono','Consolas',monospace">(reserved (television 50-inch) 20 alice)</text>
+      <text x="405" y="1078" text-anchor="middle" font-size="13.5" font-weight="600" fill="#101A45">15 · tell</text>
+      <line x1="652" y1="1088" x2="158" y2="1088" stroke="#86A8CF" stroke-width="2.4" marker-end="url(#aSoft)"/>
+      <text x="405" y="1108" text-anchor="middle" font-size="11.5" fill="#26425A" font-family="'JetBrains Mono','Consolas',monospace">reserved; (= (stock ...) 17)</text>
+      <rect x="60" y="1168" width="820" height="44" rx="10" fill="#FBF8FA" stroke="#E1CBD7" stroke-width="1.2"/>
+      <line x1="90" y1="1190" x2="130" y2="1190" stroke="#C38EB4" stroke-width="3"/>
+      <text x="140" y="1195" font-size="12" fill="#26425A">Selected message</text>
+      <line x1="300" y1="1190" x2="340" y2="1190" stroke="#86A8CF" stroke-width="3"/>
+      <text x="350" y="1195" font-size="12" fill="#26425A">retail-stock ontology</text>
+      <line x1="540" y1="1190" x2="580" y2="1190" stroke="#26425A" stroke-width="3"/>
+      <text x="590" y="1195" font-size="12" fill="#26425A">product-spec ontology</text>
+    </svg>
+    <figcaption>The extended fifteen-message exchange. Soft-blue arrows use the
+    retail-stock ontology; dark arrows use product-spec. Message 6 (highlighted)
+    is the same query that opened the core dialogue.</figcaption>
+  </figure>
+  <aside class="margin-note"><b>Two ontologies.</b> Stock lives in
+  <em>retail-stock</em>; HDMI slots live in <em>product-spec</em>. That split is
+  what makes Bob's <code style="font-family:'JetBrains Mono',monospace">sorry</code>
+  honest — and the broker necessary.</aside>
+</section>
+
+<h2 style="color:var(--navy);font-size:1.35rem;margin-bottom:22px">Breakdown, message by message</h2>
+
+<div class="pair">
+  <div class="msg bob">
+    <div class="who">1–2 · register, advertise <span>— Bob → Facilitator</span></div>
+    <pre>(register  (bob :agent-type stock-controller))
+(advertise (ask-one :content (stock ?item ?qty)))</pre>
+  </div>
+  <aside class="margin-note"><b>Joining the society.</b> Bob first registers his
+  identity with the Facilitator, then advertises the <em>class</em> of queries
+  he answers. Capability now lives in middleware, not in any requester's
+  code.</aside>
+</div>
+
+<div class="pair">
+  <div class="msg alice">
+    <div class="who">3–5 · register, recommend-one, tell <span>— Alice ↔ Facilitator</span></div>
+    <pre>(register (alice :agent-type procurement))
+(recommend-one :content (stock ?item ?qty))
+  ⇢ (tell "bob, per his advertisement")</pre>
+  </div>
+  <aside class="margin-note"><b>Discovery.</b> Alice doesn't know Bob exists.
+  <code style="font-family:'JetBrains Mono',monospace">recommend-one</code> asks
+  the Facilitator <em>who can answer this?</em>; the reply names Bob. The
+  agents are matched by capability, never hard-wired.</aside>
+</div>
+
+<div class="pair">
+  <div class="msg alice">
+    <div class="who">6–7 · ask-one, tell <span>— Alice ↔ Bob</span></div>
+    <pre>(ask-one :content (stock (television 50-inch) ?qty))
+  ⇢ (tell :content (= (stock (television 50-inch)) 37))</pre>
+  </div>
+  <aside class="margin-note"><b>The familiar exchange.</b> With Bob discovered,
+  this is the core dialogue's opening query — a direct request and an
+  assertion, threaded within the retail-stock ontology. 37 units on
+  hand.</aside>
+</div>
+
+<div class="pair">
+  <div class="msg bob">
+    <div class="who">8–9 · ask-one, sorry <span>— Alice ↔ Bob</span></div>
+    <pre>(ask-one :content (hdmi-slots (television 50-inch) ?n))
+  ⇢ (sorry "understood, but out of competence")</pre>
+  </div>
+  <aside class="margin-note"><b>Honest failure.</b> HDMI slots belong to the
+  <em>product-spec</em> ontology, which Bob doesn't speak. He parsed the
+  message and understood the intent — he simply isn't the agent to answer.
+  <code style="font-family:'JetBrains Mono',monospace">sorry</code> keeps the
+  conversation alive instead of crashing it.</aside>
+</div>
+
+<div class="pair">
+  <div class="msg alice">
+    <div class="who">10–13 · broker-one → ask-one → tell → tell <span>— via the Facilitator</span></div>
+    <pre>(broker-one :content (hdmi-slots (television 50-inch) ?n))
+  ⇢ Facilitator → Catalogue: (ask-one ...)
+  ⇢ Catalogue → Facilitator: (tell (= (hdmi-slots ...) 4))
+  ⇢ Facilitator → Alice:     (tell (= (hdmi-slots ...) 4))</pre>
+  </div>
+  <aside class="margin-note"><b>Delegation.</b>
+  <code style="font-family:'JetBrains Mono',monospace">broker-one</code> hands
+  the whole problem to the Facilitator: <em>find someone who knows, ask them,
+  and return the answer</em>. Alice never learns the Catalogue exists — the
+  broker absorbs the routing. Each set has 4 HDMI slots.</aside>
+</div>
+
+<div class="pair">
+  <div class="msg alice">
+    <div class="who">14–15 · achieve, tell <span>— Alice ↔ Bob</span></div>
+    <pre>(achieve :content (reserved (television 50-inch) 20 alice))
+  ⇢ (tell "reserved; (= (stock ...) 17)")</pre>
+  </div>
+  <aside class="margin-note"><b>From knowing to doing.</b>
+  <code style="font-family:'JetBrains Mono',monospace">achieve</code> asks Bob
+  to <em>make something true</em> — reserve 20 units — rather than report what
+  is true. The confirming <code style="font-family:'JetBrains Mono',monospace">tell</code>
+  shows the world changed: stock fell from 37 to 17. This is the step where
+  Alice stops querying and starts procuring.</aside>
+</div>
+
+<section style="margin-top:10px">
+  <p>The extension adds four performatives to the core set —
+  <code style="font-family:'JetBrains Mono',monospace">register</code> and
+  <code style="font-family:'JetBrains Mono',monospace">recommend-one</code> for
+  discovery, <code style="font-family:'JetBrains Mono',monospace">broker-one</code>
+  for delegation, and
+  <code style="font-family:'JetBrains Mono',monospace">achieve</code> for
+  action — and shows the pattern that makes multi-agent systems scale: when one
+  agent's competence ends, facilitation routes around the gap rather than
+  forcing every agent to know every other. It also gives the ontology problem
+  concrete form: Bob's <code style="font-family:'JetBrains Mono',monospace">sorry</code>
+  at message 9 is not an error but a boundary between two vocabularies, and
+  the entire brokered detour of messages 10–13 exists to cross it.</p>
+</section>
+
+<!-- ============ CRITICAL EVALUATION OF THE LANGUAGES ============ -->
+<section>
+  <h2>Critical evaluation of the languages</h2>
+  <p><strong>KQML.</strong> KQML's lasting contribution is the idea that the
+  communication layer should carry intent: performatives are speech acts, so
+  agents interoperate by understanding <em>why</em> a message was sent without
+  inspecting each other's internals. Its weaknesses are equally well
+  documented. The specification never fixed a formal semantics — different
+  implementations interpreted performatives inconsistently, and the
+  performative set was open-ended, so two "KQML-compliant" agents could still
+  fail to understand each other. It also has no notion of interaction
+  protocols: nothing in the language guarantees that an
+  <code style="font-family:'JetBrains Mono',monospace">ask-one</code> will
+  eventually receive a <code style="font-family:'JetBrains Mono',monospace">tell</code>
+  or <code style="font-family:'JetBrains Mono',monospace">sorry</code>, so
+  conversation structure is left to convention — as the ad-hoc
+  <code style="font-family:'JetBrains Mono',monospace">:reply-with</code>
+  threading in this dialogue shows. FIPA-ACL addressed exactly these gaps by
+  grounding its performatives in a formal semantics of beliefs and intentions
+  and standardising interaction protocols, which is largely why KQML is now of
+  historical rather than practical importance.</p>
+  <aside class="margin-note"><b>Why FIPA-ACL won.</b> Formal semantics plus
+  standard interaction protocols meant two independently built agents could
+  finally rely on meaning the same thing by the same performative.</aside>
+  <p><strong>KIF.</strong> As a content language, KIF's strength is
+  expressiveness: full first-order logic in a declarative, human-readable LISP
+  syntax, able to state not just facts but rules, quantified statements, and
+  meta-knowledge. That expressiveness is also its cost. Full first-order logic
+  is undecidable in general, so nothing guarantees Bob can answer an arbitrary
+  well-formed query; practical systems restrict themselves to a decidable
+  fragment, at which point much of KIF's power goes unused. Its prefix
+  s-expression syntax, natural in 1990s AI, is alien to modern tooling — today
+  the same content would likely travel as JSON(-LD) or RDF, with OWL playing
+  KIF's ontology role, precisely because those formats trade expressiveness
+  for decidability, validation, and ecosystem support.</p>
+  <p><strong>The pairing — and what neither language solves.</strong> The
+  KQML/KIF split (intent in the envelope, knowledge in the content, semantics
+  in the ontology) remains a genuinely good architecture; it is essentially
+  the architecture of modern LLM tool use, where function-call messages are
+  performatives and JSON schemas are miniature ontologies. But the pairing
+  shares one unsolved dependency: both languages assume the ontology problem
+  away. Neither provides any mechanism for two agents to discover, negotiate,
+  or verify that they mean the same thing by
+  <code style="font-family:'JetBrains Mono',monospace">available-stock</code>.
+  In this dialogue the shared vocabulary is simply asserted; in open systems,
+  that assumption is where interoperability actually breaks. The languages
+  guarantee syntactic and pragmatic agreement — semantic agreement must come
+  from elsewhere.</p>
+  <aside class="margin-note"><b>See it break.</b> In the interactive playground
+  below, sending a function outside the ontology, or free-form natural
+  language as KIF content, produces exactly the failures this evaluation
+  predicts — Bob replies
+  <code style="font-family:'JetBrains Mono',monospace">sorry</code> every
+  time.</aside>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<section>
+  <div class="kicker">
+    <b>From protocol to practice.</b> This dialogue is implemented and runnable.
+    A Python notebook
+    executes all five messages between real agent objects; a
+    step-through demo
+    replays the exchange in the browser; and an
+    interactive playground lets
+    you act as Alice — composing structured or free-form KIF queries and
+    watching Bob's <span style="font-family:'JetBrains Mono',monospace">tell</span>
+    and <span style="font-family:'JetBrains Mono',monospace">sorry</span>
+    responses update her belief base live.
+  </div>
+</section>
+
+</main>
+</body>
+</html>
