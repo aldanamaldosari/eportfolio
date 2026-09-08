@@ -95,6 +95,34 @@
     .topbar nav a{padding:6px 9px;font-size:12.5px}
     header{padding-top:100px}
   }
+
+  /* page grid with a navigation column */
+  .page-grid{display:grid;grid-template-columns:210px minmax(0,960px);
+    justify-content:center;gap:44px;max-width:1260px;margin:0 auto}
+  main{max-width:960px;margin:0;padding:48px 24px 80px}
+  .pagenav{position:sticky;top:96px;align-self:start;padding:52px 0 0}
+  .pn-head{display:block;font-size:.72rem;font-weight:500;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--slate);padding-bottom:10px;
+    border-bottom:1px solid var(--blush)}
+  .pagenav ol{list-style:none;margin:12px 0 0;padding:0}
+  .pagenav a{display:block;padding:7px 0 7px 12px;font-size:.86rem;color:var(--slate);
+    text-decoration:none;border-left:2px solid transparent;transition:color .2s,border-color .2s}
+  .pagenav a:hover{color:var(--navy)}
+  .pagenav a[aria-current="true"]{color:var(--navy);font-weight:700;border-left-color:var(--mauve)}
+  section,.pair{scroll-margin-top:96px}
+
+  /* justified body text */
+  main p,main li{text-align:justify;-webkit-hyphens:auto;hyphens:auto}
+  .margin-note,.hint,figcaption,.cap{text-align:left;hyphens:manual}
+
+  @media (max-width:1180px){
+    .page-grid{grid-template-columns:minmax(0,1fr);gap:0}
+    .pagenav{position:static;padding:22px 24px 0;max-width:960px;margin:0 auto;width:100%}
+    .pagenav ol{display:flex;flex-wrap:wrap;gap:0 6px}
+    .pagenav a{border-left:0;border:1px solid var(--blush);border-radius:20px;padding:5px 11px}
+    .pagenav a[aria-current="true"]{border-color:var(--mauve)}
+  }
+  @media (max-width:760px){ main p,main li{text-align:left;hyphens:manual} }
 </style>
 </head>
 <body>
@@ -116,11 +144,26 @@
   </div>
 </header>
 
+<div class="page-grid">
+<nav class="pagenav" aria-label="On this page">
+  <span class="pn-head">On this page</span>
+  <ol>
+    <li><a href="#s-intro">The task</a></li>
+    <li><a href="#s-ontology">The ontology</a></li>
+    <li><a href="#s-diagram">Dialogue at a glance</a></li>
+    <li><a href="#s-messages">Message by message</a></li>
+    <li><a href="#s-speechacts">Speech act terms</a></li>
+    <li><a href="#s-extended">Brokered discovery</a></li>
+    <li><a href="#s-breakdown">Extended breakdown</a></li>
+    <li><a href="#s-evaluation">Critical evaluation</a></li>
+  </ol>
+</nav>
+
 <main>
 
 <!-- ============ INTRODUCTION ============ -->
 <section>
-  <h2>Introduction — the task</h2>
+  <h2 id="s-intro">Introduction — the task</h2>
   <p>This activity asked for a dialogue between two agents built on
   <strong>KQML</strong> (Knowledge Query and Manipulation Language) and
   <strong>KIF</strong> (Knowledge Interchange Format). <strong>Alice</strong> is a
@@ -143,7 +186,7 @@
 
 <!-- ============ ONTOLOGY ============ -->
 <section>
-  <h2>The ontology</h2>
+  <h2 id="s-ontology">The ontology</h2>
   <p>Before any message is exchanged, both agents commit to the
   <em>warehouse-stock</em> ontology. It defines the classes, the instance being
   discussed, and the functions that map a product to a value:</p>
@@ -171,7 +214,7 @@
 
 <!-- ============ DIAGRAM ============ -->
 <section>
-  <h2>The dialogue at a glance</h2>
+  <h2 id="s-diagram">The dialogue at a glance</h2>
   <figure>
     <svg viewBox="0 0 860 640" xmlns="http://www.w3.org/2000/svg" font-family="'DM Sans','Segoe UI',Arial,sans-serif" role="img" aria-label="Sequence diagram of the KQML dialogue between Alice and Bob">
       <defs>
@@ -227,7 +270,7 @@
 </section>
 
 <!-- ============ DIALOGUE WITH EXPLAINABILITY ============ -->
-<h2 style="color:var(--navy);font-size:1.35rem;margin-bottom:22px">The dialogue, message by message</h2>
+<h2 id="s-messages" style="color:var(--navy);font-size:1.35rem;margin-bottom:22px">The dialogue, message by message</h2>
 
 <div class="pair">
   <div class="msg bob">
@@ -322,7 +365,7 @@
 
 <!-- ============ SPEECH ACT TERMS ============ -->
 <section style="margin-top:24px">
-  <h2>Speech act terms and their function</h2>
+  <h2 id="s-speechacts">Speech act terms and their function</h2>
   <p>KQML operationalises speech act theory (Austin 1962; Searle 1969): a
   message is an <em>action</em>, and the performative names which action.
   The terms used or implied in this dialogue:</p>
@@ -354,7 +397,7 @@
 
 <!-- ============ EXTENDED SCENARIO BREAKDOWN ============ -->
 <section>
-  <h2>Extending the dialogue: brokered discovery</h2>
+  <h2 id="s-extended">Extending the dialogue: brokered discovery</h2>
   <p>The core dialogue assumes Alice already knows Bob exists and that Bob can
   answer everything. The extended scenario below drops both assumptions. Four
   agents take part — Alice, Bob, a <strong>Facilitator</strong> (broker), and a
@@ -449,7 +492,7 @@
   honest — and the broker necessary.</aside>
 </section>
 
-<h2 style="color:var(--navy);font-size:1.35rem;margin-bottom:22px">Breakdown, message by message</h2>
+<h2 id="s-breakdown" style="color:var(--navy);font-size:1.35rem;margin-bottom:22px">Breakdown, message by message</h2>
 
 <div class="pair">
   <div class="msg bob">
@@ -547,7 +590,7 @@
 
 <!-- ============ CRITICAL EVALUATION OF THE LANGUAGES ============ -->
 <section>
-  <h2>Critical evaluation of the languages</h2>
+  <h2 id="s-evaluation">Critical evaluation of the languages</h2>
   <p><strong>KQML.</strong> KQML's lasting contribution is the idea that the
   communication layer should carry intent: performatives are speech acts, so
   agents interoperate by understanding <em>why</em> a message was sent without
@@ -605,11 +648,11 @@
 <section>
   <div class="kicker">
     <b>From protocol to practice.</b> This dialogue is implemented and runnable.
-    A Python notebook
+    A <a href="kqml_agent_dialogue.ipynb" style="color:#fff">Python notebook</a>
     executes all five messages between real agent objects; a
     step-through demo
     replays the exchange in the browser; and an
-    interactive playground lets
+    <a href="kqml-playground.html" style="color:#fff">interactive playground</a> lets
     you act as Alice — composing structured or free-form KIF queries and
     watching Bob's <span style="font-family:'JetBrains Mono',monospace">tell</span>
     and <span style="font-family:'JetBrains Mono',monospace">sorry</span>
@@ -618,5 +661,27 @@
 </section>
 
 </main>
+</div>
+
+<script>
+(function(){
+  var links={};
+  document.querySelectorAll('.pagenav a').forEach(function(a){
+    links[a.getAttribute('href').slice(1)]=a;
+  });
+  var spy=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var a=links[e.target.id]; if(!a) return;
+      if(e.isIntersecting){
+        Object.keys(links).forEach(function(k){links[k].removeAttribute('aria-current');});
+        a.setAttribute('aria-current','true');
+      }
+    });
+  },{rootMargin:'-15% 0px -70% 0px'});
+  Object.keys(links).forEach(function(k){
+    var t=document.getElementById(k); if(t) spy.observe(t);
+  });
+})();
+</script>
 </body>
 </html>

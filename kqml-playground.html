@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KQML / KIF Agent Playground — AlDana Al-Dosari</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2220%22%20fill%3D%22%23101A45%22%2F%3E%3Cg%20transform%3D%22translate%2810.00%2C16.87%29%20scale%280.17391%29%22%20fill%3D%22%23E1CBD7%22%3E%3Cg%20transform%3D%22translate%280%2C381%29%20scale%280.1%2C-0.1%29%22%3E%3Cpath%20d%3D%22M2305%203800%20c-159%20-5%20-468%20-14%20-685%20-19%20-837%20-22%20-1142%20-137%20-1176%20-441%20-24%20-218%20246%20-663%20336%20-555%2010%2013%206%2022%20-28%2059%20-166%20180%20-73%20490%20187%20625%20192%2099%20503%20165%20961%20206%20231%2020%20583%2020%20528%200%20-120%20-44%20-259%20-136%20-318%20-210%20-16%20-20%20-136%20-248%20-268%20-508%20-358%20-705%20-1354%20-2525%20-1454%20-2657%20-77%20-102%20-193%20-189%20-287%20-216%20-86%20-25%20-101%20-32%20-101%20-49%200%20-65%20204%20-21%20338%2074%20270%20190%20394%20208%20637%2096%20683%20-317%201699%20-215%202380%20240%20611%20408%201090%201124%201216%201821%2027%20146%2033%20507%2011%20609%20-123%20557%20-463%20812%20-1214%20911%20-150%2020%20-639%2026%20-1063%2014z%20m980%20-145%20c690%20-113%201018%20-639%20875%20-1405%20-235%20-1264%20-1201%20-2132%20-2375%20-2133%20-351%20-1%20-533%2055%20-690%20212%20-166%20164%20-161%20185%20245%20966%20213%20410%20394%20765%20562%201106%20412%20835%20618%201152%20796%201222%20118%2047%20403%2062%20587%2032z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#101A45; --slate:#26425A; --soft:#86A8CF;
+    --mauve:#C38EB4; --blush:#E1CBD7; --ink:#16242E; --bg:#FBF8FA;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);
+       max-width:860px;margin:0 auto;padding:36px 20px 60px;line-height:1.55}
+  h1{color:var(--navy);font-size:1.7rem;margin-bottom:6px}
+  .sub{color:var(--slate);margin-bottom:24px;max-width:640px}
+
+  /* composer */
+  .composer{background:#fff;border:1px solid var(--blush);border-radius:12px;
+            padding:18px;margin-bottom:22px}
+  .tabs{display:flex;gap:8px;margin-bottom:14px}
+  .tab{border:none;border-radius:8px;padding:8px 16px;font-family:inherit;
+       font-size:.92rem;font-weight:600;cursor:pointer;
+       background:var(--blush);color:var(--navy)}
+  .tab.active{background:var(--navy);color:var(--blush)}
+  .row{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end}
+  .field{display:flex;flex-direction:column;gap:5px}
+  label{font-size:.85rem;color:var(--slate);font-weight:500}
+  select,input[type=text]{font-family:'JetBrains Mono',monospace;font-size:.88rem;
+       border:1.5px solid var(--soft);border-radius:8px;padding:9px 12px;
+       background:#fff;color:var(--ink)}
+  input[type=text]{min-width:340px;flex:1}
+  button.send{border:none;border-radius:8px;padding:10px 18px;font-family:inherit;
+       font-size:.95rem;font-weight:700;cursor:pointer;
+       background:var(--navy);color:var(--blush)}
+  button.send:hover{background:var(--slate)}
+  button.reset{border:none;border-radius:8px;padding:8px 14px;font-family:inherit;
+       font-size:.88rem;cursor:pointer;background:var(--blush);color:var(--navy)}
+  .hint{font-size:.82rem;color:var(--slate);font-style:italic;margin-top:10px}
+  #freeform{display:none}
+
+  /* conversation */
+  .agents{display:flex;justify-content:space-between;margin-bottom:4px}
+  .agent{padding:9px 18px;border-radius:10px;color:var(--blush);font-weight:700}
+  .alice-h{background:var(--navy)} .bob-h{background:var(--slate)}
+  .msg{background:#fff;border-radius:12px;border:1px solid var(--blush);
+       padding:13px 16px;margin:12px 0;
+       opacity:0;transform:translateY(8px);animation:appear .4s forwards}
+  .msg.from-alice{border-left:6px solid var(--navy);margin-right:64px}
+  .msg.from-bob{border-left:6px solid var(--mauve);margin-left:64px}
+  .msg .head{font-weight:700;color:var(--navy)}
+  .msg .dir{color:var(--slate);font-weight:400;font-style:italic;font-size:.86rem}
+  pre{font-family:'JetBrains Mono',monospace;font-size:.79rem;line-height:1.5;
+      background:#F4EDF2;color:var(--ink);padding:9px 12px;border-radius:8px;
+      overflow-x:auto;white-space:pre;margin-top:7px}
+  .note{color:var(--slate);font-style:italic;font-size:.85rem;margin-top:7px}
+  .beliefs{background:var(--navy);color:var(--blush);border-radius:12px;
+           padding:14px 18px;margin-top:22px}
+  .beliefs h2{font-size:1rem;margin-bottom:8px}
+  .beliefs pre{background:transparent;color:var(--blush);padding:0;margin:0}
+  @keyframes appear{to{opacity:1;transform:none}}
+  @media (max-width:640px){
+    .msg.from-alice{margin-right:16px}.msg.from-bob{margin-left:16px}
+    input[type=text]{min-width:0}
+  }
+
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:70;background:rgba(251,248,250,.9);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid #DFD2DA}
+  .topbar .bar{max-width:1180px;margin:0 auto;padding:0 32px;height:64px;
+    display:flex;align-items:center;gap:26px}
+  .topbar .sig{display:flex;align-items:center;gap:11px;font-weight:700;font-size:15px;
+    letter-spacing:-.02em;color:var(--navy);text-decoration:none;margin-right:auto}
+  .topbar .sig-text span{font-size:10.5px;font-weight:400;letter-spacing:.08em;
+    color:var(--slate);display:block;margin-top:1px}
+  .topbar .logo{height:26px;width:auto;flex:none;display:block;overflow:visible;margin:-2px 2px 0 0}
+  .topbar .logo path{fill:var(--navy);transition:fill .25s}
+  .topbar .sig:hover .logo path{fill:var(--mauve)}
+  .topbar nav{display:flex;gap:2px}
+  .topbar nav a{font-size:13.5px;font-weight:500;color:var(--slate);text-decoration:none;
+    padding:7px 13px;border-radius:20px;transition:color .2s,background .2s}
+  .topbar nav a:hover{color:var(--navy);background:#EFE6EC}
+  body{padding-top:104px}
+  @media (max-width:760px){
+    .topbar .bar{padding:0 18px;height:60px;gap:8px}
+    .topbar nav a{padding:6px 9px;font-size:12.5px}
+    body{padding-top:92px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="bar">
+    <a class="sig" href="index.html#home"><svg class="logo" viewBox="0 0 460 381" aria-hidden="true"><g transform="translate(0,381) scale(0.1,-0.1)"><path d="M2305 3800 c-159 -5 -468 -14 -685 -19 -837 -22 -1142 -137 -1176 -441 -24 -218 246 -663 336 -555 10 13 6 22 -28 59 -166 180 -73 490 187 625 192 99 503 165 961 206 231 20 583 20 528 0 -120 -44 -259 -136 -318 -210 -16 -20 -136 -248 -268 -508 -358 -705 -1354 -2525 -1454 -2657 -77 -102 -193 -189 -287 -216 -86 -25 -101 -32 -101 -49 0 -65 204 -21 338 74 270 190 394 208 637 96 683 -317 1699 -215 2380 240 611 408 1090 1124 1216 1821 27 146 33 507 11 609 -123 557 -463 812 -1214 911 -150 20 -639 26 -1063 14z m980 -145 c690 -113 1018 -639 875 -1405 -235 -1264 -1201 -2132 -2375 -2133 -351 -1 -533 55 -690 212 -166 164 -161 185 245 966 213 410 394 765 562 1106 412 835 618 1152 796 1222 118 47 403 62 587 32z"/></g></svg><span class="sig-text">AlDana Al-Dosari<span>MSc Artificial Intelligence</span></span></a>
+    <nav><a href="index.html#home">Home</a><a href="index.html#about">About me</a><a href="agent-dialogue.html">Back to artefact</a></nav>
+  </div>
+</div>
+
+
+<h1>KQML / KIF Agent Playground</h1>
+<p class="sub">You act as <strong>Alice</strong>, the procurement agent. Compose
+<span style="font-family:'JetBrains Mono',monospace">ask-one</span> queries and
+send them to <strong>Bob</strong>, the warehouse agent. Bob answers with
+<span style="font-family:'JetBrains Mono',monospace">tell</span> when he holds
+the fact — and <span style="font-family:'JetBrains Mono',monospace">sorry</span>
+when the ontology or his knowledge base rejects the query.</p>
+
+<div class="composer">
+  <div class="tabs">
+    <button class="tab active" id="tab-structured">Structured query</button>
+    <button class="tab" id="tab-freeform">Free-form KIF</button>
+  </div>
+
+  <div id="structured">
+    <div class="row">
+      <div class="field">
+        <label for="fn">Function (from the ontology)</label>
+        <select id="fn">
+          <option value="available-stock">available-stock</option>
+          <option value="hdmi-slots">hdmi-slots</option>
+          <option value="screen-size">screen-size</option>
+          <option value="weight-kg">weight-kg — not in ontology!</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="pr">Product instance</label>
+        <select id="pr">
+          <option value="television-50inch">television-50inch</option>
+          <option value="television-65inch">television-65inch</option>
+          <option value="soundbar-basic">soundbar-basic</option>
+        </select>
+      </div>
+      <button class="send" id="send-structured">Send ask-one ▸</button>
+    </div>
+    <p class="hint">Try <em>weight-kg</em> to see Bob reject a function the
+    ontology doesn't define, or <em>hdmi-slots</em> on the soundbar for a
+    missing fact.</p>
+  </div>
+
+  <div id="freeform">
+    <div class="row">
+      <div class="field" style="flex:1">
+        <label for="raw">KIF content for an ask-one</label>
+        <input type="text" id="raw"
+               value="(available-stock television-50inch ?quantity)">
+      </div>
+      <button class="send" id="send-raw">Send raw KIF ▸</button>
+    </div>
+    <p class="hint">Type anything — e.g. <em>how many TVs do you have?</em> —
+    and Bob replies <span style="font-family:'JetBrains Mono',monospace">sorry</span>:
+    he only parses <span style="font-family:'JetBrains Mono',monospace">(function instance ?variable)</span>.
+    The languages guarantee syntax and intent, not understanding.</p>
+  </div>
+</div>
+
+<div class="agents">
+  <div class="agent alice-h">Alice · Procurement</div>
+  <button class="reset" id="reset">Reset</button>
+  <div class="agent bob-h">Bob · Warehouse</div>
+</div>
+
+<div id="convo"></div>
+
+<div class="beliefs">
+  <h2>Alice's belief base — updated only by <span style="font-family:'JetBrains Mono',monospace">tell</span></h2>
+  <pre id="kb">(empty)</pre>
+</div>
+
+<script>
+/* ---------- Bob's private knowledge base & the shared ontology ---------- */
+const ONTOLOGY_FUNCTIONS = ["available-stock","hdmi-slots","screen-size"];
+const KB = {
+  "available-stock|television-50inch":137, "hdmi-slots|television-50inch":3,
+  "screen-size|television-50inch":50,
+  "available-stock|television-65inch":42,  "hdmi-slots|television-65inch":4,
+  "screen-size|television-65inch":65,
+  "available-stock|soundbar-basic":260
+};
+const VARS = {"available-stock":"?quantity","hdmi-slots":"?number",
+              "screen-size":"?inches"};
+
+/* ---------- KQML rendering ---------- */
+const render = (perf, sender, receiver, extra, content) =>
+`(${perf}
+  :sender       ${sender}
+  :receiver     ${receiver}
+  :language     ${perf==="advertise"?"KQML":"KIF"}
+  :ontology     warehouse-stock${extra?"\n  "+extra:""}
+  :content      ${content})`;
+
+/* ---------- session state ---------- */
+let advertised = false, counter = 0, beliefs = {};
+const convo = document.getElementById("convo"), kb = document.getElementById("kb");
+const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+
+function addCard(from, label, text, note){
+  const div = document.createElement("div");
+  div.className = "msg from-" + from;
+  const dir = from === "alice" ? "Alice → Bob" : "Bob → Alice";
+  div.innerHTML = `<span class="head">${label}</span> <span class="dir">— ${dir}</span>
+    <pre>${esc(text)}</pre><div class="note">${note}</div>`;
+  convo.appendChild(div);
+  div.scrollIntoView({behavior:"smooth", block:"end"});
+}
+
+function ensureAdvertised(){
+  if (advertised) return;
+  advertised = true;
+  addCard("bob","advertise",
+    render("advertise","Bob","Alice",null,
+           "(ask-one :content (?function ?product ?value))"),
+    "Bob announces his query-answering capability (sent once, on first contact).");
+}
+
+/* ---------- Bob: parse, validate against ontology, answer ---------- */
+function bobHandle(content, replyWith){
+  const m = content.trim().match(/^\((\S+)\s+(\S+)\s+\?\S+\)$/);
+  const extra = `:in-reply-to  ${replyWith}`;
+  if (!m){
+    addCard("bob","sorry",
+      render("sorry","Bob","Alice",extra,'(reason "cannot parse KIF content")'),
+      "Bob understood the performative but not the content — the KIF grammar was violated.");
+    return;
+  }
+  const [ , fn, inst] = m;
+  if (!ONTOLOGY_FUNCTIONS.includes(fn)){
+    addCard("bob","sorry",
+      render("sorry","Bob","Alice",extra,`(reason "unknown function ${fn} in ontology")`),
+      "The function isn't in the shared warehouse-stock ontology — no semantic ground to answer on.");
+    return;
+  }
+  const v = KB[`${fn}|${inst}`];
+  if (v === undefined){
+    addCard("bob","sorry",
+      render("sorry","Bob","Alice",extra,`(reason "no fact for (${fn} ${inst})")`),
+      "Valid ontology term, but Bob's knowledge base holds no such fact.");
+    return;
+  }
+  addCard("bob","tell",
+    render("tell","Bob","Alice",extra,`(= (${fn} ${inst}) ${v})`),
+    `Bob asserts the fact. Alice now believes (${fn} ${inst}) = ${v}.`);
+  beliefs[`(${fn} ${inst})`] = v;
+  kb.textContent = Object.entries(beliefs).map(([k,v])=>`${k} = ${v}`).join("\n");
+}
+
+/* ---------- Alice: build and send queries ---------- */
+function aliceAsk(content, note){
+  ensureAdvertised();
+  counter++;
+  const id = `query-${String(counter).padStart(2,"0")}`;
+  addCard("alice","ask-one",
+    render("ask-one","Alice","Bob",`:reply-with   ${id}`, content), note);
+  setTimeout(() => bobHandle(content, id), 420);
+}
+
+document.getElementById("send-structured").onclick = () => {
+  const fn = document.getElementById("fn").value;
+  const pr = document.getElementById("pr").value;
+  aliceAsk(`(${fn} ${pr} ${VARS[fn] || "?value"})`,
+           "Alice requests a single binding for the variable.");
+};
+document.getElementById("send-raw").onclick = () => {
+  const raw = document.getElementById("raw").value.trim() || "( )";
+  aliceAsk(raw, "Alice sends free-form KIF content — Bob will parse and validate it.");
+};
+document.getElementById("raw").addEventListener("keydown", e => {
+  if (e.key === "Enter") document.getElementById("send-raw").click();
+});
+
+/* ---------- tabs & reset ---------- */
+const tabS = document.getElementById("tab-structured"),
+      tabF = document.getElementById("tab-freeform");
+tabS.onclick = () => { tabS.classList.add("active"); tabF.classList.remove("active");
+  document.getElementById("structured").style.display = "block";
+  document.getElementById("freeform").style.display = "none"; };
+tabF.onclick = () => { tabF.classList.add("active"); tabS.classList.remove("active");
+  document.getElementById("structured").style.display = "none";
+  document.getElementById("freeform").style.display = "block"; };
+document.getElementById("reset").onclick = () => {
+  advertised = false; counter = 0; beliefs = {};
+  convo.innerHTML = ""; kb.textContent = "(empty)";
+};
+</script>
+</body>
+</html>
