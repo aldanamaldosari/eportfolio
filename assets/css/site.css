@@ -51,7 +51,8 @@ body.wide .post p,body.wide .sub-section p{text-align:justify;-webkit-hyphens:au
 .reading{max-width:var(--col)}
 .reading.wide{max-width:none}
 .about-box{background:var(--card);border:1px solid var(--rule);border-radius:var(--radius);
-  padding:48px 56px 40px;position:relative}
+  padding:48px 56px 40px;position:relative;
+  width:calc(100% + 6vw);margin-left:-3vw}
 .about-box::before{content:"";position:absolute;left:0;top:40px;bottom:40px;width:4px;
   background:var(--mauve);border-radius:0 3px 3px 0}
 .about-box .lede{color:var(--navy)}
@@ -502,6 +503,9 @@ p{margin:0 0 18px}
     text-align:left;hyphens:manual}
 }
 
+@media (max-width:900px){
+  .about-box{width:100%;margin-left:0}
+}
 @media (max-width:760px){
   .about-box{padding:28px 24px 24px}
   .roles li{grid-template-columns:1fr;gap:2px}
