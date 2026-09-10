@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Collaborative Discussion 2 — Intelligent Agents</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2220%22%20fill%3D%22%23101A45%22%2F%3E%3Cg%20transform%3D%22translate%2810.00%2C16.87%29%20scale%280.17391%29%22%20fill%3D%22%23E1CBD7%22%3E%3Cg%20transform%3D%22translate%280%2C381%29%20scale%280.1%2C-0.1%29%22%3E%3Cpath%20d%3D%22M2305%203800%20c-159%20-5%20-468%20-14%20-685%20-19%20-837%20-22%20-1142%20-137%20-1176%20-441%20-24%20-218%20246%20-663%20336%20-555%2010%2013%206%2022%20-28%2059%20-166%20180%20-73%20490%20187%20625%20192%2099%20503%20165%20961%20206%20231%2020%20583%2020%20528%200%20-120%20-44%20-259%20-136%20-318%20-210%20-16%20-20%20-136%20-248%20-268%20-508%20-358%20-705%20-1354%20-2525%20-1454%20-2657%20-77%20-102%20-193%20-189%20-287%20-216%20-86%20-25%20-101%20-32%20-101%20-49%200%20-65%20204%20-21%20338%2074%20270%20190%20394%20208%20637%2096%20683%20-317%201699%20-215%202380%20240%20611%20408%201090%201124%201216%201821%2027%20146%2033%20507%2011%20609%20-123%20557%20-463%20812%20-1214%20911%20-150%2020%20-639%2026%20-1063%2014z%20m980%20-145%20c690%20-113%201018%20-639%20875%20-1405%20-235%20-1264%20-1201%20-2132%20-2375%20-2133%20-351%20-1%20-533%2055%20-690%20212%20-166%20164%20-161%20185%20245%20966%20213%20410%20394%20765%20562%201106%20412%20835%20618%201152%20796%201222%20118%2047%20403%2062%20587%2032z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<div id="progress"></div>
+<div class="topbar">
+  <div class="bar">
+    <a class="sig" href="index.html#home"><svg class="logo" viewBox="0 0 460 381" aria-hidden="true"><g transform="translate(0,381) scale(0.1,-0.1)"><path d="M2305 3800 c-159 -5 -468 -14 -685 -19 -837 -22 -1142 -137 -1176 -441 -24 -218 246 -663 336 -555 10 13 6 22 -28 59 -166 180 -73 490 187 625 192 99 503 165 961 206 231 20 583 20 528 0 -120 -44 -259 -136 -318 -210 -16 -20 -136 -248 -268 -508 -358 -705 -1354 -2525 -1454 -2657 -77 -102 -193 -189 -287 -216 -86 -25 -101 -32 -101 -49 0 -65 204 -21 338 74 270 190 394 208 637 96 683 -317 1699 -215 2380 240 611 408 1090 1124 1216 1821 27 146 33 507 11 609 -123 557 -463 812 -1214 911 -150 20 -639 26 -1063 14z m980 -145 c690 -113 1018 -639 875 -1405 -235 -1264 -1201 -2132 -2375 -2133 -351 -1 -533 55 -690 212 -166 164 -161 185 245 966 213 410 394 765 562 1106 412 835 618 1152 796 1222 118 47 403 62 587 32z"/></g></svg><span class="sig-text">AlDana Al-Dosari<span>MSc Artificial Intelligence</span></span></a>
+    <nav><a href="index.html#home">Home</a><a href="index.html#about">About me</a><a href="index.html#modules" aria-current="true">Modules</a></nav>
+  </div>
+</div>
+
+<div class="shell">
+
+  <div class="block slate mhead">
+    <a class="back" href="module-02.html#artefacts">← Intelligent Agents</a>
+    <span class="status now">In progress</span>
+    <h1>Collaborative Discussion 2: Agent Communication Languages</h1>
+    <p class="sub">Units 5–7 — how agent communication languages differ from method
+      invocation, and what that design buys and costs.</p>
+  </div>
+
+  <div class="tabwrap">
+    <div class="tabs" role="tablist" aria-label="Discussion sections">
+      <button role="tab" data-panel="brief" aria-controls="brief" aria-selected="true">Task</button>
+      <button role="tab" data-panel="thread" aria-controls="thread" aria-selected="false">My posts</button>
+      <button role="tab" data-panel="reviews" aria-controls="reviews" aria-selected="false">Peer responses</button>
+      <button role="tab" data-panel="refs" aria-controls="refs" aria-selected="false">References</button>
+    </div>
+  </div>
+
+  <div class="tabpanel" id="brief" role="tabpanel">
+    <div class="reading">
+      <p class="lede reveal">
+        Discuss how communication in agent systems differs from method invocation in a
+        language such as Java or Python, and evaluate the advantages and disadvantages
+        of the agent communication language approach.
+      </p>
+
+      <h3 class="sub-head">Components</h3>
+      <ul class="contrib">
+        <li><a href="#initial-post">Initial post</a> — respond to the question. Unit 5.</li>
+        <li><a href="#reviews">Peer responses</a> — respond to at least two peers'
+          posts. Unit 6.</li>
+        <li><a href="#summary-post">Summary post</a> — drawing on the initial post, the
+          feedback received and the content of the three units. Unit 7.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tabpanel" id="thread" role="tabpanel" hidden>
+    <nav class="subnav" aria-label="Sections of this thread">
+      <ol>
+        <li><a href="#initial-post">Initial post</a></li>
+        <li><a href="#replies">Replies to my post</a></li>
+        <li><a href="#summary-post">Summary post</a></li>
+      </ol>
+    </nav>
+    <div class="reading">
+
+      <section class="sub-section" id="initial-post">
+        <h3>Initial post — agent communication languages versus method invocation</h3>
+        <p class="when">Unit 5</p>
+        <div class="post mine">
+          <p>Agent communication languages (ACLs), such as KQML, rest on a different
+            premise than method invocation in Java or Python. When an object invokes a
+            method, it directly executes another object's code: the caller decides. In
+            agent systems, communication is an action performed to influence the
+            receiver, which retains autonomy over whether and how to respond (Wooldridge,
+            2009). This is grounded in speech act theory, which treats utterances as
+            performatives — acts such as requesting or informing that change the world
+            (Searle, 1969). KQML operationalises this by wrapping content in performatives
+            like <code>ask-if</code> and <code>tell</code>, separating communicative
+            intent from content (Finin et al., 1994).</p>
+
+          <p>The advantages follow from this design. It preserves autonomy: an agent may
+            refuse or negotiate rather than simply execute. It enables loose coupling,
+            since the performative, content language, and ontology are separated, allowing
+            heterogeneous agents built by different organisations to interoperate without
+            shared code — impossible with method invocation, which requires compile-time
+            knowledge of interfaces. Facilitator services (<code>advertise</code>,
+            <code>broker</code>) further support open systems where agents join and leave
+            at runtime (Finin et al., 1994).</p>
+
+          <p>The disadvantages are equally clear. KQML historically lacked formal
+            semantics, so implementations interpreted performatives inconsistently,
+            undermining the interoperability it promised (Labrou, Finin and Peng, 1999).
+            Method invocation, by contrast, has precise, verifiable semantics. Moreover,
+            ACLs defer the hardest problem: meaningful communication still requires a
+            shared ontology, and in open systems agents hold asymmetric, incomplete
+            conceptualisations, forcing costly runtime negotiation of ontological
+            correspondences (Payne and Tamma, 2014).</p>
+
+          <p>In short, the two are tools for different regimes: method invocation suits
+            closed, trusted systems; ACLs are justified when autonomy, heterogeneity, and
+            openness make direct invocation impossible — at the price of semantic
+            ambiguity and ontology alignment.</p>
+        </div>
+      </section>
+
+      <section class="sub-section" id="replies">
+        <h3>Replies to my post</h3>
+        <p class="when">Unit 6 · 1 reply received</p>
+        <div class="post">
+          <h4>I.S.</h4>
+          <p class="who">7 September 2026</p>
+          <p>I agree with your distinction between agent communication languages and
+            conventional method invocation, particularly your point that autonomy changes
+            the nature of interaction. In method invocation, behaviour is determined
+            through a predefined interface, whereas an autonomous agent retains control
+            over whether and how it responds. Your discussion of loose coupling is also
+            important in heterogeneous multi-agent systems, where independently developed
+            agents may need to communicate without sharing implementation-level
+            interfaces. Bagherzadeh and Arun-Kumar (2006), for example, demonstrate how
+            FIPA-ACL communication can be incorporated into a flexible agent programming
+            framework in which communicative acts and their semantics can be defined
+            independently of conventional procedure calls.</p>
+
+          <p>I also agree with your concern that this flexibility introduces semantic
+            challenges. Singh (1998) argues that agent interoperability remains
+            problematic when communication semantics depend heavily on representations
+            internal to individual agents, proposing greater emphasis on observable social
+            interaction instead. This complements your point that adopting a common ACL
+            does not necessarily guarantee that independently developed agents will
+            interpret communication consistently.</p>
+
+          <p>Your observation about shared ontologies therefore remains particularly
+            important. Even if agents recognise the same communicative structure,
+            meaningful exchange still depends on sufficient agreement about the concepts
+            being represented. As a useful extension, Verdicchio and Colombetti (2004)
+            propose modelling communicative acts through social commitments between
+            agents. This can make the consequences of communication more explicit, but it
+            does not remove the ontology-alignment problem you identify, since agents may
+            still conceptualise the communicated content differently.</p>
+
+          <p>Overall, I agree that ACLs are better suited to open, heterogeneous and
+            autonomous environments, while their effectiveness still depends on resolving
+            semantic and conceptual differences between participating agents.</p>
+
+          <p class="cited">Cited: Bagherzadeh and Arun-Kumar (2006); Singh (1998);
+            Verdicchio and Colombetti (2004).</p>
+        </div>
+      </section>
+
+      <section class="sub-section" id="summary-post">
+        <h3>Summary post</h3>
+        <p class="when">Unit 7</p>
+        <div class="post mine">
+          <p>My first post argued that agent communication languages such as KQML and
+            method invocation in Java or Python are not competing mechanisms but tools for
+            different regimes. Method invocation offers precise and verifiable semantics
+            for closed, trusted systems; ACLs, based on speech act theory (Searle, 1969)
+            and implemented via performatives such as <code>ask-if</code> and
+            <code>tell</code> (Finin et al., 1994), preserve agent autonomy and allow for
+            loose coupling among heterogeneous agents. I identified two main costs: KQML's
+            weak formal semantics and the deferred ontology alignment, which in open
+            systems has to be negotiated at runtime when the system is asymmetric and
+            incomplete (Payne and Tamma, 2014).</p>
+
+          <p>The conversation made this point stronger in two ways. First, replies by
+            Singh (1998) sharpened my semantic critique: the deeper problem is not that
+            KQML's performatives were loosely defined, but that mentalistic semantics —
+            meaning in terms of what an agent believes and what it wants to do — is not
+            easily discernible because no agent can view another's psychological state.
+            Solutions based on observable social commitments (Verdicchio and Colombetti,
+            2004) respond to that issue. Second, the conversations in the discussion
+            revealed that this semantic problem and the ontology-alignment problem are not
+            in conflict but complementary: one is about what a message binds an agent to,
+            and the other is about whether the two sides understand what it means.</p>
+
+          <p>My overall conclusion stands, but with greater precision: the engineering
+            case for ACLs rests on autonomy, heterogeneity, and openness, and their
+            practical effectiveness depends on progress in verifiable semantics and
+            runtime ontology negotiation — both active research areas rather than solved
+            problems.</p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <div class="tabpanel" id="reviews" role="tabpanel" hidden>
+    <div class="reading">
+      <p class="reveal">Responses I wrote to peers in Unit 6.</p>
+
+      <article class="entry reveal" id="response-is">
+        <div class="entry-head"><span class="call">Peer response 1</span><h3>I.S.</h3></div>
+        <p class="meta">Unit 6 · on performatives, loose coupling and the cost of abstraction</p>
+
+        <details class="peer-post">
+          <summary>Their initial post</summary>
+          <div class="post">
+            <p>Agent Communication Languages (ACLs) such as the Knowledge Query and
+              Manipulation Language (KQML) address a different problem from conventional
+              method invocation. Rather than simply specifying which operation should
+              execute, KQML structures communication around performatives that express the
+              intention of a message, such as requesting information, providing knowledge
+              or asking another agent to achieve an outcome. Finin et al. (1994) describe
+              KQML as a message format and protocol for supporting run-time knowledge
+              sharing between agents.</p>
+            <p>A major advantage of ACLs is therefore loose coupling and interoperability.
+              An agent can communicate what it wants without prescribing exactly how
+              another agent should accomplish it. FIPA-ACL formalised similar principles
+              through communicative acts and message parameters including sender, receiver,
+              content, language, ontology and conversation information (FIPA, 2002). The
+              ontology field is particularly important because interoperability requires
+              more than exchanging syntactically valid messages.</p>
+            <p>However, greater abstraction also introduces complexity. Agents must agree
+              on message syntax, performative semantics, content languages and relevant
+              ontologies. A message may therefore be structurally correct yet still be
+              misunderstood if agents interpret its concepts differently. ACL-based
+              interaction also requires message construction, parsing, routing,
+              conversation management and error handling, introducing computational and
+              architectural overhead compared with a direct method call, alongside security
+              concerns around authentication, authorisation and message validation
+              (Yang et al., 2025).</p>
+            <p>The post closed by arguing that neither approach is inherently superior:
+              method invocation suits tightly integrated software with well-defined
+              interfaces, while ACLs suit distributed or heterogeneous systems where
+              autonomy and semantic communication matter — a flexibility that must be
+              justified by the requirements of the system.</p>
+            <p class="cited">Cited: Ecma International (2025); Finin et al. (1994);
+              FIPA (2002, 2005); Oracle (2026); Python Software Foundation (2026);
+              Yang et al. (2025).</p>
+          </div>
+        </details>
+
+        <div class="post mine">
+          <p>The line I keep coming back to is your closing one, that the flexibility of
+            ACLs has to be justified by the requirements of the system. I agree, and I
+            think it raises an awkward question for the autonomy argument earlier in your
+            post. On paper, a receiving agent can decide how, or whether, to respond. Once
+            a system is deployed, that freedom shrinks fast. The Contract Net protocol
+            spells out which responses are acceptable at each stage of a negotiation
+            (Smith, 1980), and FIPA interaction protocols do much the same with their reply
+            sequences. An agent that keeps refusing or ignoring requests has, for practical
+            purposes, stopped participating. Wooldridge (2009) says something similar when
+            he notes that autonomy always operates within the social conventions of the
+            wider system.</p>
+
+          <p>If that holds, the overhead you describe looks harder to justify. Where
+            protocols have already reduced interaction to fairly predictable sequences, a
+            full ACL adds semantic and architectural cost without giving you much more than
+            a carefully specified service interface would. My suspicion is that the real
+            criterion is organisational. ACLs earn their keep when the agents belong to
+            independent parties; under single ownership, they rarely do. Would you apply
+            that test once for the whole system, or separately for each type of
+            interaction?</p>
+        </div>
+      </article>
+
+      <article class="entry reveal" data-i="1" id="response-fo">
+        <div class="entry-head"><span class="call">Peer response 2</span><h3>F.O.</h3></div>
+        <p class="meta">Unit 6 · on KQML's structure, expressiveness and verifiability</p>
+
+        <details class="peer-post">
+          <summary>Their initial post</summary>
+          <div class="post">
+            <p>KQML, developed as part of the DARPA-funded Knowledge Sharing Effort,
+              provides a framework for autonomous information systems to exchange
+              represented knowledge. The post described KQML as consisting of the language
+              itself plus the Knowledge Interchange Format for content representation, with
+              performatives defined in accordance with speech act theory — tell, ask-if,
+              perform, reply — each wrapping content with an expressed communicative
+              intent.</p>
+            <p>Three advantages were argued: semantic expressiveness, since performatives
+              convey not only what is communicated but why; interoperability, since
+              independently developed agents can communicate given a shared vocabulary and
+              message structure (Finin et al., 1994); and autonomy, since messages convey
+              intent rather than direct commands, allowing agents to negotiate, refuse or
+              reason about requests.</p>
+            <p>Three disadvantages followed: the overhead of ontology matching, which is
+              computationally expensive when agents rely on differing conceptual
+              vocabularies (Euzenat and Shvaiko, 2013); complexity disproportionate to task
+              demands, where a direct method call would be more efficient; and
+              verifiability, since there is no reliable way to confirm that an agent's
+              stated intent reflects its actual internal state. The post closed on
+              Wooldridge and Jennings' (1995) distinction: objects execute methods without
+              choice, whereas autonomous agents can reason, refuse or negotiate.</p>
+            <p class="cited">Cited: Euzenat and Shvaiko (2013); Finin et al. (1994);
+              Wooldridge and Jennings (1995).</p>
+          </div>
+        </details>
+
+        <div class="post mine">
+          <p>This is a clear and well-organised post, and I like that you name specific
+            performatives rather than describing KQML in the abstract. One small point on
+            structure first: KIF was a companion to KQML from the Knowledge Sharing Effort
+            rather than a required part of it. KQML is deliberately agnostic about the
+            content language, so KIF is one option among several, and in practice
+            implementations used Prolog, Lisp expressions and other formats (Finin et al.,
+            1994). That flexibility is part of why the language spread, but it also fed the
+            deeper problem I want to raise.</p>
+
+          <p>Your advantage of semantic expressiveness rests on agents interpreting
+            performatives the same way, and this is exactly where KQML struggled. The
+            original specification described what performatives meant informally, without
+            formal semantics, so different implementations attached different meanings to
+            the same performative and sometimes invented incompatible new ones (Labrou and
+            Finin, 1997). A <code>tell</code> from one system was not always a
+            <code>tell</code> in another. Expressiveness without agreed semantics can
+            therefore give the appearance of shared understanding rather than the substance
+            of it, which is worth keeping in mind when we assess how much the performative
+            layer really buys us. Do you think FIPA-ACL's attempt at formal semantics
+            solved this, or does the fact that its semantics rely on unverifiable mental
+            states leave the problem in place?</p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="tabpanel" id="refs" role="tabpanel" hidden>
+    <div class="reading">
+      <p class="reveal">Sources cited across my posts, in UoEO Harvard format.</p>
+      <ul class="refs">
+        <li>Finin, T., Fritzson, R., McKay, D. and McEntire, R. (1994) 'KQML as an agent
+          communication language', <i>Proceedings of the Third International Conference on
+          Information and Knowledge Management</i>, pp. 456–463.</li>
+        <li>Labrou, Y., Finin, T. and Peng, Y. (1999) 'Agent communication languages: the
+          current landscape', <i>IEEE Intelligent Systems</i>, 14(2), pp. 45–52.</li>
+        <li>Payne, T.R. and Tamma, V. (2014) 'Negotiating over ontological correspondences
+          with asymmetric and incomplete knowledge', <i>Proceedings of AAMAS 2014</i>,
+          pp. 517–524.</li>
+        <li>Searle, J.R. (1969) <i>Speech Acts: An Essay in the Philosophy of
+          Language</i>. Cambridge: Cambridge University Press.</li>
+        <li>Singh, M.P. (1998) 'Agent communication languages: rethinking the principles',
+          <i>Computer</i>, 31(12), pp. 40–47.</li>
+        <li>Verdicchio, M. and Colombetti, M. (2004) 'A logical model for agent
+          communication languages', <i>Electronic Notes in Theoretical Computer
+          Science</i>, 85(2), pp. 192–207.</li>
+        <li>Labrou, Y. and Finin, T. (1997) 'Semantics and conversations for an agent
+          communication language', <i>Proceedings of the Fifteenth International Joint
+          Conference on Artificial Intelligence (IJCAI-97)</i>, pp. 584–591.</li>
+        <li>Smith, R.G. (1980) 'The contract net protocol: high-level communication and
+          control in a distributed problem solver', <i>IEEE Transactions on Computers</i>,
+          C-29(12), pp. 1104–1113.</li>
+        <li>Wooldridge, M.J. (2009) <i>An Introduction to Multiagent Systems</i>. 2nd edn.
+          New York: John Wiley &amp; Sons.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
