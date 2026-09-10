@@ -39,6 +39,16 @@ a{color:inherit}
 .topbar nav a[aria-current="true"]{color:var(--navy);background:var(--blush)}
 .topbar nav a:focus-visible{outline:2px solid var(--mauve);outline-offset:2px}
 
+/* ---------- wide artefact pages ---------- */
+body.wide .shell{width:85%;max-width:none;padding:0;margin:0 auto}
+body.wide .topbar .bar{width:85%;max-width:none;padding:0}
+body.wide{--col:100%}
+body.wide .post p,body.wide .sub-section p{text-align:justify;-webkit-hyphens:auto;hyphens:auto}
+@media (max-width:1100px){
+  body.wide .shell,body.wide .topbar .bar{width:auto;padding:0 22px}
+  body.wide .post p,body.wide .sub-section p{text-align:left;hyphens:manual}
+}
+
 /* ---------- shell ---------- */
 .shell{max-width:1180px;margin:0 auto;padding:0 32px}
 .reading{max-width:var(--col)}
