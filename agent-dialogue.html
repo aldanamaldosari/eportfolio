@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="assets/css/site.css">
 <style>
 .artefact{padding-top:40px}
-.artefact section{display:grid;grid-template-columns:minmax(0,600px) 250px;column-gap:40px;
+.artefact section{display:grid;grid-template-columns:minmax(0,1fr) 270px;column-gap:44px;
   margin-bottom:50px;scroll-margin-top:100px}
 .artefact section > *{grid-column:1}
 .artefact h2{font-weight:700;font-size:22px;letter-spacing:-.03em;color:var(--navy);
@@ -31,23 +31,23 @@
 .msg .who{font-weight:700;color:var(--navy);margin-bottom:8px;font-size:15px}
 .msg .who span{font-weight:400;color:var(--soft);font-size:13px}
 .msg pre{margin-bottom:0}
-.pair{margin-bottom:28px;display:grid;grid-template-columns:minmax(0,600px) 250px;
-  column-gap:40px;scroll-margin-top:100px}
+.pair{margin-bottom:28px;display:grid;grid-template-columns:minmax(0,1fr) 270px;
+  column-gap:44px;scroll-margin-top:100px}
 .pair .msg{grid-column:1}
 .pair .margin-note{grid-column:2;align-self:start;font-size:13.5px;color:var(--slate);
   border-left:2px solid var(--rule);padding-left:16px;text-align:left}
-.artefact table{border-collapse:collapse;width:100%;max-width:600px;font-size:14.5px}
+.artefact table{border-collapse:collapse;width:100%;font-size:14.5px}
 .artefact th{background:var(--navy);color:var(--blush);text-align:left;padding:11px 14px;
   font-weight:500;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase}
 .artefact td{padding:12px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
 .artefact td code{color:var(--navy);background:var(--panel);padding:2px 7px;border-radius:5px;font-size:.86em}
 .artefact figure{margin:0}
-.artefact figure svg{width:100%;height:auto;border-radius:14px}
+.artefact figure svg{width:100%;height:auto;border-radius:14px;max-width:820px}
 .artefact figcaption{font-size:13.5px;color:var(--soft);margin-top:10px;text-align:left}
-.kicker{background:var(--slate);color:var(--blush);border-radius:16px;padding:20px 24px;max-width:600px}
+.kicker{background:var(--slate);color:var(--blush);border-radius:16px;padding:22px 26px}
 .kicker b{color:#fff}
 .kicker p{text-align:left;margin:0;color:var(--blush)}
-.artefact .with-menu{align-items:start;grid-template-columns:230px minmax(0,1fr)}
+.artefact .with-menu{align-items:start;grid-template-columns:200px minmax(0,1fr);gap:44px}
 .artefact .menu-body{max-width:none}
 @media (max-width:1120px){
   .artefact section,.pair{grid-template-columns:1fr}
@@ -71,8 +71,7 @@
     <a class="back" href="module-02.html#artefacts">← Intelligent Agents</a>
     <span class="status done">Complete</span>
     <h1>An Agent Dialogue with KQML and KIF</h1>
-    <p class="sub">Two software agents negotiate warehouse stock through
-    speech acts, a shared ontology, and first-order-logic content.</p>
+    <p class="sub">Unit 6 — two software agents negotiate warehouse stock through speech acts, a shared ontology, and first-order-logic content.</p>
   </div>
 
   <div class="artefact">

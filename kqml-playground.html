@@ -9,7 +9,7 @@
 <style>
   :root{
     --navy:#101A45; --slate:#26425A; --soft:#86A8CF;
-    --mauve:#C38EB4; --blush:#E1CBD7; --ink:#16242E; --bg:#FBF8FA;
+    --mauve:#C38EB4; --blush:#E1CBD7; --ink:#16242E; --bg:#F7F2F5;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);
@@ -66,8 +66,8 @@
     input[type=text]{min-width:0}
   }
 
-  .topbar{position:fixed;top:0;left:0;right:0;z-index:70;background:rgba(251,248,250,.9);
-    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid #DFD2DA}
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:70;background:#F7F2F5;
+    border-bottom:1px solid #DFD2DA}
   .topbar .bar{max-width:1180px;margin:0 auto;padding:0 32px;height:64px;
     display:flex;align-items:center;gap:26px}
   .topbar .sig{display:flex;align-items:center;gap:11px;font-weight:700;font-size:15px;
@@ -81,11 +81,11 @@
   .topbar nav a{font-size:13.5px;font-weight:500;color:var(--slate);text-decoration:none;
     padding:7px 13px;border-radius:20px;transition:color .2s,background .2s}
   .topbar nav a:hover{color:var(--navy);background:#EFE6EC}
-  body{padding-top:104px}
+  body{padding-top:64px}
   @media (max-width:760px){
     .topbar .bar{padding:0 18px;height:60px;gap:8px}
     .topbar nav a{padding:6px 9px;font-size:12.5px}
-    body{padding-top:92px}
+    body{padding-top:60px}
   }
 </style>
 </head>

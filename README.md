@@ -3,7 +3,7 @@
 Professional ePortfolio documenting my learning journey through the MSc Artificial
 Intelligence programme at the University of Essex.
 
-Live at [https://aldanamaldosari.github.io/eportfolio]
+Live at https://[username].github.io/
 
 ## Structure
 
