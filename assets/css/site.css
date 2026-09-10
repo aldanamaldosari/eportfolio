@@ -49,14 +49,14 @@ body.wide .post p,body.wide .sub-section p{text-align:justify;-webkit-hyphens:au
 /* ---------- shell ---------- */
 .shell{width:90%;max-width:none;margin:0 auto;padding:0}
 .reading{max-width:var(--col)}
-.reading.wide{max-width:940px}
+.reading.wide{max-width:none}
 .about-box{background:var(--card);border:1px solid var(--rule);border-radius:var(--radius);
-  padding:44px 48px 36px;position:relative}
-.about-box::before{content:"";position:absolute;left:0;top:34px;bottom:34px;width:3px;
+  padding:48px 56px 40px;position:relative}
+.about-box::before{content:"";position:absolute;left:0;top:40px;bottom:40px;width:4px;
   background:var(--mauve);border-radius:0 3px 3px 0}
 .about-box .lede{color:var(--navy)}
-.about-box p:last-child{margin-bottom:0;color:var(--soft);font-size:15px;
-  padding-top:20px;border-top:1px solid var(--rule)}
+.about-box p:last-child{margin-bottom:0;color:var(--soft);font-size:16px;
+  padding-top:22px;margin-top:6px;border-top:1px solid var(--rule)}
 .reading.wide p{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
 @media (max-width:700px){.reading.wide p{text-align:left;hyphens:manual}}
 section{padding:0 0 92px;scroll-margin-top:104px}
@@ -186,7 +186,7 @@ p{margin:0 0 18px}
 .sub-head{font-weight:700;font-size:16.5px;letter-spacing:-.02em;color:var(--navy);
   margin:34px 0 10px}
 .entry .sub-head{margin:26px 0 8px;font-size:14px}
-.entry .docs li{font-size:14.5px;padding:8px 0}
+.entry .docs li{font-size:16px;padding:11px 0}
 .entry .small{font-size:14.5px;color:var(--soft);line-height:1.6}
 .contrib{margin:0 0 18px;padding:0;list-style:none;max-width:var(--col)}
 .contrib li{position:relative;padding:0 0 11px 24px;font-size:16.5px;line-height:1.6}
@@ -214,10 +214,10 @@ p{margin:0 0 18px}
   stroke-linecap:round;stroke-linejoin:round}
 
 .roles{list-style:none;margin:0 0 26px;padding:0;max-width:var(--col)}
-.roles li{display:flex;flex-wrap:wrap;gap:4px 14px;padding:9px 0;
-  border-bottom:1px solid var(--rule)}
-.roles b{font-weight:700;font-size:16.5px;color:var(--navy);min-width:150px}
-.roles span{font-size:16px;color:var(--soft)}
+.roles li{display:grid;grid-template-columns:minmax(220px,32%) 1fr;gap:4px 24px;
+  padding:12px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.roles b{font-weight:700;font-size:16.5px;color:var(--navy)}
+.roles span{font-size:16px;color:var(--slate)}
 
 .timeline{list-style:none;margin:6px 0 8px;padding:0 0 0 26px;position:relative;
   max-width:var(--col)}
@@ -232,7 +232,7 @@ p{margin:0 0 18px}
 .tl button{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;
   background:none;border:0;padding:10px 0;cursor:pointer;font-family:var(--sans);
   border-bottom:1px solid var(--rule);transition:color .2s}
-.tl-date{font-size:13px;font-weight:500;color:var(--soft);min-width:104px;
+.tl-date{font-size:14.5px;font-weight:500;color:var(--soft);min-width:150px;
   letter-spacing:.02em;transition:color .2s}
 .tl-title{font-size:17px;font-weight:700;letter-spacing:-.02em;color:var(--navy)}
 .tl:hover::before,.tl.open::before{transform:scale(1.25)}
@@ -500,4 +500,10 @@ p{margin:0 0 18px}
   .shell,.topbar .bar{width:auto;padding:0 22px}
   .reading p,.entry p,.panel-body p,.post p,.sub-section p,.about-box p{
     text-align:left;hyphens:manual}
+}
+
+@media (max-width:760px){
+  .about-box{padding:28px 24px 24px}
+  .roles li{grid-template-columns:1fr;gap:2px}
+  .tl-date{min-width:0}
 }
