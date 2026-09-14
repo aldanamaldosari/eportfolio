@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creating Parse Trees — AlDana Al-Dosari</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2220%22%20fill%3D%22%23101A45%22%2F%3E%3Cg%20transform%3D%22translate%2810.00%2C16.87%29%20scale%280.17391%29%22%20fill%3D%22%23E1CBD7%22%3E%3Cg%20transform%3D%22translate%280%2C381%29%20scale%280.1%2C-0.1%29%22%3E%3Cpath%20d%3D%22M2305%203800%20c-159%20-5%20-468%20-14%20-685%20-19%20-837%20-22%20-1142%20-137%20-1176%20-441%20-24%20-218%20246%20-663%20336%20-555%2010%2013%206%2022%20-28%2059%20-166%20180%20-73%20490%20187%20625%20192%2099%20503%20165%20961%20206%20231%2020%20583%2020%20528%200%20-120%20-44%20-259%20-136%20-318%20-210%20-16%20-20%20-136%20-248%20-268%20-508%20-358%20-705%20-1354%20-2525%20-1454%20-2657%20-77%20-102%20-193%20-189%20-287%20-216%20-86%20-25%20-101%20-32%20-101%20-49%200%20-65%20204%20-21%20338%2074%20270%20190%20394%20208%20637%2096%20683%20-317%201699%20-215%202380%20240%20611%20408%201090%201124%201216%201821%2027%20146%2033%20507%2011%20609%20-123%20557%20-463%20812%20-1214%20911%20-150%2020%20-639%2026%20-1063%2014z%20m980%20-145%20c690%20-113%201018%20-639%20875%20-1405%20-235%20-1264%20-1201%20-2132%20-2375%20-2133%20-351%20-1%20-533%2055%20-690%20212%20-166%20164%20-161%20185%20245%20966%20213%20410%20394%20765%20562%201106%20412%20835%20618%201152%20796%201222%20118%2047%20403%2062%20587%2032z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="stylesheet" href="assets/css/site.css">
+<style>
+.parse{padding-top:40px}
+.parse section{margin-bottom:56px;scroll-margin-top:110px}
+.parse h2{font-weight:700;font-size:25px;letter-spacing:-.03em;color:var(--navy);
+  margin:0 0 6px;display:flex;align-items:center;gap:11px}
+.parse h2::before{content:"";width:12px;height:12px;border-radius:3px;background:var(--mauve);flex:none}
+.parse .sentence{font-size:19px;color:var(--slate);margin:0 0 20px;font-style:italic}
+.parse figure{margin:0 0 18px;background:var(--card);border:1px solid var(--rule);
+  border-radius:18px;padding:22px 24px}
+.parse figcaption{font-size:14.5px;color:var(--soft);margin-top:10px;text-align:left}
+.tree{width:100%;height:auto;max-width:760px;display:block;margin:0 auto}
+.tree line{stroke:#9DAEBD;stroke-width:1}
+.tree line.lex{stroke:#C3CDD8;stroke-width:1;stroke-dasharray:2 3}
+.tree line.hi{stroke:var(--mauve);stroke-width:2}
+.tree text.th{font:700 15px var(--sans);fill:var(--navy);letter-spacing:.02em}
+.tree text.ts{font:400 15px var(--sans);fill:var(--slate)}
+.parse pre{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:13.5px;
+  line-height:1.7;background:var(--panel);border:1px solid var(--rule);color:var(--ink);
+  padding:20px 22px;border-radius:14px;overflow-x:auto;white-space:pre;margin:0}
+.two-up{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:22px}
+.two-up figure{margin:0}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div class="topbar">
+  <div class="bar">
+    <a class="sig" href="index.html#home"><svg class="logo" viewBox="0 0 460 381" aria-hidden="true"><g transform="translate(0,381) scale(0.1,-0.1)"><path d="M2305 3800 c-159 -5 -468 -14 -685 -19 -837 -22 -1142 -137 -1176 -441 -24 -218 246 -663 336 -555 10 13 6 22 -28 59 -166 180 -73 490 187 625 192 99 503 165 961 206 231 20 583 20 528 0 -120 -44 -259 -136 -318 -210 -16 -20 -136 -248 -268 -508 -358 -705 -1354 -2525 -1454 -2657 -77 -102 -193 -189 -287 -216 -86 -25 -101 -32 -101 -49 0 -65 204 -21 338 74 270 190 394 208 637 96 683 -317 1699 -215 2380 240 611 408 1090 1124 1216 1821 27 146 33 507 11 609 -123 557 -463 812 -1214 911 -150 20 -639 26 -1063 14z m980 -145 c690 -113 1018 -639 875 -1405 -235 -1264 -1201 -2132 -2375 -2133 -351 -1 -533 55 -690 212 -166 164 -161 185 245 966 213 410 394 765 562 1106 412 835 618 1152 796 1222 118 47 403 62 587 32z"/></g></svg><span class="sig-text">AlDana Al-Dosari<span>MSc Artificial Intelligence</span></span></a>
+    <nav><a href="index.html#home">Home</a><a href="index.html#about">About me</a><a href="module-02.html#artefacts" aria-current="true">Modules</a></nav>
+  </div>
+</div>
+
+<div class="shell">
+
+  <div class="block slate mhead">
+    <a class="back" href="module-02.html#artefacts">← Intelligent Agents</a>
+    <span class="status now">In progress</span>
+    <h1>Creating Parse Trees</h1>
+    <p class="sub">Unit 8 — constituency parse trees for three sentences, and what the
+      ambiguous one shows about the limits of syntax alone.</p>
+  </div>
+
+  <div class="parse">
+    <div class="with-menu">
+    <nav class="sidemenu" aria-label="On this page">
+      <span class="m-head">On this page</span>
+      <ol>
+        <li><a href="#task"><span class="m-title">The task</span></a></li>
+        <li><a href="#grammar"><span class="m-title">The grammar</span></a></li>
+        <li><a href="#s1"><span class="m-title">The government raised interest rates</span></a></li>
+        <li><a href="#s2"><span class="m-title">The internet gives everyone a voice</span></a></li>
+        <li><a href="#s3"><span class="m-title">The man saw the dog with the telescope</span></a></li>
+        <li><a href="#brackets"><span class="m-title">Bracket notation</span></a></li>
+        <li><a href="#discussion"><span class="m-title">Discussion</span></a></li>
+        <li><a href="#evaluation"><span class="m-title">Critical evaluation</span></a></li>
+        <li><a href="#conclusion"><span class="m-title">Conclusion</span></a></li>
+        <li><a href="#references"><span class="m-title">References</span></a></li>
+      </ol>
+    </nav>
+    <div class="menu-body">
+
+      <section id="task">
+        <h2>The task</h2>
+        <p class="lede">Create a constituency-based parse tree for three sentences and add
+          the completed trees to the e-portfolio.</p>
+        <h3 class="sub-head">Learning outcomes</h3>
+        <ul class="contrib">
+          <li>The knowledge and skills required to develop, deploy and evaluate the tools
+            and techniques of intelligent systems to solve real-world problems.</li>
+          <li>An understanding of contemporary research issues in the area of intelligent
+            agent systems.</li>
+        </ul>
+      </section>
+
+      <section id="grammar">
+        <h2>The grammar</h2>
+        <p>All four trees are derived from one small context-free grammar. The ambiguity in
+          sentence 3 is not a defect in the analysis — it follows from the grammar itself,
+          which offers two rules that can consume a prepositional phrase.</p>
+        <pre><code>S   → NP VP
+NP  → Det N | Det N PP | N N | Pro | NP PP     ← NP PP admits the modifier reading
+VP  → V NP | V NP NP | V NP PP                 ← V NP PP admits the instrument reading
+PP  → P NP
+Det → the | a
+N   → government | rates | interest | internet | voice | man | dog | telescope
+V   → raised | gives | saw
+P   → with
+Pro → everyone</code></pre>
+        <p>Because both <code>VP → V NP PP</code> and <code>NP → NP PP</code> are available,
+          the parser can attach <i>with the telescope</i> in two places and has no
+          grammatical basis for preferring either.</p>
+      </section>
+
+      <section id="s1">
+        <h2>Sentence 1</h2>
+        <p class="sentence">The government raised interest rates.</p>
+        <figure><svg class="tree" viewBox="0 0 680 320" role="img"><title>Constituency parse tree</title><desc>Parse tree for "The government raised interest rates": S splits into NP (Det The, N government) and VP (V raised, NP with N interest and N rates).</desc>
+<text class="th" x="295" y="70" text-anchor="middle">S</text>
+<text class="th" x="160" y="140" text-anchor="middle">NP</text>
+<text class="th" x="430" y="140" text-anchor="middle">VP</text>
+<text class="th" x="100" y="230" text-anchor="middle">Det</text>
+<text class="th" x="220" y="230" text-anchor="middle">N</text>
+<text class="th" x="340" y="230" text-anchor="middle">V</text>
+<text class="th" x="517" y="185" text-anchor="middle">NP</text>
+<text class="th" x="460" y="230" text-anchor="middle">N</text>
+<text class="th" x="575" y="230" text-anchor="middle">N</text>
+<text class="ts" x="100" y="278" text-anchor="middle">The</text>
+<text class="ts" x="220" y="278" text-anchor="middle">government</text>
+<text class="ts" x="340" y="278" text-anchor="middle">raised</text>
+<text class="ts" x="460" y="278" text-anchor="middle">interest</text>
+<text class="ts" x="575" y="278" text-anchor="middle">rates</text>
+<line x1="295" y1="78" x2="160" y2="124"/><line x1="295" y1="78" x2="430" y2="124"/>
+<line x1="160" y1="148" x2="100" y2="214"/><line x1="160" y1="148" x2="220" y2="214"/>
+<line x1="430" y1="148" x2="340" y2="214"/><line x1="430" y1="148" x2="517" y2="169"/>
+<line x1="517" y1="193" x2="460" y2="214"/><line x1="517" y1="193" x2="575" y2="214"/>
+<line class="lex" x1="100" y1="238" x2="100" y2="262"/><line class="lex" x1="220" y1="238" x2="220" y2="262"/>
+<line class="lex" x1="340" y1="238" x2="340" y2="262"/><line class="lex" x1="460" y1="238" x2="460" y2="262"/>
+<line class="lex" x1="575" y1="238" x2="575" y2="262"/>
+</svg>
+          <figcaption>A transitive clause. The subject NP takes a determiner and a noun;
+            the VP takes the verb and a single object NP, in which <i>interest</i> and
+            <i>rates</i> form a compound noun rather than separate constituents.</figcaption>
+        </figure>
+      </section>
+
+      <section id="s2">
+        <h2>Sentence 2</h2>
+        <p class="sentence">The internet gives everyone a voice.</p>
+        <figure><svg class="tree" viewBox="0 0 680 325" role="img"><title>Constituency parse tree</title><desc>Parse tree for "The internet gives everyone a voice": S splits into NP (Det The, N internet) and a ditransitive VP (V gives, NP everyone, NP a voice).</desc>
+<text class="th" x="270" y="45" text-anchor="middle">S</text>
+<text class="th" x="125" y="105" text-anchor="middle">NP</text>
+<text class="th" x="412" y="105" text-anchor="middle">VP</text>
+<text class="th" x="400" y="170" text-anchor="middle">NP</text>
+<text class="th" x="545" y="170" text-anchor="middle">NP</text>
+<text class="th" x="70" y="235" text-anchor="middle">Det</text>
+<text class="th" x="180" y="235" text-anchor="middle">N</text>
+<text class="th" x="290" y="235" text-anchor="middle">V</text>
+<text class="th" x="400" y="235" text-anchor="middle">Pro</text>
+<text class="th" x="500" y="235" text-anchor="middle">Det</text>
+<text class="th" x="590" y="235" text-anchor="middle">N</text>
+<text class="ts" x="70" y="283" text-anchor="middle">The</text>
+<text class="ts" x="180" y="283" text-anchor="middle">internet</text>
+<text class="ts" x="290" y="283" text-anchor="middle">gives</text>
+<text class="ts" x="400" y="283" text-anchor="middle">everyone</text>
+<text class="ts" x="500" y="283" text-anchor="middle">a</text>
+<text class="ts" x="590" y="283" text-anchor="middle">voice</text>
+<line x1="270" y1="53" x2="125" y2="89"/><line x1="270" y1="53" x2="412" y2="89"/>
+<line x1="125" y1="113" x2="70" y2="219"/><line x1="125" y1="113" x2="180" y2="219"/>
+<line x1="412" y1="113" x2="290" y2="219"/><line x1="412" y1="113" x2="400" y2="154"/>
+<line x1="412" y1="113" x2="545" y2="154"/><line x1="400" y1="178" x2="400" y2="219"/>
+<line x1="545" y1="178" x2="500" y2="219"/><line x1="545" y1="178" x2="590" y2="219"/>
+<line class="lex" x1="70" y1="243" x2="70" y2="267"/><line class="lex" x1="180" y1="243" x2="180" y2="267"/>
+<line class="lex" x1="290" y1="243" x2="290" y2="267"/><line class="lex" x1="400" y1="243" x2="400" y2="267"/>
+<line class="lex" x1="500" y1="243" x2="500" y2="267"/><line class="lex" x1="590" y1="243" x2="590" y2="267"/>
+</svg>
+          <figcaption>A ditransitive clause. <i>Gives</i> takes two object NPs — the
+            indirect object <i>everyone</i>, a pronoun standing alone as an NP, and the
+            direct object <i>a voice</i>. Both attach at the same level inside the
+            VP.</figcaption>
+        </figure>
+      </section>
+
+      <section id="s3">
+        <h2>Sentence 3 — a structural ambiguity</h2>
+        <p class="sentence">The man saw the dog with the telescope.</p>
+        <p>This sentence has two grammatically valid parses, differing only in where the
+          prepositional phrase attaches. The mauve branch marks the attachment point in
+          each reading.</p>
+
+        <div class="two-up">
+          <figure><svg class="tree" viewBox="0 0 680 340" role="img"><title>Parse tree, VP attachment</title><desc>Parse tree for "The man saw the dog with the telescope" with the PP attached to the VP: the man uses the telescope to see the dog.</desc>
+<text class="th" x="223" y="50" text-anchor="middle">S</text>
+<text class="th" x="97" y="105" text-anchor="middle">NP</text>
+<text class="th" x="349" y="105" text-anchor="middle">VP</text>
+<text class="th" x="327" y="165" text-anchor="middle">NP</text>
+<text class="th" x="505" y="165" text-anchor="middle">PP</text>
+<text class="th" x="565" y="205" text-anchor="middle">NP</text>
+<text class="th" x="60" y="245" text-anchor="middle">Det</text>
+<text class="th" x="135" y="245" text-anchor="middle">N</text>
+<text class="th" x="215" y="245" text-anchor="middle">V</text>
+<text class="th" x="290" y="245" text-anchor="middle">Det</text>
+<text class="th" x="365" y="245" text-anchor="middle">N</text>
+<text class="th" x="445" y="245" text-anchor="middle">P</text>
+<text class="th" x="520" y="245" text-anchor="middle">Det</text>
+<text class="th" x="610" y="245" text-anchor="middle">N</text>
+<text class="ts" x="60" y="293" text-anchor="middle">The</text>
+<text class="ts" x="135" y="293" text-anchor="middle">man</text>
+<text class="ts" x="215" y="293" text-anchor="middle">saw</text>
+<text class="ts" x="290" y="293" text-anchor="middle">the</text>
+<text class="ts" x="365" y="293" text-anchor="middle">dog</text>
+<text class="ts" x="445" y="293" text-anchor="middle">with</text>
+<text class="ts" x="520" y="293" text-anchor="middle">the</text>
+<text class="ts" x="610" y="293" text-anchor="middle">telescope</text>
+<line x1="223" y1="58" x2="97" y2="89"/><line x1="223" y1="58" x2="349" y2="89"/>
+<line x1="97" y1="113" x2="60" y2="229"/><line x1="97" y1="113" x2="135" y2="229"/>
+<line x1="349" y1="113" x2="215" y2="229"/><line x1="349" y1="113" x2="327" y2="149"/>
+<line class="hi" x1="349" y1="113" x2="505" y2="149"/>
+<line x1="327" y1="173" x2="290" y2="229"/><line x1="327" y1="173" x2="365" y2="229"/>
+<line x1="505" y1="173" x2="445" y2="229"/><line x1="505" y1="173" x2="565" y2="189"/>
+<line x1="565" y1="213" x2="520" y2="229"/><line x1="565" y1="213" x2="610" y2="229"/>
+<line class="lex" x1="60" y1="253" x2="60" y2="277"/><line class="lex" x1="135" y1="253" x2="135" y2="277"/>
+<line class="lex" x1="215" y1="253" x2="215" y2="277"/><line class="lex" x1="290" y1="253" x2="290" y2="277"/>
+<line class="lex" x1="365" y1="253" x2="365" y2="277"/><line class="lex" x1="445" y1="253" x2="445" y2="277"/>
+<line class="lex" x1="520" y1="253" x2="520" y2="277"/><line class="lex" x1="610" y1="253" x2="610" y2="277"/>
+</svg>
+            <figcaption><b>Reading A — instrument.</b> The PP attaches to the VP: the man
+              used the telescope to see the dog.</figcaption>
+          </figure>
+          <figure><svg class="tree" viewBox="0 0 680 360" role="img"><title>Parse tree, NP attachment</title><desc>Parse tree for "The man saw the dog with the telescope" with the PP attached inside the object NP: the dog has the telescope.</desc>
+<text class="th" x="206" y="45" text-anchor="middle">S</text>
+<text class="th" x="97" y="95" text-anchor="middle">NP</text>
+<text class="th" x="315" y="95" text-anchor="middle">VP</text>
+<text class="th" x="416" y="140" text-anchor="middle">NP</text>
+<text class="th" x="327" y="185" text-anchor="middle">NP</text>
+<text class="th" x="505" y="185" text-anchor="middle">PP</text>
+<text class="th" x="565" y="222" text-anchor="middle">NP</text>
+<text class="th" x="60" y="260" text-anchor="middle">Det</text>
+<text class="th" x="135" y="260" text-anchor="middle">N</text>
+<text class="th" x="215" y="260" text-anchor="middle">V</text>
+<text class="th" x="290" y="260" text-anchor="middle">Det</text>
+<text class="th" x="365" y="260" text-anchor="middle">N</text>
+<text class="th" x="445" y="260" text-anchor="middle">P</text>
+<text class="th" x="520" y="260" text-anchor="middle">Det</text>
+<text class="th" x="610" y="260" text-anchor="middle">N</text>
+<text class="ts" x="60" y="308" text-anchor="middle">The</text>
+<text class="ts" x="135" y="308" text-anchor="middle">man</text>
+<text class="ts" x="215" y="308" text-anchor="middle">saw</text>
+<text class="ts" x="290" y="308" text-anchor="middle">the</text>
+<text class="ts" x="365" y="308" text-anchor="middle">dog</text>
+<text class="ts" x="445" y="308" text-anchor="middle">with</text>
+<text class="ts" x="520" y="308" text-anchor="middle">the</text>
+<text class="ts" x="610" y="308" text-anchor="middle">telescope</text>
+<line x1="206" y1="53" x2="97" y2="79"/><line x1="206" y1="53" x2="315" y2="79"/>
+<line x1="97" y1="103" x2="60" y2="244"/><line x1="97" y1="103" x2="135" y2="244"/>
+<line x1="315" y1="103" x2="215" y2="244"/><line x1="315" y1="103" x2="416" y2="124"/>
+<line x1="416" y1="148" x2="327" y2="169"/>
+<line class="hi" x1="416" y1="148" x2="505" y2="169"/>
+<line x1="327" y1="193" x2="290" y2="244"/><line x1="327" y1="193" x2="365" y2="244"/>
+<line x1="505" y1="193" x2="445" y2="244"/><line x1="505" y1="193" x2="565" y2="206"/>
+<line x1="565" y1="230" x2="520" y2="244"/><line x1="565" y1="230" x2="610" y2="244"/>
+<line class="lex" x1="60" y1="268" x2="60" y2="292"/><line class="lex" x1="135" y1="268" x2="135" y2="292"/>
+<line class="lex" x1="215" y1="268" x2="215" y2="292"/><line class="lex" x1="290" y1="268" x2="290" y2="292"/>
+<line class="lex" x1="365" y1="268" x2="365" y2="292"/><line class="lex" x1="445" y1="268" x2="445" y2="292"/>
+<line class="lex" x1="520" y1="268" x2="520" y2="292"/><line class="lex" x1="610" y1="268" x2="610" y2="292"/>
+</svg>
+            <figcaption><b>Reading B — modifier.</b> The PP attaches inside the object NP:
+              the dog had the telescope.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="brackets">
+        <h2>Labelled bracket notation</h2>
+        <p>The same four analyses in the standard compact form.</p>
+        <pre><code>(S (NP (Det The) (N government))
+   (VP (V raised)
+       (NP (N interest) (N rates))))
+
+(S (NP (Det The) (N internet))
+   (VP (V gives)
+       (NP (Pro everyone))
+       (NP (Det a) (N voice))))
+
+Reading A — instrument (PP attached to VP):
+(S (NP (Det The) (N man))
+   (VP (V saw)
+       (NP (Det the) (N dog))
+       (PP (P with) (NP (Det the) (N telescope)))))
+
+Reading B — modifier (PP attached to NP):
+(S (NP (Det The) (N man))
+   (VP (V saw)
+       (NP (NP (Det the) (N dog))
+           (PP (P with) (NP (Det the) (N telescope))))))</code></pre>
+      </section>
+
+      <section id="discussion">
+        <h2>Discussion</h2>
+        <p>Sentences 1 and 2 have a single well-formed analysis each, and the interest lies
+          in what the tree records. In sentence 1, <i>interest rates</i> is a compound noun
+          rather than two separate constituents: the grammar could in principle read
+          <i>raised interest</i> as verb plus object and leave <i>rates</i> stranded, but no
+          rule in the grammar rules that out. In sentence 2, <i>gives</i> subcategorises for
+          two objects, so both NPs attach at the same level inside the VP — the tree encodes
+          the verb's argument structure, not just word order.</p>
+        <p>Sentence 3 is the instructive case. Both parses are licensed by the same grammar,
+          so the choice between them cannot be made syntactically. Swapping one word makes
+          this plain: in <i>the man saw the dog with the bone</i> the modifier reading is
+          obviously right, and in <i>the man saw the dog with the telescope</i> the
+          instrument reading is preferred — yet the trees are structurally identical in each
+          pair. What changes is knowledge about telescopes and bones, not grammar.</p>
+        <p>This is why practical parsers do not rely on grammar alone. Statistical parsers
+          learn attachment preferences from annotated corpora such as the Penn Treebank
+          (Marcus, Santorini and Marcinkiewicz, 1993), and neural models resolve attachment
+          implicitly from context. Both replace an absent rule with evidence about how
+          language is actually used.</p>
+      </section>
+
+      <section id="evaluation">
+        <h2>Critical evaluation</h2>
+        <p>A context-free grammar of this kind overgenerates. The rules above will happily
+          derive <i>the telescope saw the government</i>, which is grammatical and
+          meaningless; nothing in the formalism encodes selectional restrictions on what can
+          see. The grammar also says nothing about which of two valid parses is intended,
+          and the problem grows quickly: with each additional prepositional phrase the number
+          of attachment possibilities grows at the rate of the Catalan numbers, so a sentence
+          with four PPs has dozens of valid parses (Church and Patil, 1982). Syntactic
+          coverage and useful analysis are not the same thing.</p>
+        <p>Working through these trees also exposed how far the constituency template is
+          built around English. It assumes a fixed subject–verb–object order and marks
+          grammatical relations by position in the tree. Arabic, my first language, is
+          verb-initial in its classical order and marks subject and object through case
+          rather than position, so the same S → NP VP skeleton fits awkwardly and the
+          NP–VP division carries less of the information. Dependency representations, which
+          link words directly by grammatical relation rather than grouping them into
+          phrases, travel between languages more comfortably for exactly that reason
+          (Kübler, McDonald and Nivre, 2009) — which is also why they dominate multilingual
+          parsing in practice.</p>
+      </section>
+
+      <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>The four trees show what a constituency analysis can and cannot deliver. It makes
+          structure explicit — compound nouns, ditransitive argument structure, the two
+          places a prepositional phrase can attach — and in doing so it locates ambiguity
+          precisely, which is a genuine result rather than a failure. What it cannot do is
+          choose between two grammatical readings, because that choice rests on meaning.</p>
+        <p>For an agent that takes instructions in natural language, the gap between
+          grammaticality and meaning is the point at which parsing stops being a syntactic
+          problem and becomes a question of what the agent knows about its domain. That is
+          the same boundary the ontology draws in the KQML dialogue elsewhere in this
+          module: a message can be perfectly well formed and still not be understood.</p>
+      </section>
+
+      <section id="references">
+        <h2>References</h2>
+        <ul class="refs">
+          <li>Chomsky, N. (1957) <i>Syntactic Structures</i>. The Hague: Mouton.</li>
+          <li>Church, K. and Patil, R. (1982) 'Coping with syntactic ambiguity or how to put
+            the block in the box on the table', <i>American Journal of Computational
+            Linguistics</i>, 8(3–4), pp. 139–149.</li>
+          <li>Jurafsky, D. and Martin, J.H. (2009) <i>Speech and Language Processing</i>.
+            2nd edn. Upper Saddle River, NJ: Pearson.</li>
+          <li>Kübler, S., McDonald, R. and Nivre, J. (2009) <i>Dependency Parsing</i>. San
+            Rafael, CA: Morgan &amp; Claypool.</li>
+          <li>Marcus, M.P., Santorini, B. and Marcinkiewicz, M.A. (1993) 'Building a large
+            annotated corpus of English: the Penn Treebank', <i>Computational
+            Linguistics</i>, 19(2), pp. 313–330.</li>
+        </ul>
+      </section>
+
+    </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="shell">
+  <div class="colophon">
+    <div class="row">
+      <a href="mailto:daldosarii@gmail.com" aria-label="Email AlDana" title="daldosarii@gmail.com">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M3 7l9 6.5L21 7"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/aldanamaldosari/" target="_blank" rel="noopener"
+         aria-label="LinkedIn profile" title="linkedin.com/in/aldanamaldosari">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M7.5 10.5v6.2M7.5 7.6v.1M11.6 16.7v-6.2M11.6 13.2c0-1.6.9-2.6 2.3-2.6s2.4.9 2.4 2.7v3.4"/></svg>
+      </a>
+      <span aria-label="CV — to add" title="CV — to add">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.8h7.5L19 8.3v12.9H6z"/><path d="M13.3 3v5.5H19M9 12.5h6M9 16h4.5"/></svg>
+      </span>
+    </div>
+    <p class="set">
+      MSc Artificial Intelligence, University of Essex.<br>
+      Last revised August 2026.
+    </p>
+    <p class="copy">© 2026 AlDana Al-Dosari. All rights reserved.</p>
+  </div>
+</div>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

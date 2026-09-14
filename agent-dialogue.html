@@ -249,7 +249,7 @@
   :in-reply-to  query-tv-stock-01
   :content      (= (available-stock television-50inch) 137))</pre>
   </div>
-  <aside class="margin-note"><b>What this box does.</b> An assertive speech act:
+  <aside class="margin-note"><b>What this box does.</b> A representative speech act:
   Bob binds the variable and asserts the fact — 137 units on hand.
   <code style="font-family:'JetBrains Mono',monospace">:in-reply-to</code> matches
   the thread label, so even in an asynchronous exchange Alice knows exactly which
@@ -306,10 +306,10 @@
     <tr><td><code>ask-one</code></td><td>Directive</td>
         <td>Requests a single binding for the query's variable; the counterpart
         <code>ask-all</code> would request every matching fact.</td></tr>
-    <tr><td><code>tell</code></td><td>Assertive</td>
+    <tr><td><code>tell</code></td><td>Representative</td>
         <td>Asserts a fact into the conversation; the receiver may adopt it as a
         belief.</td></tr>
-    <tr><td><code>sorry</code></td><td>Assertive (negative)</td>
+    <tr><td><code>sorry</code></td><td>Representative (negative)</td>
         <td>Graceful failure — the agent understood the request but cannot
         answer it.</td></tr>
     <tr><td><code>:reply-with</code> / <code>:in-reply-to</code></td><td>—</td>

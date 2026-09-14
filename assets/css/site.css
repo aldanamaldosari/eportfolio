@@ -231,8 +231,8 @@ p{margin:0 0 18px}
 .tl.done::before{background:var(--slate);border-color:var(--slate)}
 .tl.now::before{background:var(--mauve);border-color:var(--mauve)}
 .tl button{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;
-  background:none;border:0;padding:10px 0;cursor:pointer;font-family:var(--sans);
-  border-bottom:1px solid var(--rule);transition:color .2s}
+  background:none;border:0;padding:12px 0;cursor:pointer;font-family:var(--sans);
+  transition:color .2s}
 .tl-date{font-size:14.5px;font-weight:500;color:var(--soft);min-width:150px;
   letter-spacing:.02em;transition:color .2s}
 .tl-title{font-size:17px;font-weight:700;letter-spacing:-.02em;color:var(--navy)}
