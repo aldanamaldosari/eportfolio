@@ -28,6 +28,10 @@
 .parse pre{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:13.5px;
   line-height:1.7;background:var(--panel);border:1px solid var(--rule);color:var(--ink);
   padding:20px 22px;border-radius:14px;overflow-x:auto;white-space:pre;margin:0}
+.legend td{font-size:15.5px}
+.legend td:first-child{width:80px}
+.legend code{background:var(--panel);padding:2px 8px;border-radius:5px;
+  font-family:ui-monospace,Menlo,monospace;font-size:13.5px;color:var(--navy);font-weight:500}
 .two-up{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:22px}
 .two-up figure{margin:0}
 </style>
@@ -72,8 +76,14 @@
 
       <section id="task">
         <h2>The task</h2>
-        <p class="lede">Create a constituency-based parse tree for three sentences and add
-          the completed trees to the e-portfolio.</p>
+        <p class="lede">Create a constituency-based parse tree for the following phrases:</p>
+        <ul class="contrib">
+          <li>The government raised interest rates.</li>
+          <li>The internet gives everyone a voice.</li>
+          <li>The man saw the dog with the telescope.</li>
+        </ul>
+        <p>Add your completed tree to your e-Portfolio.</p>
+
         <h3 class="sub-head">Learning outcomes</h3>
         <ul class="contrib">
           <li>The knowledge and skills required to develop, deploy and evaluate the tools
@@ -85,21 +95,64 @@
 
       <section id="grammar">
         <h2>The grammar</h2>
-        <p>All four trees are derived from one small context-free grammar. The ambiguity in
-          sentence 3 is not a defect in the analysis — it follows from the grammar itself,
-          which offers two rules that can consume a prepositional phrase.</p>
-        <pre><code>S   → NP VP
-NP  → Det N | Det N PP | N N | Pro | NP PP     ← NP PP admits the modifier reading
-VP  → V NP | V NP NP | V NP PP                 ← V NP PP admits the instrument reading
-PP  → P NP
-Det → the | a
-N   → government | rates | interest | internet | voice | man | dog | telescope
-V   → raised | gives | saw
-P   → with
-Pro → everyone</code></pre>
-        <p>Because both <code>VP → V NP PP</code> and <code>NP → NP PP</code> are available,
-          the parser can attach <i>with the telescope</i> in two places and has no
-          grammatical basis for preferring either.</p>
+        <p>A constituency tree groups words into phrases and labels each group by its
+          category. Every label used in the four trees is listed below, with an example
+          drawn from the three sentences.</p>
+
+        <table class="map legend">
+          <thead><tr><th>Symbol</th><th>Category</th><th>What it covers</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td><code>S</code></td><td>Sentence</td>
+                <td>The whole clause: a subject phrase plus a predicate phrase.</td>
+                <td><i>The internet gives everyone a voice</i></td></tr>
+            <tr><td><code>NP</code></td><td>Noun phrase</td>
+                <td>A noun and the words that belong with it; fills subject and object positions.</td>
+                <td><i>the government</i>, <i>a voice</i></td></tr>
+            <tr><td><code>VP</code></td><td>Verb phrase</td>
+                <td>The verb together with its objects and any phrases modifying the action.</td>
+                <td><i>raised interest rates</i></td></tr>
+            <tr><td><code>PP</code></td><td>Prepositional phrase</td>
+                <td>A preposition plus the noun phrase it governs.</td>
+                <td><i>with the telescope</i></td></tr>
+            <tr><td><code>Det</code></td><td>Determiner</td>
+                <td>Specifies a noun — articles, demonstratives, quantifiers.</td>
+                <td><i>the</i>, <i>a</i></td></tr>
+            <tr><td><code>N</code></td><td>Noun</td>
+                <td>A thing, person or concept.</td>
+                <td><i>dog</i>, <i>rates</i></td></tr>
+            <tr><td><code>V</code></td><td>Verb</td>
+                <td>The action or state at the head of the verb phrase.</td>
+                <td><i>saw</i>, <i>gives</i></td></tr>
+            <tr><td><code>P</code></td><td>Preposition</td>
+                <td>Relates a noun phrase to the rest of the clause.</td>
+                <td><i>with</i></td></tr>
+            <tr><td><code>Pro</code></td><td>Pronoun</td>
+                <td>Stands in for a noun phrase on its own.</td>
+                <td><i>everyone</i></td></tr>
+          </tbody>
+        </table>
+
+        <h3 class="sub-head">Production rules</h3>
+        <p>The trees are derived from one small context-free grammar. Phrase-structure rules
+          build the branches; lexical rules attach the words.</p>
+        <pre><code>Phrase structure
+  S   → NP VP
+  NP  → Det N | N N | Pro | NP PP
+  VP  → V NP | V NP NP | V NP PP
+  PP  → P NP
+
+Lexicon
+  Det → the | a
+  N   → government | interest | rates | internet | voice | man | dog | telescope
+  V   → raised | gives | saw
+  P   → with
+  Pro → everyone</code></pre>
+
+        <p>Two rules matter for sentence 3. <code>VP → V NP PP</code> lets the prepositional
+          phrase attach to the verb phrase, giving the instrument reading, while
+          <code>NP → NP PP</code> lets it attach inside the object noun phrase, giving the
+          modifier reading. Both are in the grammar, so both derivations are legal and the
+          grammar itself offers no way to choose between them.</p>
       </section>
 
       <section id="s1">
@@ -301,8 +354,7 @@ Reading B — modifier (PP attached to NP):
           instrument reading is preferred — yet the trees are structurally identical in each
           pair. What changes is knowledge about telescopes and bones, not grammar.</p>
         <p>This is why practical parsers do not rely on grammar alone. Statistical parsers
-          learn attachment preferences from annotated corpora such as the Penn Treebank
-          (Marcus, Santorini and Marcinkiewicz, 1993), and neural models resolve attachment
+          learn attachment preferences from annotated corpora, and neural models resolve attachment
           implicitly from context. Both replace an absent rule with evidence about how
           language is actually used.</p>
       </section>
@@ -315,7 +367,7 @@ Reading B — modifier (PP attached to NP):
           see. The grammar also says nothing about which of two valid parses is intended,
           and the problem grows quickly: with each additional prepositional phrase the number
           of attachment possibilities grows at the rate of the Catalan numbers, so a sentence
-          with four PPs has dozens of valid parses (Church and Patil, 1982). Syntactic
+          with four PPs has dozens of valid parses (Russell and Norvig, 2021). Syntactic
           coverage and useful analysis are not the same thing.</p>
         <p>Working through these trees also exposed how far the constituency template is
           built around English. It assumes a fixed subject–verb–object order and marks
@@ -324,9 +376,9 @@ Reading B — modifier (PP attached to NP):
           rather than position, so the same S → NP VP skeleton fits awkwardly and the
           NP–VP division carries less of the information. Dependency representations, which
           link words directly by grammatical relation rather than grouping them into
-          phrases, travel between languages more comfortably for exactly that reason
-          (Kübler, McDonald and Nivre, 2009) — which is also why they dominate multilingual
-          parsing in practice.</p>
+          phrases, travel between languages more comfortably for exactly that reason, and
+          are now the common representation in multilingual parsing (Russell and Norvig,
+          2021).</p>
       </section>
 
       <section id="conclusion">
@@ -346,17 +398,8 @@ Reading B — modifier (PP attached to NP):
       <section id="references">
         <h2>References</h2>
         <ul class="refs">
-          <li>Chomsky, N. (1957) <i>Syntactic Structures</i>. The Hague: Mouton.</li>
-          <li>Church, K. and Patil, R. (1982) 'Coping with syntactic ambiguity or how to put
-            the block in the box on the table', <i>American Journal of Computational
-            Linguistics</i>, 8(3–4), pp. 139–149.</li>
-          <li>Jurafsky, D. and Martin, J.H. (2009) <i>Speech and Language Processing</i>.
-            2nd edn. Upper Saddle River, NJ: Pearson.</li>
-          <li>Kübler, S., McDonald, R. and Nivre, J. (2009) <i>Dependency Parsing</i>. San
-            Rafael, CA: Morgan &amp; Claypool.</li>
-          <li>Marcus, M.P., Santorini, B. and Marcinkiewicz, M.A. (1993) 'Building a large
-            annotated corpus of English: the Penn Treebank', <i>Computational
-            Linguistics</i>, 19(2), pp. 313–330.</li>
+          <li>Russell, S. and Norvig, P. (2021) <i>Artificial Intelligence: A Modern
+            Approach</i>. 4th edn. Harlow: Pearson.</li>
         </ul>
       </section>
 
