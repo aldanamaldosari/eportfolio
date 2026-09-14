@@ -95,9 +95,15 @@
 
       <section id="grammar">
         <h2>The grammar</h2>
-        <p>A constituency tree groups words into phrases and labels each group by its
-          category. Every label used in the four trees is listed below, with an example
-          drawn from the three sentences.</p>
+        <p>A parse tree makes the hierarchical structure of a sentence explicit, so that
+          each syntactic unit corresponds to a subtree (Zimmerman, 2019). Two families of
+          parse tree do this differently. A <i>constituency</i> tree, used here, groups words
+          into phrases and labels each group by its category. A <i>dependency</i> tree —
+          the form Zimmerman (2019) works with — takes the words themselves as nodes and
+          labels the edges with the grammatical relations between them, radiating from the
+          main verb. The activity asks for the first; the contrast matters later.</p>
+        <p>Every label used in the four trees is listed below, with an example drawn from
+          the three sentences.</p>
 
         <table class="map legend">
           <thead><tr><th>Symbol</th><th>Category</th><th>What it covers</th><th>Example</th></tr></thead>
@@ -355,7 +361,7 @@ Reading B — modifier (PP attached to NP):
           pair. What changes is knowledge about telescopes and bones, not grammar.</p>
         <p>This is why practical parsers do not rely on grammar alone. Statistical parsers
           learn attachment preferences from annotated corpora, and neural models resolve attachment
-          implicitly from context. Both replace an absent rule with evidence about how
+          implicitly from context (Russell and Norvig, 2021). Both replace an absent rule with evidence about how
           language is actually used.</p>
       </section>
 
@@ -367,7 +373,7 @@ Reading B — modifier (PP attached to NP):
           see. The grammar also says nothing about which of two valid parses is intended,
           and the problem grows quickly: with each additional prepositional phrase the number
           of attachment possibilities grows at the rate of the Catalan numbers, so a sentence
-          with four PPs has dozens of valid parses (Russell and Norvig, 2021). Syntactic
+          with four PPs has dozens of valid parses (Church and Patil, 1982). Syntactic
           coverage and useful analysis are not the same thing.</p>
         <p>Working through these trees also exposed how far the constituency template is
           built around English. It assumes a fixed subject–verb–object order and marks
@@ -376,9 +382,11 @@ Reading B — modifier (PP attached to NP):
           rather than position, so the same S → NP VP skeleton fits awkwardly and the
           NP–VP division carries less of the information. Dependency representations, which
           link words directly by grammatical relation rather than grouping them into
-          phrases, travel between languages more comfortably for exactly that reason, and
-          are now the common representation in multilingual parsing (Russell and Norvig,
-          2021).</p>
+          phrases, travel between languages more comfortably for exactly that reason
+          (Kübler, McDonald and Nivre, 2009). In a dependency tree every token is reachable
+          by a single path from the root, and the edge labels carry the grammatical relation
+          directly, which is what makes them a practical basis for rule-based analysis
+          (Zimmerman, 2019).</p>
       </section>
 
       <section id="conclusion">
@@ -398,8 +406,17 @@ Reading B — modifier (PP attached to NP):
       <section id="references">
         <h2>References</h2>
         <ul class="refs">
+          <li>Church, K. and Patil, R. (1982) 'Coping with syntactic ambiguity or how to put
+            the block in the box on the table', <i>American Journal of Computational
+            Linguistics</i>, 8(3–4), pp. 139–149.</li>
+          <li>Kübler, S., McDonald, R. and Nivre, J. (2009) <i>Dependency Parsing</i>. San
+            Rafael, CA: Morgan &amp; Claypool.</li>
           <li>Russell, S. and Norvig, P. (2021) <i>Artificial Intelligence: A Modern
-            Approach</i>. 4th edn. Harlow: Pearson.</li>
+            Approach</i>. 4th edn. Harlow: Pearson Education.</li>
+          <li>Zimmerman, V. (2019) 'Getting to grips with parse trees', <i>Towards Data
+            Science</i>. Available at:
+            https://towardsdatascience.com/getting-to-grips-with-parse-trees-6e19e7cd3c3c/
+            (Accessed: 14 September 2026).</li>
         </ul>
       </section>
 
