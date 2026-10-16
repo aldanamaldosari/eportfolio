@@ -309,27 +309,35 @@
 
   <div class="tabpanel" id="outcomes" role="tabpanel" hidden>
     <div class="reading">
-      <p style="margin-bottom:28px">
-        Each module outcome, and the artefact that proves it. A row with no
-        evidence is the gap to work on next.
+      <p style="margin-bottom:10px">
+        Each module learning outcome, how the work evidences it, and where to find that work.
+        Every chip opens the artefact it names.
       </p>
-      <table class="map">
-        <thead><tr><th>Learning outcome</th><th>Evidence</th></tr></thead>
+      <p class="map-note">All four outcomes are evidenced. Nine pieces of work carry them: six
+        e-portfolio artefacts, the group design proposal and two assessed submissions.</p>
+      <table class="map outcomes">
+        <thead><tr><th>Learning outcome</th><th>How it is evidenced</th><th>Evidence</th></tr></thead>
         <tbody>
-          <tr><td>Identify and critically analyse agent-based systems, differentiating
-              between architectures and approaches.</td>
-              <td><a class="chip" href="#act-dialogues">Dialogues</a><a class="chip" href="#unit-6">Unit 6</a><a class="chip" href="#unit-11">Unit 11</a></td></tr>
-          <tr><td>Apply and critically evaluate intelligent agent techniques to real-world
-              problems, particularly where technical risk and uncertainty is involved.</td>
-              <td><a class="chip" href="#unit-11">Unit 11</a></td></tr>
-          <tr><td>Deploy critically appropriate software tools and skills for the design and
-              implementation of an agent-based system, bearing in mind applicable legal,
-              social, ethical and professional issues.</td>
-              <td><a class="chip" href="#unit-6">Unit 6</a></td></tr>
-          <tr><td>Systematically develop and implement the skills required to be an effective
-              member of a development team in a virtual professional environment, adopting
-              real-life perspectives on team roles and organisation.</td>
-              <td><a class="chip" href="#group">Group project</a></td></tr>
+          <tr>
+            <td class="lo">Identify and critically analyse agent-based systems, differentiating between architectures and approaches.</td>
+            <td class="how">Traced the rise of agent-based computing through Wooldridge's five trends and set reactive architectures (Brooks) against deliberative BDI ones; separated agents from capabilities in the six-agent design; and compared KQML and KIF against method invocation and FIPA-ACL, naming what each buys and costs.</td>
+            <td class="ev"><a class="chip" href="#act-cd1">Discussion 1</a><a class="chip" href="#act-cd2">Discussion 2</a><a class="chip" href="#act-dialogues">Dialogues</a><a class="chip" href="#unit-6">Unit 6</a></td>
+          </tr>
+          <tr>
+            <td class="lo">Apply and critically evaluate intelligent agent techniques to real-world problems, particularly where technical risk and uncertainty is involved.</td>
+            <td class="how">Built and ran a planning agent on live academic search, where three runs exposed schema failure, failed quotation checks, a processing retry and a re-plan; analysed live facial recognition as a deployed system whose threshold setting trades missed suspects against false alerts; and showed with PP-attachment that syntax alone cannot resolve ambiguity.</td>
+            <td class="ev"><a class="chip" href="#unit-11">Unit 11</a><a class="chip" href="#act-dl">Deep Learning</a><a class="chip" href="#act-parse">Parse Trees</a><a class="chip" href="#unit-6">Unit 6</a></td>
+          </tr>
+          <tr>
+            <td class="lo">Deploy critically appropriate software tools and skills for the design and implementation of an agent-based system, bearing in mind applicable legal, social, ethical and professional issues.</td>
+            <td class="how">Implemented the agent in LangGraph and Pydantic against Crossref, OpenAlex and a hosted model, with the goal and retrieved records treated as untrusted data, Boolean-only approval, escaped CSV output and hashed exports; argued privacy and lifecycle accountability as engineering requirements rather than later governance; and set out the bias and anonymity costs of biometric processing in public space.</td>
+            <td class="ev"><a class="chip" href="#unit-11">Unit 11</a><a class="chip" href="#act-cd3">Discussion 3</a><a class="chip" href="#act-dl">Deep Learning</a><a class="chip" href="#act-dialogues">Dialogues</a></td>
+          </tr>
+          <tr>
+            <td class="lo">Systematically develop and implement the skills required to be an effective member of a development team in a virtual professional environment, adopting real-life perspectives on team roles and organisation.</td>
+            <td class="how">Held the Methodology Lead role in Group E across eight recorded milestones, reconciling three competing architecture proposals into one documented approach and handing over on schedule; and engaged the cohort through six peer responses that changed my own position on verification and accountability.</td>
+            <td class="ev"><a class="chip" href="#group">Group project</a><a class="chip" href="#unit-6">Unit 6</a><a class="chip" href="#act-cd1">Discussion 1</a><a class="chip" href="#act-cd2">Discussion 2</a><a class="chip" href="#act-cd3">Discussion 3</a></td>
+          </tr>
         </tbody>
       </table>
     </div>
