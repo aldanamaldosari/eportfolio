@@ -1,0 +1,2477 @@
+{
+  "run_id": "a2495ada80c34dabbe461ba449357e51",
+  "goal": "How can passive cooling reduce energy use in school buildings?",
+  "settings": {
+    "model_id": "Qwen/Qwen2.5-72B-Instruct",
+    "provider": "deepinfra",
+    "use_openalex": true,
+    "rows_per_query": 8,
+    "max_records": 10,
+    "min_records": 3,
+    "min_abstracts": 2,
+    "retrieval_retries": 1,
+    "processing_retries": 1,
+    "max_replans": 1,
+    "timeout_seconds": 30,
+    "http_attempts": 3,
+    "start_year": null,
+    "end_year": null
+  },
+  "plan": {
+    "tasks": [
+      {
+        "question": "What are the most effective passive cooling techniques for school buildings?",
+        "query": "effective passive cooling techniques school buildings",
+        "rationale": "This subquestion focuses on identifying the specific passive cooling methods that have been proven to be effective in school buildings, which is essential for understanding how to reduce energy use."
+      },
+      {
+        "question": "How do passive cooling techniques impact energy consumption in school buildings?",
+        "query": "impact of passive cooling on energy consumption school buildings",
+        "rationale": "This subquestion aims to quantify the energy savings achieved through passive cooling methods, providing a clear measure of their effectiveness in reducing energy use."
+      },
+      {
+        "question": "What are the design considerations for implementing passive cooling in school buildings?",
+        "query": "design considerations passive cooling school buildings",
+        "rationale": "This subquestion explores the practical aspects of integrating passive cooling into school building designs, ensuring that the methods are feasible and sustainable."
+      }
+    ],
+    "scope_note": "The research goal is to investigate how passive cooling techniques can reduce energy use in school buildings. The subquestions focus on identifying effective methods, quantifying their impact on energy consumption, and understanding the design considerations for implementation. The scope is limited to school buildings and does not cover other types of buildings or non-passive cooling methods."
+  },
+  "records": [
+    {
+      "id": "P6f736c2813a0",
+      "title": "Passive cooling of buildings",
+      "doi": "10.4324/9781315073668-7",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-7",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P90be0303f01e",
+      "title": "Recent Advances in Passive Cooling Techniques",
+      "doi": "10.1142/9789813236974_0008",
+      "year": 2019,
+      "authors": [
+        "P. Rajagopalan"
+      ],
+      "abstract": "",
+      "url": "https://doi.org/10.1142/9789813236974_0008",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P910ea519ef6d",
+      "title": "Cooling in buildings",
+      "doi": "10.4324/9781315073668-6",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-6",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pa94d383cf01e",
+      "title": "A Review of Passive-Cooling Techniques for Buildings in Hot\u2013Humid Climate Zones",
+      "doi": "10.3390/buildings16122288",
+      "year": 2026,
+      "authors": [
+        "Floriberta Binarti",
+        "Tetsu Kubota"
+      ],
+      "abstract": "Buildings in hot\u2013humid climates experience increasing thermal stress due to urban heat islands and climate change, leading to greater reliance on air conditioning. Passive cooling is therefore a crucial low-carbon strategy for maintaining thermal comfort. This paper reviews thermal comfort ranges and passive-cooling techniques across K\u00f6ppen\u2013Geiger hot\u2013humid climate classes. A two-stage approach was adopted: thermal comfort data from 35 field studies were analyzed by climate class and ventilation mode, while more than 70 application studies were qualitatively reviewed to assess mechanisms, performance, and climate suitability. The results indicate that occupants in hot\u2013humid areas exhibit broad thermal tolerance, particularly in naturally ventilated buildings, with neutral temperatures ranging from 19.5 \u00b0C in humid subtropical climates to 36.3 \u00b0C in tropical savanna climates. Natural ventilation is the most widely applicable passive-cooling strategy, but its effectiveness depends on integration with climate-responsive measures. Ventilation, combined with solar protection and courtyards, is most effective in Af and Am climates, whereas shading, solar chimneys, evaporative cooling, night ventilation, thermal mass, and phase-change materials provide greater benefits in Aw, Cfa, and Cwa climates. However, no single strategy is sufficient across all climates. The review provides climate-specific guidance for designing low-carbon, thermally resilient buildings in hot\u2013humid regions.",
+      "url": "https://doi.org/10.3390/buildings16122288",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P23cdaee72196",
+      "title": "Passive Cooling and Heating Techniques for Buildings",
+      "doi": "10.1115/1.861271_ch4",
+      "year": 2017,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.1115/1.861271_ch4",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P0ea50de16e80",
+      "title": "Cooling load of buildings - C. Balaras",
+      "doi": "10.4324/9781315073668-12",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-12",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P7f6d8332213b",
+      "title": "Optimizing Windcatcher Designs for Effective Passive Cooling Strategies in Vienna\u2019s Urban Environment",
+      "doi": "10.3390/buildings14030765",
+      "year": 2024,
+      "authors": [
+        "Aida Shayegani",
+        "Viera Joklova",
+        "Juraj Illes"
+      ],
+      "abstract": "Urban overheating, intensified by climate change, poses a critical challenge in Central European cities, witnessing a rise in tropical days. Conventional mechanical cooling systems in buildings significantly contribute to carbon dioxide emissions, exacerbating global warming. In response, windcatchers\u2014traditional Iranian natural cooling systems\u2014emerge as a promising sustainable solution for contemporary architecture, even in non-arid climates. This research aims to evaluate windcatchers\u2019 efficacy in improving building thermal comfort in Central European climates, focusing on Vienna\u2019s urban environment. This study identifies optimal windcatcher designs by analyzing key variables: height variation, inlet dimensions, urban exposure, Building Management System (BMS) temperature thresholds, and integration with an earth tube system using Design Builder simulation software version 6. The findings reveal that a windcatcher standing at 2.5 m tall, with inlet dimensions of 0.9 m by 1.4 m, in an open, less densely populated urban setting, and with open valves when indoor temperatures surpass 22 \u00b0C, demonstrates the most effective reduction in cooling load. Moreover, both one-sided and two-sided windcatchers outperform conventional ventilation through openings. Additionally, combining a one-sided windcatcher with an earth tube system ensures efficient cooling even when exterior temperatures exceed 25 degrees Celsius. When augmented by a heat pump, this integrated system can provide heated ventilation.",
+      "url": "https://doi.org/10.3390/buildings14030765",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pda6861078b57",
+      "title": "Radiative cooling",
+      "doi": "10.4324/9781315073668-18",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-18",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P3cc9c486ecae",
+      "title": "Use of passive cooling techniques and super cool materials to minimize cooling energy and improve thermal comfort in Brazilian schools",
+      "doi": "10.1016/j.enbuild.2024.114125",
+      "year": 2024,
+      "authors": [
+        "Camila Machado de Azevedo Correia",
+        "Cl\u00e1udia Naves David Amorim",
+        "M. Santamouris"
+      ],
+      "abstract": "Standardized replicable buildings can cause discomfort and increased air conditioning usage. Besides, super cool coatings are effective passive solutions. Therefore, this study evaluates thermal comfort in a standardized Brazilian public school in 8 climates, verifies suitable super cool coatings and identifies optimal additional passive techniques to meet regulatory requirements without active air conditioning, a topic worthy of investigation. Methods include pilot simulations with DesignBuilder, thermal comfort analysis considering ASHRAE 55 adaptive model; JEA Algorithm optimization simulations; identification of most influential passive strategies by sensitivity analyses; and evaluation of the ideal opaque envelope through heat balance. Results showed that current model do not meet the Brazilian normative. Thus, different super cool coatings are recommended: thermochromic for heating-dominated; spectrally selective for cooling-dominated dry and high broadband emissivity for extreme-cooling-dominated humid zones. Regarding opaque envelope, thermal mass flat roofs and insulated walls are advised. In 7 of 8 climates, super cool roof was most effective followed by natural ventilation . Optimal combinations include super cool envelope, window shading and natural ventilation 24 hours 7 days a week with 95 % of free-aperture for extreme-cooling-dominated zones; super cool roofs, medium reflectivity walls and 5 % of free-aperture for cooling-dominated; thermochromic roof and dark walls with natural ventilation during occupancy with 5 % of free-aperture for heating-dominated.",
+      "url": "https://doi.org/10.1016/j.enbuild.2024.114125",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P76ace636800b",
+      "title": "Use of Passive Cooling Techniques and Super Cool Materials to Minimize Cooling Energy and Improve Thermal Comfort in Brazilian Schools",
+      "doi": "10.2139/ssrn.4655986",
+      "year": 2023,
+      "authors": [
+        "Camila Machado de Azevedo Correia",
+        "Cl\u00e1udia Naves David Amorim",
+        "M. Santamouris"
+      ],
+      "abstract": "",
+      "url": "https://doi.org/10.2139/ssrn.4655986",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P4ace89b6905e",
+      "title": "Review of passive heating/cooling systems of buildings",
+      "doi": "10.1002/ese3.129",
+      "year": 2016,
+      "authors": [
+        "Neha Gupta",
+        "Gopal Nath Tiwari"
+      ],
+      "abstract": "Abstract In this review, an attempt has been made to analyze passive solar heating and cooling concepts along with their effects on performance of a building's thermal management. The concepts of Trombe wall, solarium, evaporative cooling, ventilation, radiative cooling, wind tower, earth air heat exchanger, roof pond, solar shading for buildings, and building\u2010integrated photovoltaic thermal (BiPVT) systems are extensively covered in this review. Comparison of results by various heating and cooling concepts has been made. It has been observed that direct heating through double\u2010glazed window saves maximum conventional fuel for thermal heating during winter months. Further, an evaporative cooling is one of the best cooling concepts which is economical too in summer period.",
+      "url": "https://doi.org/10.1002/ese3.129",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P4b4cf20740a8",
+      "title": "Alternative Ways of Cooling a Passive School Building in Order to Maintain Thermal Comfort in Summer",
+      "doi": "10.3390/en14010070",
+      "year": 2020,
+      "authors": [
+        "Anna Dudzi\u0144ska",
+        "Tomasz Kisilewicz"
+      ],
+      "abstract": "The heatwaves that have affected our civilization in recent years pose a serious threat to the environment as well as the proper functioning of our bodies. Schools are facilities with specific microclimatic requirements. Thermal conditions in educational buildings are decisive for the stimulation and efficiency of the learning process, as well as the interaction of students. Based on the measurements of thermal comfort carried out in the school building, with the energy standard of a passive building, it can be observed that in schools with very low energy consumption, the problem of interior overheating may occur in the summer months. In this paper, an attempt was made to search for alternative passive measures allowing for the required indoor microclimate conditions to be obtained. Such solutions are in line with the spirit of the European energy policy and sustainable development. A model of the school under study was created using the Design Builder simulation program. The role of mechanical ventilation and the possibility of night ventilation in reducing discomfort were examined. Consideration was given to the justification of using expensive heat pump installations with a ground heat exchanger to reduce overheating in summer. The application of the adaptive approach to the assessment of thermal conditions and the acceptance of limited overheating periods led to the conclusion that the analyzed building could function successfully without these additional installation elements. A proprietary tool for the analysis of microclimate conditions was proposed to estimate the hours of discomfort in a way that is objective and easy to calculate.",
+      "url": "https://doi.org/10.3390/en14010070",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P210b803031e9",
+      "title": "Passive cooling techniques",
+      "doi": "10.59490/abe.19.10.4104",
+      "year": 2019,
+      "authors": [
+        "Xiaoyu Du"
+      ],
+      "abstract": "Vernacular buildings are local buildings that have evolved overtime in one location to suit the local climate, culture and economy (Meir & Roaf, 2003). The construction of vernacular buildings uses locally available resources to address local needs. These kinds of structures evolve over time to reflect the environmental, cultural and historical context in which they exist (Coch, 1998). The building knowledge of this type of architecture is always handed down traditions and is thus more based on the knowledge achieved by trial and error and in this way handed down through the generations (Singh et al., 2009). Vernacular buildings are most often residential buildings. People have traditional lifestyles in vernacular buildings in virtually every climate in the world, from the Arctic circle to the tropics, in temperatures from below zero to over 40\u00b0C, and historically without the benefit of gas or electrically driven mechanized heating and cooling systems (Meir & Roaf, 2003). After the emergence of modernist architecture, aided by the industrial revolution, vernacular buildings are seen to be in a state of decline and are frequently looked down upon, abandoned, neglected or actively demolished. Associated, by many at least, with an out-dated past and poverty, they are steadily replaced by architectural models that favour more modern, inter-national technologies, materials and forms (Oliver, 1997). It is assumed, as in international standards such as CENASO 7730 or ASHRAE 55, that people suffer less discomfort in very closely controlled conditions, then such vernacular buildings, along with modern passive buildings, cannot provide their occupants with \u2018comfortable\u2019 indoor climates (Santamouris, 2007). But nowadays, by the more and more important issues of energy consumption in building construction sectors, the continuity of the vernacular traditions is emphasized in academic research and building practice because of its climate-response, passive model and low-energy consumption. The principles that were used in traditional buildings can very well be implemented in modern buildings so as to produce \u201cenergy saving\u201d buildings. If these principles are sensibly adopted in modern buildings, it should be possible to build sustainable buildings for the future (Shanthi Priya, Sundarraja, Radhakrishnan, & Vijayalakshmi, 2012). We can learn a lesson from the approach of the builders who acknowledged the interdependence of human beings, buildings and physical environment (Coch, 1998). A \u201cnew vernacular\u201d can be developed, harnessing the types of low-tech solutions that are familiar to most of us from the vernacular, together with modern passive and active renewable energy technologies and strategies to reflect the new cultural, climatic and economic realities of the 21st century (Meir & Roaf, 2003). Vernacular buildings have to adapt to the environment through low-tech methods. Changing building form and material is the most important technique to adapt to the environment to obtain the best comfortable living space, in another words, the environment deeply influenced building form design and material use. Fathy (1986) described the climate effect on building form generation in vernacular building as: \u201cFor example, the proportion of window to wall area becomes less as one moves toward the equator. In warm areas, people shun the glare and heat of the sun, as demonstrated by the decreasing size of the windows. In the subtropical and tropical zones, more distinctive changes in architectural form occur to meet the problems caused by excessive heat. In Egypt, Iraq, India, and Pakijstan, deep loggias, projecting balconies, and overhangs casting long shadows on the walls of buildings are found. Wooden or marble lattices fill large openings to subdue the glare of the sun while permitting the breeze to pass through. Such arrangements characterize the architecture of hot zones, and evoke comfort as well as aesthetic satisfaction with the visible endeavour of man to protect himself against the excessive heat\u201d. In recent years, a significant amount of research has looked specifically at environmental performance issues of vernacular architecture, including its thermal properties, energy consumption and resources (Foruzanmehr & Vellinga, 2011). Both qualitative and quantitative such as field measurements, field surveys, statistical methods, comparative study and computer simulation methods are used in the investigation of the performance of vernacular buildings. Professor Paul Oliver of Oxford University compiled the book \u201cDwellings: Encyclopedia of Vernacular Architecture\u201d and published in 1997 with 4000 pages collection of research by over 750 authors from 80 countries. With two volumes categorized by climate and the \u2018\u2018vernacular responses\u2019\u2019 of a plethora of cultures and another volume focused on materials, resources and production, it is the world\u2019s foremost source for research in the area (Zhai & Previtali, 2010). Zhai and Previtali (2010) introduced an approach to categorizing distinct vernacular regions and evaluate energy performance of ancient vernacular homes as well as identify optimal constructions using vernacular building techniques. Chandel, Sharma, and Marwah (2016) reviewed the vernacular architecture features affecting indoor thermal comfort conditions and energy efficiency for adaptation in modern architecture to suit present day lifestyles. Singh et al. (2009) carried out a qualitative analysis on the vernacular buildings in north-east India. And Shanthi Priya et al. (2012) have conducted the qualitative and quantitative analysis to investigate the indoor environmental condition of a vernacular residential building in coastal region of Nagapatinam, India. Cardinale, Rospi, and Stefanizzi (2013) performed one experimental research on two types of vernacular buildings which lie in Southern Italy. Nguyen, Tran, Tran, and Reiter (2011) carried out an investigation on climate responsive design strategies of vernacular housing in Vietnam by a new research methodology which is adapted to the natural and social context of Vietnam. Ng and Lin (2012) analysed the microclimate of two Minangkabau vernacular houses in villages of Balimbing of Bukittinggi, Sumatra, Indonesia. Ali-Toudert, Djenane, Bensalem, and Mayer (2005) addressed the issue of outdoor thermal comfort in a hot and dry climate in relation to urban geometry. Beccali, Strazzeri, German\u00e0, Melluso, and Galatioto (2017) reviewed some models evaluating thermal comfort in natural ventilated vernacular buildings, based on adaptive approaches. Borong et al. (2004) concluded that sun shading and insulation are of great importance while natural ventilation is just considered as an auxiliary approach for the design principles of the traditional Chinese vernacular dwellings, based on the field measurements of the thermal environment parameters and a long-term auto-recorder of the indoor and outdoor temperature at four typical traditional vernacular dwellings at Wannan area in summer. Bouillot (2008) studied six Chinese vernacular houses in different provinces and found that the value and the diversity of the Chinese housing stock is due to the combination of the specific structure of the Chinese eastern climates, which creates the contrast of cold-dry winters and hothumid summers, with the structure of the Ming t\u2019ang, which contains the opposition of the yin and the yang. Liu et al. (2011)\u2019s study interprets the characteristic of warm in winter and cool in summer in traditional Yaodong dwelling by measuring the indoor, outdoor and the wall\u2019s temperatures in winter and summer. The results show that the Yaodong thick wall effectively damps the external temperature wave and keeps a steady inner surface temperature, are the chief causes of warm in winter and cool in summer in Yaodong. Gou et al. (2015) focused on a qualitative analysis of ancient dwellings located in the village of Xinye, in the hot summer and cold winter region of China. According to the analysis, the climate responsive strategies of the dwellings are mainly focused on natural ventilation, sun-shading and thermal insulation, illustrated by different building aspects such as the building location, building group layout and orientation, internal space arrangement, opening design, among other variables. Soflaei, Shokouhian, and Zhu (2017) investigated the potential of traditional courtyard houses in Iran and China in responding to environmental challenges alongside social norms over a long period of time. The social and environmental dimensions of the sustainability as well as the main elements of traditional courtyard houses in Iran and China were identified. Because of the advantage of vernacular building using passive ways to achieve thermal comfort and energy efficiency as mentioned above, this research will start with the investigation of a Chinese vernacular buildings in chapter 4. The next part of the literature review is an overview of passive cooling techniques.",
+      "url": "https://doi.org/10.59490/abe.19.10.4104",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pb498b92a67d4",
+      "title": "Assessment of Passive vs. Active Strategies for a School Building Design",
+      "doi": "10.3390/su71115136",
+      "year": 2015,
+      "authors": [
+        "Ji Hoon Kang",
+        "Ki Ahn",
+        "Cheol Ho Park",
+        "Thorsten Schuetze"
+      ],
+      "abstract": "This paper presents a simulation study to reduce heating and cooling energy demand of a school building in Seoul Metropolitan Area, Korea. The aim of this study was to estimate the impact of passive vs. active approaches on energy savings in buildings using EnergyPlus simulation. By controlling lighting, the energy saving of the original school building design was found most significant, and increased by 32% when the design was improved. It is noteworthy that energy saving potential of each room varies significantly depending on the rooms\u2019 thermal characteristics and orientation. Thus, the analysis of energy saving should be introduced at the individual space level, not at the whole building level. Additionally, the simulation studies should be involved for rational decision-making. Finally, it was concluded that priority should be given to passive building design strategies, such as building orientation, as well as control and utilization of solar radiation. These passive energy saving strategies are related to urban, architectural design, and engineering issues, and are more beneficial in terms of energy savings than active strategies.",
+      "url": "https://doi.org/10.3390/su71115136",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P064a32c631ac",
+      "title": "Using passive cooling strategies to improve thermal performance and reduce energy consumption of residential buildings in U.A.E. buildings",
+      "doi": "10.1016/j.foar.2014.01.002",
+      "year": 2014,
+      "authors": [
+        "Hanan M. Taleb"
+      ],
+      "abstract": "Passive design responds to local climate and site conditions in order to maximise the comfort and health of building users while minimising energy use. The key to designing a passive building is to take best advantage of the local climate. Passive cooling refers to any technologies or design features adopted to reduce the temperature of buildings without the need for power consumption. Consequently, the aim of this study is to test the usefulness of applying selected passive cooling strategies to improve thermal performance and to reduce energy consumption of residential buildings in hot arid climate settings, namely Dubai, United Arab Emirates. One case building was selected and eight passive cooling strategies were applied. Energy simulation software \u2013 namely IES \u2013 was used to assess the performance of the building. Solar shading performance was also assessed using Sun Cast Analysis, as a part of the IES software. Energy reduction was achieved due to both the harnessing of natural ventilation and the minimising of heat gain in line with applying good shading devices alongside the use of double glazing. Additionally, green roofing proved its potential by acting as an effective roof insulation. The study revealed several significant findings including that the total annual energy consumption of a residential building in Dubai may be reduced by up to 23.6% when a building uses passive cooling strategies.",
+      "url": "https://doi.org/10.1016/j.foar.2014.01.002",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P35b5fa210999",
+      "title": "Improving the Thermal Performance of Secondary School Buildings by Using Passive Techniques at Hyderabad",
+      "doi": "10.47001/irjiet/2023.708020",
+      "year": 2023,
+      "authors": [
+        "Ar. Aisha Tarique",
+        "Sabeen Qureshi",
+        "Engr. Mohaimin Ahmed Memon",
+        "Ar. Mahjabeen Memon"
+      ],
+      "abstract": "Educational domain is essential as they acquire an immense impact about student's physical well-being and studies.Mostly Building devours around 40 to 50% energy and the thermal comfort is an essential aspect of indoor environmental quality, particularly in educational buildings where students spends a significant amount of time.Poor thermal comfort can lead to negative health effects, reduced productivity, and discomfort.The study focuses to enhance the indoor environment by fostering to develop a comfortable learning environment, to accomplish the aim a particular school is selected in Hyderabad city as a case study to analyses its existing thermal performances and propose suitable passive strategies for implementation the impact of passive techniques on thermal comfort of school is further evaluated by gathering data through questionnaire surveys, interviews and analyzed on simulation tool.The study as a policy emphasizes the importance of passive techniques as a solution for creating environment friendly and energy efficient educational infrastructure, and giving valuable awareness to architects and policymakers that will form the basis for all other schools in Hyderabad city by considering both social and technical factors for optimal thermal performance in school buildings.",
+      "url": "https://doi.org/10.47001/irjiet/2023.708020",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P73ecda3ad3e1",
+      "title": "Passive strategies for energy-efficient educational facilities: Insights from a mediterranean primary school",
+      "doi": "10.1016/j.egyr.2024.03.040",
+      "year": 2024,
+      "authors": [
+        "Salaheddine Jaouaf",
+        "Bourassia Bensaad",
+        "Mustapha Habib"
+      ],
+      "abstract": "",
+      "url": "https://doi.org/10.1016/j.egyr.2024.03.040",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "passive cooling strategies energy consumption educational facilities"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P4701b86d6659",
+      "title": "A Study of the Energy Consumption of a Battery Cooling System by Different Cooling Strategies",
+      "doi": "10.33915/etd.5273",
+      "year": null,
+      "authors": [
+        "Justin A. Brumley"
+      ],
+      "abstract": "",
+      "url": "https://doi.org/10.33915/etd.5273",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "passive cooling strategies energy consumption educational facilities"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P28b58c07af3d",
+      "title": "Passive Cooling Strategies to Reduce the Energy Consumption of Cooling in Hot and Humid Climates in Indonesia",
+      "doi": "10.1007/978-981-10-8465-2_39",
+      "year": 2018,
+      "authors": [
+        "Tomoko Uno",
+        "Shuichi Hokoi",
+        "Sri Nastiti N. Ekasiwi"
+      ],
+      "abstract": "",
+      "url": "https://doi.org/10.1007/978-981-10-8465-2_39",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "passive cooling strategies energy consumption educational facilities"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pd3f16ca13ade",
+      "title": "Architectural Responses to Heat: Passive Cooling Strategies in Motorsport Facilities for Tropical Regions",
+      "doi": "10.37134/kupasseni.vol14.sp.13.2026",
+      "year": 2026,
+      "authors": [
+        "Hakimi Hasrulnizam"
+      ],
+      "abstract": "This study explores the effectiveness of passive cooling strategies in climate-responsive motorsport facility design within tropical climates, focusing on Malaysia. Despite progress in sustainable infrastructure, there is a lack of research on passive design suited to hot and humid environments, where performance often takes precedence over environmental responsiveness. A comparative case study of six circuits Sepang, Dato Sagor, Kuala Selangor, Melaka, Mandalika (Indonesia), and Chang (Thailand) was conducted using observational data, environmental analysis, wind speed measurements, sun path studies, and thermal material evaluations. The findings show that circuits employing strategies such as strategic orientation, natural ventilation, shading, insulated materials, and integration with vegetation or water features achieved superior thermal comfort and reduced dependence on mechanical cooling. In contrast, local circuits lacking these features exhibited thermal inefficiencies. The study offers design recommendations, including climate-sensitive material selection and passive ventilation methods, contributing to sustainable motorsport architecture and offering a framework for future tropical design.",
+      "url": "https://doi.org/10.37134/kupasseni.vol14.sp.13.2026",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "passive cooling strategies energy consumption educational facilities"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P064a32c631ac",
+      "title": "Using passive cooling strategies to improve thermal performance and reduce energy consumption of residential buildings in U.A.E. buildings",
+      "doi": "10.1016/j.foar.2014.01.002",
+      "year": 2014,
+      "authors": [
+        "Hanan M. Taleb"
+      ],
+      "abstract": "",
+      "url": "https://doi.org/10.1016/j.foar.2014.01.002",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "passive cooling strategies energy consumption educational facilities"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P9180cc32e833",
+      "title": "Optimizing the cooling energy consumption by the passive traditional fa\u00e7ade strategies in hot dry climate",
+      "doi": "10.1556/606.2019.14.1.18",
+      "year": 2019,
+      "authors": [
+        "Messaouda Rais",
+        "Adel Boumerzoug",
+        "Miklos Halada",
+        "Leila Sriti"
+      ],
+      "abstract": "",
+      "url": "https://doi.org/10.1556/606.2019.14.1.18",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "passive cooling strategies energy consumption educational facilities"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pdd90988c72bd",
+      "title": "Passive Cooling System Could Slash Energy Consumption",
+      "doi": "10.1061/ciegag.0000982",
+      "year": 2015,
+      "authors": [
+        "David Hill"
+      ],
+      "abstract": "",
+      "url": "https://doi.org/10.1061/ciegag.0000982",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "passive cooling strategies energy consumption educational facilities"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pa33957c4321f",
+      "title": "Integration Strategies for Passive Daytime Radiative Cooling Panels into Cooling Systems",
+      "doi": "10.70675/f92e47d8z31daz4701zbe94zff06beafdb1b",
+      "year": null,
+      "authors": [
+        "Peter Zghaib"
+      ],
+      "abstract": "Strat\u00e9gies d'int\u00e9gration des panneaux de refroidissement passif radiatif diurne dans les syst\u00e8mes de production de froid Cette th\u00e8se \u00e9tudie l\u2019int\u00e9gration du refroidissement radiatif passif diurne (PDRC) dans lessyst\u00e8mes de refroidissement actifs afin de r\u00e9duire la consommation d\u2019\u00e9nergie et les\u00e9missions associ\u00e9es. Elle propose une approche multi-\u00e9chelle combinant caract\u00e9risationdes mat\u00e9riaux, mod\u00e9lisation et validation exp\u00e9rimentale de panneaux hydrauliques, etint\u00e9gration dans les cycles frigorifiques. Les r\u00e9sultats montrent que la r\u00e9flectivit\u00e9 solaire etles conditions m\u00e9t\u00e9orologiques sont d\u00e9terminantes pour la performance. L\u2019int\u00e9gration auxsyst\u00e8mes \u00e0 compression de vapeur permet des gains d\u2019efficacit\u00e9 de 5 \u00e0 25 %, selon laconfiguration. Une analyse techno-\u00e9conomique globale met en \u00e9vidence un fort potentieldans les r\u00e9gions chaudes \u00e0 co\u00fbt \u00e9lev\u00e9 de l\u2019\u00e9lectricit\u00e9. Enfin, le PDRC appara\u00eet comme unetechnologie compl\u00e9mentaire aux syst\u00e8mes existants pour une transition vers unrefroidissement bas carbone.KEYWORDSPassive radiative",
+      "url": "https://doi.org/10.70675/f92e47d8z31daz4701zbe94zff06beafdb1b",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "passive cooling strategies energy consumption educational facilities"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P73ecda3ad3e1",
+      "title": "Passive strategies for energy-efficient educational facilities: Insights from a mediterranean primary school",
+      "doi": "10.1016/j.egyr.2024.03.040",
+      "year": 2024,
+      "authors": [
+        "Salah-Eddine Jaouaf",
+        "Bourassia Bensaad",
+        "Mustapha Habib"
+      ],
+      "abstract": "This study investigates the thermal and energetic dynamics of primary school classrooms in a Mediterranean climate in Khoualed Abdel Hakeem, Ain Temouchent County, Algeria. The research highlights significant optimizations by focusing on passive strategies such as external shading devices, Window-to-Wall Ratio (WWR), glazing types, and building envelope adjustments. Our simulations, validated rigorously, showcase a remarkable congruence with actual electricity consumption, affirming the reliability and efficacy of our simulation model as a valuable predictive tool. A Vertical Shading Angle (VSA) of 60\u00b0 proves optimal, resulting in an impressive 11% reduction in Annual Energy Consumption (AEC). A recommended WWR of 30% demonstrates an 11% decrease in AEC and improves thermal and energy efficiency. Double Low Emissivity (Double-Low E) glazing is found to be superior, resulting in a significant 14% decrease in AEC. Achieving a WWR of 50% in shaded areas helps maintain a well-balanced thermal environment, resulting in a 12% reduction in heating and cooling requirements. The integration of passive strategies in the optimized model showcases a remarkable 44% overall reduction in energy consumption. The results highlight the efficacy of passive strategies, promoting energy-conscious and ecologically responsible practices, advocating for their incorporation in educational facilities, and offering valuable insights for sustainable school building design.",
+      "url": "https://doi.org/10.1016/j.egyr.2024.03.040",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "passive cooling strategies energy consumption educational facilities"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P18552a087e9a",
+      "title": "Electricity Consumption Optimisation Trends for Educational, Commercial and Industrial Facilities",
+      "doi": "10.2478/lpts-2025-0042",
+      "year": 2025,
+      "authors": [
+        "Davids Kronkalns",
+        "Andris Backurs",
+        "Leo Jansons",
+        "Eg\u012bls Dzelz\u012btis",
+        "Laila Zem\u012bte",
+        "Aigars Laiz\u0101ns"
+      ],
+      "abstract": "Abstract The study explores emerging trends and strategies in electricity consumption optimisation for educational, commercial, and industrial facilities, focusing on the integration of digital technologies, smart metering, and tariff-driven energy management systems. In response to rising energy costs, environmental policy constraints, and the growing need for operational sustainability, these facility types are increasingly investing in tailored energy efficiency solutions. It identifies distinct patterns in consumption behaviour and optimisation tactics across facility categories, highlighting that educational institutions often rely on behavioural interventions and scheduling-based load management. At the same time, commercial buildings prioritise building automation systems and demand response participation. In contrast, industrial facilities adopt process-level optimisation, load shifting, and renewable integration to reduce peak demand and stabilise operational costs. A multi-method approach has been applied, combining energy consumption case studies, time-of-use data analysis, and stakeholder interviews. The results reveal that data-driven electricity consumption tracking, combined with dynamic pricing awareness and customised load control strategies, significantly reduces energy waste and improves economic performance. Additionally, the adoption of energy management systems, when linked to real-time consumption data and production cycles, leads to enhanced energy autonomy, particularly in industrial facilities. The study emphasises the importance of cross-sectoral learning, stan-dardised performance benchmarking, and the role of digital infrastructure in enabling adaptive energy consumption practices. It concludes that future optimisation efforts must align not only with cost reduction but also with broader goals of energy resilience and decarbonisation. These findings contribute to the understanding of sector-specific optimisation pathways and inform the development of integrated electricity consumption strategies that support both operational efficiency and policy compliance.",
+      "url": "https://doi.org/10.2478/lpts-2025-0042",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "passive cooling strategies energy consumption educational facilities"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P5df45a9a5b2e",
+      "title": "Energy-efficient design trends and performance for passive solar commercial buildings",
+      "doi": "10.25669/15lw-qwm9",
+      "year": 2019,
+      "authors": [
+        "Gary Byron Eddington"
+      ],
+      "abstract": "This is a study of passive and climate responsive architecture applied to commercial buildings. Commercial buildings-ncluding offices, educational facilities, civic and governmental buildings, health care and retail businesses-lay an important role in the US energy use picture. In an attempt to be more environmentally sensitive and to preserve our natural resourses the US government and the private sector have long been involved in an effort to reduce energy consumption and our dependency on non-renewable energy in new buildings through energy conservation and innovative passive solar strategies as an alternative to the energy wasting buildings that exist all around us. This alternative approach emphasizes the use of simple technology to take advantage of the onsite energy available from the natural environment in combination with the architecture, rather than relying on mechanical components to heat, cool and light our buildings; This study reviewed a number of buildings that are considered to be on the leading edge of passive and low energy technology and examines the passive solar and energy conserving features. As part of the effort to better understand the activities in passive solar usage and to encourage a wider use of climate responsive architecture the performance of these buildings have been evaluated. Each project was examined in terms of reduction of energy costs, energy use and construction costs as compared to a comparable non-passive builDing Some of the general trends found in these buildings are described as well as actual energy consumption and initial construction cost data to indicate cost effectiveness of energy features in various climate conditions.",
+      "url": "https://doi.org/10.25669/15lw-qwm9",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "passive cooling strategies energy consumption educational facilities"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pd32cd112de8e",
+      "title": "Expert Recommendations for Energy Improvements in Educational Facilities: Case Study-School Buildings in Azerbaijan",
+      "doi": "10.1088/1757-899x/1030/1/012063",
+      "year": 2021,
+      "authors": [
+        "G. H. Mammadova",
+        "N Y Mammadov",
+        "Samira Akbarova",
+        "G H Feyzieva"
+      ],
+      "abstract": "Abstract Energy efficiency and resource saving are the key parts of the state policy in Azerbaijan. They cover all areas of the economy, including the building industry and the educational institutions. Therefore utilizing of innovative architectural design and construction strategies, energy-efficient engineering equipment and renewable energy sources should be raised to the level of the current requirements. In pursuit of this aim, examining and evaluation energy consumption in the educational buildings at their operational stage are ones of the contemporary issues and offering recommendations by the implementation the energy improvements is crucial. This article makes research to find energy efficient opportunities and then suggest proper measures and recommendations for educational buildings, what solutions can be used in schools to reduce their energy consumption. There were examined some school buildings in different climate regions of Azerbaijan. There had been performed energy auditing of them and the results were processed by software. Technical data and results for 2 school buildings in Ujar and Lankaran are given here. The recommendations for energy improvements in educational buildings were proposed by the local experts-architects and auditors. Findings can be used for fulfilling a multi-disciplinary energy audit of any educational buildings.",
+      "url": "https://doi.org/10.1088/1757-899x/1030/1/012063",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "passive cooling strategies energy consumption educational facilities"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pda8f714031d0",
+      "title": "Passive and low energy cooling techniques in buildings",
+      "doi": null,
+      "year": 2006,
+      "authors": [
+        "M Milos Lain",
+        "Jlm Jan Hensen"
+      ],
+      "abstract": "The paper deals with applicability of passive and low energy cooling technologies in the Czech Republic.There are presented climate, buildings and systems analysis, to find out passive and low energy cooling technologies potential. Some case studies including building simulations and monitoring are introduced (the office building with night ventilation, direct evaporative cooling, slab cooling, role of thermal mass in an historical building, thermal lops). The role of computer simulation in the low energy building design and optimalization is discussed.",
+      "url": "https://openalex.org/W1528651258",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "passive cooling strategies energy consumption educational facilities"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P846be6d949d2",
+      "title": "The Role of Water Pools as Evaporative Cooling Systems in Educational Institution",
+      "doi": "10.17576/jkukm-2025-37(4)-20",
+      "year": 2025,
+      "authors": [
+        "Jabatan Seni Bina dan Alam Bina, Fakulti Kejuruteraan dan Alam Bina, Universiti Kebangsaan Malaysia, 43600 Bangi Selangor, Malaysia",
+        "Nur Athirah Khalit",
+        "Farah Adilah Fazley Zulfikar",
+        "Jabatan Seni Bina dan Alam Bina, Fakulti Kejuruteraan dan Alam Bina, Universiti Kebangsaan Malaysia, 43600 Bangi Selangor, Malaysia"
+      ],
+      "abstract": "Evaporative cooling refers to a passive cooling method that utilizes the principle of water evaporation to cool the surrounding environment. This is a crucial concept in naturally cooled buildings, where water pools are used to maintain thermal comfort. This study explores and discusses the concept of using water pools as an evaporative cooling element within the context of sustainable architecture and environmental design. The issue addressed in this study is the continuous use of HVAC systems in urban areas, which contributes to heat accumulation, as hot air from air conditioning absorbs heat, increasing local temperatures and exacerbating urban warming. The high temperatures in Malaysia, which has a tropical climate, result in a significant reliance on air conditioning for building cooling. The energy consumption of HVAC systems during peak demand presents a challenge in achieving sustainability by balancing comfort needs and energy efficiency. The objective of this study is to identify the impact of using water pools as an evaporative cooling element in buildings. This research was conducted at Pusat Kreatif Kanak-Kanak Tuanku Bainun through field studies. Environmental parameters, including air temperature, relative humidity, and air velocity, were recorded using a data logger. The findings indicate that water pools significantly stabilize indoor temperatures and moderate humidity levels, contributing to a comfortable 1814 indoor environment. The data also highlight the importance of strategic placement and integration of water pools with natural ventilation systems to maximize cooling efficiency. This study contributes to the advancement of knowledge on sustainable building practices, promoting the integration of passive cooling strategies in the design of future educational facilities.",
+      "url": "https://doi.org/10.17576/jkukm-2025-37(4)-20",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "passive cooling strategies energy consumption educational facilities"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P2e396a18ce56",
+      "title": "The Effect of Ventilation Strategies on Indoor Air Quality and Energy Consumptions in Classrooms",
+      "doi": "10.3390/buildings9050110",
+      "year": 2019,
+      "authors": [
+        "Luca Stabile",
+        "Angelamaria Massimo",
+        "Laura Canale",
+        "Aldo Russi",
+        "Alexandro Andrade",
+        "Marco Dell\u2019Isola"
+      ],
+      "abstract": "Most of the school buildings in Italy are high energy-demanding buildings with no ad-hoc ventilation systems (i.e., naturally-ventilated buildings). Therefore, reducing the heat losses of schools represent the main aspect to be dealt with. Nonetheless, the indoor air quality of the building should be simultaneously considered. Indeed, to date, energy consumptions and air quality are considered as incompatible aspects especially in naturally-ventilated buildings. The aim of the present paper is to evaluate the effect of different ventilation and airing strategies on both indoor air quality and energy consumptions in high energy-demanding naturally-ventilated classrooms. To this purpose, an Italian test-classroom, characterized in terms of air permeability and thermophysical parameters of the envelope, was investigated by means of experimental analyses and simulations through CO2 mass balance equation during the heating season. The air quality was assessed in terms of indoor CO2 concentrations whereas the energy consumptions were evaluated through the asset rating approach. Results clearly report that not adequate indoor CO2 concentrations are measured in the classroom for free-running ventilation scenarios even in low densely populated conditions (2.2 m2 person\u22121), whereas scheduled airing procedures can reduce the indoor CO2 levels at the cost of higher energy need for ventilation. In particular, when airing periods leading to the air exchange rate required by standards are adopted, the CO2 concentration can decrease to values lower than 1000 ppm, but the ventilation losses increase up to 36% of the overall energy need for space heating of the classroom. On the contrary, when the same air exchange rate is applied through mechanical ventilation systems equipped with heat recovery units, the ventilation energy loss contribution decreases to 5% and the overall energy saving results higher than 30%. Such energy-saving was found even higher for occupancy scenarios characterized by more densely populated conditions of the classroom typically occurring in Italian classrooms.",
+      "url": "https://doi.org/10.3390/buildings9050110",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "passive cooling strategies energy consumption educational facilities"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P77f0f6488f29",
+      "title": "Energy-Efficient Design Strategies for Schools of Architecture in Tropical Climates",
+      "doi": "10.56201/ijemt.vol.12.no3.2026.pg161.169",
+      "year": 2026,
+      "authors": [
+        "Chukwuebuka Raymond Azuaru"
+      ],
+      "abstract": "Buildings are responsible for a substantial proportion of global energy consumption, with educational facilities contributing significantly due to extended operational hours, high occupancy density, and intensive environmental conditioning requirements. In tropical climates, Schools of Architecture experience particularly high energy demand because of elevated temperatures, solar radiation, and humidity levels, which increase reliance on mechanical cooling systems. This study examines energy-efficient design strategies applicable to Schools of Architecture in tropical regions, focusing on both passive and integrated environmental design approaches. Using a qualitative research methodology based on literature review and comparative analysis of existing energy-efficient academic buildings, the study identifies key strategies including climate responsive building orientation, natural ventilation systems, daylight optimization, shading devices, high-performance building envelopes, and energy-efficient material selection. Findings indicate that integrating these strategies can reduce cooling energy demand by up to 40\u201360% while improving indoor environmental quality and occupant comfort. The study concludes that early incorporation of energy-efficient design strategies in the planning and design stages of architecture school facilities is essential for achieving sustainable and low-energy educational environments in tropical climates.",
+      "url": "https://doi.org/10.56201/ijemt.vol.12.no3.2026.pg161.169",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "passive cooling strategies energy consumption educational facilities"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P6f736c2813a0",
+      "title": "Passive cooling of buildings",
+      "doi": "10.4324/9781315073668-7",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-7",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pa9c898e9b51b",
+      "title": "Urban design - A. Dimoudi",
+      "doi": "10.4324/9781315073668-10",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-10",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P910ea519ef6d",
+      "title": "Cooling in buildings",
+      "doi": "10.4324/9781315073668-6",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-6",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P0ea50de16e80",
+      "title": "Cooling load of buildings - C. Balaras",
+      "doi": "10.4324/9781315073668-12",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-12",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pe66bf5e380a2",
+      "title": "Passive Cooling in Buildings",
+      "doi": "10.1201/9781003014829-8",
+      "year": 2024,
+      "authors": [
+        "Pablo M. La Roche"
+      ],
+      "abstract": "",
+      "url": "https://doi.org/10.1201/9781003014829-8",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pda6861078b57",
+      "title": "Radiative cooling",
+      "doi": "10.4324/9781315073668-18",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-18",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P07a3229f0402",
+      "title": "Evaporative cooling",
+      "doi": "10.4324/9781315073668-17",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-17",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pe7bebee9880c",
+      "title": "Ground cooling",
+      "doi": "10.4324/9781315073668-16",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-16",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P124d621733be",
+      "title": "Improving building fabric for energy efficiency in hot climates by applying passive cooling strategies: a case study for school buildings: towards environmental school buildings in hot, arid region",
+      "doi": null,
+      "year": 2017,
+      "authors": [
+        "Sara Mohamed"
+      ],
+      "abstract": "The demands for cooling in non-domestic buildings are rising throughout the world This thesis is concerned about the environmental performance of the primary schools in Khartoum State in Sudan. The Sudanese government continues to build more schools throughout the country, and particularly in the large city of Khartoum, without any consideration for the effect of the climate on the thermal comfort inside the buildings. This study focused on the thermal comfort within classrooms and the improvement of the building fabric by provision of passive cooling strategies, as well as other passive ways that improve the classroom\u2019s thermal performance. A comprehensive literature review has been conducted, including the concept of the environmental performance of school buildings and the technique of passive cooling technologies, as well as the benefit of a ventilated facade for reducing the cooling load. The literature review also helped to initially formulate possible passive measures that could be applied to the prototypes school wall fabrics, to enhance their thermal performance and adapt them for a hot and harsh climate. These passives cooling techniques ideas were investigated for further research. School buildings often have poor thermal comfort and poor indoor air quality (IAQ), which affect the pupils\u2019 health, education and productivity. So, this research investigated the thermal performance of naturally ventilated walls when adding passive cooling to the wall fabric by using ceramic and looked into passive cooling techniques to enhance thermal comfort and the temperature and ventilation inside the classrooms. A number of different studies were undertaken and sketches of proposed techniques produced in order to achieve the intended research case design. Computational fluid dynamics (CFD) simulations have been performed in order to examine the behaviour of the cooling wall system in reducing the effect of outside air temperature under different wind velocities in the summer period, utilizing weather data for Khartoum. The work concludes that the system was capable of reducing the air temperature by up to 12C\u00b0-15 C\u00b0. The different examinations included analyzing the temperature distribution and air velocities profiles inside the classroom, highlighting the different effects of buoyancy and wind velocity when adding passive cooling to the wall fa\u00e7ade.",
+      "url": "https://openalex.org/W2748447879",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pcce01fac6003",
+      "title": "Investigation of a passive design approach for a building facility: a case study",
+      "doi": "10.1080/15567036.2021.1938761",
+      "year": 2021,
+      "authors": [
+        "Du\u0161an Ran\u0111elovi\u0107",
+        "Miomir Vasov",
+        "Marko  G. Ignjatovi\u0107",
+        "Mirko Stojiljkovi\u0107",
+        "Veliborka Bogdanovi\u0107"
+      ],
+      "abstract": "Educational buildings represent an indivisible part of every society, and it is necessary to make them energy efficient. In the current research on the energy-efficient retrofit of school buildings, the impact of several passive design strategies is studied. These interventions include improvement of the building envelope characteristics and parameters related to select passive design systems. In order to determine whether applying a green roof, double-skin facade, or Trombe wall, with or without shading contributes to heating and cooling energy consumption reduction, building energy performance was simulated using the EnergyPlus and jEplus software. This holistic approach takes into consideration parameters that may be critical for the success of the energy-efficient retrofit of school buildings. The results revealed which parameters provide the most significant heating and cooling energy savings of the modeled school buildings in local climatic conditions. By applying the appropriate combination of interventions, the heating energy saving can be up to 77%, while with a proper mix of the proposed measures, the maximum cooling energy savings are up to 79%.",
+      "url": "https://doi.org/10.1080/15567036.2021.1938761",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pd82cb30819f1",
+      "title": "Improving energy efficiency of school buildings during winter season using passive design strategies",
+      "doi": "10.1051/sbuild/2019005",
+      "year": 2020,
+      "authors": [
+        "Sahar Zahiri",
+        "Ha\u015fim Altan"
+      ],
+      "abstract": "Passive building design can improve energy efficiency of buildings, while providing comfortable indoor environment for occupants with minimum mechanical energy use. The foundation of passive design depends on natural sources of energy, which uses building architecture and surrounding environment to minimise heating and cooling loads of buildings with minimum operating and maintenance costs. The correlation of local climate with shape and thermal performance of buildings is one of the main considerations of passive design approach to reduce energy use and increase thermal comfort of occupants. This paper focuses on a series of field studies and building simulation analysis to improve thermal performance of female secondary school buildings in the city of Tehran in Iran during winter season using passive design strategies. The field studies included measuring indoor air temperature, as well as a questionnaire-based survey in a cold winter season in a typical female secondary school building. The on-site monitoring assessed indoor air temperature of classrooms while the occupants completed questionnaires covering their thermal sensations and thermal preferences. Moreover, building thermal simulation analysis were carried out using DesignBuilder tool to evaluate and improve thermal performance of classrooms based on students' thermal requirements and passive design strategies. The simulation analysis started from the basic school building model, investigating various passive design strategies to predict the optimum design strategies for the case study. The simulation results determined how to provide classrooms that are more comfortable for students with minimum energy use. The results of the field studies indicated that indoor thermal environment were usually comfortable for female students based on 7-point ASHRAE scale. However, most of the occupants preferred their indoor thermal environment to be improved. Moreover, simulation results showed that building fabrics and thermal properties, as well as glazing and orientation had significant impacts on indoor air temperature and thermal comfort and using appropriate passive design strategies could improve energy efficiency of the building considerably. Therefore, in order to enhance indoor thermal environment and to increase learning performance of students, it is necessary to use appropriate low energy methods, which can reduce the needs for mechanical energy systems and hence save energy.",
+      "url": "https://doi.org/10.1051/sbuild/2019005",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pee6c53017321",
+      "title": "Passive Cooling Consideration in the Effective Planning and Design of Public Buildings in Nigeria",
+      "doi": null,
+      "year": 2017,
+      "authors": [
+        "Ayomikun Solomon Adewumi",
+        "Joseph Akinlabi Fadamiro",
+        "Husam AlWaer",
+        "Vincent Onyango",
+        "Dumiso Moyo"
+      ],
+      "abstract": "The rapid increase in the growth of Nigerian cities as a result of mass rural-urban migration has led to a demand for more public buildings. The ongoing campaign for sustainability backed up with the statistics that confronts us daily have necessitated the need to deliver more environment-friendly public buildings. This study is aimed at enhancing sustainable utilization of energy through passive cooling in the planning and delivery of public buildings with optimum design condition for users\u2019 comfort in Nigeria. The objectives are: (i) to identify the factors that enhances the passive performance of a building (ii) to measure these factors through case study survey and post occupancy evaluation of three existing public buildings (iii) to arrive at optimum design conditions using passive cooling in public buildings. Findings showed inadequate consideration of the design strategies that enhance the passive performance of a building due to dependence on active cooling means in the public buildings visited. The paper recommended for a policy framework for the planning of public buildings and canvassed the need for professionals in the built industry to consider how key design strategies can be considered in the early stage of their design decisions that will lead to sustainable public buildings.",
+      "url": "https://openalex.org/W2951402693",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P30afe541aa31",
+      "title": "Courtyard as a Passive Cooling Strategy in Buildings",
+      "doi": "10.11113/ijbes.v4.n1.159",
+      "year": 2017,
+      "authors": [
+        "Markus Bulus",
+        "Malsiah Hamid",
+        "Yaik-Wah Lim"
+      ],
+      "abstract": "One of the most significant current discussions in the built environment, architectural practice, theory, and procedures is \u201cPassive Design\u201d. It is becoming very difficult to ignore the issues of passive architectural design strategies in buildings. Recent studies emphasized the need for passive architectural design strategies and the application of the courtyard as a passive design strategy for cooling in buildings. Also, that the courtyard is very suitable in almost all building typologies in all the climatic zones due to its passive tendencies for cooling. Its cooling potentials can be achieved only when design requirements are not ignored. The courtyard has social, cultural, religious, and environmental benefits. Despite its abundant advantages, research effort towards courtyard design requirements is very scarce. Therefore, the main objective of this study is to investigate the design of central courtyard as a passive cooling strategy for improving indoor thermal comfort in Universiti Teknologi Malaysia (UTM) Buildings. Courtyard design requirement such as the courtyard configurations, orientation, and natural features in courtyard buildings in UTM were investigated. Besides the design variants, courtyard usage in such buildings was also examined. The methodology of this study involved the developing of a checklist based on literature for the field survey. Forty-six (46) courtyards in thirty-two (32) buildings in UTM were surveyed, and the statistical description method was used to interpret and analyzed the data. The Results of this quantitative study shows that UTM central courtyards buildings were designed based on a cautious consideration to orientation and configurations to enhance their effective passive cooling potentials, however, only two courtyards had water pools. The study concluded that courtyards in UTM buildings are creatively designed but future experimental studies to appraise their thermal performances is required, and future simulation studies can predict a better design requirement for optimum performance. Therefore, further simulation studies are recommended.",
+      "url": "https://doi.org/10.11113/ijbes.v4.n1.159",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P8ddfa7f2e65f",
+      "title": "Passive cooling strategies to optimise sustainability and environmental ergonomics in Mediterranean schools based on a critical review",
+      "doi": "10.1016/j.buildenv.2022.109297",
+      "year": 2022,
+      "authors": [
+        "Carmen D\u00edaz-L\u00f3pez",
+        "Antonio Serrano-Jim\u00e9nez",
+        "Konstantin Verichev",
+        "\u00c1ngela Barrios Padura"
+      ],
+      "abstract": "This article identifies and compares the passive cooling strategies used and their relationship to optimising sustainability and environmental ergonomics based on 47 case studies. The analysis of the schools has resulted in the identification of 20 passive strategies, eight parameters related to sustainability and six related to environmental ergonomics. The results show that the most used passive strategies are natural ventilation, green roofs, low thermal transmittance windows and solar shading. In contrast, the least used strategies are ventilated fa\u00e7ades and evaporative cooling systems. In terms of sustainability, energy efficiency is present in most case studies; in contrast, the circular economy is hardly considered in schools. In terms of environmental ergonomics, thermal comfort is present in most case studies, while acoustic comfort is not assessed. Furthermore, the results show an absence of optimisation of acoustic and visual comfort, climate change adaptation measures and involvement of the educational community. This work provides a detailed understanding of the status quo for researchers, practitioners and policymakers and predicts the dynamic directions of the field. It highlights the need to incorporate passive design protocols explicitly applied to schools to achieve a sustainable and climate-resilient educational building stock within the principles of the circular economy.",
+      "url": "https://doi.org/10.1016/j.buildenv.2022.109297",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P4b4cf20740a8",
+      "title": "Alternative Ways of Cooling a Passive School Building in Order to Maintain Thermal Comfort in Summer",
+      "doi": "10.3390/en14010070",
+      "year": 2020,
+      "authors": [
+        "Anna Dudzi\u0144ska",
+        "Tomasz Kisilewicz"
+      ],
+      "abstract": "The heatwaves that have affected our civilization in recent years pose a serious threat to the environment as well as the proper functioning of our bodies. Schools are facilities with specific microclimatic requirements. Thermal conditions in educational buildings are decisive for the stimulation and efficiency of the learning process, as well as the interaction of students. Based on the measurements of thermal comfort carried out in the school building, with the energy standard of a passive building, it can be observed that in schools with very low energy consumption, the problem of interior overheating may occur in the summer months. In this paper, an attempt was made to search for alternative passive measures allowing for the required indoor microclimate conditions to be obtained. Such solutions are in line with the spirit of the European energy policy and sustainable development. A model of the school under study was created using the Design Builder simulation program. The role of mechanical ventilation and the possibility of night ventilation in reducing discomfort were examined. Consideration was given to the justification of using expensive heat pump installations with a ground heat exchanger to reduce overheating in summer. The application of the adaptive approach to the assessment of thermal conditions and the acceptance of limited overheating periods led to the conclusion that the analyzed building could function successfully without these additional installation elements. A proprietary tool for the analysis of microclimate conditions was proposed to estimate the hours of discomfort in a way that is objective and easy to calculate.",
+      "url": "https://doi.org/10.3390/en14010070",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pb0334e0903cb",
+      "title": "Health and safety considerations for passive solar heated and cooled buildings",
+      "doi": "10.6028/nbs.ir.82-2554",
+      "year": 1982,
+      "authors": [
+        "F Eugene Metz",
+        "James H Pielert",
+        "Patrick W Cooke",
+        "William D. Walton"
+      ],
+      "abstract": "This report discusses the nature of health and safety considerations in applying solar passive technology to buildings and how they would be affected by current building regulatory requirements.Health and safety considerations associated with solar passive systems are discussed including; indoor air quality; structural safety; fire safety; and environmental issues such as ventilation, illumination, temperature control, humidity and noise control.The report also identifies technical issues and research needs associated with health and safety concerns in passive solar technology.",
+      "url": "https://doi.org/10.6028/nbs.ir.82-2554",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P6f736c2813a0",
+      "title": "Passive cooling of buildings",
+      "doi": "10.4324/9781315073668-7",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-7",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P90be0303f01e",
+      "title": "Recent Advances in Passive Cooling Techniques",
+      "doi": "10.1142/9789813236974_0008",
+      "year": 2019,
+      "authors": [
+        "P. Rajagopalan"
+      ],
+      "abstract": "",
+      "url": "https://doi.org/10.1142/9789813236974_0008",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P910ea519ef6d",
+      "title": "Cooling in buildings",
+      "doi": "10.4324/9781315073668-6",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-6",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pa94d383cf01e",
+      "title": "A Review of Passive-Cooling Techniques for Buildings in Hot\u2013Humid Climate Zones",
+      "doi": "10.3390/buildings16122288",
+      "year": 2026,
+      "authors": [
+        "Floriberta Binarti",
+        "Tetsu Kubota"
+      ],
+      "abstract": "Buildings in hot\u2013humid climates experience increasing thermal stress due to urban heat islands and climate change, leading to greater reliance on air conditioning. Passive cooling is therefore a crucial low-carbon strategy for maintaining thermal comfort. This paper reviews thermal comfort ranges and passive-cooling techniques across K\u00f6ppen\u2013Geiger hot\u2013humid climate classes. A two-stage approach was adopted: thermal comfort data from 35 field studies were analyzed by climate class and ventilation mode, while more than 70 application studies were qualitatively reviewed to assess mechanisms, performance, and climate suitability. The results indicate that occupants in hot\u2013humid areas exhibit broad thermal tolerance, particularly in naturally ventilated buildings, with neutral temperatures ranging from 19.5 \u00b0C in humid subtropical climates to 36.3 \u00b0C in tropical savanna climates. Natural ventilation is the most widely applicable passive-cooling strategy, but its effectiveness depends on integration with climate-responsive measures. Ventilation, combined with solar protection and courtyards, is most effective in Af and Am climates, whereas shading, solar chimneys, evaporative cooling, night ventilation, thermal mass, and phase-change materials provide greater benefits in Aw, Cfa, and Cwa climates. However, no single strategy is sufficient across all climates. The review provides climate-specific guidance for designing low-carbon, thermally resilient buildings in hot\u2013humid regions.",
+      "url": "https://doi.org/10.3390/buildings16122288",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P23cdaee72196",
+      "title": "Passive Cooling and Heating Techniques for Buildings",
+      "doi": "10.1115/1.861271_ch4",
+      "year": 2017,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.1115/1.861271_ch4",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P0ea50de16e80",
+      "title": "Cooling load of buildings - C. Balaras",
+      "doi": "10.4324/9781315073668-12",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-12",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P7f6d8332213b",
+      "title": "Optimizing Windcatcher Designs for Effective Passive Cooling Strategies in Vienna\u2019s Urban Environment",
+      "doi": "10.3390/buildings14030765",
+      "year": 2024,
+      "authors": [
+        "Aida Shayegani",
+        "Viera Joklova",
+        "Juraj Illes"
+      ],
+      "abstract": "Urban overheating, intensified by climate change, poses a critical challenge in Central European cities, witnessing a rise in tropical days. Conventional mechanical cooling systems in buildings significantly contribute to carbon dioxide emissions, exacerbating global warming. In response, windcatchers\u2014traditional Iranian natural cooling systems\u2014emerge as a promising sustainable solution for contemporary architecture, even in non-arid climates. This research aims to evaluate windcatchers\u2019 efficacy in improving building thermal comfort in Central European climates, focusing on Vienna\u2019s urban environment. This study identifies optimal windcatcher designs by analyzing key variables: height variation, inlet dimensions, urban exposure, Building Management System (BMS) temperature thresholds, and integration with an earth tube system using Design Builder simulation software version 6. The findings reveal that a windcatcher standing at 2.5 m tall, with inlet dimensions of 0.9 m by 1.4 m, in an open, less densely populated urban setting, and with open valves when indoor temperatures surpass 22 \u00b0C, demonstrates the most effective reduction in cooling load. Moreover, both one-sided and two-sided windcatchers outperform conventional ventilation through openings. Additionally, combining a one-sided windcatcher with an earth tube system ensures efficient cooling even when exterior temperatures exceed 25 degrees Celsius. When augmented by a heat pump, this integrated system can provide heated ventilation.",
+      "url": "https://doi.org/10.3390/buildings14030765",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pda6861078b57",
+      "title": "Radiative cooling",
+      "doi": "10.4324/9781315073668-18",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-18",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P3cc9c486ecae",
+      "title": "Use of passive cooling techniques and super cool materials to minimize cooling energy and improve thermal comfort in Brazilian schools",
+      "doi": "10.1016/j.enbuild.2024.114125",
+      "year": 2024,
+      "authors": [
+        "Camila Machado de Azevedo Correia",
+        "Cl\u00e1udia Naves David Amorim",
+        "M. Santamouris"
+      ],
+      "abstract": "Standardized replicable buildings can cause discomfort and increased air conditioning usage. Besides, super cool coatings are effective passive solutions. Therefore, this study evaluates thermal comfort in a standardized Brazilian public school in 8 climates, verifies suitable super cool coatings and identifies optimal additional passive techniques to meet regulatory requirements without active air conditioning, a topic worthy of investigation. Methods include pilot simulations with DesignBuilder, thermal comfort analysis considering ASHRAE 55 adaptive model; JEA Algorithm optimization simulations; identification of most influential passive strategies by sensitivity analyses; and evaluation of the ideal opaque envelope through heat balance. Results showed that current model do not meet the Brazilian normative. Thus, different super cool coatings are recommended: thermochromic for heating-dominated; spectrally selective for cooling-dominated dry and high broadband emissivity for extreme-cooling-dominated humid zones. Regarding opaque envelope, thermal mass flat roofs and insulated walls are advised. In 7 of 8 climates, super cool roof was most effective followed by natural ventilation . Optimal combinations include super cool envelope, window shading and natural ventilation 24 hours 7 days a week with 95 % of free-aperture for extreme-cooling-dominated zones; super cool roofs, medium reflectivity walls and 5 % of free-aperture for cooling-dominated; thermochromic roof and dark walls with natural ventilation during occupancy with 5 % of free-aperture for heating-dominated.",
+      "url": "https://doi.org/10.1016/j.enbuild.2024.114125",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P76ace636800b",
+      "title": "Use of Passive Cooling Techniques and Super Cool Materials to Minimize Cooling Energy and Improve Thermal Comfort in Brazilian Schools",
+      "doi": "10.2139/ssrn.4655986",
+      "year": 2023,
+      "authors": [
+        "Camila Machado de Azevedo Correia",
+        "Cl\u00e1udia Naves David Amorim",
+        "M. Santamouris"
+      ],
+      "abstract": "",
+      "url": "https://doi.org/10.2139/ssrn.4655986",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P4ace89b6905e",
+      "title": "Review of passive heating/cooling systems of buildings",
+      "doi": "10.1002/ese3.129",
+      "year": 2016,
+      "authors": [
+        "Neha Gupta",
+        "Gopal Nath Tiwari"
+      ],
+      "abstract": "Abstract In this review, an attempt has been made to analyze passive solar heating and cooling concepts along with their effects on performance of a building's thermal management. The concepts of Trombe wall, solarium, evaporative cooling, ventilation, radiative cooling, wind tower, earth air heat exchanger, roof pond, solar shading for buildings, and building\u2010integrated photovoltaic thermal (BiPVT) systems are extensively covered in this review. Comparison of results by various heating and cooling concepts has been made. It has been observed that direct heating through double\u2010glazed window saves maximum conventional fuel for thermal heating during winter months. Further, an evaporative cooling is one of the best cooling concepts which is economical too in summer period.",
+      "url": "https://doi.org/10.1002/ese3.129",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P4b4cf20740a8",
+      "title": "Alternative Ways of Cooling a Passive School Building in Order to Maintain Thermal Comfort in Summer",
+      "doi": "10.3390/en14010070",
+      "year": 2020,
+      "authors": [
+        "Anna Dudzi\u0144ska",
+        "Tomasz Kisilewicz"
+      ],
+      "abstract": "The heatwaves that have affected our civilization in recent years pose a serious threat to the environment as well as the proper functioning of our bodies. Schools are facilities with specific microclimatic requirements. Thermal conditions in educational buildings are decisive for the stimulation and efficiency of the learning process, as well as the interaction of students. Based on the measurements of thermal comfort carried out in the school building, with the energy standard of a passive building, it can be observed that in schools with very low energy consumption, the problem of interior overheating may occur in the summer months. In this paper, an attempt was made to search for alternative passive measures allowing for the required indoor microclimate conditions to be obtained. Such solutions are in line with the spirit of the European energy policy and sustainable development. A model of the school under study was created using the Design Builder simulation program. The role of mechanical ventilation and the possibility of night ventilation in reducing discomfort were examined. Consideration was given to the justification of using expensive heat pump installations with a ground heat exchanger to reduce overheating in summer. The application of the adaptive approach to the assessment of thermal conditions and the acceptance of limited overheating periods led to the conclusion that the analyzed building could function successfully without these additional installation elements. A proprietary tool for the analysis of microclimate conditions was proposed to estimate the hours of discomfort in a way that is objective and easy to calculate.",
+      "url": "https://doi.org/10.3390/en14010070",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P210b803031e9",
+      "title": "Passive cooling techniques",
+      "doi": "10.59490/abe.19.10.4104",
+      "year": 2019,
+      "authors": [
+        "Xiaoyu Du"
+      ],
+      "abstract": "Vernacular buildings are local buildings that have evolved overtime in one location to suit the local climate, culture and economy (Meir & Roaf, 2003). The construction of vernacular buildings uses locally available resources to address local needs. These kinds of structures evolve over time to reflect the environmental, cultural and historical context in which they exist (Coch, 1998). The building knowledge of this type of architecture is always handed down traditions and is thus more based on the knowledge achieved by trial and error and in this way handed down through the generations (Singh et al., 2009). Vernacular buildings are most often residential buildings. People have traditional lifestyles in vernacular buildings in virtually every climate in the world, from the Arctic circle to the tropics, in temperatures from below zero to over 40\u00b0C, and historically without the benefit of gas or electrically driven mechanized heating and cooling systems (Meir & Roaf, 2003). After the emergence of modernist architecture, aided by the industrial revolution, vernacular buildings are seen to be in a state of decline and are frequently looked down upon, abandoned, neglected or actively demolished. Associated, by many at least, with an out-dated past and poverty, they are steadily replaced by architectural models that favour more modern, inter-national technologies, materials and forms (Oliver, 1997). It is assumed, as in international standards such as CENASO 7730 or ASHRAE 55, that people suffer less discomfort in very closely controlled conditions, then such vernacular buildings, along with modern passive buildings, cannot provide their occupants with \u2018comfortable\u2019 indoor climates (Santamouris, 2007). But nowadays, by the more and more important issues of energy consumption in building construction sectors, the continuity of the vernacular traditions is emphasized in academic research and building practice because of its climate-response, passive model and low-energy consumption. The principles that were used in traditional buildings can very well be implemented in modern buildings so as to produce \u201cenergy saving\u201d buildings. If these principles are sensibly adopted in modern buildings, it should be possible to build sustainable buildings for the future (Shanthi Priya, Sundarraja, Radhakrishnan, & Vijayalakshmi, 2012). We can learn a lesson from the approach of the builders who acknowledged the interdependence of human beings, buildings and physical environment (Coch, 1998). A \u201cnew vernacular\u201d can be developed, harnessing the types of low-tech solutions that are familiar to most of us from the vernacular, together with modern passive and active renewable energy technologies and strategies to reflect the new cultural, climatic and economic realities of the 21st century (Meir & Roaf, 2003). Vernacular buildings have to adapt to the environment through low-tech methods. Changing building form and material is the most important technique to adapt to the environment to obtain the best comfortable living space, in another words, the environment deeply influenced building form design and material use. Fathy (1986) described the climate effect on building form generation in vernacular building as: \u201cFor example, the proportion of window to wall area becomes less as one moves toward the equator. In warm areas, people shun the glare and heat of the sun, as demonstrated by the decreasing size of the windows. In the subtropical and tropical zones, more distinctive changes in architectural form occur to meet the problems caused by excessive heat. In Egypt, Iraq, India, and Pakijstan, deep loggias, projecting balconies, and overhangs casting long shadows on the walls of buildings are found. Wooden or marble lattices fill large openings to subdue the glare of the sun while permitting the breeze to pass through. Such arrangements characterize the architecture of hot zones, and evoke comfort as well as aesthetic satisfaction with the visible endeavour of man to protect himself against the excessive heat\u201d. In recent years, a significant amount of research has looked specifically at environmental performance issues of vernacular architecture, including its thermal properties, energy consumption and resources (Foruzanmehr & Vellinga, 2011). Both qualitative and quantitative such as field measurements, field surveys, statistical methods, comparative study and computer simulation methods are used in the investigation of the performance of vernacular buildings. Professor Paul Oliver of Oxford University compiled the book \u201cDwellings: Encyclopedia of Vernacular Architecture\u201d and published in 1997 with 4000 pages collection of research by over 750 authors from 80 countries. With two volumes categorized by climate and the \u2018\u2018vernacular responses\u2019\u2019 of a plethora of cultures and another volume focused on materials, resources and production, it is the world\u2019s foremost source for research in the area (Zhai & Previtali, 2010). Zhai and Previtali (2010) introduced an approach to categorizing distinct vernacular regions and evaluate energy performance of ancient vernacular homes as well as identify optimal constructions using vernacular building techniques. Chandel, Sharma, and Marwah (2016) reviewed the vernacular architecture features affecting indoor thermal comfort conditions and energy efficiency for adaptation in modern architecture to suit present day lifestyles. Singh et al. (2009) carried out a qualitative analysis on the vernacular buildings in north-east India. And Shanthi Priya et al. (2012) have conducted the qualitative and quantitative analysis to investigate the indoor environmental condition of a vernacular residential building in coastal region of Nagapatinam, India. Cardinale, Rospi, and Stefanizzi (2013) performed one experimental research on two types of vernacular buildings which lie in Southern Italy. Nguyen, Tran, Tran, and Reiter (2011) carried out an investigation on climate responsive design strategies of vernacular housing in Vietnam by a new research methodology which is adapted to the natural and social context of Vietnam. Ng and Lin (2012) analysed the microclimate of two Minangkabau vernacular houses in villages of Balimbing of Bukittinggi, Sumatra, Indonesia. Ali-Toudert, Djenane, Bensalem, and Mayer (2005) addressed the issue of outdoor thermal comfort in a hot and dry climate in relation to urban geometry. Beccali, Strazzeri, German\u00e0, Melluso, and Galatioto (2017) reviewed some models evaluating thermal comfort in natural ventilated vernacular buildings, based on adaptive approaches. Borong et al. (2004) concluded that sun shading and insulation are of great importance while natural ventilation is just considered as an auxiliary approach for the design principles of the traditional Chinese vernacular dwellings, based on the field measurements of the thermal environment parameters and a long-term auto-recorder of the indoor and outdoor temperature at four typical traditional vernacular dwellings at Wannan area in summer. Bouillot (2008) studied six Chinese vernacular houses in different provinces and found that the value and the diversity of the Chinese housing stock is due to the combination of the specific structure of the Chinese eastern climates, which creates the contrast of cold-dry winters and hothumid summers, with the structure of the Ming t\u2019ang, which contains the opposition of the yin and the yang. Liu et al. (2011)\u2019s study interprets the characteristic of warm in winter and cool in summer in traditional Yaodong dwelling by measuring the indoor, outdoor and the wall\u2019s temperatures in winter and summer. The results show that the Yaodong thick wall effectively damps the external temperature wave and keeps a steady inner surface temperature, are the chief causes of warm in winter and cool in summer in Yaodong. Gou et al. (2015) focused on a qualitative analysis of ancient dwellings located in the village of Xinye, in the hot summer and cold winter region of China. According to the analysis, the climate responsive strategies of the dwellings are mainly focused on natural ventilation, sun-shading and thermal insulation, illustrated by different building aspects such as the building location, building group layout and orientation, internal space arrangement, opening design, among other variables. Soflaei, Shokouhian, and Zhu (2017) investigated the potential of traditional courtyard houses in Iran and China in responding to environmental challenges alongside social norms over a long period of time. The social and environmental dimensions of the sustainability as well as the main elements of traditional courtyard houses in Iran and China were identified. Because of the advantage of vernacular building using passive ways to achieve thermal comfort and energy efficiency as mentioned above, this research will start with the investigation of a Chinese vernacular buildings in chapter 4. The next part of the literature review is an overview of passive cooling techniques.",
+      "url": "https://doi.org/10.59490/abe.19.10.4104",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pb498b92a67d4",
+      "title": "Assessment of Passive vs. Active Strategies for a School Building Design",
+      "doi": "10.3390/su71115136",
+      "year": 2015,
+      "authors": [
+        "Ji Hoon Kang",
+        "Ki Ahn",
+        "Cheol Ho Park",
+        "Thorsten Schuetze"
+      ],
+      "abstract": "This paper presents a simulation study to reduce heating and cooling energy demand of a school building in Seoul Metropolitan Area, Korea. The aim of this study was to estimate the impact of passive vs. active approaches on energy savings in buildings using EnergyPlus simulation. By controlling lighting, the energy saving of the original school building design was found most significant, and increased by 32% when the design was improved. It is noteworthy that energy saving potential of each room varies significantly depending on the rooms\u2019 thermal characteristics and orientation. Thus, the analysis of energy saving should be introduced at the individual space level, not at the whole building level. Additionally, the simulation studies should be involved for rational decision-making. Finally, it was concluded that priority should be given to passive building design strategies, such as building orientation, as well as control and utilization of solar radiation. These passive energy saving strategies are related to urban, architectural design, and engineering issues, and are more beneficial in terms of energy savings than active strategies.",
+      "url": "https://doi.org/10.3390/su71115136",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P064a32c631ac",
+      "title": "Using passive cooling strategies to improve thermal performance and reduce energy consumption of residential buildings in U.A.E. buildings",
+      "doi": "10.1016/j.foar.2014.01.002",
+      "year": 2014,
+      "authors": [
+        "Hanan M. Taleb"
+      ],
+      "abstract": "Passive design responds to local climate and site conditions in order to maximise the comfort and health of building users while minimising energy use. The key to designing a passive building is to take best advantage of the local climate. Passive cooling refers to any technologies or design features adopted to reduce the temperature of buildings without the need for power consumption. Consequently, the aim of this study is to test the usefulness of applying selected passive cooling strategies to improve thermal performance and to reduce energy consumption of residential buildings in hot arid climate settings, namely Dubai, United Arab Emirates. One case building was selected and eight passive cooling strategies were applied. Energy simulation software \u2013 namely IES \u2013 was used to assess the performance of the building. Solar shading performance was also assessed using Sun Cast Analysis, as a part of the IES software. Energy reduction was achieved due to both the harnessing of natural ventilation and the minimising of heat gain in line with applying good shading devices alongside the use of double glazing. Additionally, green roofing proved its potential by acting as an effective roof insulation. The study revealed several significant findings including that the total annual energy consumption of a residential building in Dubai may be reduced by up to 23.6% when a building uses passive cooling strategies.",
+      "url": "https://doi.org/10.1016/j.foar.2014.01.002",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P35b5fa210999",
+      "title": "Improving the Thermal Performance of Secondary School Buildings by Using Passive Techniques at Hyderabad",
+      "doi": "10.47001/irjiet/2023.708020",
+      "year": 2023,
+      "authors": [
+        "Ar. Aisha Tarique",
+        "Sabeen Qureshi",
+        "Engr. Mohaimin Ahmed Memon",
+        "Ar. Mahjabeen Memon"
+      ],
+      "abstract": "Educational domain is essential as they acquire an immense impact about student's physical well-being and studies.Mostly Building devours around 40 to 50% energy and the thermal comfort is an essential aspect of indoor environmental quality, particularly in educational buildings where students spends a significant amount of time.Poor thermal comfort can lead to negative health effects, reduced productivity, and discomfort.The study focuses to enhance the indoor environment by fostering to develop a comfortable learning environment, to accomplish the aim a particular school is selected in Hyderabad city as a case study to analyses its existing thermal performances and propose suitable passive strategies for implementation the impact of passive techniques on thermal comfort of school is further evaluated by gathering data through questionnaire surveys, interviews and analyzed on simulation tool.The study as a policy emphasizes the importance of passive techniques as a solution for creating environment friendly and energy efficient educational infrastructure, and giving valuable awareness to architects and policymakers that will form the basis for all other schools in Hyderabad city by considering both social and technical factors for optimal thermal performance in school buildings.",
+      "url": "https://doi.org/10.47001/irjiet/2023.708020",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P3ba3998663b4",
+      "title": "Passive cooling of buildings",
+      "doi": "10.1016/s0378-7788(97)00033-9",
+      "year": 1998,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.1016/s0378-7788(97)00033-9",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "impact of passive cooling on energy consumption school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pe1e020a794fb",
+      "title": "Reducing the Operational Energy Consumption in Buildings by Passive Cooling Techniques using Building Information Modelling Tools",
+      "doi": "10.20508/ijrer.v9i1.8951.g7587",
+      "year": 2019,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.20508/ijrer.v9i1.8951.g7587",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "impact of passive cooling on energy consumption school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P6f736c2813a0",
+      "title": "Passive cooling of buildings",
+      "doi": "10.4324/9781315073668-7",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-7",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "impact of passive cooling on energy consumption school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P97f4d44be574",
+      "title": "The Impact of Local and Global Climate Change on the Future Energy Cooling Consumption",
+      "doi": "10.1142/9789813236974_0002",
+      "year": 2019,
+      "authors": [
+        "M. Santamouris"
+      ],
+      "abstract": "",
+      "url": "https://doi.org/10.1142/9789813236974_0002",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "impact of passive cooling on energy consumption school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P72a98ea724eb",
+      "title": "Predicting the Future Cooling Energy Consumption of Buildings",
+      "doi": "10.1142/9789813236974_0004",
+      "year": 2019,
+      "authors": [
+        "M. Santamouris"
+      ],
+      "abstract": "",
+      "url": "https://doi.org/10.1142/9789813236974_0004",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "impact of passive cooling on energy consumption school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P8d3039a4ea08",
+      "title": "Options and applications of passive cooling",
+      "doi": "10.1016/0378-7788(85)90025-8",
+      "year": 1985,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.1016/0378-7788(85)90025-8",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "impact of passive cooling on energy consumption school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P43277bd2b71d",
+      "title": "Energy consumption for cooling loads",
+      "doi": "10.4324/9780203349021_chapter_5",
+      "year": null,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9780203349021_chapter_5",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "impact of passive cooling on energy consumption school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P36586c6fd37d",
+      "title": "Passive solar heating and cooling",
+      "doi": "10.1016/0378-7788(77)90035-4",
+      "year": 1977,
+      "authors": [
+        "F.S.H."
+      ],
+      "abstract": "",
+      "url": "https://doi.org/10.1016/0378-7788(77)90035-4",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "impact of passive cooling on energy consumption school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P3a185ebdc4a8",
+      "title": "Impact of Green Roofs on Energy Demand for Cooling in Egyptian Buildings",
+      "doi": "10.3390/su12145729",
+      "year": 2020,
+      "authors": [
+        "Ayman Ragab",
+        "Ahmed Abdelrady"
+      ],
+      "abstract": "Energy consumption for cooling purposes has increased significantly in recent years, mainly due to population growth, urbanization, and climate change consequences. The situation can be mitigated by passive climate solutions to reduce energy consumption in buildings. This study investigated the effectiveness of the green roof concept in reducing energy demand for cooling in different climatic regions. The impact of several types of green roofing of varying thermal conductivity and soil depth on energy consumption for cooling school buildings in Egypt was examined. In a co-simulation approach, the efficiency of the proposed green roof types was evaluated using the Design-Builder software, and a cost analysis was performed for the best options. The results showed that the proposed green roof types saved between 31.61 and 39.74% of energy, on average. A green roof featuring a roof soil depth of 0.1 m and 0.9 W/m-K thermal conductivity exhibited higher efficiency in reducing energy than the other options tested. The decrease in air temperature due to green roofs in hot arid areas, which exceeded an average of 4 \u00b0C, was greater than that in other regions that were not as hot. In conclusion, green roofs were shown to be efficient in reducing energy consumption as compared with traditional roofs, especially in hot arid climates.",
+      "url": "https://doi.org/10.3390/su12145729",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "impact of passive cooling on energy consumption school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P064a32c631ac",
+      "title": "Using passive cooling strategies to improve thermal performance and reduce energy consumption of residential buildings in U.A.E. buildings",
+      "doi": "10.1016/j.foar.2014.01.002",
+      "year": 2014,
+      "authors": [
+        "Hanan M. Taleb"
+      ],
+      "abstract": "Passive design responds to local climate and site conditions in order to maximise the comfort and health of building users while minimising energy use. The key to designing a passive building is to take best advantage of the local climate. Passive cooling refers to any technologies or design features adopted to reduce the temperature of buildings without the need for power consumption. Consequently, the aim of this study is to test the usefulness of applying selected passive cooling strategies to improve thermal performance and to reduce energy consumption of residential buildings in hot arid climate settings, namely Dubai, United Arab Emirates. One case building was selected and eight passive cooling strategies were applied. Energy simulation software \u2013 namely IES \u2013 was used to assess the performance of the building. Solar shading performance was also assessed using Sun Cast Analysis, as a part of the IES software. Energy reduction was achieved due to both the harnessing of natural ventilation and the minimising of heat gain in line with applying good shading devices alongside the use of double glazing. Additionally, green roofing proved its potential by acting as an effective roof insulation. The study revealed several significant findings including that the total annual energy consumption of a residential building in Dubai may be reduced by up to 23.6% when a building uses passive cooling strategies.",
+      "url": "https://doi.org/10.1016/j.foar.2014.01.002",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "impact of passive cooling on energy consumption school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P6c18a45487a2",
+      "title": "Unravelling the impact of courtyard geometry on cooling energy consumption in buildings",
+      "doi": "10.1016/j.buildenv.2023.110349",
+      "year": 2023,
+      "authors": [
+        "Eduardo Diz-Mellado",
+        "\u00c1lvaro Ruiz\u2013Pardo",
+        "Carlos Rivera-G\u00f3mez",
+        "Francisco Jos\u00e9 S\u00e1nchez de la Flor",
+        "Carmen Gal\u00e1n-Mar\u00edn"
+      ],
+      "abstract": "At present, the energy used for air conditioning in buildings in urban areas accounts for over 36% of total global energy consumption. Energy efficiency has become a critical factor in the urban planning of cities worldwide. Courtyard buildings in hot cities are a prime example of the approach used in traditional vernacular architecture to mitigate the effects of extreme weather. However, given the challenge of guaranteeing accurate modelling of microclimates within these courtyards, their impact on energy demand in buildings has been routinely overlooked by energy certification tools. This work examines three empirical case studies selected in Seville city (Spain), where temperatures during the summer months are extreme. The case studies selected display distinct geometric variations, and the primary objective of the research is to assess the influence of this geometric factor on the cooling energy demand of the building indoors. To achieve this, a validated methodology combining experimental and numerical data was implemented to evaluate the energy performance of buildings with courtyards. Different simulations were conducted to detect the impact of individual courtyard features. The results show a reduction in cooling demand of 8\u201318% depending on the geometry of the courtyard. Analysis was also carried out on the influence of the floor level and the orientation of adjacent rooms, revealing differences of 15% and 22%, respectively. The main conclusion of the research is that the use of courtyards as functional devices, paying particular attention to their geometry, is a key factor in the cooling energy demand of buildings.",
+      "url": "https://doi.org/10.1016/j.buildenv.2023.110349",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "impact of passive cooling on energy consumption school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P6453b1cf956d",
+      "title": "Determination of boundary conditions for passive schools : impact on heating and cooling demand",
+      "doi": null,
+      "year": 2010,
+      "authors": [
+        "Barbara Wauman",
+        "Jeroen Poppe",
+        "Stefan Van Loon",
+        "Ralf Klein",
+        "Hilde Breesch",
+        "Dirk Saelens",
+        "G. Desmetstraat"
+      ],
+      "abstract": "The Passive House standard is originally developed for dwellings in a moderate climate. This standard is extended to school buildings aiming a very low energy consumption and a high thermal comfort. In Flanders (Belgium), as of December 7, 2007, the criteria for Flemish passive school were set forward by the government: annual net heating demand \u2264 15 kWh/(m2.a) annual net cooling demand \u2264 15 kWh/(m2.a) n50 \u2264 0,6 air changes per hour maximum E-level = 55 (energy performance as defined by EPB) These criteria show strong resemblances to the performance criteria as set for residential passive buildings. However, the boundary conditions for schools differ strongly from the well known characteristics of residential buildings. In comparison, schools typically have a discontinuous user profile, higher occupancy rates, higher internal heat gains and ventilation flow rates and a large percentage of glass surface. Considering the significant influence of these characteristics on the heating and cooling demand, a set of boundary conditions needs to be defined to guarantee a uniform and objective evaluation of the design of all passive schools in Flanders. Implementing this set of boundary conditions in the existing monthly calculation method PHPP, the impact of these characteristics on the energy demand for heating and cooling is studied. In addition, the results of these calculations are compared to the results of dynamic building simulations in TRNSYS.",
+      "url": "https://openalex.org/W2559783433",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "impact of passive cooling on energy consumption school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P85761ce01eca",
+      "title": "Impacts Of Building Design Factors On Auckland School Energy Consumptions",
+      "doi": "10.5281/zenodo.1089241",
+      "year": 2013,
+      "authors": [
+        "Bin Su"
+      ],
+      "abstract": "This study focuses on the impact of school building design factors on winter extra energy consumption which mainly includes space heating, water heating and other appliances related to winter indoor thermal conditions. A number of Auckland schools were randomly selected for the study which introduces a method of using real monthly energy consumption data for a year to calculate winter extra energy data of school buildings. The study seeks to identify the relationships between winter extra energy data related to school building design data related to the main architectural features, building envelope and elements of the sample schools. The relationships can be used to estimate the approximate saving in winter extra energy consumption which would result from a changed design datum for future school development, and identify any major energy-efficient design problems. The relationships are also valuable for developing passive design guides for school energy efficiency.",
+      "url": "https://doi.org/10.5281/zenodo.1089241",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "impact of passive cooling on energy consumption school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P74f5f681f389",
+      "title": "A Case Study on Passive vs. Active Strategies for an Energy-Efficient School Building Design",
+      "doi": "10.3390/ifou-e004",
+      "year": 2015,
+      "authors": [
+        "Cheol-Soo Park",
+        "Ji-Eun Kang",
+        "Ki-Uhn Ahn",
+        "Thorsten Schuetze"
+      ],
+      "abstract": "This paper presents a simulation study to reduce heating and cooling demand of a school building. This study aims to cross-compare the impact of passive vs. active design on building energy savings. Firstly, the original design of the school building was assessed in terms of heating and cooling energy consumption. Then, the authors made several active energy saving strategies including dynamic blind control, lighting control (dimming), heat recovery ventilator and the use of heat pump. Then, based on the results from the aforementioned simulation study, the authors redesigned the building by changing insulation, windows, and the shape and orientation of the building. It was found that the energy saving of the original design by lighting control is most significant. In addition, the energy savings from the original design to the new design increases by 32%. However, the contribution of the thermal performance improvement of the building envelopes is marginal since the thermal performance of the envelopes of the original design is already good enough. With regard to ventilation, sensible heat & total heat exchangers are very advantageous only in heating season. In intermediate and cooling seasons, their energy saving potential is insignificant. With regard to blind and lighting controls, blind control is less effective than lighting control in heating season. In Intermediate and cooling seasons, blind and lighting controls are very advantageous. When all the active controls are integrated together, total energy savings for the whole building would range from 34.3-48.4%. Finally, it was concluded that energy saving potentials of each room significantly vary depending on room's thermal characteristics (window-wall-ratio, internal heat generation, ventilation requirement) and orientation.",
+      "url": "https://doi.org/10.3390/ifou-e004",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "impact of passive cooling on energy consumption school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P624b397a8afd",
+      "title": "Impact of Passive Energy Efficiency Measures on Cooling Energy Demand in an Architectural Campus Building in Karachi, Pakistan",
+      "doi": "10.3390/su13137251",
+      "year": 2021,
+      "authors": [
+        "Mushk Bughio",
+        "Muhammad Shoaib Khan",
+        "Waqas Ahmed Mahar",
+        "Thorsten Schuetze"
+      ],
+      "abstract": "Electric appliances for cooling and lighting are responsible for most of the increase in electricity consumption in Karachi, Pakistan. This study aims to investigate the impact of passive energy efficiency measures (PEEMs) on the potential reduction of indoor temperature and cooling energy demand of an architectural campus building (ACB) in Karachi, Pakistan. PEEMs focus on the building envelope\u2019s design and construction, which is a key factor of influence on a building\u2019s cooling energy demand. The existing architectural campus building was modeled using the building information modeling (BIM) software Autodesk Revit. Data related to the electricity consumption for cooling, building masses, occupancy conditions, utility bills, energy use intensity, as well as space types, were collected and analyzed to develop a virtual ACB model. The utility bill data were used to calibrate the DesignBuilder and EnergyPlus base case models of the existing ACB. The cooling energy demand was compared with different alternative building envelope compositions applied as PEEMs in the renovation of the existing exemplary ACB. Finally, cooling energy demand reduction potentials and the related potential electricity demand savings were determined. The quantification of the cooling energy demand facilitates the definition of the building\u2019s electricity consumption benchmarks for cooling with specific technologies.",
+      "url": "https://doi.org/10.3390/su13137251",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "impact of passive cooling on energy consumption school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pc7bb2507fbe0",
+      "title": "Impact of controlled ventilation systems on energy consumption in mediterranean school buildings",
+      "doi": null,
+      "year": 2012,
+      "authors": [
+        "J\u00e9sica Fern\u00e1ndez-Ag\u00fcera",
+        "Samuel Dom\u00ednguez-Amarillo",
+        "Miguel \u00c1ngel Campano"
+      ],
+      "abstract": "Current standards for indoor air quality (IAQ) in non-residential buildings demand high air \\nrenewal rates with different filtration stages and constant flow. Currently, new school buildings must \\nincorporate mechanical ventilation systems which modify traditional heating installations in order to \\ncomply with the requirements for indoor air quality and energy efficiency. This study analyses the \\ntechnical and energy outcomes involved in a school building when changing from a traditional \\ncentral heating system with radiators, to an HV system which fulfils the current regulatory \\nframework.",
+      "url": "https://openalex.org/W2556139075",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "impact of passive cooling on energy consumption school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P6f736c2813a0",
+      "title": "Passive cooling of buildings",
+      "doi": "10.4324/9781315073668-7",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-7",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pa9c898e9b51b",
+      "title": "Urban design - A. Dimoudi",
+      "doi": "10.4324/9781315073668-10",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-10",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P910ea519ef6d",
+      "title": "Cooling in buildings",
+      "doi": "10.4324/9781315073668-6",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-6",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P0ea50de16e80",
+      "title": "Cooling load of buildings - C. Balaras",
+      "doi": "10.4324/9781315073668-12",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-12",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pe66bf5e380a2",
+      "title": "Passive Cooling in Buildings",
+      "doi": "10.1201/9781003014829-8",
+      "year": 2024,
+      "authors": [
+        "Pablo M. La Roche"
+      ],
+      "abstract": "",
+      "url": "https://doi.org/10.1201/9781003014829-8",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pda6861078b57",
+      "title": "Radiative cooling",
+      "doi": "10.4324/9781315073668-18",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-18",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P07a3229f0402",
+      "title": "Evaporative cooling",
+      "doi": "10.4324/9781315073668-17",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-17",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pe7bebee9880c",
+      "title": "Ground cooling",
+      "doi": "10.4324/9781315073668-16",
+      "year": 2013,
+      "authors": [],
+      "abstract": "",
+      "url": "https://doi.org/10.4324/9781315073668-16",
+      "sources": [
+        "Crossref"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P124d621733be",
+      "title": "Improving building fabric for energy efficiency in hot climates by applying passive cooling strategies: a case study for school buildings: towards environmental school buildings in hot, arid region",
+      "doi": null,
+      "year": 2017,
+      "authors": [
+        "Sara Mohamed"
+      ],
+      "abstract": "The demands for cooling in non-domestic buildings are rising throughout the world This thesis is concerned about the environmental performance of the primary schools in Khartoum State in Sudan. The Sudanese government continues to build more schools throughout the country, and particularly in the large city of Khartoum, without any consideration for the effect of the climate on the thermal comfort inside the buildings. This study focused on the thermal comfort within classrooms and the improvement of the building fabric by provision of passive cooling strategies, as well as other passive ways that improve the classroom\u2019s thermal performance. A comprehensive literature review has been conducted, including the concept of the environmental performance of school buildings and the technique of passive cooling technologies, as well as the benefit of a ventilated facade for reducing the cooling load. The literature review also helped to initially formulate possible passive measures that could be applied to the prototypes school wall fabrics, to enhance their thermal performance and adapt them for a hot and harsh climate. These passives cooling techniques ideas were investigated for further research. School buildings often have poor thermal comfort and poor indoor air quality (IAQ), which affect the pupils\u2019 health, education and productivity. So, this research investigated the thermal performance of naturally ventilated walls when adding passive cooling to the wall fabric by using ceramic and looked into passive cooling techniques to enhance thermal comfort and the temperature and ventilation inside the classrooms. A number of different studies were undertaken and sketches of proposed techniques produced in order to achieve the intended research case design. Computational fluid dynamics (CFD) simulations have been performed in order to examine the behaviour of the cooling wall system in reducing the effect of outside air temperature under different wind velocities in the summer period, utilizing weather data for Khartoum. The work concludes that the system was capable of reducing the air temperature by up to 12C\u00b0-15 C\u00b0. The different examinations included analyzing the temperature distribution and air velocities profiles inside the classroom, highlighting the different effects of buoyancy and wind velocity when adding passive cooling to the wall fa\u00e7ade.",
+      "url": "https://openalex.org/W2748447879",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pcce01fac6003",
+      "title": "Investigation of a passive design approach for a building facility: a case study",
+      "doi": "10.1080/15567036.2021.1938761",
+      "year": 2021,
+      "authors": [
+        "Du\u0161an Ran\u0111elovi\u0107",
+        "Miomir Vasov",
+        "Marko  G. Ignjatovi\u0107",
+        "Mirko Stojiljkovi\u0107",
+        "Veliborka Bogdanovi\u0107"
+      ],
+      "abstract": "Educational buildings represent an indivisible part of every society, and it is necessary to make them energy efficient. In the current research on the energy-efficient retrofit of school buildings, the impact of several passive design strategies is studied. These interventions include improvement of the building envelope characteristics and parameters related to select passive design systems. In order to determine whether applying a green roof, double-skin facade, or Trombe wall, with or without shading contributes to heating and cooling energy consumption reduction, building energy performance was simulated using the EnergyPlus and jEplus software. This holistic approach takes into consideration parameters that may be critical for the success of the energy-efficient retrofit of school buildings. The results revealed which parameters provide the most significant heating and cooling energy savings of the modeled school buildings in local climatic conditions. By applying the appropriate combination of interventions, the heating energy saving can be up to 77%, while with a proper mix of the proposed measures, the maximum cooling energy savings are up to 79%.",
+      "url": "https://doi.org/10.1080/15567036.2021.1938761",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pd82cb30819f1",
+      "title": "Improving energy efficiency of school buildings during winter season using passive design strategies",
+      "doi": "10.1051/sbuild/2019005",
+      "year": 2020,
+      "authors": [
+        "Sahar Zahiri",
+        "Ha\u015fim Altan"
+      ],
+      "abstract": "Passive building design can improve energy efficiency of buildings, while providing comfortable indoor environment for occupants with minimum mechanical energy use. The foundation of passive design depends on natural sources of energy, which uses building architecture and surrounding environment to minimise heating and cooling loads of buildings with minimum operating and maintenance costs. The correlation of local climate with shape and thermal performance of buildings is one of the main considerations of passive design approach to reduce energy use and increase thermal comfort of occupants. This paper focuses on a series of field studies and building simulation analysis to improve thermal performance of female secondary school buildings in the city of Tehran in Iran during winter season using passive design strategies. The field studies included measuring indoor air temperature, as well as a questionnaire-based survey in a cold winter season in a typical female secondary school building. The on-site monitoring assessed indoor air temperature of classrooms while the occupants completed questionnaires covering their thermal sensations and thermal preferences. Moreover, building thermal simulation analysis were carried out using DesignBuilder tool to evaluate and improve thermal performance of classrooms based on students' thermal requirements and passive design strategies. The simulation analysis started from the basic school building model, investigating various passive design strategies to predict the optimum design strategies for the case study. The simulation results determined how to provide classrooms that are more comfortable for students with minimum energy use. The results of the field studies indicated that indoor thermal environment were usually comfortable for female students based on 7-point ASHRAE scale. However, most of the occupants preferred their indoor thermal environment to be improved. Moreover, simulation results showed that building fabrics and thermal properties, as well as glazing and orientation had significant impacts on indoor air temperature and thermal comfort and using appropriate passive design strategies could improve energy efficiency of the building considerably. Therefore, in order to enhance indoor thermal environment and to increase learning performance of students, it is necessary to use appropriate low energy methods, which can reduce the needs for mechanical energy systems and hence save energy.",
+      "url": "https://doi.org/10.1051/sbuild/2019005",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pee6c53017321",
+      "title": "Passive Cooling Consideration in the Effective Planning and Design of Public Buildings in Nigeria",
+      "doi": null,
+      "year": 2017,
+      "authors": [
+        "Ayomikun Solomon Adewumi",
+        "Joseph Akinlabi Fadamiro",
+        "Husam AlWaer",
+        "Vincent Onyango",
+        "Dumiso Moyo"
+      ],
+      "abstract": "The rapid increase in the growth of Nigerian cities as a result of mass rural-urban migration has led to a demand for more public buildings. The ongoing campaign for sustainability backed up with the statistics that confronts us daily have necessitated the need to deliver more environment-friendly public buildings. This study is aimed at enhancing sustainable utilization of energy through passive cooling in the planning and delivery of public buildings with optimum design condition for users\u2019 comfort in Nigeria. The objectives are: (i) to identify the factors that enhances the passive performance of a building (ii) to measure these factors through case study survey and post occupancy evaluation of three existing public buildings (iii) to arrive at optimum design conditions using passive cooling in public buildings. Findings showed inadequate consideration of the design strategies that enhance the passive performance of a building due to dependence on active cooling means in the public buildings visited. The paper recommended for a policy framework for the planning of public buildings and canvassed the need for professionals in the built industry to consider how key design strategies can be considered in the early stage of their design decisions that will lead to sustainable public buildings.",
+      "url": "https://openalex.org/W2951402693",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P30afe541aa31",
+      "title": "Courtyard as a Passive Cooling Strategy in Buildings",
+      "doi": "10.11113/ijbes.v4.n1.159",
+      "year": 2017,
+      "authors": [
+        "Markus Bulus",
+        "Malsiah Hamid",
+        "Yaik-Wah Lim"
+      ],
+      "abstract": "One of the most significant current discussions in the built environment, architectural practice, theory, and procedures is \u201cPassive Design\u201d. It is becoming very difficult to ignore the issues of passive architectural design strategies in buildings. Recent studies emphasized the need for passive architectural design strategies and the application of the courtyard as a passive design strategy for cooling in buildings. Also, that the courtyard is very suitable in almost all building typologies in all the climatic zones due to its passive tendencies for cooling. Its cooling potentials can be achieved only when design requirements are not ignored. The courtyard has social, cultural, religious, and environmental benefits. Despite its abundant advantages, research effort towards courtyard design requirements is very scarce. Therefore, the main objective of this study is to investigate the design of central courtyard as a passive cooling strategy for improving indoor thermal comfort in Universiti Teknologi Malaysia (UTM) Buildings. Courtyard design requirement such as the courtyard configurations, orientation, and natural features in courtyard buildings in UTM were investigated. Besides the design variants, courtyard usage in such buildings was also examined. The methodology of this study involved the developing of a checklist based on literature for the field survey. Forty-six (46) courtyards in thirty-two (32) buildings in UTM were surveyed, and the statistical description method was used to interpret and analyzed the data. The Results of this quantitative study shows that UTM central courtyards buildings were designed based on a cautious consideration to orientation and configurations to enhance their effective passive cooling potentials, however, only two courtyards had water pools. The study concluded that courtyards in UTM buildings are creatively designed but future experimental studies to appraise their thermal performances is required, and future simulation studies can predict a better design requirement for optimum performance. Therefore, further simulation studies are recommended.",
+      "url": "https://doi.org/10.11113/ijbes.v4.n1.159",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P8ddfa7f2e65f",
+      "title": "Passive cooling strategies to optimise sustainability and environmental ergonomics in Mediterranean schools based on a critical review",
+      "doi": "10.1016/j.buildenv.2022.109297",
+      "year": 2022,
+      "authors": [
+        "Carmen D\u00edaz-L\u00f3pez",
+        "Antonio Serrano-Jim\u00e9nez",
+        "Konstantin Verichev",
+        "\u00c1ngela Barrios Padura"
+      ],
+      "abstract": "This article identifies and compares the passive cooling strategies used and their relationship to optimising sustainability and environmental ergonomics based on 47 case studies. The analysis of the schools has resulted in the identification of 20 passive strategies, eight parameters related to sustainability and six related to environmental ergonomics. The results show that the most used passive strategies are natural ventilation, green roofs, low thermal transmittance windows and solar shading. In contrast, the least used strategies are ventilated fa\u00e7ades and evaporative cooling systems. In terms of sustainability, energy efficiency is present in most case studies; in contrast, the circular economy is hardly considered in schools. In terms of environmental ergonomics, thermal comfort is present in most case studies, while acoustic comfort is not assessed. Furthermore, the results show an absence of optimisation of acoustic and visual comfort, climate change adaptation measures and involvement of the educational community. This work provides a detailed understanding of the status quo for researchers, practitioners and policymakers and predicts the dynamic directions of the field. It highlights the need to incorporate passive design protocols explicitly applied to schools to achieve a sustainable and climate-resilient educational building stock within the principles of the circular economy.",
+      "url": "https://doi.org/10.1016/j.buildenv.2022.109297",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "P4b4cf20740a8",
+      "title": "Alternative Ways of Cooling a Passive School Building in Order to Maintain Thermal Comfort in Summer",
+      "doi": "10.3390/en14010070",
+      "year": 2020,
+      "authors": [
+        "Anna Dudzi\u0144ska",
+        "Tomasz Kisilewicz"
+      ],
+      "abstract": "The heatwaves that have affected our civilization in recent years pose a serious threat to the environment as well as the proper functioning of our bodies. Schools are facilities with specific microclimatic requirements. Thermal conditions in educational buildings are decisive for the stimulation and efficiency of the learning process, as well as the interaction of students. Based on the measurements of thermal comfort carried out in the school building, with the energy standard of a passive building, it can be observed that in schools with very low energy consumption, the problem of interior overheating may occur in the summer months. In this paper, an attempt was made to search for alternative passive measures allowing for the required indoor microclimate conditions to be obtained. Such solutions are in line with the spirit of the European energy policy and sustainable development. A model of the school under study was created using the Design Builder simulation program. The role of mechanical ventilation and the possibility of night ventilation in reducing discomfort were examined. Consideration was given to the justification of using expensive heat pump installations with a ground heat exchanger to reduce overheating in summer. The application of the adaptive approach to the assessment of thermal conditions and the acceptance of limited overheating periods led to the conclusion that the analyzed building could function successfully without these additional installation elements. A proprietary tool for the analysis of microclimate conditions was proposed to estimate the hours of discomfort in a way that is objective and easy to calculate.",
+      "url": "https://doi.org/10.3390/en14010070",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    },
+    {
+      "id": "Pb0334e0903cb",
+      "title": "Health and safety considerations for passive solar heated and cooled buildings",
+      "doi": "10.6028/nbs.ir.82-2554",
+      "year": 1982,
+      "authors": [
+        "F Eugene Metz",
+        "James H Pielert",
+        "Patrick W Cooke",
+        "William D. Walton"
+      ],
+      "abstract": "This report discusses the nature of health and safety considerations in applying solar passive technology to buildings and how they would be affected by current building regulatory requirements.Health and safety considerations associated with solar passive systems are discussed including; indoor air quality; structural safety; fire safety; and environmental issues such as ventilation, illumination, temperature control, humidity and noise control.The report also identifies technical issues and research needs associated with health and safety concerns in passive solar technology.",
+      "url": "https://doi.org/10.6028/nbs.ir.82-2554",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.0,
+      "synthetic": false
+    }
+  ],
+  "papers": [
+    {
+      "id": "P064a32c631ac",
+      "title": "Using passive cooling strategies to improve thermal performance and reduce energy consumption of residential buildings in U.A.E. buildings",
+      "doi": "10.1016/j.foar.2014.01.002",
+      "year": 2014,
+      "authors": [
+        "Hanan M. Taleb"
+      ],
+      "abstract": "Passive design responds to local climate and site conditions in order to maximise the comfort and health of building users while minimising energy use. The key to designing a passive building is to take best advantage of the local climate. Passive cooling refers to any technologies or design features adopted to reduce the temperature of buildings without the need for power consumption. Consequently, the aim of this study is to test the usefulness of applying selected passive cooling strategies to improve thermal performance and to reduce energy consumption of residential buildings in hot arid climate settings, namely Dubai, United Arab Emirates. One case building was selected and eight passive cooling strategies were applied. Energy simulation software \u2013 namely IES \u2013 was used to assess the performance of the building. Solar shading performance was also assessed using Sun Cast Analysis, as a part of the IES software. Energy reduction was achieved due to both the harnessing of natural ventilation and the minimising of heat gain in line with applying good shading devices alongside the use of double glazing. Additionally, green roofing proved its potential by acting as an effective roof insulation. The study revealed several significant findings including that the total annual energy consumption of a residential building in Dubai may be reduced by up to 23.6% when a building uses passive cooling strategies.",
+      "url": "https://doi.org/10.1016/j.foar.2014.01.002",
+      "sources": [
+        "Crossref",
+        "OpenAlex"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings",
+        "impact of passive cooling on energy consumption school buildings",
+        "passive cooling strategies energy consumption educational facilities"
+      ],
+      "score": 0.7643,
+      "synthetic": false
+    },
+    {
+      "id": "Pd82cb30819f1",
+      "title": "Improving energy efficiency of school buildings during winter season using passive design strategies",
+      "doi": "10.1051/sbuild/2019005",
+      "year": 2020,
+      "authors": [
+        "Sahar Zahiri",
+        "Ha\u015fim Altan"
+      ],
+      "abstract": "Passive building design can improve energy efficiency of buildings, while providing comfortable indoor environment for occupants with minimum mechanical energy use. The foundation of passive design depends on natural sources of energy, which uses building architecture and surrounding environment to minimise heating and cooling loads of buildings with minimum operating and maintenance costs. The correlation of local climate with shape and thermal performance of buildings is one of the main considerations of passive design approach to reduce energy use and increase thermal comfort of occupants. This paper focuses on a series of field studies and building simulation analysis to improve thermal performance of female secondary school buildings in the city of Tehran in Iran during winter season using passive design strategies. The field studies included measuring indoor air temperature, as well as a questionnaire-based survey in a cold winter season in a typical female secondary school building. The on-site monitoring assessed indoor air temperature of classrooms while the occupants completed questionnaires covering their thermal sensations and thermal preferences. Moreover, building thermal simulation analysis were carried out using DesignBuilder tool to evaluate and improve thermal performance of classrooms based on students' thermal requirements and passive design strategies. The simulation analysis started from the basic school building model, investigating various passive design strategies to predict the optimum design strategies for the case study. The simulation results determined how to provide classrooms that are more comfortable for students with minimum energy use. The results of the field studies indicated that indoor thermal environment were usually comfortable for female students based on 7-point ASHRAE scale. However, most of the occupants preferred their indoor thermal environment to be improved. Moreover, simulation results showed that building fabrics and thermal properties, as well as glazing and orientation had significant impacts on indoor air temperature and thermal comfort and using appropriate passive design strategies could improve energy efficiency of the building considerably. Therefore, in order to enhance indoor thermal environment and to increase learning performance of students, it is necessary to use appropriate low energy methods, which can reduce the needs for mechanical energy systems and hence save energy.",
+      "url": "https://doi.org/10.1051/sbuild/2019005",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.7214,
+      "synthetic": false
+    },
+    {
+      "id": "P124d621733be",
+      "title": "Improving building fabric for energy efficiency in hot climates by applying passive cooling strategies: a case study for school buildings: towards environmental school buildings in hot, arid region",
+      "doi": null,
+      "year": 2017,
+      "authors": [
+        "Sara Mohamed"
+      ],
+      "abstract": "The demands for cooling in non-domestic buildings are rising throughout the world This thesis is concerned about the environmental performance of the primary schools in Khartoum State in Sudan. The Sudanese government continues to build more schools throughout the country, and particularly in the large city of Khartoum, without any consideration for the effect of the climate on the thermal comfort inside the buildings. This study focused on the thermal comfort within classrooms and the improvement of the building fabric by provision of passive cooling strategies, as well as other passive ways that improve the classroom\u2019s thermal performance. A comprehensive literature review has been conducted, including the concept of the environmental performance of school buildings and the technique of passive cooling technologies, as well as the benefit of a ventilated facade for reducing the cooling load. The literature review also helped to initially formulate possible passive measures that could be applied to the prototypes school wall fabrics, to enhance their thermal performance and adapt them for a hot and harsh climate. These passives cooling techniques ideas were investigated for further research. School buildings often have poor thermal comfort and poor indoor air quality (IAQ), which affect the pupils\u2019 health, education and productivity. So, this research investigated the thermal performance of naturally ventilated walls when adding passive cooling to the wall fabric by using ceramic and looked into passive cooling techniques to enhance thermal comfort and the temperature and ventilation inside the classrooms. A number of different studies were undertaken and sketches of proposed techniques produced in order to achieve the intended research case design. Computational fluid dynamics (CFD) simulations have been performed in order to examine the behaviour of the cooling wall system in reducing the effect of outside air temperature under different wind velocities in the summer period, utilizing weather data for Khartoum. The work concludes that the system was capable of reducing the air temperature by up to 12C\u00b0-15 C\u00b0. The different examinations included analyzing the temperature distribution and air velocities profiles inside the classroom, highlighting the different effects of buoyancy and wind velocity when adding passive cooling to the wall fa\u00e7ade.",
+      "url": "https://openalex.org/W2748447879",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings"
+      ],
+      "score": 0.6643,
+      "synthetic": false
+    },
+    {
+      "id": "P3a185ebdc4a8",
+      "title": "Impact of Green Roofs on Energy Demand for Cooling in Egyptian Buildings",
+      "doi": "10.3390/su12145729",
+      "year": 2020,
+      "authors": [
+        "Ayman Ragab",
+        "Ahmed Abdelrady"
+      ],
+      "abstract": "Energy consumption for cooling purposes has increased significantly in recent years, mainly due to population growth, urbanization, and climate change consequences. The situation can be mitigated by passive climate solutions to reduce energy consumption in buildings. This study investigated the effectiveness of the green roof concept in reducing energy demand for cooling in different climatic regions. The impact of several types of green roofing of varying thermal conductivity and soil depth on energy consumption for cooling school buildings in Egypt was examined. In a co-simulation approach, the efficiency of the proposed green roof types was evaluated using the Design-Builder software, and a cost analysis was performed for the best options. The results showed that the proposed green roof types saved between 31.61 and 39.74% of energy, on average. A green roof featuring a roof soil depth of 0.1 m and 0.9 W/m-K thermal conductivity exhibited higher efficiency in reducing energy than the other options tested. The decrease in air temperature due to green roofs in hot arid areas, which exceeded an average of 4 \u00b0C, was greater than that in other regions that were not as hot. In conclusion, green roofs were shown to be efficient in reducing energy consumption as compared with traditional roofs, especially in hot arid climates.",
+      "url": "https://doi.org/10.3390/su12145729",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "impact of passive cooling on energy consumption school buildings"
+      ],
+      "score": 0.5786,
+      "synthetic": false
+    },
+    {
+      "id": "P74f5f681f389",
+      "title": "A Case Study on Passive vs. Active Strategies for an Energy-Efficient School Building Design",
+      "doi": "10.3390/ifou-e004",
+      "year": 2015,
+      "authors": [
+        "Cheol-Soo Park",
+        "Ji-Eun Kang",
+        "Ki-Uhn Ahn",
+        "Thorsten Schuetze"
+      ],
+      "abstract": "This paper presents a simulation study to reduce heating and cooling demand of a school building. This study aims to cross-compare the impact of passive vs. active design on building energy savings. Firstly, the original design of the school building was assessed in terms of heating and cooling energy consumption. Then, the authors made several active energy saving strategies including dynamic blind control, lighting control (dimming), heat recovery ventilator and the use of heat pump. Then, based on the results from the aforementioned simulation study, the authors redesigned the building by changing insulation, windows, and the shape and orientation of the building. It was found that the energy saving of the original design by lighting control is most significant. In addition, the energy savings from the original design to the new design increases by 32%. However, the contribution of the thermal performance improvement of the building envelopes is marginal since the thermal performance of the envelopes of the original design is already good enough. With regard to ventilation, sensible heat & total heat exchangers are very advantageous only in heating season. In intermediate and cooling seasons, their energy saving potential is insignificant. With regard to blind and lighting controls, blind control is less effective than lighting control in heating season. In Intermediate and cooling seasons, blind and lighting controls are very advantageous. When all the active controls are integrated together, total energy savings for the whole building would range from 34.3-48.4%. Finally, it was concluded that energy saving potentials of each room significantly vary depending on room's thermal characteristics (window-wall-ratio, internal heat generation, ventilation requirement) and orientation.",
+      "url": "https://doi.org/10.3390/ifou-e004",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "impact of passive cooling on energy consumption school buildings"
+      ],
+      "score": 0.5786,
+      "synthetic": false
+    },
+    {
+      "id": "P3cc9c486ecae",
+      "title": "Use of passive cooling techniques and super cool materials to minimize cooling energy and improve thermal comfort in Brazilian schools",
+      "doi": "10.1016/j.enbuild.2024.114125",
+      "year": 2024,
+      "authors": [
+        "Camila Machado de Azevedo Correia",
+        "Cl\u00e1udia Naves David Amorim",
+        "M. Santamouris"
+      ],
+      "abstract": "Standardized replicable buildings can cause discomfort and increased air conditioning usage. Besides, super cool coatings are effective passive solutions. Therefore, this study evaluates thermal comfort in a standardized Brazilian public school in 8 climates, verifies suitable super cool coatings and identifies optimal additional passive techniques to meet regulatory requirements without active air conditioning, a topic worthy of investigation. Methods include pilot simulations with DesignBuilder, thermal comfort analysis considering ASHRAE 55 adaptive model; JEA Algorithm optimization simulations; identification of most influential passive strategies by sensitivity analyses; and evaluation of the ideal opaque envelope through heat balance. Results showed that current model do not meet the Brazilian normative. Thus, different super cool coatings are recommended: thermochromic for heating-dominated; spectrally selective for cooling-dominated dry and high broadband emissivity for extreme-cooling-dominated humid zones. Regarding opaque envelope, thermal mass flat roofs and insulated walls are advised. In 7 of 8 climates, super cool roof was most effective followed by natural ventilation . Optimal combinations include super cool envelope, window shading and natural ventilation 24 hours 7 days a week with 95 % of free-aperture for extreme-cooling-dominated zones; super cool roofs, medium reflectivity walls and 5 % of free-aperture for cooling-dominated; thermochromic roof and dark walls with natural ventilation during occupancy with 5 % of free-aperture for heating-dominated.",
+      "url": "https://doi.org/10.1016/j.enbuild.2024.114125",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.5714,
+      "synthetic": false
+    },
+    {
+      "id": "Pda8f714031d0",
+      "title": "Passive and low energy cooling techniques in buildings",
+      "doi": null,
+      "year": 2006,
+      "authors": [
+        "M Milos Lain",
+        "Jlm Jan Hensen"
+      ],
+      "abstract": "The paper deals with applicability of passive and low energy cooling technologies in the Czech Republic.There are presented climate, buildings and systems analysis, to find out passive and low energy cooling technologies potential. Some case studies including building simulations and monitoring are introduced (the office building with night ventilation, direct evaporative cooling, slab cooling, role of thermal mass in an historical building, thermal lops). The role of computer simulation in the low energy building design and optimalization is discussed.",
+      "url": "https://openalex.org/W1528651258",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "passive cooling strategies energy consumption educational facilities"
+      ],
+      "score": 0.5714,
+      "synthetic": false
+    },
+    {
+      "id": "P4b4cf20740a8",
+      "title": "Alternative Ways of Cooling a Passive School Building in Order to Maintain Thermal Comfort in Summer",
+      "doi": "10.3390/en14010070",
+      "year": 2020,
+      "authors": [
+        "Anna Dudzi\u0144ska",
+        "Tomasz Kisilewicz"
+      ],
+      "abstract": "The heatwaves that have affected our civilization in recent years pose a serious threat to the environment as well as the proper functioning of our bodies. Schools are facilities with specific microclimatic requirements. Thermal conditions in educational buildings are decisive for the stimulation and efficiency of the learning process, as well as the interaction of students. Based on the measurements of thermal comfort carried out in the school building, with the energy standard of a passive building, it can be observed that in schools with very low energy consumption, the problem of interior overheating may occur in the summer months. In this paper, an attempt was made to search for alternative passive measures allowing for the required indoor microclimate conditions to be obtained. Such solutions are in line with the spirit of the European energy policy and sustainable development. A model of the school under study was created using the Design Builder simulation program. The role of mechanical ventilation and the possibility of night ventilation in reducing discomfort were examined. Consideration was given to the justification of using expensive heat pump installations with a ground heat exchanger to reduce overheating in summer. The application of the adaptive approach to the assessment of thermal conditions and the acceptance of limited overheating periods led to the conclusion that the analyzed building could function successfully without these additional installation elements. A proprietary tool for the analysis of microclimate conditions was proposed to estimate the hours of discomfort in a way that is objective and easy to calculate.",
+      "url": "https://doi.org/10.3390/en14010070",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "design considerations passive cooling school buildings",
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.5286,
+      "synthetic": false
+    },
+    {
+      "id": "P5df45a9a5b2e",
+      "title": "Energy-efficient design trends and performance for passive solar commercial buildings",
+      "doi": "10.25669/15lw-qwm9",
+      "year": 2019,
+      "authors": [
+        "Gary Byron Eddington"
+      ],
+      "abstract": "This is a study of passive and climate responsive architecture applied to commercial buildings. Commercial buildings-ncluding offices, educational facilities, civic and governmental buildings, health care and retail businesses-lay an important role in the US energy use picture. In an attempt to be more environmentally sensitive and to preserve our natural resourses the US government and the private sector have long been involved in an effort to reduce energy consumption and our dependency on non-renewable energy in new buildings through energy conservation and innovative passive solar strategies as an alternative to the energy wasting buildings that exist all around us. This alternative approach emphasizes the use of simple technology to take advantage of the onsite energy available from the natural environment in combination with the architecture, rather than relying on mechanical components to heat, cool and light our buildings; This study reviewed a number of buildings that are considered to be on the leading edge of passive and low energy technology and examines the passive solar and energy conserving features. As part of the effort to better understand the activities in passive solar usage and to encourage a wider use of climate responsive architecture the performance of these buildings have been evaluated. Each project was examined in terms of reduction of energy costs, energy use and construction costs as compared to a comparable non-passive builDing Some of the general trends found in these buildings are described as well as actual energy consumption and initial construction cost data to indicate cost effectiveness of energy features in various climate conditions.",
+      "url": "https://doi.org/10.25669/15lw-qwm9",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "passive cooling strategies energy consumption educational facilities"
+      ],
+      "score": 0.5286,
+      "synthetic": false
+    },
+    {
+      "id": "Pb498b92a67d4",
+      "title": "Assessment of Passive vs. Active Strategies for a School Building Design",
+      "doi": "10.3390/su71115136",
+      "year": 2015,
+      "authors": [
+        "Ji Hoon Kang",
+        "Ki Ahn",
+        "Cheol Ho Park",
+        "Thorsten Schuetze"
+      ],
+      "abstract": "This paper presents a simulation study to reduce heating and cooling energy demand of a school building in Seoul Metropolitan Area, Korea. The aim of this study was to estimate the impact of passive vs. active approaches on energy savings in buildings using EnergyPlus simulation. By controlling lighting, the energy saving of the original school building design was found most significant, and increased by 32% when the design was improved. It is noteworthy that energy saving potential of each room varies significantly depending on the rooms\u2019 thermal characteristics and orientation. Thus, the analysis of energy saving should be introduced at the individual space level, not at the whole building level. Additionally, the simulation studies should be involved for rational decision-making. Finally, it was concluded that priority should be given to passive building design strategies, such as building orientation, as well as control and utilization of solar radiation. These passive energy saving strategies are related to urban, architectural design, and engineering issues, and are more beneficial in terms of energy savings than active strategies.",
+      "url": "https://doi.org/10.3390/su71115136",
+      "sources": [
+        "OpenAlex"
+      ],
+      "queries": [
+        "effective passive cooling techniques school buildings"
+      ],
+      "score": 0.4857,
+      "synthetic": false
+    }
+  ],
+  "synthesis": {
+    "claims": [
+      {
+        "paper_id": "P064a32c631ac",
+        "summary": "Passive cooling strategies, such as natural ventilation, shading devices, and green roofing, can reduce the total annual energy consumption of a residential building in Dubai by up to 23.6%.",
+        "evidence_quote": "Energy reduction was achieved due to both the harnessing of natural ventilation and the minimising of heat gain in line with applying good shading devices alongside the use of double glazing. Additionally, green roofing proved its potential by acting as an effective roof insulation. The study revealed several significant findings including that the total annual energy consumption of a residential building in Dubai may be reduced by up to 23.6% when a building uses passive cooling strategies."
+      },
+      {
+        "paper_id": "P124d621733be",
+        "summary": "Passive cooling strategies, such as the use of ceramic and ventilated facades, can significantly improve the thermal comfort and reduce the cooling load in school buildings in hot, arid regions like Khartoum, Sudan.",
+        "evidence_quote": "The work concludes that the system was capable of reducing the air temperature by up to 12C\u00b0-15 C\u00b0. The different examinations included analyzing the temperature distribution and air velocities profiles inside the classroom, highlighting the different effects of buoyancy and wind velocity when adding passive cooling to the wall fa\u00e7ade."
+      },
+      {
+        "paper_id": "P3a185ebdc4a8",
+        "summary": "Green roofs can reduce energy demand for cooling in school buildings in Egypt by 31.61 to 39.74%, with the most efficient green roof featuring a soil depth of 0.1 m and thermal conductivity of 0.9 W/m-K.",
+        "evidence_quote": "The results showed that the proposed green roof types saved between 31.61 and 39.74% of energy, on average. A green roof featuring a roof soil depth of 0.1 m and 0.9 W/m-K thermal conductivity exhibited higher efficiency in reducing energy than the other options tested."
+      },
+      {
+        "paper_id": "P4b4cf20740a8",
+        "summary": "Mechanical ventilation and night ventilation can effectively reduce overheating in passive school buildings during summer months, potentially eliminating the need for expensive heat pump installations.",
+        "evidence_quote": "The role of mechanical ventilation and the possibility of night ventilation in reducing discomfort were examined. Consideration was given to the justification of using expensive heat pump installations with a ground heat exchanger to reduce overheating in summer. The application of the adaptive approach to the assessment of thermal conditions and the acceptance of limited overheating periods led to the conclusion that the analyzed building could function successfully without these additional installation elements."
+      }
+    ],
+    "limitations": [
+      "The study on residential buildings in Dubai may not be directly applicable to school buildings.",
+      "The study on school buildings in Khartoum is specific to the hot, arid climate and may not be generalizable to other regions.",
+      "The study on green roofs in Egypt focuses on energy savings and does not address other potential benefits or drawbacks of green roofs.",
+      "The study on passive school buildings in Poland is based on a single building and may not be representative of all school buildings.",
+      "The studies do not account for the potential costs and maintenance requirements of implementing passive cooling strategies.",
+      "The effectiveness of passive cooling strategies may vary depending on the specific design and orientation of the building.",
+      "The studies do not provide long-term data on the sustainability and durability of the passive cooling strategies.",
+      "The studies do not consider the impact of passive cooling strategies on indoor air quality and occupant health."
+    ]
+  },
+  "validation": {
+    "passed": true,
+    "retrieval_errors": [],
+    "processing_errors": [],
+    "warnings": [
+      "Some records lack a DOI; inspect their source URLs manually.",
+      "Quote matching checks attribution, not whether every summary inference is justified; human review remains necessary.",
+      "Metadata and abstracts are not full texts; source presence does not establish study quality."
+    ],
+    "records": 10,
+    "abstracts": 10,
+    "grounded_claims": 4
+  },
+  "events": [
+    {
+      "time": "2026-10-11T10:26:06.742828+00:00",
+      "role": "Planner",
+      "action": "plan_created",
+      "tasks": 3,
+      "replan": 0
+    },
+    {
+      "time": "2026-10-11T10:26:07.088800+00:00",
+      "role": "Academic Retrieval",
+      "action": "search",
+      "source": "Crossref",
+      "query": "effective passive cooling techniques school buildings",
+      "count": 8
+    },
+    {
+      "time": "2026-10-11T10:26:08.019015+00:00",
+      "role": "Academic Retrieval",
+      "action": "search",
+      "source": "OpenAlex",
+      "query": "effective passive cooling techniques school buildings",
+      "count": 8
+    },
+    {
+      "time": "2026-10-11T10:26:08.338358+00:00",
+      "role": "Academic Retrieval",
+      "action": "search",
+      "source": "Crossref",
+      "query": "passive cooling strategies energy consumption educational facilities",
+      "count": 8
+    },
+    {
+      "time": "2026-10-11T10:26:08.825544+00:00",
+      "role": "Academic Retrieval",
+      "action": "search",
+      "source": "OpenAlex",
+      "query": "passive cooling strategies energy consumption educational facilities",
+      "count": 8
+    },
+    {
+      "time": "2026-10-11T10:26:08.997821+00:00",
+      "role": "Academic Retrieval",
+      "action": "search",
+      "source": "Crossref",
+      "query": "design considerations passive cooling school buildings",
+      "count": 8
+    },
+    {
+      "time": "2026-10-11T10:26:09.551572+00:00",
+      "role": "Academic Retrieval",
+      "action": "search",
+      "source": "OpenAlex",
+      "query": "design considerations passive cooling school buildings",
+      "count": 8
+    },
+    {
+      "time": "2026-10-11T10:26:09.551602+00:00",
+      "role": "Academic Retrieval",
+      "action": "pass_complete",
+      "seconds": 2.808
+    },
+    {
+      "time": "2026-10-11T10:27:30.306070+00:00",
+      "role": "Processing and Ranking",
+      "action": "synthesis",
+      "unique_records": 10,
+      "usable_abstracts": 10,
+      "error": "Model returned invalid structured output after two attempts."
+    },
+    {
+      "time": "2026-10-11T10:27:30.307152+00:00",
+      "role": "Evidence Validator",
+      "action": "validation",
+      "passed": false
+    },
+    {
+      "time": "2026-10-11T10:27:30.307918+00:00",
+      "role": "Orchestrator/Supervisor",
+      "action": "route",
+      "destination": "processing",
+      "reasons": [
+        "No valid structured synthesis."
+      ]
+    },
+    {
+      "time": "2026-10-11T10:27:58.534655+00:00",
+      "role": "Processing and Ranking",
+      "action": "synthesis",
+      "unique_records": 10,
+      "usable_abstracts": 10,
+      "error": null
+    },
+    {
+      "time": "2026-10-11T10:27:58.535863+00:00",
+      "role": "Evidence Validator",
+      "action": "validation",
+      "passed": false
+    },
+    {
+      "time": "2026-10-11T10:27:58.536417+00:00",
+      "role": "Orchestrator/Supervisor",
+      "action": "route",
+      "destination": "planner",
+      "reasons": [
+        "Unmatched or insufficient supporting quote for Pd82cb30819f1.",
+        "Unmatched or insufficient supporting quote for P3cc9c486ecae.",
+        "Unmatched or insufficient supporting quote for P5df45a9a5b2e."
+      ]
+    },
+    {
+      "time": "2026-10-11T10:28:07.128193+00:00",
+      "role": "Planner",
+      "action": "plan_created",
+      "tasks": 3,
+      "replan": 1
+    },
+    {
+      "time": "2026-10-11T10:28:07.497804+00:00",
+      "role": "Academic Retrieval",
+      "action": "search",
+      "source": "Crossref",
+      "query": "effective passive cooling techniques school buildings",
+      "count": 8
+    },
+    {
+      "time": "2026-10-11T10:28:08.294773+00:00",
+      "role": "Academic Retrieval",
+      "action": "search",
+      "source": "OpenAlex",
+      "query": "effective passive cooling techniques school buildings",
+      "count": 8
+    },
+    {
+      "time": "2026-10-11T10:28:08.523122+00:00",
+      "role": "Academic Retrieval",
+      "action": "search",
+      "source": "Crossref",
+      "query": "impact of passive cooling on energy consumption school buildings",
+      "count": 8
+    },
+    {
+      "time": "2026-10-11T10:28:09.189455+00:00",
+      "role": "Academic Retrieval",
+      "action": "search",
+      "source": "OpenAlex",
+      "query": "impact of passive cooling on energy consumption school buildings",
+      "count": 8
+    },
+    {
+      "time": "2026-10-11T10:28:09.469491+00:00",
+      "role": "Academic Retrieval",
+      "action": "search",
+      "source": "Crossref",
+      "query": "design considerations passive cooling school buildings",
+      "count": 8
+    },
+    {
+      "time": "2026-10-11T10:28:10.241248+00:00",
+      "role": "Academic Retrieval",
+      "action": "search",
+      "source": "OpenAlex",
+      "query": "design considerations passive cooling school buildings",
+      "count": 8
+    },
+    {
+      "time": "2026-10-11T10:28:10.241274+00:00",
+      "role": "Academic Retrieval",
+      "action": "pass_complete",
+      "seconds": 3.112
+    },
+    {
+      "time": "2026-10-11T10:28:59.836767+00:00",
+      "role": "Processing and Ranking",
+      "action": "synthesis",
+      "unique_records": 10,
+      "usable_abstracts": 10,
+      "error": null
+    },
+    {
+      "time": "2026-10-11T10:28:59.837885+00:00",
+      "role": "Evidence Validator",
+      "action": "validation",
+      "passed": true
+    },
+    {
+      "time": "2026-10-11T10:28:59.838378+00:00",
+      "role": "Orchestrator/Supervisor",
+      "action": "route",
+      "destination": "approval",
+      "reasons": []
+    },
+    {
+      "time": "2026-10-11T10:32:15.763211+00:00",
+      "role": "Storage/Export",
+      "action": "human_decision",
+      "approved": false
+    }
+  ],
+  "feedback": [],
+  "retrieval_attempt": 1,
+  "processing_attempt": 1,
+  "replans": 1,
+  "route": "approval",
+  "status": "rejected",
+  "approved": false,
+  "started": "2026-10-11T10:25:58.720694+00:00",
+  "model_calls": [
+    {
+      "task": "Decompose the research goal into 2 to 4 distinct searchable academic subquestions. Use feedback to revise failed queries. State scope and assumptions.",
+      "attempt": 1,
+      "seconds": 7.993,
+      "usage": {
+        "completion_tokens": 288,
+        "prompt_tokens": 379,
+        "total_tokens": 667,
+        "estimated_cost": 0.00025163999999999997,
+        "prompt_tokens_details": null
+      },
+      "model": "Qwen/Qwen2.5-72B-Instruct"
+    },
+    {
+      "task": "Create 1 concise evidence-grounded claim for each selected useful abstract. Quote 20 to 60 consecutive words exactly from that abstract. Do not use title-only records as findings. Do not invent effect sizes or claim full-text review. Include limitations.",
+      "attempt": 1,
+      "seconds": 41.583,
+      "usage": {
+        "completion_tokens": 1518,
+        "prompt_tokens": 3526,
+        "total_tokens": 5044,
+        "estimated_cost": 0.00187656,
+        "prompt_tokens_details": null
+      },
+      "model": "Qwen/Qwen2.5-72B-Instruct"
+    },
+    {
+      "task": "Create 1 concise evidence-grounded claim for each selected useful abstract. Quote 20 to 60 consecutive words exactly from that abstract. Do not use title-only records as findings. Do not invent effect sizes or claim full-text review. Include limitations.",
+      "attempt": 2,
+      "seconds": 39.166,
+      "usage": {
+        "completion_tokens": 1337,
+        "prompt_tokens": 3539,
+        "total_tokens": 4876,
+        "estimated_cost": 0.00180884,
+        "prompt_tokens_details": null
+      },
+      "model": "Qwen/Qwen2.5-72B-Instruct"
+    },
+    {
+      "task": "Create 1 concise evidence-grounded claim for each selected useful abstract. Quote 20 to 60 consecutive words exactly from that abstract. Do not use title-only records as findings. Do not invent effect sizes or claim full-text review. Include limitations.",
+      "attempt": 1,
+      "seconds": 28.221,
+      "usage": {
+        "completion_tokens": 1065,
+        "prompt_tokens": 3531,
+        "total_tokens": 4596,
+        "estimated_cost": 0.00169716,
+        "prompt_tokens_details": null
+      },
+      "model": "Qwen/Qwen2.5-72B-Instruct"
+    },
+    {
+      "task": "Decompose the research goal into 2 to 4 distinct searchable academic subquestions. Use feedback to revise failed queries. State scope and assumptions.",
+      "attempt": 1,
+      "seconds": 8.59,
+      "usage": {
+        "completion_tokens": 286,
+        "prompt_tokens": 439,
+        "total_tokens": 725,
+        "estimated_cost": 0.00027244000000000004,
+        "prompt_tokens_details": null
+      },
+      "model": "Qwen/Qwen2.5-72B-Instruct"
+    },
+    {
+      "task": "Create 1 concise evidence-grounded claim for each selected useful abstract. Quote 20 to 60 consecutive words exactly from that abstract. Do not use title-only records as findings. Do not invent effect sizes or claim full-text review. Include limitations.",
+      "attempt": 1,
+      "seconds": 29.038,
+      "usage": {
+        "completion_tokens": 1054,
+        "prompt_tokens": 3676,
+        "total_tokens": 4730,
+        "estimated_cost": 0.00174496,
+        "prompt_tokens_details": null
+      },
+      "model": "Qwen/Qwen2.5-72B-Instruct"
+    },
+    {
+      "task": "Create 1 concise evidence-grounded claim for each selected useful abstract. Quote 20 to 60 consecutive words exactly from that abstract. Do not use title-only records as findings. Do not invent effect sizes or claim full-text review. Include limitations.",
+      "attempt": 2,
+      "seconds": 20.551,
+      "usage": {
+        "completion_tokens": 813,
+        "prompt_tokens": 3689,
+        "total_tokens": 4502,
+        "estimated_cost": 0.00165324,
+        "prompt_tokens_details": null
+      },
+      "model": "Qwen/Qwen2.5-72B-Instruct"
+    }
+  ],
+  "metrics": {
+    "initial_model_calls": 0
+  }
+}

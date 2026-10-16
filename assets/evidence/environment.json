@@ -1,0 +1,27 @@
+{
+  "python": "3.13.16",
+  "timestamp": "2026-10-11T10:48:10.416154+00:00",
+  "settings": {
+    "model_id": "Qwen/Qwen2.5-72B-Instruct",
+    "provider": "deepinfra",
+    "use_openalex": true,
+    "rows_per_query": 8,
+    "max_records": 10,
+    "min_records": 3,
+    "min_abstracts": 2,
+    "retrieval_retries": 1,
+    "processing_retries": 1,
+    "max_replans": 1,
+    "timeout_seconds": 30,
+    "http_attempts": 3,
+    "start_year": null,
+    "end_year": null
+  },
+  "packages": {
+    "langgraph": "1.2.14",
+    "langgraph-checkpoint-sqlite": "3.1.1",
+    "pydantic": "2.13.5",
+    "requests": "2.34.2",
+    "huggingface-hub": "2.2.0"
+  }
+}
