@@ -35,7 +35,7 @@
       <button role="tab" data-panel="artefacts" aria-controls="artefacts" aria-selected="false">Artefacts</button>
       <button role="tab" data-panel="assessments" aria-controls="assessments" aria-selected="false">Assessments</button>
       <button role="tab" data-panel="outcomes" aria-controls="outcomes" aria-selected="false">Outcome map</button>
-      <button role="tab" data-panel="reflection" aria-controls="reflection" aria-selected="false">Reflection</button>
+      <button role="tab" data-panel="reflection" aria-controls="reflection" aria-selected="false">Skills matrix</button>
     </div>
   </div>
 
@@ -302,7 +302,7 @@
 
         <h3 class="sub-head">Reflective framework</h3>
         <p class="small">Reflections follow Rolfe et al. (2001) — what, so what, now what.</p>
-        <a class="evidence" href="#reflection">Read the reflections →</a>
+        <a class="evidence" href="#reflection">Read the skills matrix →</a>
       </article>
     </div>
   </div>
@@ -345,29 +345,64 @@
   </div>
 
   <div class="tabpanel" id="reflection" role="tabpanel" hidden>
-    <div class="reflect">
-      <details open>
-        <summary><span class="stage">01</span>[The decision I would reverse]</summary>
-        <div class="panel-body">
-          <h4>What happened</h4>
-          <p>[The situation, plainly — who, when, what was at stake. No evaluation yet.]</p>
-          <h4>So what</h4>
-          <p>[Why it mattered, and what it revealed about how you work under a constraint.]</p>
-          <h4>Now what</h4>
-          <p>[The specific change, testable by someone watching you work next term.]</p>
-        </div>
-      </details>
-      <details>
-        <summary><span class="stage">02</span>[What this module left unfinished]</summary>
-        <div class="panel-body">
-          <h4>What happened</h4>
-          <p>[The moment you noticed the limit of what you know.]</p>
-          <h4>So what</h4>
-          <p>[Where it will bite you — in the dissertation, in a job, in a specific task.]</p>
-          <h4>Now what</h4>
-          <p>[The plan, with a date attached.]</p>
-        </div>
-      </details>
+    <div class="reading">
+      <p style="margin-bottom:10px">A skills development matrix: where each skill stood
+        coming into the module, what the work on it developed, what still needs
+        development, and the action that will show whether it has.</p>
+      <p class="map-note">Seven skill areas. Each remaining need carries an action and a
+        success measure that someone other than me could check.</p>
+      <table class="map matrix">
+        <thead><tr>
+          <th>Skill</th>
+          <th>Starting position and demonstrated development</th>
+          <th>Remaining development need</th>
+          <th>Action and success measure</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="sk" data-l="Skill">Agent design and digital skills</td>
+            <td class="pos" data-l="Starting position and demonstrated development">Built on engineering integration experience to define six functional roles and implement a Python/LangGraph workflow.</td>
+            <td class="need" data-l="Remaining development need">Justify when agent-based designs offer benefits over simpler approaches.</td>
+            <td class="act" data-l="Action and success measure">Within four weeks of module completion, compare the agent with direct search across the planned 24 goals; document relevance, unsupported claims, time and cost.</td>
+          </tr>
+          <tr>
+            <td class="sk" data-l="Skill">Critical thinking and numeracy</td>
+            <td class="pos" data-l="Starting position and demonstrated development">Moved from checking whether the workflow operates to distinguishing code coverage, quotation accuracy and answer quality.</td>
+            <td class="need" data-l="Remaining development need">Evaluate usefulness beyond three live runs.</td>
+            <td class="act" data-l="Action and success measure">Produce a results table using predefined evaluation criteria and obtain independent review of a sample.</td>
+          </tr>
+          <tr>
+            <td class="sk" data-l="Skill">Teamwork, leadership and communication</td>
+            <td class="pos" data-l="Starting position and demonstrated development">Contributed as Methodology Lead and helped reconcile competing architecture proposals.</td>
+            <td class="need" data-l="Remaining development need">Make individual contributions and decisions easier to trace.</td>
+            <td class="act" data-l="Action and success measure">From the first meeting of the next team project, record each decision, owner, deadline and supporting artefact. Review the log weekly.</td>
+          </tr>
+          <tr>
+            <td class="sk" data-l="Skill">Ethical awareness</td>
+            <td class="pos" data-l="Starting position and demonstrated development">Connected source verification, bounded recovery and human approval to practical risks.</td>
+            <td class="need" data-l="Remaining development need">Assess misleading inferences and ineffective human review.</td>
+            <td class="act" data-l="Action and success measure">During the planned evaluation, record unsupported claims and reviewer errors; document a proposed safeguard for each observed failure type.</td>
+          </tr>
+          <tr>
+            <td class="sk" data-l="Skill">Time management, resilience and problem-solving</td>
+            <td class="pos" data-l="Starting position and demonstrated development">Responded to repeated development difficulties by working through problems step by step.</td>
+            <td class="need" data-l="Remaining development need">Allocate sufficient time to evaluation as well as implementation.</td>
+            <td class="act" data-l="Action and success measure">In the next project plan, reserve a separate evaluation stage and review progress weekly against milestones.</td>
+          </tr>
+          <tr>
+            <td class="sk" data-l="Skill">Research and critical reflection</td>
+            <td class="pos" data-l="Starting position and demonstrated development">Used peer feedback to recognise the limits of metadata and quotation checks.</td>
+            <td class="need" data-l="Remaining development need">Maintain a clearer record of how feedback changes practice.</td>
+            <td class="act" data-l="Action and success measure">Record feedback, resulting action and evidence of the change after each substantive review.</td>
+          </tr>
+          <tr>
+            <td class="sk" data-l="Skill">Commercial awareness</td>
+            <td class="pos" data-l="Starting position and demonstrated development">Identified dependence on hosted-model availability and credits.</td>
+            <td class="need" data-l="Remaining development need">Quantify the practical cost of using the system.</td>
+            <td class="act" data-l="Action and success measure">Record runtime and available usage-cost data during the comparative evaluation; report cost per usable evidence package where measurable.</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 

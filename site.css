@@ -370,6 +370,41 @@ p{margin:0 0 18px}
 }
 
 /* ---------- outcome map ---------- */
+/* ---------- skills development matrix ---------- */
+.map.matrix{table-layout:fixed}
+.map.matrix td{vertical-align:top;font-size:15px;line-height:1.6;color:var(--slate);
+  padding-right:24px}
+.map.matrix td:last-child{padding-right:0;white-space:normal}
+.map.matrix td.sk{width:17%;font-weight:500;font-size:16px;color:var(--navy)}
+.map.matrix td.pos{width:29%}
+.map.matrix td.need{width:22%;color:var(--navy)}
+.map.matrix td.act{width:32%}
+.map.matrix th:nth-child(1){width:17%}
+.map.matrix th:nth-child(2){width:29%}
+.map.matrix th:nth-child(3){width:22%}
+.map.matrix th:nth-child(4){width:32%}
+@media (max-width:1000px){
+  .map.matrix{table-layout:auto;display:block;width:100%}
+  .map.matrix tbody{display:block;width:100%}
+  .map.matrix thead{display:none}
+  .map.matrix tr{display:block;padding:22px 0;border-bottom:1px solid var(--rule)}
+  .map.matrix td{display:block;width:auto;border:0;padding:0 0 14px}
+  .map.matrix td.sk,.map.matrix td.pos,.map.matrix td.need,.map.matrix td.act{width:auto}
+  .map.matrix td:last-child{padding-bottom:0}
+  .map.matrix td.sk{font-size:18px;padding-bottom:12px}
+  .map.matrix td:not(.sk)::before{content:attr(data-l);display:block;font-size:11.5px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--soft);margin-bottom:5px}
+}
+.map-empty{background:var(--card);border:1px solid var(--rule);border-radius:22px;
+  padding:34px 36px;margin:0}
+.map-empty h3{font-weight:600;font-size:19px;letter-spacing:-.02em;color:var(--navy);margin:0 0 10px}
+.map-empty p{margin:0 0 14px;color:var(--slate);font-size:16px;line-height:1.66}
+.map-empty p:last-child{margin-bottom:0}
+.map-empty ul{margin:0;padding-left:20px;color:var(--slate);font-size:15.5px;line-height:1.7}
+.map-empty ul li{margin-bottom:6px}
+.map-empty .cols{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 20px}
+.map-empty .cols span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--soft);background:var(--panel);border-radius:999px;padding:7px 15px}
 .map-note{font-size:14.5px;color:var(--soft);margin:0 0 26px;padding-left:14px;
   border-left:2px solid var(--mauve)}
 .map.outcomes td{vertical-align:top}
@@ -378,9 +413,12 @@ p{margin:0 0 18px}
 .map.outcomes td.ev{width:190px;white-space:normal}
 .map.outcomes td.ev .chip{margin:0 5px 6px 0}
 @media (max-width:900px){
+  .map.outcomes{display:block;width:100%}
+  .map.outcomes tbody{display:block;width:100%}
   .map.outcomes thead{display:none}
   .map.outcomes tr{display:block;padding:18px 0;border-bottom:1px solid var(--rule)}
   .map.outcomes td{display:block;border:0;padding:0 0 10px;width:auto}
+  .map.outcomes td.lo,.map.outcomes td.how,.map.outcomes td.ev{width:auto;padding-right:0}
   .map.outcomes td.ev{width:auto;padding-bottom:0}
 }
 
