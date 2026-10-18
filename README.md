@@ -7,29 +7,45 @@ Live at https://[username].github.io/
 
 ## Structure
 
-* `index.html` — Homepage: hero, About Me, and the module cards with their statuses
-* `module-01.html` — Numerical Analysis — Completed
-* `module-02.html` — Intelligent Agents — In progress
-* `module-03.html` — Machine Learning — Upcoming
-* `assets/`
-  * `css/site.css` — the whole design system, shared by every page
-  * `js/site.js` — reading progress, margin notes, section navigation, module tabs
+```
+index.html              Homepage: hero, About me, module cards
+module-01.html          Numerical Analysis — page not yet linked
+module-03.html          Machine Learning — page not yet linked
+assets/
+  css/site.css          The whole design system, shared by every page
+  js/site.js            Tabs, scrollspy, section navigation, scroll reveal
+  favicon.svg
+intelligent-agents/     Everything for IA_PCOM7E lives here
+  module-02.html        The module page — six tabs
+  collaborative-discussion.html, -2.html, -3.html
+  agent-dialogue.html
+  kqml-playground.html
+  kqml_agent_dialogue.ipynb
+  parse-trees.html
+  deep-learning-in-action.html
+  individual-project.html
+  documents/            Report, notebook, transcript, sources
+  evidence/             Diagnostic JSON from the three live runs
+```
 
-Three modules are published so far. Further module pages will be added as the
-programme progresses; each new one is a copy of an existing module file plus a
-card on the homepage.
+Each module keeps its own folder of artefact pages, documents and evidence;
+only `index.html`, the module landing pages and `assets/` sit at the root. A new
+module is a new folder on the same pattern plus a card on the homepage. Pages
+inside a module folder reach the shared stylesheet and script as
+`../assets/...`, and the homepage as `../index.html`.
 
-The homepage is a single scrolling page — the menu items Home, About me and
-Modules jump to sections rather than separate pages. Each module page runs
-Overview → Artefacts → Outcome map → Reflection as tabbed sections, switched by
-the sticky bar under the header rather than by scrolling. Intelligent Agents
-carries an additional Group project tab covering the team deliverable, my
-contribution and how the group worked.
+Numerical Analysis and Machine Learning are shown on the homepage but not
+linked — their cards are disabled until the pages carry real content.
 
-One stylesheet and one small script serve all four pages — edit
-`assets/css/site.css` rather than adding styles to a page. There is no build step
-and no dependency beyond the Google Fonts request, so the folder can be pushed to
-GitHub Pages exactly as it is.
+The homepage is a single scrolling page: Home, About me and Modules jump to
+sections rather than separate pages. The Intelligent Agents page runs Overview →
+Group project → Artefacts → Assessments → Outcome map → Skills matrix as tabbed
+sections, switched by the sticky bar under the header rather than by scrolling.
+
+One stylesheet and one small script serve every page — edit
+`assets/css/site.css` rather than adding styles to a page. There is no build
+step and no dependency beyond the Google Fonts request, so the folder can be
+pushed to GitHub Pages exactly as it is.
 
 ## Design
 
@@ -82,7 +98,7 @@ with Ctrl+F5 — that is CDN caching, not a failed push.
 
 * Programme: MSc Artificial Intelligence
 * Institution: University of Essex
-* Modules published: 3
+* Modules published: 1 (Intelligent Agents); two more are placeholders
 
 ## Disclaimer
 

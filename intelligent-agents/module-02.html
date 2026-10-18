@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intelligent Agents — AlDana Al-Dosari</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2220%22%20fill%3D%22%23101A45%22%2F%3E%3Cg%20transform%3D%22translate%2810.00%2C16.87%29%20scale%280.17391%29%22%20fill%3D%22%23E1CBD7%22%3E%3Cg%20transform%3D%22translate%280%2C381%29%20scale%280.1%2C-0.1%29%22%3E%3Cpath%20d%3D%22M2305%203800%20c-159%20-5%20-468%20-14%20-685%20-19%20-837%20-22%20-1142%20-137%20-1176%20-441%20-24%20-218%20246%20-663%20336%20-555%2010%2013%206%2022%20-28%2059%20-166%20180%20-73%20490%20187%20625%20192%2099%20503%20165%20961%20206%20231%2020%20583%2020%20528%200%20-120%20-44%20-259%20-136%20-318%20-210%20-16%20-20%20-136%20-248%20-268%20-508%20-358%20-705%20-1354%20-2525%20-1454%20-2657%20-77%20-102%20-193%20-189%20-287%20-216%20-86%20-25%20-101%20-32%20-101%20-49%200%20-65%20204%20-21%20338%2074%20270%20190%20394%20208%20637%2096%20683%20-317%201699%20-215%202380%20240%20611%20408%201090%201124%201216%201821%2027%20146%2033%20507%2011%20609%20-123%20557%20-463%20812%20-1214%20911%20-150%2020%20-639%2026%20-1063%2014z%20m980%20-145%20c690%20-113%201018%20-639%20875%20-1405%20-235%20-1264%20-1201%20-2132%20-2375%20-2133%20-351%20-1%20-533%2055%20-690%20212%20-166%20164%20-161%20185%20245%20966%20213%20410%20394%20765%20562%201106%20412%20835%20618%201152%20796%201222%20118%2047%20403%2062%20587%2032z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<div id="progress"></div>
+<div class="topbar">
+  <div class="bar">
+    <a class="sig" href="../index.html#home"><svg class="logo" viewBox="0 0 460 381" aria-hidden="true"><g transform="translate(0,381) scale(0.1,-0.1)"><path d="M2305 3800 c-159 -5 -468 -14 -685 -19 -837 -22 -1142 -137 -1176 -441 -24 -218 246 -663 336 -555 10 13 6 22 -28 59 -166 180 -73 490 187 625 192 99 503 165 961 206 231 20 583 20 528 0 -120 -44 -259 -136 -318 -210 -16 -20 -136 -248 -268 -508 -358 -705 -1354 -2525 -1454 -2657 -77 -102 -193 -189 -287 -216 -86 -25 -101 -32 -101 -49 0 -65 204 -21 338 74 270 190 394 208 637 96 683 -317 1699 -215 2380 240 611 408 1090 1124 1216 1821 27 146 33 507 11 609 -123 557 -463 812 -1214 911 -150 20 -639 26 -1063 14z m980 -145 c690 -113 1018 -639 875 -1405 -235 -1264 -1201 -2132 -2375 -2133 -351 -1 -533 55 -690 212 -166 164 -161 185 245 966 213 410 394 765 562 1106 412 835 618 1152 796 1222 118 47 403 62 587 32z"/></g></svg><span class="sig-text">AlDana Al-Dosari<span>MSc Artificial Intelligence</span></span></a>
+    <nav><a href="../index.html#home">Home</a><a href="../index.html#about">About me</a><a href="../index.html#modules" aria-current="true">Modules</a></nav>
+  </div>
+</div>
+
+<div class="shell">
+
+  <div class="block slate mhead">
+    <a class="back" href="../index.html#modules">← All modules</a>
+    <span class="status now">In progress</span>
+    <h1>Intelligent Agents</h1>
+    <p class="sub">This module explores agent-based computing, from the main agent architectures and their roots in AI research to applying them to real-world problems under uncertainty. It covers designing, building and evaluating an agent-based system with legal, ethical and professional issues in mind, and working effectively in a virtual development team.</p>
+  </div>
+
+  <div class="tabwrap">
+    <div class="tabs" role="tablist" aria-label="Module sections">
+      <button role="tab" data-panel="overview" aria-controls="overview" aria-selected="true">Overview</button>
+      <button role="tab" data-panel="group" aria-controls="group" aria-selected="false">Group project</button>
+      <button role="tab" data-panel="artefacts" aria-controls="artefacts" aria-selected="false">Artefacts</button>
+      <button role="tab" data-panel="assessments" aria-controls="assessments" aria-selected="false">Assessments</button>
+      <button role="tab" data-panel="outcomes" aria-controls="outcomes" aria-selected="false">Outcome map</button>
+      <button role="tab" data-panel="reflection" aria-controls="reflection" aria-selected="false">Skills matrix</button>
+    </div>
+  </div>
+
+  <div class="tabpanel" id="overview" role="tabpanel">
+    <div class="reading">
+      <p class="lede reveal">
+        Intelligent agents are software programs that perceive their environment and
+        act within it to pursue a goal. The module covers both the individual agent
+        and the interactions between agents, moving from the motivations for
+        agent-based computing through the main agent models in use today
+        and their grounding in artificial intelligence research.
+      </p>
+      <p class="reveal">
+        The work is practical as well as theoretical: designing, deploying and
+        evaluating agent systems in languages such as Java and Python, drawing on
+        skills built in earlier modules, and reading into current research issues
+        including state-of-the-art models and recent developments in deployment.
+      </p>
+
+      <h3 class="sub-head">Module aims</h3>
+      <ul class="contrib">
+        <li>Understand the motivations for, and appropriate use of, agent-based computing.</li>
+        <li>Understand the main agent models in use today and their grounding in AI research.</li>
+        <li>Develop, deploy and evaluate intelligent systems to solve real-world problems.</li>
+        <li>Understand contemporary research issues in intelligent agent systems.</li>
+      </ul>
+
+      <h3 class="sub-head">Assessment</h3>
+      <p class="reveal">
+        This e-portfolio forms part of the assessment for the module.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="tabpanel" id="group" role="tabpanel" hidden>
+    <div class="reading">
+      <div class="sec-head"><h2>Team design proposal</h2><span class="count">Unit 6 · Group E</span></div>
+
+      <p class="meta-line"><span class="status done">Completed</span>
+        Submitted 7 September 2026</p>
+
+      <p class="lede reveal">
+        Group E is building an LLM-powered planning agent for academic research: it
+        takes a topic, plans its own search, retrieves and validates sources, and
+        exports a structured result. My role is Methodology Lead, contributing the
+        approach and methodology behind the six-agent architecture.
+      </p>
+
+      <h3 class="sub-head">Submission</h3>
+      <ul class="docs">
+        <li><a class="doc-slot live" href="documents/group-project-report.pdf" title="Open the team report">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.8h7.5L19 8.3v12.9H6z"/><path d="M13.3 3v5.5H19M9 12.5h6M9 16h4.5"/></svg>
+        </a><a href="documents/group-project-report.pdf">Team report — the group design proposal</a></li>
+        <li><span class="doc-slot" title="To upload after submission">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.8h7.5L19 8.3v12.9H6z"/><path d="M13.3 3v5.5H19M9 12.5h6M9 16h4.5"/></svg>
+        </span>Individual peer review evaluation</li>
+      </ul>
+
+      <h3 class="sub-head">What I contributed</h3>
+      <ul class="contrib">
+        <li>Selected Prometheus over Gaia as the agent-oriented design methodology,
+          and set it alongside Scrum for team delivery.</li>
+        <li>Derived the six-agent architecture — Orchestrator, Planner, Academic
+          Retrieval, Processing and Ranking, Evidence Validator, Storage and Export.</li>
+        <li>Drew the boundary between agents and capabilities, keeping frameworks such
+          as LangGraph out of the agent set.</li>
+        <li>Defined the two-level planning approach: Plan-and-Execute for the outer
+          loop, ReAct within subtasks.</li>
+        <li>Specified re-planning through the Orchestrator rather than local retry when
+          evidence is judged insufficient.</li>
+        <li>Set retrieval as a structured-API RAG pipeline, and bounded autonomy to a
+          single human approval before export.</li>
+        <li>Wrote the Approach and Methodology section, its references and the
+          terminology appendix.</li>
+      </ul>
+
+      <h3 class="sub-head">How we worked</h3>
+      <ul class="roles">
+        <li><b>AlDana Al-Dosari</b><span>Methodology Lead — me</span></li>
+        <li><b>F.O.</b><span>Coordinator</span></li>
+        <li><b>A.A.</b><span>Technical Lead</span></li>
+        <li><b>P.M.</b><span>Diagram Lead</span></li>
+        <li><b>A.A.</b><span>Research Lead</span></li>
+      </ul>
+
+      <p class="reveal">The group meets weekly. Select a date to see what was decided.</p>
+
+      <ol class="timeline">
+        <li class="tl done">
+          <button type="button" aria-expanded="false"><span class="tl-date">2 August</span><span class="tl-title">Kick-off</span></button>
+          <div class="tl-body">Team contract agreed and signed.</div>
+        </li>
+        <li class="tl done">
+          <button type="button" aria-expanded="false"><span class="tl-date">9 August</span><span class="tl-title">Architecture locked</span></button>
+          <div class="tl-body">The team reconciled three competing architecture proposals and
+            resolved the inconsistency between the six-agent design and the earlier
+            four-role framing. Decisions were fixed on architecture, orchestration,
+            planning logic, the scope of human approval, and deployment.</div>
+        </li>
+        <li class="tl done">
+          <button type="button" aria-expanded="false"><span class="tl-date">16 August</span><span class="tl-title">Draft plan</span></button>
+          <div class="tl-body">Agreed the section split, word counts and deadlines for
+            stitching together the full draft.</div>
+        </li>
+        <li class="tl done">
+          <button type="button" aria-expanded="false"><span class="tl-date">17 August</span><span class="tl-title">Challenges split</span></button>
+          <div class="tl-body">Agreed how the challenges section divides between us, and the
+            approach each of us takes to it.</div>
+        </li>
+        <li class="tl done">
+          <button type="button" aria-expanded="false"><span class="tl-date">23 August</span><span class="tl-title">Merge and verify</span></button>
+          <div class="tl-body">Three strands come together into a single document: the
+            research scan, my methodology, and the architecture diagrams. The coordinator
+            merges them; the technical lead and the team then check consistency, verify
+            sources and correct errors, before a final read by everyone.</div>
+        </li>
+        <li class="tl done">
+          <button type="button" aria-expanded="false"><span class="tl-date">26 August</span><span class="tl-title">Merged draft ready</span></button>
+          <div class="tl-body">Mid-week target for the combined document to be ready to read.</div>
+        </li>
+        <li class="tl done">
+          <button type="button" aria-expanded="false"><span class="tl-date">4–5 September</span><span class="tl-title">Final check-in</span></button>
+          <div class="tl-body">Last team review before submission.</div>
+        </li>
+        <li class="tl done">
+          <button type="button" aria-expanded="false"><span class="tl-date">7 September</span><span class="tl-title">Submission</span></button>
+          <div class="tl-body">Final submission, 23:55 UK time.</div>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="tabpanel" id="artefacts" role="tabpanel" hidden>
+    <div class="with-menu">
+    <nav class="sidemenu" aria-label="Contents">
+      <span class="m-head">Unit · Progress</span>
+      <ol>
+        <li><a href="#act-cd1"><span class="m-unit">Units 1–3</span><span class="m-title">Collaborative Discussion 1: Agent Based Systems</span><span class="status done">Completed</span></a></li>
+        <li><a href="#act-dialogues"><span class="m-unit">Unit 6</span><span class="m-title">Creating Agent Dialogues</span><span class="status done">Completed</span></a></li>
+        <li><a href="#act-cd2"><span class="m-unit">Units 5–7</span><span class="m-title">Collaborative Discussion 2: Agent Communication Languages</span><span class="status done">Completed</span></a></li>
+        <li><a href="#act-parse"><span class="m-unit">Unit 8</span><span class="m-title">Creating Parse Trees</span><span class="status done">Completed</span></a></li>
+        <li><a href="#act-dl"><span class="m-unit">Unit 10</span><span class="m-title">Deep Learning in Action</span><span class="status done">Completed</span></a></li>
+        <li><a href="#act-cd3"><span class="m-unit">Units 9–11</span><span class="m-title">Collaborative Discussion 3: Deep Learning</span><span class="status done">Completed</span></a></li>
+      </ol>
+    </nav>
+    <div class="menu-body">
+      <article class="entry reveal" data-i="0" id="act-cd1">
+        <div class="entry-head"><span class="call">Units 1–3</span><h3>Collaborative Discussion 1: Agent Based Systems</h3></div>
+        <p class="meta"><span class="status done">Completed</span> Task · due End of Unit 3</p>
+        <p>Initial post, peer replies and a summary post on agent-based systems.</p>
+        <a class="evidence" href="collaborative-discussion.html">Open the artefact →</a>
+      </article>
+
+      <article class="entry reveal" data-i="1" id="act-dialogues">
+        <div class="entry-head"><span class="call">Unit 6</span><h3>Creating Agent Dialogues</h3></div>
+        <p class="meta"><span class="status done">Completed</span> Task · due End of Unit 6</p>
+        <p>A KQML and KIF dialogue between Alice, procuring stock, and Bob, controlling warehouse stock levels: the available stock of 50-inch televisions, then the number of HDMI slots. The artefact works through the shared ontology, each message in turn, the speech acts behind the performatives, a brokered four-agent extension, and a critical evaluation of both languages.</p>
+        <a class="evidence" href="agent-dialogue.html">Open the artefact →</a>
+      </article>
+
+      <article class="entry reveal" data-i="2" id="act-cd2">
+        <div class="entry-head"><span class="call">Units 5–7</span><h3>Collaborative Discussion 2: Agent Communication Languages</h3></div>
+        <p class="meta"><span class="status done">Completed</span> Task · due End of Unit 7</p>
+        <p>How communication in agent systems differs from method invocation, what the speech-act design buys in autonomy and loose coupling, and what it costs in semantics and ontology alignment.</p>
+        <a class="evidence" href="collaborative-discussion-2.html">Open the discussion →</a>
+      </article>
+
+      <article class="entry reveal" data-i="3" id="act-parse">
+        <div class="entry-head"><span class="call">Unit 8</span><h3>Creating Parse Trees</h3></div>
+        <p class="meta"><span class="status done">Completed</span> Task · due End of Unit 8</p>
+        <p>Constituency parse trees for three sentences, including the two valid readings of an ambiguous one, with the bracket notation and a commentary on why syntax alone cannot resolve PP attachment.</p>
+        <a class="evidence" href="parse-trees.html">Open the artefact →</a>
+      </article>
+
+      <article class="entry reveal" data-i="3" id="act-dl">
+        <div class="entry-head"><span class="call">Unit 10</span><h3>Deep Learning in Action</h3></div>
+        <p class="meta"><span class="status done">Completed</span> Task · due End of Unit 10</p>
+        <p>Live facial recognition for policing: the convolutional pipeline behind it, the similarity threshold that governs every alert, the uneven accuracy it carries, and where the human deliberation is supposed to sit.</p>
+        <a class="evidence" href="deep-learning-in-action.html">Open the artefact →</a>
+      </article>
+
+      <article class="entry reveal" data-i="3" id="act-cd3">
+        <div class="entry-head"><span class="call">Units 9–11</span><h3>Collaborative Discussion 3: Deep Learning</h3></div>
+        <p class="meta"><span class="status done">Completed</span> Task · due End of Unit 11</p>
+        <p>The ethical consequences of deep learning's shift from recognition to generation, responsible deployment with a focus on privacy, and how the thread moved my own agent system from source-level to claim-level verification.</p>
+        <a class="evidence" href="collaborative-discussion-3.html">Open the discussion →</a>
+      </article>
+    </div>
+    </div>
+  </div>
+
+
+  <div class="tabpanel" id="assessments" role="tabpanel" hidden>
+    <div class="with-menu">
+    <nav class="sidemenu" aria-label="Contents">
+      <span class="m-head">Unit · Progress</span>
+      <ol>
+        <li><a href="#unit-6"><span class="m-unit">Unit 6</span><span class="m-title">Development Team Project: Project Report</span><span class="status done">Completed</span></a></li>
+        <li><a href="#unit-11"><span class="m-unit">Unit 11</span><span class="m-title">Individual Project: Presentation</span><span class="status done">Submitted</span></a></li>
+        <li><a href="#unit-12"><span class="m-unit">Unit 12</span><span class="m-title">Individual Module e-Portfolio</span><span class="status done">Completed</span></a></li>
+      </ol>
+    </nav>
+    <div class="menu-body">
+      <article class="entry reveal" id="unit-6">
+        <div class="entry-head"><span class="call">Unit 6</span><h3>Development Team Project: Project Report</h3></div>
+        <p class="meta"><span class="status done">Completed</span> Group E · due 23:55, Monday 7 September 2026</p>
+        <p>
+          The team design proposal for Group E's LLM-powered research planning agent,
+          submitted alongside an individual peer review evaluation.
+        </p>
+        <a class="evidence" href="documents/group-project-report.pdf">Open the project report →</a>
+        <a class="evidence" href="#group">Group project tab →</a>
+      </article>
+
+      <article class="entry reveal" data-i="1" id="unit-11">
+        <div class="entry-head"><span class="call">Unit 11</span><h3>Individual Project: Presentation</h3></div>
+        <p class="meta"><span class="status done">Submitted</span> Individual · 40% of the module mark · submitted 12 October 2026</p>
+        <p>
+          An LLM-powered academic research planning agent built from the Group E design: it plans
+          sub-questions, retrieves live records from Crossref and OpenAlex, writes claims that quote
+          their sources, checks every quotation, and exports only after a person approves. Three live
+          runs, 55 offline tests at 96.09% statement coverage.
+        </p>
+
+        <h3 class="sub-head">Deliverables</h3>
+        <ul class="docs">
+          <li><a class="doc-slot live" href="documents/Academic_Research_Planning_Agent.pdf" title="Open the deck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.8h7.5L19 8.3v12.9H6z"/><path d="M13.3 3v5.5H19M9 12.5h6M9 16h4.5"/></svg></a><a href="documents/Academic_Research_Planning_Agent.pdf">Presentation deck — 10 slides</a></li>
+          <li><a class="doc-slot live" href="documents/Audio_Transcript.docx" title="Open the transcript"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.8h7.5L19 8.3v12.9H6z"/><path d="M13.3 3v5.5H19M9 12.5h6M9 16h4.5"/></svg></a><a href="documents/Audio_Transcript.docx">Audio transcript</a></li>
+          <li><a class="doc-slot live" href="documents/01_Research_Agent.ipynb" title="Open the notebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.8h7.5L19 8.3v12.9H6z"/><path d="M13.3 3v5.5H19M9 12.5h6M9 16h4.5"/></svg></a><a href="documents/01_Research_Agent.ipynb">Source code and dependencies — the executed notebook</a></li>
+          <li><a class="doc-slot live" href="evidence/0e82cee494a64489bb3425c0b550d7b4_diagnostic.json" title="Open the diagnostic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.8h7.5L19 8.3v12.9H6z"/><path d="M13.3 3v5.5H19M9 12.5h6M9 16h4.5"/></svg></a><a href="individual-project.html#execution">Evidence of execution — three live runs</a></li>
+          <li><a class="doc-slot live" href="individual-project.html#testing" title="Testing evidence"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.8h7.5L19 8.3v12.9H6z"/><path d="M13.3 3v5.5H19M9 12.5h6M9 16h4.5"/></svg></a><a href="individual-project.html#testing">Testing evidence and remediation</a></li>
+          <li><a class="doc-slot live" href="documents/README_research_agent.md" title="Open the README"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.8h7.5L19 8.3v12.9H6z"/><path d="M13.3 3v5.5H19M9 12.5h6M9 16h4.5"/></svg></a><a href="documents/README_research_agent.md">README — the solution and how to run it</a></li>
+        </ul>
+
+        <a class="evidence" href="individual-project.html">Open the artefact →</a>
+      </article>
+
+      <article class="entry reveal" data-i="2" id="unit-12">
+        <div class="entry-head"><span class="call">Unit 12</span><h3>Individual Module e-Portfolio</h3></div>
+        <p class="meta"><span class="status next">Upcoming</span> Individual · 40% of the module mark · 2,500 words · due 23:55, Monday 19 October 2026</p>
+        <p>
+          This site itself: the collated evidence of the module, and a reflective
+          account of how the work developed. The reflective section runs to 1,000
+          words, the remaining evidence to 1,500.
+        </p>
+
+        <h3 class="sub-head">Contents</h3>
+        <ul class="contrib">
+          <li>Exercise outputs — coding scripts, agent implementations and system designs.</li>
+          <li>Forum contributions, with the analysis behind them.</li>
+          <li>Reflective commentary on the skills and understanding developed.</li>
+          <li>Critical evaluation of the project across both the Unit 6 design and the
+            Unit 11 implementation.</li>
+          <li>Three reflective case studies grounded in the systems I designed and built.</li>
+        </ul>
+
+        <h3 class="sub-head">Case study themes</h3>
+        <p class="small">Three to be selected from: bias in autonomous decision-making ·
+          AI safety constraints such as kill switches, bounded autonomy and safe
+          exploration · explainable decisions in agents (XAI) · legal and ethical
+          frameworks for autonomous systems · responsible deployment and unintended
+          emergent behaviour.</p>
+
+        <h3 class="sub-head">Reflective framework</h3>
+        <p class="small">Reflections follow Rolfe et al. (2001) — what, so what, now what.</p>
+        <a class="evidence" href="#reflection">Read the skills matrix →</a>
+      </article>
+    </div>
+  </div>
+  </div>
+
+  <div class="tabpanel" id="outcomes" role="tabpanel" hidden>
+    <div class="reading">
+      <p style="margin-bottom:10px">
+        Each module learning outcome, how the work evidences it, and where to find that work.
+        Every chip opens the artefact it names.
+      </p>
+      <p class="map-note">All four outcomes are evidenced. Nine pieces of work carry them: six
+        e-portfolio artefacts, the group design proposal and two assessed submissions.</p>
+      <table class="map outcomes">
+        <thead><tr><th>Learning outcome</th><th>How it is evidenced</th><th>Evidence</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="lo">Identify and critically analyse agent-based systems, differentiating between architectures and approaches.</td>
+            <td class="how">Traced the rise of agent-based computing through Wooldridge's five trends and set reactive architectures (Brooks) against deliberative BDI ones; separated agents from capabilities in the six-agent design; and compared KQML and KIF against method invocation and FIPA-ACL, naming what each buys and costs.</td>
+            <td class="ev"><a class="chip" href="#act-cd1">Discussion 1</a><a class="chip" href="#act-cd2">Discussion 2</a><a class="chip" href="#act-dialogues">Dialogues</a><a class="chip" href="#unit-6">Unit 6</a></td>
+          </tr>
+          <tr>
+            <td class="lo">Apply and critically evaluate intelligent agent techniques to real-world problems, particularly where technical risk and uncertainty is involved.</td>
+            <td class="how">Built and ran a planning agent on live academic search, where three runs exposed schema failure, failed quotation checks, a processing retry and a re-plan; analysed live facial recognition as a deployed system whose threshold setting trades missed suspects against false alerts; and showed with PP-attachment that syntax alone cannot resolve ambiguity.</td>
+            <td class="ev"><a class="chip" href="#unit-11">Unit 11</a><a class="chip" href="#act-dl">Deep Learning</a><a class="chip" href="#act-parse">Parse Trees</a><a class="chip" href="#unit-6">Unit 6</a></td>
+          </tr>
+          <tr>
+            <td class="lo">Deploy critically appropriate software tools and skills for the design and implementation of an agent-based system, bearing in mind applicable legal, social, ethical and professional issues.</td>
+            <td class="how">Implemented the agent in LangGraph and Pydantic against Crossref, OpenAlex and a hosted model, with the goal and retrieved records treated as untrusted data, Boolean-only approval, escaped CSV output and hashed exports; argued privacy and lifecycle accountability as engineering requirements rather than later governance; and set out the bias and anonymity costs of biometric processing in public space.</td>
+            <td class="ev"><a class="chip" href="#unit-11">Unit 11</a><a class="chip" href="#act-cd3">Discussion 3</a><a class="chip" href="#act-dl">Deep Learning</a><a class="chip" href="#act-dialogues">Dialogues</a></td>
+          </tr>
+          <tr>
+            <td class="lo">Systematically develop and implement the skills required to be an effective member of a development team in a virtual professional environment, adopting real-life perspectives on team roles and organisation.</td>
+            <td class="how">Held the Methodology Lead role in Group E across eight recorded milestones, reconciling three competing architecture proposals into one documented approach and handing over on schedule; and engaged the cohort through six peer responses that changed my own position on verification and accountability.</td>
+            <td class="ev"><a class="chip" href="#group">Group project</a><a class="chip" href="#unit-6">Unit 6</a><a class="chip" href="#act-cd1">Discussion 1</a><a class="chip" href="#act-cd2">Discussion 2</a><a class="chip" href="#act-cd3">Discussion 3</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="tabpanel" id="reflection" role="tabpanel" hidden>
+    <div class="reading">
+      <p style="margin-bottom:10px">A skills development matrix: where each skill stood
+        coming into the module, what the work on it developed, what still needs
+        development, and the action that will show whether it has.</p>
+      <p class="map-note">Seven skill areas. Each remaining need carries an action and a
+        success measure that someone other than me could check.</p>
+      <table class="map matrix">
+        <thead><tr>
+          <th>Skill</th>
+          <th>Starting position and demonstrated development</th>
+          <th>Remaining development need</th>
+          <th>Action and success measure</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="sk" data-l="Skill">Agent design and digital skills</td>
+            <td class="pos" data-l="Starting position and demonstrated development">Built on engineering integration experience to define six functional roles and implement a Python/LangGraph workflow.</td>
+            <td class="need" data-l="Remaining development need">Justify when agent-based designs offer benefits over simpler approaches.</td>
+            <td class="act" data-l="Action and success measure">Within four weeks of module completion, compare the agent with direct search across the planned 24 goals; document relevance, unsupported claims, time and cost.</td>
+          </tr>
+          <tr>
+            <td class="sk" data-l="Skill">Critical thinking and numeracy</td>
+            <td class="pos" data-l="Starting position and demonstrated development">Moved from checking whether the workflow operates to distinguishing code coverage, quotation accuracy and answer quality.</td>
+            <td class="need" data-l="Remaining development need">Evaluate usefulness beyond three live runs.</td>
+            <td class="act" data-l="Action and success measure">Produce a results table using predefined evaluation criteria and obtain independent review of a sample.</td>
+          </tr>
+          <tr>
+            <td class="sk" data-l="Skill">Teamwork, leadership and communication</td>
+            <td class="pos" data-l="Starting position and demonstrated development">Contributed as Methodology Lead and helped reconcile competing architecture proposals.</td>
+            <td class="need" data-l="Remaining development need">Make individual contributions and decisions easier to trace.</td>
+            <td class="act" data-l="Action and success measure">From the first meeting of the next team project, record each decision, owner, deadline and supporting artefact. Review the log weekly.</td>
+          </tr>
+          <tr>
+            <td class="sk" data-l="Skill">Ethical awareness</td>
+            <td class="pos" data-l="Starting position and demonstrated development">Connected source verification, bounded recovery and human approval to practical risks.</td>
+            <td class="need" data-l="Remaining development need">Assess misleading inferences and ineffective human review.</td>
+            <td class="act" data-l="Action and success measure">During the planned evaluation, record unsupported claims and reviewer errors; document a proposed safeguard for each observed failure type.</td>
+          </tr>
+          <tr>
+            <td class="sk" data-l="Skill">Time management, resilience and problem-solving</td>
+            <td class="pos" data-l="Starting position and demonstrated development">Responded to repeated development difficulties by working through problems step by step.</td>
+            <td class="need" data-l="Remaining development need">Allocate sufficient time to evaluation as well as implementation.</td>
+            <td class="act" data-l="Action and success measure">In the next project plan, reserve a separate evaluation stage and review progress weekly against milestones.</td>
+          </tr>
+          <tr>
+            <td class="sk" data-l="Skill">Research and critical reflection</td>
+            <td class="pos" data-l="Starting position and demonstrated development">Used peer feedback to recognise the limits of metadata and quotation checks.</td>
+            <td class="need" data-l="Remaining development need">Maintain a clearer record of how feedback changes practice.</td>
+            <td class="act" data-l="Action and success measure">Record feedback, resulting action and evidence of the change after each substantive review.</td>
+          </tr>
+          <tr>
+            <td class="sk" data-l="Skill">Commercial awareness</td>
+            <td class="pos" data-l="Starting position and demonstrated development">Identified dependence on hosted-model availability and credits.</td>
+            <td class="need" data-l="Remaining development need">Quantify the practical cost of using the system.</td>
+            <td class="act" data-l="Action and success measure">Record runtime and available usage-cost data during the comparative evaluation; report cost per usable evidence package where measurable.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="pager"><span>← Numerical Analysis</span><span>Machine Learning →</span></div>
+
+</div>
+
+<div class="shell">
+  <div class="colophon">
+    <div class="row">
+      <a href="mailto:daldosarii@gmail.com" aria-label="Email AlDana" title="daldosarii@gmail.com">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M3 7l9 6.5L21 7"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/aldanamaldosari/" target="_blank" rel="noopener"
+         aria-label="LinkedIn profile" title="linkedin.com/in/aldanamaldosari">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M7.5 10.5v6.2M7.5 7.6v.1M11.6 16.7v-6.2M11.6 13.2c0-1.6.9-2.6 2.3-2.6s2.4.9 2.4 2.7v3.4"/></svg>
+      </a>
+      <span aria-label="CV — to add" title="CV — to add">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.8h7.5L19 8.3v12.9H6z"/><path d="M13.3 3v5.5H19M9 12.5h6M9 16h4.5"/></svg>
+      </span>
+    </div>
+    <p class="set">
+      MSc Artificial Intelligence, University of Essex.<br>
+      Last revised August 2026.
+    </p>
+    <p class="copy">© 2026 AlDana Al-Dosari. All rights reserved.</p>
+  </div>
+</div>
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>
