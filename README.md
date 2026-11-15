@@ -10,7 +10,7 @@ Live at https://[username].github.io/
 ```
 index.html              Homepage: hero, About me, module cards
 module-01.html          Numerical Analysis — page not yet linked
-module-03.html          Machine Learning — page not yet linked
+module-03.html          Machine Learning
 assets/
   css/site.css          The whole design system, shared by every page
   js/site.js            Tabs, scrollspy, section navigation, scroll reveal
@@ -38,8 +38,8 @@ module is a new folder on the same pattern plus a card on the homepage. Pages
 inside a module folder reach the shared stylesheet and script as
 `../assets/...`, and the homepage as `../index.html`.
 
-Numerical Analysis and Machine Learning are shown on the homepage but not
-linked — their cards are disabled until the pages carry real content.
+Numerical Analysis is shown on the homepage but not linked — its card is
+disabled until the page carries real content.
 
 The homepage is a single scrolling page: Home, About me and Modules jump to
 sections rather than separate pages. The Intelligent Agents page runs Overview →
@@ -102,7 +102,7 @@ with Ctrl+F5 — that is CDN caching, not a failed push.
 
 * Programme: MSc Artificial Intelligence
 * Institution: University of Essex
-* Modules published: 1 (Intelligent Agents); two more are placeholders
+* Modules published: 2 (Intelligent Agents, Machine Learning); one more is a placeholder
 
 ## Disclaimer
 
