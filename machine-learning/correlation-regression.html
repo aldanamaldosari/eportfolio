@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Correlation and Regression Lab — AlDana Al-Dosari</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2220%22%20fill%3D%22%23101A45%22%2F%3E%3Cg%20transform%3D%22translate%2810.00%2C16.87%29%20scale%280.17391%29%22%20fill%3D%22%23E1CBD7%22%3E%3Cg%20transform%3D%22translate%280%2C381%29%20scale%280.1%2C-0.1%29%22%3E%3Cpath%20d%3D%22M2305%203800%20c-159%20-5%20-468%20-14%20-685%20-19%20-837%20-22%20-1142%20-137%20-1176%20-441%20-24%20-218%20246%20-663%20336%20-555%2010%2013%206%2022%20-28%2059%20-166%20180%20-73%20490%20187%20625%20192%2099%20503%20165%20961%20206%20231%2020%20583%2020%20528%200%20-120%20-44%20-259%20-136%20-318%20-210%20-16%20-20%20-136%20-248%20-268%20-508%20-358%20-705%20-1354%20-2525%20-1454%20-2657%20-77%20-102%20-193%20-189%20-287%20-216%20-86%20-25%20-101%20-32%20-101%20-49%200%20-65%20204%20-21%20338%2074%20270%20190%20394%20208%20637%2096%20683%20-317%201699%20-215%202380%20240%20611%20408%201090%201124%201216%201821%2027%20146%2033%20507%2011%20609%20-123%20557%20-463%20812%20-1214%20911%20-150%2020%20-639%2026%20-1063%2014z%20m980%20-145%20c690%20-113%201018%20-639%20875%20-1405%20-235%20-1264%20-1201%20-2132%20-2375%20-2133%20-351%20-1%20-533%2055%20-690%20212%20-166%20164%20-161%20185%20245%20966%20213%20410%20394%20765%20562%201106%20412%20835%20618%201152%20796%201222%20118%2047%20403%2062%20587%2032z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="stylesheet" href="../assets/css/site.css">
+<style>
+.lab-page{padding-top:40px}
+.lab-page section{margin-bottom:56px;scroll-margin-top:110px}
+.lab-page h2{font-weight:700;font-size:25px;letter-spacing:-.03em;color:var(--navy);
+  margin:0 0 14px;display:flex;align-items:center;gap:11px}
+.lab-page h2::before{content:"";width:12px;height:12px;border-radius:3px;background:var(--mauve);flex:none}
+.lab-page p{margin:0 0 17px}
+.lab-page code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:.86em;
+  background:var(--panel);padding:1px 6px;border-radius:5px;color:var(--navy)}
+/* the window */
+.lab{background:var(--card);border:1px solid var(--rule);border-radius:18px;overflow:hidden;
+  box-shadow:0 1px 0 rgba(16,26,69,.03)}
+.lab-bar{display:flex;align-items:center;gap:14px;background:var(--navy);color:var(--blush);
+  padding:11px 18px}
+.lab-bar .dots{display:flex;gap:6px}
+.lab-bar .dots i{width:10px;height:10px;border-radius:50%;background:var(--slate);display:block}
+.lab-bar .dots i:first-child{background:var(--mauve)}
+.lab-title{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:12.5px;
+  letter-spacing:.02em;opacity:.9;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lab-tabs{display:flex;gap:4px;flex-wrap:wrap;padding:10px 12px 0;background:var(--panel);
+  border-bottom:1px solid var(--rule)}
+.lab-tabs button{font:500 14px var(--sans);border:1px solid transparent;border-bottom:none;
+  background:none;color:var(--slate);padding:9px 15px;border-radius:10px 10px 0 0;cursor:pointer}
+.lab-tabs button:hover{color:var(--navy)}
+.lab-tabs button[aria-selected="true"]{background:var(--card);color:var(--navy);font-weight:700;
+  border-color:var(--rule);margin-bottom:-1px}
+.lab-tabs button:focus-visible,.lab button:focus-visible,.lab select:focus-visible,
+.lab input:focus-visible{outline:2px solid var(--mauve);outline-offset:2px}
+.lab-panel{padding:22px 22px 18px}
+.lab-grid{display:grid;grid-template-columns:230px minmax(0,1fr);gap:24px;align-items:start}
+.ctl{display:flex;flex-direction:column;gap:14px}
+.ctl label{display:flex;flex-direction:column;gap:5px;font-size:14px;font-weight:500;color:var(--slate);
+  line-height:1.35}
+.ctl label output{font-weight:700;color:var(--navy)}
+.ctl label.chk{flex-direction:row;align-items:center;gap:8px}
+.ctl input[type=range]{width:100%;accent-color:var(--navy)}
+.ctl input[type=checkbox]{accent-color:var(--navy);width:16px;height:16px}
+.ctl select{font:400 14px var(--sans);padding:7px 9px;border:1px solid var(--rule);border-radius:8px;
+  background:#fff;color:var(--ink)}
+.ctl-head{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin-top:4px}
+.ctl-note{font-size:13.5px;color:var(--soft);line-height:1.45;margin:0!important}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+.btns.col{flex-direction:column}
+.lab button[type=button]{font:500 13.5px var(--sans);text-align:left;border:none;border-radius:8px;
+  padding:8px 12px;cursor:pointer;background:var(--navy);color:var(--blush)}
+.lab button[type=button]:hover{background:var(--slate)}
+.lab button[type=button].ghost{background:var(--blush);color:var(--navy)}
+.btns.col button[type=button]{background:var(--panel);color:var(--navy)}
+.btns.col button[type=button]:hover{background:var(--blush)}
+.btns.col button[type=button].on{background:var(--navy);color:var(--blush)}
+.plot svg{width:100%;height:auto;display:block}
+.plot.clickable svg{cursor:crosshair}
+.plot .ax{stroke:#B9C3CD;stroke-width:1}
+.plot .grid{stroke:#EEE5EB;stroke-width:1}
+.plot .tick{font:400 11px var(--sans);fill:var(--soft)}
+.plot .lbl{font:500 12px var(--sans);fill:var(--slate)}
+.plot .pt{fill:var(--slate);fill-opacity:.55}
+.plot .pt.big{fill-opacity:.85}
+.plot .pt.hot{fill:var(--mauve);fill-opacity:1;stroke:var(--navy);stroke-width:1.2}
+.plot .fit{stroke:var(--mauve);stroke-width:2.4;fill:none}
+.plot .guide{stroke:var(--mauve);stroke-width:1.2;stroke-dasharray:3 4;fill:none}
+.plot .band{fill:var(--blue);fill-opacity:.13}
+.plot .cap{font:500 11px var(--sans);fill:var(--soft)}
+.cell{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:12.5px;line-height:1.6;
+  margin:12px 0 0;padding:12px 14px;border-radius:10px;overflow-x:auto;white-space:pre}
+.cell.code{background:var(--panel);color:var(--ink);border-left:3px solid var(--blue)}
+.cell.code b{color:var(--navy);background:#E9D6E2;font-weight:700;border-radius:3px;padding:0 2px}
+.cell.out{background:#fff;border:1px solid var(--rule);color:var(--navy)}
+.cell.out .warn{color:#9A4A7E;font-weight:700}
+.lab-hint{font-size:14.5px;color:var(--soft);margin:16px 0 0!important;line-height:1.55}
+table.deg{margin-top:12px;border-collapse:collapse;font-size:13px;width:100%}
+table.deg th,table.deg td{padding:5px 8px;text-align:right;border-bottom:1px solid var(--rule)}
+table.deg th{font-weight:500;color:var(--soft);font-size:12px}
+table.deg td:first-child,table.deg th:first-child{text-align:left}
+table.deg tr.cur td{background:#F6E9F1;font-weight:700;color:var(--navy)}
+table.deg td.best{color:var(--mauve);font-weight:700}
+/* findings and files */
+.finds{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.find{background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:18px 20px}
+.find .k{display:block;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mauve);
+  font-weight:700;margin-bottom:6px}
+.find p{font-size:15.5px;line-height:1.6;margin:0}
+.nb-list{list-style:none;padding:0;margin:0 0 18px}
+.nb-list li{display:flex;gap:16px;align-items:baseline;flex-wrap:wrap;padding:12px 0;
+  border-bottom:1px solid var(--rule);font-size:16px}
+.nb-list .nb-name{flex:1;min-width:240px;color:var(--navy);font-weight:500}
+.nb-list a{font-size:14.5px;color:var(--slate);text-decoration:none;border-bottom:1px solid var(--blue)}
+.nb-list a:hover{color:var(--mauve);border-color:var(--mauve)}
+@media (max-width:860px){.lab-grid{grid-template-columns:1fr}.lab-panel{padding:18px 14px}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div class="topbar">
+  <div class="bar">
+    <a class="sig" href="../index.html#home"><svg class="logo" viewBox="0 0 460 381" aria-hidden="true"><g transform="translate(0,381) scale(0.1,-0.1)"><path d="M2305 3800 c-159 -5 -468 -14 -685 -19 -837 -22 -1142 -137 -1176 -441 -24 -218 246 -663 336 -555 10 13 6 22 -28 59 -166 180 -73 490 187 625 192 99 503 165 961 206 231 20 583 20 528 0 -120 -44 -259 -136 -318 -210 -16 -20 -136 -248 -268 -508 -358 -705 -1354 -2525 -1454 -2657 -77 -102 -193 -189 -287 -216 -86 -25 -101 -32 -101 -49 0 -65 204 -21 338 74 270 190 394 208 637 96 683 -317 1699 -215 2380 240 611 408 1090 1124 1216 1821 27 146 33 507 11 609 -123 557 -463 812 -1214 911 -150 20 -639 26 -1063 14z m980 -145 c690 -113 1018 -639 875 -1405 -235 -1264 -1201 -2132 -2375 -2133 -351 -1 -533 55 -690 212 -166 164 -161 185 245 966 213 410 394 765 562 1106 412 835 618 1152 796 1222 118 47 403 62 587 32z"/></g></svg><span class="sig-text">AlDana Al-Dosari<span>MSc Artificial Intelligence</span></span></a>
+    <nav><a href="../index.html#home">Home</a><a href="../index.html#about">About me</a><a href="../module-03.html#artefacts" aria-current="true">Modules</a></nav>
+  </div>
+</div>
+
+<div class="shell">
+
+  <div class="block slate mhead">
+    <a class="back" href="../module-03.html#artefacts">← Machine Learning</a>
+    <span class="status done">Completed</span>
+    <h1>Correlation and Regression Lab</h1>
+    <p class="sub">Unit 3: the four correlation and regression notebooks, run and then
+      rebuilt as an interactive lab. Change the data and watch what happens to r, the fitted
+      line and the predictions.</p>
+  </div>
+
+  <div class="lab-page">
+    <div class="with-menu">
+    <nav class="sidemenu" aria-label="On this page">
+      <span class="m-head">On this page</span>
+      <ol>
+        <li><a href="#task"><span class="m-title">The task</span></a></li>
+        <li><a href="#lab"><span class="m-title">The lab</span></a></li>
+        <li><a href="#changed"><span class="m-title">What changed</span></a></li>
+        <li><a href="#notebooks"><span class="m-title">The notebooks</span></a></li>
+        <li><a href="#outcomes"><span class="m-title">Learning outcomes</span></a></li>
+      </ol>
+    </nav>
+    <div class="menu-body">
+
+      <section id="task">
+        <h2>The task</h2>
+        <p class="lede">Run four programmes (covariance and Pearson correlation, linear
+          regression, multiple linear regression and polynomial regression) and change
+          the variables to see how the data points affect correlation and regression.</p>
+        <p>Each notebook was run as given and then extended with experiments: more or less
+          noise, fewer points, outliers, removed points, different units and higher
+          polynomial degrees. The lab below runs the same calculations in the browser, so
+          every change can be tried directly on this page.</p>
+      </section>
+
+      <section id="lab">
+        <h2>The lab</h2>
+        <div class="lab" id="labwin">
+          <div class="lab-bar">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="lab-title" id="lab-title">Unit03_Ex1_covariance_pearson_correlation.ipynb</span>
+          </div>
+          <div class="lab-tabs" role="tablist" aria-label="Notebooks">
+            <button role="tab" id="t1" aria-controls="p1" aria-selected="true" data-file="Unit03_Ex1_covariance_pearson_correlation.ipynb">1 · Correlation</button>
+            <button role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1" data-file="Unit03_Ex2_linear_regression.ipynb">2 · Linear regression</button>
+            <button role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1" data-file="Unit03_Ex3_multiple_linear_regression.ipynb">3 · Multiple regression</button>
+            <button role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1" data-file="Unit03_Ex4_polynomial_regression.ipynb">4 · Polynomial regression</button>
+          </div>
+
+          <!-- ============ 1 ============ -->
+          <div class="lab-panel" id="p1" role="tabpanel" aria-labelledby="t1">
+            <div class="lab-grid">
+              <div class="ctl">
+                <label>Number of points <output id="e1-n-o">1000</output>
+                  <input type="range" id="e1-n" min="0" max="7" value="7" step="1"></label>
+                <label>Noise added to data2 (sd) <output id="e1-noise-o">10</output>
+                  <input type="range" id="e1-noise" min="0" max="100" value="10" step="1"></label>
+                <label>Relationship
+                  <select id="e1-shape">
+                    <option value="pos">Positive linear (notebook)</option>
+                    <option value="neg">Negative linear</option>
+                    <option value="u">U-shape (non-linear)</option>
+                    <option value="none">No relationship</option>
+                  </select></label>
+                <label>Units of data1
+                  <select id="e1-scale">
+                    <option value="1">× 1 (notebook)</option>
+                    <option value="10">× 10</option>
+                    <option value="1000">× 1000</option>
+                  </select></label>
+                <label class="chk"><input type="checkbox" id="e1-out"> Add one outlier</label>
+                <div class="btns"><button type="button" id="e1-new">New random sample</button>
+                  <button type="button" class="ghost" id="e1-reset">Reset</button></div>
+              </div>
+              <div class="viz">
+                <div class="plot" id="e1-plot"></div>
+                <pre class="cell code" id="e1-code"></pre>
+                <pre class="cell out" id="e1-out-txt" aria-live="polite"></pre>
+              </div>
+            </div>
+            <p class="lab-hint">Try: noise 0, then 100. Then 5 points with several new samples.
+              Then the U-shape: a perfect relationship that Pearson's r scores as close to nothing.
+              Random samples are drawn in the browser, so the numbers differ slightly from the notebook run.</p>
+          </div>
+
+          <!-- ============ 2 ============ -->
+          <div class="lab-panel" id="p2" role="tabpanel" aria-labelledby="t2" hidden>
+            <div class="lab-grid">
+              <div class="ctl">
+                <label>Predict y at x = <output id="e2-px-o">10</output>
+                  <input type="range" id="e2-px" min="0" max="25" value="10" step="0.5"></label>
+                <span class="ctl-head">Change the data</span>
+                <div class="btns col">
+                  <button type="button" data-e2="orig">Notebook data</button>
+                  <button type="button" data-e2="drop2">Drop the two x = 2 points</button>
+                  <button type="button" data-e2="drop17">Drop (17, 86)</button>
+                  <button type="button" data-e2="outlier">Add outlier (20, 120)</button>
+                  <button type="button" data-e2="line">Perfect line y = 100 − 2x</button>
+                  <button type="button" data-e2="rand">Random y (no relation)</button>
+                </div>
+                <p class="ctl-note">Or click the plot: on empty space to add a point, on a point to remove it.</p>
+              </div>
+              <div class="viz">
+                <div class="plot clickable" id="e2-plot"></div>
+                <pre class="cell code" id="e2-code"></pre>
+                <pre class="cell out" id="e2-out-txt" aria-live="polite"></pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============ 3 ============ -->
+          <div class="lab-panel" id="p3" role="tabpanel" aria-labelledby="t3" hidden>
+            <div class="lab-grid">
+              <div class="ctl">
+                <span class="ctl-head">Predictors</span>
+                <label class="chk"><input type="checkbox" id="e3-w" checked> Weight</label>
+                <label class="chk"><input type="checkbox" id="e3-v" checked> Volume</label>
+                <label>Cars in the data
+                  <select id="e3-data">
+                    <option value="all">All 36 cars (notebook)</option>
+                    <option value="light">Drop cars over 1600 kg</option>
+                    <option value="slk">Drop the Mercedes SLK</option>
+                    <option value="odd">Add a heavy, low-CO2 car</option>
+                  </select></label>
+                <label>Volume measured in
+                  <select id="e3-unit">
+                    <option value="cm3">cm³ (notebook)</option>
+                    <option value="l">litres</option>
+                  </select></label>
+                <label>Predict for weight <output id="e3-pw-o">2300</output> kg
+                  <input type="range" id="e3-pw" min="700" max="3500" value="2300" step="50"></label>
+                <label>and volume <output id="e3-pv-o">1300</output> cm³
+                  <input type="range" id="e3-pv" min="800" max="3000" value="1300" step="50"></label>
+              </div>
+              <div class="viz">
+                <div class="plot" id="e3-plot"></div>
+                <pre class="cell code" id="e3-code"></pre>
+                <pre class="cell out" id="e3-out-txt" aria-live="polite"></pre>
+              </div>
+            </div>
+            <p class="lab-hint">The shaded band is the range of weights in the data. The mauve point is
+              the car being predicted. Outside the band the model is extrapolating.</p>
+          </div>
+
+          <!-- ============ 4 ============ -->
+          <div class="lab-panel" id="p4" role="tabpanel" aria-labelledby="t4" hidden>
+            <div class="lab-grid">
+              <div class="ctl">
+                <label>Polynomial degree <output id="e4-d-o">3</output>
+                  <input type="range" id="e4-d" min="1" max="9" value="3" step="1"></label>
+                <label>Predict speed at hour <output id="e4-px-o">17</output>
+                  <input type="range" id="e4-px" min="1" max="30" value="17" step="0.5"></label>
+                <span class="ctl-head">Change the data</span>
+                <div class="btns col">
+                  <button type="button" data-e4="orig">Notebook data</button>
+                  <button type="button" data-e4="early">Drop hours 1–3</button>
+                  <button type="button" data-e4="odd">Add odd reading (17, 40)</button>
+                  <button type="button" data-e4="noise">Add noise (sd 8)</button>
+                </div>
+                <p class="ctl-note">Click the plot to add or remove points.</p>
+              </div>
+              <div class="viz">
+                <div class="plot clickable" id="e4-plot"></div>
+                <pre class="cell code" id="e4-code"></pre>
+                <pre class="cell out" id="e4-out-txt" aria-live="polite"></pre>
+                <table class="deg" id="e4-table"></table>
+              </div>
+            </div>
+            <p class="lab-hint">The table refits every degree on the current points. Fit on the training data
+              (R²) always improves as the degree rises. Leave-one-out error, from predicting each point
+              with a model that never saw it, does not.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="changed">
+        <h2>What changed</h2>
+        <p>Results from the executed notebooks, which use the notebook data and seeds:</p>
+        <div class="finds">
+          <div class="find"><span class="k">Correlation</span>
+            <p>Noise alone took r from 1.00 (no noise) to 0.89 (notebook) to 0.21 (noise sd 100).
+              With 5 points, r ranged from −0.30 to 1.00 over 200 samples. With 1000 points it
+              stayed between 0.88 and 0.91. Multiplying data1 by 1000 multiplied the covariance
+              by 1000 and left r at 0.888. A U-shaped relationship scored r ≈ 0.01. One outlier
+              in a 20-point sample turned r from 0.89 to −0.28.</p></div>
+          <div class="find"><span class="k">Linear regression</span>
+            <p>The notebook fit has r = −0.76 (R² 0.58). Removing (17, 86) gave r = −0.93 and a
+              steeper slope (−2.88). Removing the two x = 2 points flattened the slope to −1.02.
+              Adding one outlier at (20, 120) flattened the slope to −0.05 and r to −0.02.</p></div>
+          <div class="find"><span class="k">Multiple regression</span>
+            <p>Weight and Volume together explain only 38% of the variation in CO2, barely more
+              than Volume alone (35%), because the two inputs are correlated (r = 0.75). Dropping
+              the four cars over 1600 kg made the Weight coefficient negative. The notebook's
+              2300 kg prediction is heavier than any car in the data.</p></div>
+          <div class="find"><span class="k">Polynomial regression</span>
+            <p>Training R² rose from 0.18 (degree 1) to 0.94 (degree 3) to 0.99 (degree 9). The
+              leave-one-out error was lowest at degree 3 (4.2) and highest at degree 9 (20.6).
+              At hour 24, outside the data, degrees 3 to 9 predicted anywhere from 33 to 181.</p></div>
+        </div>
+      </section>
+
+      <section id="notebooks">
+        <h2>The notebooks</h2>
+        <p>Each notebook keeps the original code, then adds the experiments and a short note on
+          what changed. They are saved with their outputs, so they can be read without running them.</p>
+        <ul class="nb-list">
+          <li><span class="nb-name">Ex 1 · Covariance and Pearson correlation</span>
+            <a href="notebooks/Unit03_Ex1_covariance_pearson_correlation.ipynb" download>Download</a>
+            <a href="https://colab.research.google.com/github/aldanamaldosari/eportfolio/blob/main/machine-learning/notebooks/Unit03_Ex1_covariance_pearson_correlation.ipynb" target="_blank" rel="noopener">Open in Colab ↗</a></li>
+          <li><span class="nb-name">Ex 2 · Linear regression</span>
+            <a href="notebooks/Unit03_Ex2_linear_regression.ipynb" download>Download</a>
+            <a href="https://colab.research.google.com/github/aldanamaldosari/eportfolio/blob/main/machine-learning/notebooks/Unit03_Ex2_linear_regression.ipynb" target="_blank" rel="noopener">Open in Colab ↗</a></li>
+          <li><span class="nb-name">Ex 3 · Multiple linear regression</span>
+            <a href="notebooks/Unit03_Ex3_multiple_linear_regression.ipynb" download>Download</a>
+            <a href="https://colab.research.google.com/github/aldanamaldosari/eportfolio/blob/main/machine-learning/notebooks/Unit03_Ex3_multiple_linear_regression.ipynb" target="_blank" rel="noopener">Open in Colab ↗</a></li>
+          <li><span class="nb-name">Ex 4 · Polynomial regression</span>
+            <a href="notebooks/Unit03_Ex4_polynomial_regression.ipynb" download>Download</a>
+            <a href="https://colab.research.google.com/github/aldanamaldosari/eportfolio/blob/main/machine-learning/notebooks/Unit03_Ex4_polynomial_regression.ipynb" target="_blank" rel="noopener">Open in Colab ↗</a></li>
+          <li><span class="nb-name">cars.csv · data for Ex 3</span>
+            <a href="notebooks/cars.csv" download>Download</a></li>
+        </ul>
+        <p class="small">Two changes from the files as supplied: Ex 2 called <code>stat.linregress</code>
+          after importing <code>stats</code>, which raises a <code>NameError</code>, so it now reads
+          <code>stats.</code>. Ex 3 needs a <code>cars.csv</code> with Weight, Volume and CO2 columns
+          that was not in the unit folder. The 36-car file here reproduces the notebook's coefficients
+          (0.00755, 0.00781) and its 107.2 g prediction exactly.</p>
+      </section>
+
+      <section id="outcomes">
+        <h2>Learning outcomes</h2>
+        <p><strong>Applicability and challenges of different datasets.</strong>
+          [How the experiments show it: small samples, outliers, correlated inputs and
+          extrapolation, in your own words.]</p>
+        <p><strong>Legal, social, ethical and professional issues.</strong>
+          [What it means for a professional when a model built on 13 or 36 rows is presented
+          as a confident prediction.]</p>
+      </section>
+
+    </div>
+    </div>
+  </div>
+
+  <div class="pager"><a href="../module-03.html#artefacts">← Machine Learning</a><span></span></div>
+</div>
+
+<div class="shell">
+  <div class="colophon">
+    <div class="row">
+      <a href="mailto:daldosarii@gmail.com" aria-label="Email AlDana" title="daldosarii@gmail.com">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M3 7l9 6.5L21 7"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/aldanamaldosari/" target="_blank" rel="noopener"
+         aria-label="LinkedIn profile" title="linkedin.com/in/aldanamaldosari">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M7.5 10.5v6.2M7.5 7.6v.1M11.6 16.7v-6.2M11.6 13.2c0-1.6.9-2.6 2.3-2.6s2.4.9 2.4 2.7v3.4"/></svg>
+      </a>
+      <span aria-label="CV — to add" title="CV — to add">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.8h7.5L19 8.3v12.9H6z"/><path d="M13.3 3v5.5H19M9 12.5h6M9 16h4.5"/></svg>
+      </span>
+    </div>
+    <p class="set">
+      MSc Artificial Intelligence, University of Essex.<br>
+      Last revised November 2026.
+    </p>
+    <p class="copy">© 2026 AlDana Al-Dosari. All rights reserved.</p>
+  </div>
+</div>
+<script src="../assets/js/site.js" defer></script>
+<script src="lab.js" defer></script>
+</body>
+</html>

@@ -26,6 +26,10 @@ intelligent-agents/     Everything for IA_PCOM7E lives here
   individual-project.html
   documents/            Report, notebook, transcript, sources
   evidence/             Diagnostic JSON from the three live runs
+machine-learning/       Artefacts for the Machine Learning module
+  correlation-regression.html   Unit 3 interactive correlation & regression lab
+  lab.js                The lab's calculations and plots
+  notebooks/            The four executed Unit 3 notebooks and cars.csv
 ```
 
 Each module keeps its own folder of artefact pages, documents and evidence;
