@@ -25,7 +25,7 @@
     <a class="back" href="index.html#modules">← All modules</a>
     <span class="status now">In progress</span>
     <h1>Machine Learning</h1>
-    <p class="sub">Description to follow.</p>
+    <p class="sub">This module introduces machine learning with a practical approach, building from the underlying mathematics to a framework of learning models, then through the main paradigms and algorithms with hands-on implementation in software, and closing with the systematic design of a complete application system that uses more than one machine learning component.</p>
   </div>
 
   <div class="tabwrap">
@@ -41,17 +41,29 @@
 
   <div class="tabpanel" id="overview" role="tabpanel">
     <div class="reading">
-      <aside class="note" id="n21"><span class="n">note 1</span>
-        [What you expected before starting, in one line.]
-      </aside>
       <p class="lede reveal">
-        [What the module covered, in two or three sentences — the syllabus in your
-        own words, not the handbook's.]
-        <span class="anchor" id="a21">I went in expecting [X]</span><button class="mark" data-note="n21" data-anchor="a21" aria-expanded="false" aria-controls="n21">1</button>.
+        This module introduces machine learning with a practical approach, providing
+        hands-on cases of real-world data analytics alongside a conceptual understanding
+        of the theories and practices underneath them.
       </p>
       <p class="reveal">
-        [What you actually spent the most time on, and why it was harder or easier
-        than the brief suggested.]
+        The material evolves gradually: the underlying mathematical concepts first, then a
+        framework of learning models, then the various paradigms and algorithms — each set
+        out as theory alongside a wealth of practical case implementation with software.
+        The final stage is a systematic approach to designing a complete application system
+        that makes use of more than one component of machine learning.
+      </p>
+      <p class="reveal">
+        Data analytics requirements are emphasised throughout, with a systematic approach to
+        machine learning implementation, state-of-the-art models and the latest developments
+        in model deployment.
+      </p>
+
+      <h3 class="sub-head">Assessment</h3>
+      <p class="reveal">
+        Two assessed submissions: the Unit 6 team project report, written with Group C, and
+        the Unit 11 individual project presentation. The formative and e-portfolio activities
+        set across the twelve units are listed under Artefacts.
       </p>
     </div>
   </div>
@@ -323,17 +335,35 @@
   <div class="tabpanel" id="outcomes" role="tabpanel" hidden>
     <div class="reading">
       <p style="margin-bottom:10px">Each module learning outcome, how the work evidences
-        it, and where to find that work — the same three columns used on Intelligent
-        Agents.</p>
-      <p class="map-note">Machine Learning has not started. Its outcome map opens with the
-        module.</p>
-      <div class="map-empty">
-        <h3>Opens with the module</h3>
-        <div class="cols"><span>Learning outcome</span><span>How it is evidenced</span><span>Evidence</span></div>
-        <p>The outcomes will be listed from the module handbook at the start of the module,
-          each row left empty until there is work to put against it. An outcome with no
-          evidence beside it is the next thing to work on — that is what the map is for.</p>
-      </div>
+        it, and where to find that work. Every chip opens the artefact it names.</p>
+      <p class="map-note">The module is still running. Three outcomes already carry evidence,
+        from the Group C design proposal and the Unit 3 lab; the legal, social, ethical and
+        professional outcome is only partly covered, and is the next one to build on.</p>
+      <table class="map outcomes">
+        <thead><tr><th>Learning outcome</th><th>How it is evidenced</th><th>Evidence</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="lo">Articulate the legal, social, ethical, and professional issues faced by machine learning professionals.</td>
+            <td class="how">Partly covered so far. The group proposal treats a flagged price as a prompt for review rather than an automatic change, specifies a host-facing display carrying the price, the peer median and the score components so a flag can be understood rather than simply obeyed, and states plainly that without verified labels or booking outcomes the commercial benefit is untested and deployment premature.</td>
+            <td class="ev"><a class="chip" href="#group">Group project</a><a class="chip" href="#unit-6">Unit 6</a></td>
+          </tr>
+          <tr>
+            <td class="lo">Understand the applicability and challenges associated with different datasets for the use of machine learning algorithms.</td>
+            <td class="how">Prepared the AB_NYC_2019 listings for modelling: separated genuine absence from missing data, removed only the eleven impossible $0 prices, and kept and flagged extreme values because they are precisely what the anomaly model must detect. A price skew of 19.1 forced log transforms and rank-based statistics, and comparing each listing against its own neighbourhood and room type showed a flat $1,000 cut-off would miss 704 of the 920 unusual listings, including every underpriced one.</td>
+            <td class="ev"><a class="chip" href="#group">Group project</a><a class="chip" href="#unit-6">Unit 6</a><a class="chip" href="#act-regression">Correlation and Regression</a></td>
+          </tr>
+          <tr>
+            <td class="lo">Apply and critically appraise machine learning techniques to real-world problems, particularly where technical risk and uncertainty is involved.</td>
+            <td class="how">A denoising autoencoder applied to real listings, with Neural Architecture Search tested against it, and the results appraised rather than accepted: the 46% overlap with the exploratory flags reported as agreement rather than accuracy, and the better NAS architecture discounted because its split and training procedure differ from the model it is measured against. The Unit 3 lab moves noise, outliers, sample size and polynomial degree to show what each does to r, the fitted line and the predictions.</td>
+            <td class="ev"><a class="chip" href="#unit-6">Unit 6</a><a class="chip" href="#group">Group project</a><a class="chip" href="#act-regression">Correlation and Regression</a></td>
+          </tr>
+          <tr>
+            <td class="lo">Systematically develop and implement the skills required to be an effective member of a development team in a virtual professional environment, adopting real-life perspectives on team roles and organisation.</td>
+            <td class="how">Group C works to a signed contract with one owner per section, fixed roles and weekly minuted meetings. I chaired the kick-off and took the contract through its final draft, and the team agreed a dependency order — data preparation feeds the modelling leads, who feed visualisation and discussion — with internal deadlines set deliberately ahead of the official one.</td>
+            <td class="ev"><a class="chip" href="#group">Group project</a><a class="chip" href="#unit-6">Unit 6</a></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
